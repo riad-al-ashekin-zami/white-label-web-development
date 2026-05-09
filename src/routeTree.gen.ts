@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProcessRouteImport } from './routes/process'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
@@ -27,6 +28,11 @@ import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
   path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PortfolioRoute = PortfolioRouteImport.update({
@@ -109,6 +115,7 @@ export interface FileRoutesByFullPath {
   '/agency-partner': typeof AgencyPartnerRoute
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
+  '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -125,6 +132,7 @@ export interface FileRoutesByTo {
   '/agency-partner': typeof AgencyPartnerRoute
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
+  '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -142,6 +150,7 @@ export interface FileRoutesById {
   '/agency-partner': typeof AgencyPartnerRoute
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
+  '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -160,6 +169,7 @@ export interface FileRouteTypes {
     | '/agency-partner'
     | '/contact'
     | '/portfolio'
+    | '/pricing'
     | '/process'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -176,6 +186,7 @@ export interface FileRouteTypes {
     | '/agency-partner'
     | '/contact'
     | '/portfolio'
+    | '/pricing'
     | '/process'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -192,6 +203,7 @@ export interface FileRouteTypes {
     | '/agency-partner'
     | '/contact'
     | '/portfolio'
+    | '/pricing'
     | '/process'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -209,6 +221,7 @@ export interface RootRouteChildren {
   AgencyPartnerRoute: typeof AgencyPartnerRoute
   ContactRoute: typeof ContactRoute
   PortfolioRoute: typeof PortfolioRoute
+  PricingRoute: typeof PricingRoute
   ProcessRoute: typeof ProcessRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
   ServicesWhiteLabelLandingPageDesignRoute: typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -227,6 +240,13 @@ declare module '@tanstack/react-router' {
       path: '/process'
       fullPath: '/process'
       preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/portfolio': {
@@ -329,6 +349,7 @@ const rootRouteChildren: RootRouteChildren = {
   AgencyPartnerRoute: AgencyPartnerRoute,
   ContactRoute: ContactRoute,
   PortfolioRoute: PortfolioRoute,
+  PricingRoute: PricingRoute,
   ProcessRoute: ProcessRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
     ServicesSeoFriendlyWebDevelopmentRoute,
@@ -348,3 +369,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
