@@ -18,6 +18,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesWhiteLabelWordpressDevelopmentRouteImport } from './routes/services.white-label-wordpress-development'
 import { Route as ServicesWhiteLabelWebsiteMaintenanceRouteImport } from './routes/services.white-label-website-maintenance'
 import { Route as ServicesWhiteLabelWebsiteDevelopmentRouteImport } from './routes/services.white-label-website-development'
+import { Route as ServicesWhiteLabelWebsiteDesignRouteImport } from './routes/services.white-label-website-design'
 
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
@@ -67,6 +68,12 @@ const ServicesWhiteLabelWebsiteDevelopmentRoute =
     path: '/services/white-label-website-development',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ServicesWhiteLabelWebsiteDesignRoute =
+  ServicesWhiteLabelWebsiteDesignRouteImport.update({
+    id: '/services/white-label-website-design',
+    path: '/services/white-label-website-design',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
+  '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
@@ -86,6 +94,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
+  '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
@@ -98,6 +107,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
+  '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/portfolio'
     | '/process'
+    | '/services/white-label-website-design'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
     | '/services/white-label-wordpress-development'
@@ -122,6 +133,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/portfolio'
     | '/process'
+    | '/services/white-label-website-design'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
     | '/services/white-label-wordpress-development'
@@ -133,6 +145,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/portfolio'
     | '/process'
+    | '/services/white-label-website-design'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
     | '/services/white-label-wordpress-development'
@@ -145,6 +158,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PortfolioRoute: typeof PortfolioRoute
   ProcessRoute: typeof ProcessRoute
+  ServicesWhiteLabelWebsiteDesignRoute: typeof ServicesWhiteLabelWebsiteDesignRoute
   ServicesWhiteLabelWebsiteDevelopmentRoute: typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   ServicesWhiteLabelWebsiteMaintenanceRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRoute
   ServicesWhiteLabelWordpressDevelopmentRoute: typeof ServicesWhiteLabelWordpressDevelopmentRoute
@@ -215,6 +229,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesWhiteLabelWebsiteDevelopmentRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/white-label-website-design': {
+      id: '/services/white-label-website-design'
+      path: '/services/white-label-website-design'
+      fullPath: '/services/white-label-website-design'
+      preLoaderRoute: typeof ServicesWhiteLabelWebsiteDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -225,6 +246,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   PortfolioRoute: PortfolioRoute,
   ProcessRoute: ProcessRoute,
+  ServicesWhiteLabelWebsiteDesignRoute: ServicesWhiteLabelWebsiteDesignRoute,
   ServicesWhiteLabelWebsiteDevelopmentRoute:
     ServicesWhiteLabelWebsiteDevelopmentRoute,
   ServicesWhiteLabelWebsiteMaintenanceRoute:
@@ -235,3 +257,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
