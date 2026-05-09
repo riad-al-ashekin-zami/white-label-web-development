@@ -24,6 +24,7 @@ import { Route as ServicesWhiteLabelWebsiteDesignRouteImport } from './routes/se
 import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/services.white-label-website-audit'
 import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './routes/services.white-label-landing-page-design'
 import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
+import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
 
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
@@ -108,6 +109,11 @@ const ServicesSeoFriendlyWebDevelopmentRoute =
     path: '/services/seo-friendly-web-development',
     getParentRoute: () => rootRouteImport,
   } as any)
+const IndustriesSeoAgenciesRoute = IndustriesSeoAgenciesRouteImport.update({
+  id: '/industries/seo-agencies',
+  path: '/industries/seo-agencies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -117,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
+  '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
@@ -134,6 +141,7 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
+  '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
@@ -152,6 +160,7 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
+  '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
@@ -171,6 +180,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/process'
+    | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
@@ -188,6 +198,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/process'
+    | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
@@ -205,6 +216,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/process'
+    | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
@@ -223,6 +235,7 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   ProcessRoute: typeof ProcessRoute
+  IndustriesSeoAgenciesRoute: typeof IndustriesSeoAgenciesRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
   ServicesWhiteLabelLandingPageDesignRoute: typeof ServicesWhiteLabelLandingPageDesignRoute
   ServicesWhiteLabelWebsiteAuditRoute: typeof ServicesWhiteLabelWebsiteAuditRoute
@@ -340,6 +353,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesSeoFriendlyWebDevelopmentRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industries/seo-agencies': {
+      id: '/industries/seo-agencies'
+      path: '/industries/seo-agencies'
+      fullPath: '/industries/seo-agencies'
+      preLoaderRoute: typeof IndustriesSeoAgenciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -351,6 +371,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   ProcessRoute: ProcessRoute,
+  IndustriesSeoAgenciesRoute: IndustriesSeoAgenciesRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
     ServicesSeoFriendlyWebDevelopmentRoute,
   ServicesWhiteLabelLandingPageDesignRoute:
@@ -369,3 +390,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
