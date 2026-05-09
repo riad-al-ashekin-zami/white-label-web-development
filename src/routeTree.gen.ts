@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesWhiteLabelWebsiteMaintenanceRouteImport } from './routes/services.white-label-website-maintenance'
 import { Route as ServicesWhiteLabelWebsiteDevelopmentRouteImport } from './routes/services.white-label-website-development'
 
 const IndexRoute = IndexRouteImport.update({
@@ -17,6 +18,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesWhiteLabelWebsiteMaintenanceRoute =
+  ServicesWhiteLabelWebsiteMaintenanceRouteImport.update({
+    id: '/services/white-label-website-maintenance',
+    path: '/services/white-label-website-maintenance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesWhiteLabelWebsiteDevelopmentRoute =
   ServicesWhiteLabelWebsiteDevelopmentRouteImport.update({
     id: '/services/white-label-website-development',
@@ -27,27 +34,41 @@ const ServicesWhiteLabelWebsiteDevelopmentRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
+  '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
+  '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
+  '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/services/white-label-website-development'
+  fullPaths:
+    | '/'
+    | '/services/white-label-website-development'
+    | '/services/white-label-website-maintenance'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/services/white-label-website-development'
-  id: '__root__' | '/' | '/services/white-label-website-development'
+  to:
+    | '/'
+    | '/services/white-label-website-development'
+    | '/services/white-label-website-maintenance'
+  id:
+    | '__root__'
+    | '/'
+    | '/services/white-label-website-development'
+    | '/services/white-label-website-maintenance'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ServicesWhiteLabelWebsiteDevelopmentRoute: typeof ServicesWhiteLabelWebsiteDevelopmentRoute
+  ServicesWhiteLabelWebsiteMaintenanceRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -57,6 +78,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/white-label-website-maintenance': {
+      id: '/services/white-label-website-maintenance'
+      path: '/services/white-label-website-maintenance'
+      fullPath: '/services/white-label-website-maintenance'
+      preLoaderRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/white-label-website-development': {
@@ -73,6 +101,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ServicesWhiteLabelWebsiteDevelopmentRoute:
     ServicesWhiteLabelWebsiteDevelopmentRoute,
+  ServicesWhiteLabelWebsiteMaintenanceRoute:
+    ServicesWhiteLabelWebsiteMaintenanceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
