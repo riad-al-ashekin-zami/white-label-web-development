@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProcessRouteImport } from './routes/process'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
 import { Route as IndexRouteImport } from './routes/index'
@@ -19,6 +20,11 @@ import { Route as ServicesWhiteLabelWebsiteDevelopmentRouteImport } from './rout
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
   path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/agency-partner': typeof AgencyPartnerRoute
   '/contact': typeof ContactRoute
+  '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/agency-partner': typeof AgencyPartnerRoute
   '/contact': typeof ContactRoute
+  '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/agency-partner': typeof AgencyPartnerRoute
   '/contact': typeof ContactRoute
+  '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/'
     | '/agency-partner'
     | '/contact'
+    | '/portfolio'
     | '/process'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/'
     | '/agency-partner'
     | '/contact'
+    | '/portfolio'
     | '/process'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/'
     | '/agency-partner'
     | '/contact'
+    | '/portfolio'
     | '/process'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AgencyPartnerRoute: typeof AgencyPartnerRoute
   ContactRoute: typeof ContactRoute
+  PortfolioRoute: typeof PortfolioRoute
   ProcessRoute: typeof ProcessRoute
   ServicesWhiteLabelWebsiteDevelopmentRoute: typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   ServicesWhiteLabelWebsiteMaintenanceRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -117,6 +130,13 @@ declare module '@tanstack/react-router' {
       path: '/process'
       fullPath: '/process'
       preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AgencyPartnerRoute: AgencyPartnerRoute,
   ContactRoute: ContactRoute,
+  PortfolioRoute: PortfolioRoute,
   ProcessRoute: ProcessRoute,
   ServicesWhiteLabelWebsiteDevelopmentRoute:
     ServicesWhiteLabelWebsiteDevelopmentRoute,
