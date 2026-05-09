@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProcessRouteImport } from './routes/process'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesWhiteLabelWebsiteMaintenanceRouteImport } from './routes/services.white-label-website-maintenance'
@@ -18,6 +19,11 @@ import { Route as ServicesWhiteLabelWebsiteDevelopmentRouteImport } from './rout
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
   path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AgencyPartnerRoute = AgencyPartnerRouteImport.update({
@@ -46,6 +52,7 @@ const ServicesWhiteLabelWebsiteDevelopmentRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/contact': typeof ContactRoute
   '/process': typeof ProcessRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -53,6 +60,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/contact': typeof ContactRoute
   '/process': typeof ProcessRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -61,6 +69,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/contact': typeof ContactRoute
   '/process': typeof ProcessRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -70,6 +79,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/agency-partner'
+    | '/contact'
     | '/process'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
@@ -77,6 +87,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/agency-partner'
+    | '/contact'
     | '/process'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
@@ -84,6 +95,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/agency-partner'
+    | '/contact'
     | '/process'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
@@ -92,6 +104,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AgencyPartnerRoute: typeof AgencyPartnerRoute
+  ContactRoute: typeof ContactRoute
   ProcessRoute: typeof ProcessRoute
   ServicesWhiteLabelWebsiteDevelopmentRoute: typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   ServicesWhiteLabelWebsiteMaintenanceRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -104,6 +117,13 @@ declare module '@tanstack/react-router' {
       path: '/process'
       fullPath: '/process'
       preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/agency-partner': {
@@ -140,6 +160,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AgencyPartnerRoute: AgencyPartnerRoute,
+  ContactRoute: ContactRoute,
   ProcessRoute: ProcessRoute,
   ServicesWhiteLabelWebsiteDevelopmentRoute:
     ServicesWhiteLabelWebsiteDevelopmentRoute,
