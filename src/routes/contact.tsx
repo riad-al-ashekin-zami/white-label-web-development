@@ -4,7 +4,7 @@ import { z } from "zod";
 import { toast } from "sonner";
 import {
   ArrowRight, ArrowLeft, CheckCircle2, Mail, MessageSquare, Slack, Phone,
-  Globe, Workflow, Headphones, ShieldCheck, EyeOff, FileLock2, UserX,
+  Globe, Workflow, Headphones, ShieldCheck, EyeOff, FileLock2, UserX, Lock,
   Timer, LayoutGrid, MessagesSquare, Search, Wrench, Repeat, Star,
   Clock, Send, FileText, Inbox, ClipboardCheck, Rocket, Globe2, Users,
   Sparkles, CircleDot, AlertOctagon, RefreshCw,
