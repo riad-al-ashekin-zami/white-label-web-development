@@ -640,14 +640,6 @@ function CommunicationSupport() {
 }
 
 /* ---------- TRUST & RELIABILITY ---------- */
-const trustItems = [
-  { icon: UserX, label: "No client poaching, contractually" },
-  { icon: FileLock2, label: "NDA-friendly workflow" },
-  { icon: Lock(), label: "" }, // sentinel — replaced below
-];
-// (avoid unused import warning)
-import { Lock } from "lucide-react";
-
 const trust = [
   { icon: UserX, label: "No client poaching, contractually" },
   { icon: FileLock2, label: "NDA-friendly workflow" },
