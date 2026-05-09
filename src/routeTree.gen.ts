@@ -19,6 +19,7 @@ import { Route as ServicesWhiteLabelWordpressDevelopmentRouteImport } from './ro
 import { Route as ServicesWhiteLabelWebsiteMaintenanceRouteImport } from './routes/services.white-label-website-maintenance'
 import { Route as ServicesWhiteLabelWebsiteDevelopmentRouteImport } from './routes/services.white-label-website-development'
 import { Route as ServicesWhiteLabelWebsiteDesignRouteImport } from './routes/services.white-label-website-design'
+import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
 
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
@@ -74,6 +75,12 @@ const ServicesWhiteLabelWebsiteDesignRoute =
     path: '/services/white-label-website-design',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ServicesSeoFriendlyWebDevelopmentRoute =
+  ServicesSeoFriendlyWebDevelopmentRouteImport.update({
+    id: '/services/seo-friendly-web-development',
+    path: '/services/seo-friendly-web-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
+  '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -94,6 +102,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
+  '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -107,6 +116,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
+  '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -121,6 +131,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/portfolio'
     | '/process'
+    | '/services/seo-friendly-web-development'
     | '/services/white-label-website-design'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
@@ -133,6 +144,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/portfolio'
     | '/process'
+    | '/services/seo-friendly-web-development'
     | '/services/white-label-website-design'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
@@ -145,6 +157,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/portfolio'
     | '/process'
+    | '/services/seo-friendly-web-development'
     | '/services/white-label-website-design'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
@@ -158,6 +171,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PortfolioRoute: typeof PortfolioRoute
   ProcessRoute: typeof ProcessRoute
+  ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
   ServicesWhiteLabelWebsiteDesignRoute: typeof ServicesWhiteLabelWebsiteDesignRoute
   ServicesWhiteLabelWebsiteDevelopmentRoute: typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   ServicesWhiteLabelWebsiteMaintenanceRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRoute
@@ -236,6 +250,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesWhiteLabelWebsiteDesignRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/seo-friendly-web-development': {
+      id: '/services/seo-friendly-web-development'
+      path: '/services/seo-friendly-web-development'
+      fullPath: '/services/seo-friendly-web-development'
+      preLoaderRoute: typeof ServicesSeoFriendlyWebDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -246,6 +267,8 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   PortfolioRoute: PortfolioRoute,
   ProcessRoute: ProcessRoute,
+  ServicesSeoFriendlyWebDevelopmentRoute:
+    ServicesSeoFriendlyWebDevelopmentRoute,
   ServicesWhiteLabelWebsiteDesignRoute: ServicesWhiteLabelWebsiteDesignRoute,
   ServicesWhiteLabelWebsiteDevelopmentRoute:
     ServicesWhiteLabelWebsiteDevelopmentRoute,
