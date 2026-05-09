@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ProcessRouteImport } from './routes/process'
 import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesWhiteLabelWebsiteMaintenanceRouteImport } from './routes/services.white-label-website-maintenance'
 import { Route as ServicesWhiteLabelWebsiteDevelopmentRouteImport } from './routes/services.white-label-website-development'
 
+const ProcessRoute = ProcessRouteImport.update({
+  id: '/process',
+  path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AgencyPartnerRoute = AgencyPartnerRouteImport.update({
   id: '/agency-partner',
   path: '/agency-partner',
@@ -40,12 +46,14 @@ const ServicesWhiteLabelWebsiteDevelopmentRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/process': typeof ProcessRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/process': typeof ProcessRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
 }
@@ -53,6 +61,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/process': typeof ProcessRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
 }
@@ -61,18 +70,21 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/agency-partner'
+    | '/process'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/agency-partner'
+    | '/process'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
   id:
     | '__root__'
     | '/'
     | '/agency-partner'
+    | '/process'
     | '/services/white-label-website-development'
     | '/services/white-label-website-maintenance'
   fileRoutesById: FileRoutesById
@@ -80,12 +92,20 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AgencyPartnerRoute: typeof AgencyPartnerRoute
+  ProcessRoute: typeof ProcessRoute
   ServicesWhiteLabelWebsiteDevelopmentRoute: typeof ServicesWhiteLabelWebsiteDevelopmentRoute
   ServicesWhiteLabelWebsiteMaintenanceRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/process': {
+      id: '/process'
+      path: '/process'
+      fullPath: '/process'
+      preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/agency-partner': {
       id: '/agency-partner'
       path: '/agency-partner'
@@ -120,6 +140,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AgencyPartnerRoute: AgencyPartnerRoute,
+  ProcessRoute: ProcessRoute,
   ServicesWhiteLabelWebsiteDevelopmentRoute:
     ServicesWhiteLabelWebsiteDevelopmentRoute,
   ServicesWhiteLabelWebsiteMaintenanceRoute:
