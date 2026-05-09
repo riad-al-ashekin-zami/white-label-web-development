@@ -21,6 +21,7 @@ import { Route as ServicesWhiteLabelWebsiteMaintenanceRouteImport } from './rout
 import { Route as ServicesWhiteLabelWebsiteDevelopmentRouteImport } from './routes/services.white-label-website-development'
 import { Route as ServicesWhiteLabelWebsiteDesignRouteImport } from './routes/services.white-label-website-design'
 import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/services.white-label-website-audit'
+import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './routes/services.white-label-landing-page-design'
 import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
 
 const ProcessRoute = ProcessRouteImport.update({
@@ -89,6 +90,12 @@ const ServicesWhiteLabelWebsiteAuditRoute =
     path: '/services/white-label-website-audit',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ServicesWhiteLabelLandingPageDesignRoute =
+  ServicesWhiteLabelLandingPageDesignRouteImport.update({
+    id: '/services/white-label-landing-page-design',
+    path: '/services/white-label-landing-page-design',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesSeoFriendlyWebDevelopmentRoute =
   ServicesSeoFriendlyWebDevelopmentRouteImport.update({
     id: '/services/seo-friendly-web-development',
@@ -104,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
+  '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
@@ -119,6 +127,7 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
+  '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
@@ -135,6 +144,7 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
+  '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-development': typeof ServicesWhiteLabelWebsiteDevelopmentRoute
@@ -152,6 +162,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/process'
     | '/services/seo-friendly-web-development'
+    | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
     | '/services/white-label-website-design'
     | '/services/white-label-website-development'
@@ -167,6 +178,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/process'
     | '/services/seo-friendly-web-development'
+    | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
     | '/services/white-label-website-design'
     | '/services/white-label-website-development'
@@ -182,6 +194,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/process'
     | '/services/seo-friendly-web-development'
+    | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
     | '/services/white-label-website-design'
     | '/services/white-label-website-development'
@@ -198,6 +211,7 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   ProcessRoute: typeof ProcessRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
+  ServicesWhiteLabelLandingPageDesignRoute: typeof ServicesWhiteLabelLandingPageDesignRoute
   ServicesWhiteLabelWebsiteAuditRoute: typeof ServicesWhiteLabelWebsiteAuditRoute
   ServicesWhiteLabelWebsiteDesignRoute: typeof ServicesWhiteLabelWebsiteDesignRoute
   ServicesWhiteLabelWebsiteDevelopmentRoute: typeof ServicesWhiteLabelWebsiteDevelopmentRoute
@@ -292,6 +306,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesWhiteLabelWebsiteAuditRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/white-label-landing-page-design': {
+      id: '/services/white-label-landing-page-design'
+      path: '/services/white-label-landing-page-design'
+      fullPath: '/services/white-label-landing-page-design'
+      preLoaderRoute: typeof ServicesWhiteLabelLandingPageDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/seo-friendly-web-development': {
       id: '/services/seo-friendly-web-development'
       path: '/services/seo-friendly-web-development'
@@ -311,6 +332,8 @@ const rootRouteChildren: RootRouteChildren = {
   ProcessRoute: ProcessRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
     ServicesSeoFriendlyWebDevelopmentRoute,
+  ServicesWhiteLabelLandingPageDesignRoute:
+    ServicesWhiteLabelLandingPageDesignRoute,
   ServicesWhiteLabelWebsiteAuditRoute: ServicesWhiteLabelWebsiteAuditRoute,
   ServicesWhiteLabelWebsiteDesignRoute: ServicesWhiteLabelWebsiteDesignRoute,
   ServicesWhiteLabelWebsiteDevelopmentRoute:
