@@ -97,14 +97,14 @@ const audiences = [
 
 export function WhoWeHelp() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Who we help"
           title="Built for the people who sell websites"
           sub="We work exclusively with agencies, freelancers and consultants — never your clients directly."
         />
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-3 md:mt-14 md:gap-4 lg:grid-cols-3">
           {audiences.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
@@ -135,14 +135,14 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="bg-surface py-24 md:py-32">
+    <section id="services" className="bg-surface py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Services"
           title="Production-grade web development, on demand"
           sub="Everything your agency needs to deliver websites at scale — under your brand."
         />
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
           {services.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="group flex flex-col bg-background p-8 transition-colors hover:bg-surface-elevated">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink text-brand-foreground">
@@ -176,14 +176,14 @@ const reasons = [
 
 export function WhyUs() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Why agencies choose us"
           title="Operational trust, built into every project"
           sub="The reasons agency owners renew with us — quarter after quarter."
         />
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-4 md:mt-14 md:gap-6 lg:grid-cols-3">
           {reasons.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="flex gap-4 rounded-xl p-2">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-border bg-surface-elevated text-brand">
@@ -211,14 +211,14 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="bg-surface py-24 md:py-32">
+    <section id="process" className="bg-surface py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Process"
           title="A workflow built for agencies"
           sub="Predictable, transparent and engineered to make you look great in front of your clients."
         />
-        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:mt-16 lg:grid-cols-4">
           {steps.map((s) => (
             <div key={s.n} className="relative bg-background p-8">
               <div className="text-xs font-semibold tracking-[0.18em] text-brand">{s.n}</div>
@@ -244,7 +244,7 @@ const promises = [
 
 export function WhiteLabel() {
   return (
-    <section id="white-label" className="py-24 md:py-32">
+    <section id="white-label" className="py-16 md:py-32">
       <div className="container-page">
         <div className="relative overflow-hidden rounded-3xl border border-border bg-ink p-10 text-brand-foreground md:p-16">
           <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-brand/40 blur-3xl" aria-hidden />
@@ -296,14 +296,14 @@ const projects = [
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="bg-surface py-24 md:py-32">
+    <section id="portfolio" className="bg-surface py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Portfolio"
           title="Selected white label projects"
           sub="Real work delivered for agency partners — names anonymized for confidentiality."
         />
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-14 md:gap-6 lg:grid-cols-3">
           {projects.map((p) => (
             <div key={p.title} className="group overflow-hidden rounded-2xl border border-border bg-background shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-elevated">
               <div className={`relative aspect-[4/3] bg-gradient-to-br ${p.color}`}>
@@ -361,13 +361,13 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Testimonials"
           title="Agency owners, in their own words"
         />
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-14 md:gap-6 lg:grid-cols-3">
           {testimonials.map((t) => (
             <figure key={t.name} className="flex flex-col rounded-2xl border border-border bg-card p-7 shadow-soft">
               <div className="flex gap-0.5 text-brand">
@@ -393,7 +393,7 @@ export function Testimonials() {
 /* ---------- FINAL CTA ---------- */
 export function FinalCTA() {
   return (
-    <section id="contact" className="pb-24 md:pb-32">
+    <section id="contact" className="pb-20 md:pb-32">
       <div className="container-page">
         <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-surface-elevated to-brand-soft p-10 text-center md:p-20">
           <div className="absolute inset-0 bg-grid-soft opacity-60" aria-hidden />
