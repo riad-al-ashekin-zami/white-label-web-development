@@ -98,7 +98,7 @@ function PortfolioMock() {
     { tag: "Healthcare", title: "Northbridge Clinic", color: "from-emerald-100 to-emerald-50" },
     { tag: "Real Estate", title: "Harbor & Vine Realty", color: "from-amber-100 to-amber-50" },
     { tag: "Ecommerce", title: "Field Goods Co.", color: "from-rose-100 to-rose-50" },
-    { tag: "SaaS", title: "Mavenly", color: "from-indigo-100 to-indigo-50" },
+    { tag: "Legal", title: "Summit Legal Partners", color: "from-indigo-100 to-indigo-50" },
   ];
   return (
     <div className="relative">
