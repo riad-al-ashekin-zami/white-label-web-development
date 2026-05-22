@@ -5,6 +5,7 @@ import {
   CheckCircle2, Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-dashboard.jpg";
 
 /* ---------- HERO ---------- */
@@ -406,10 +407,10 @@ export function FinalCTA() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <a href="#contact">Book a Call <ArrowRight className="h-4 w-4" /></a>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full bg-background px-6">
-                <a href="#contact">Get a Free Quote</a>
+                <a href="https://calendly.com/" target="_blank" rel="noreferrer">Book a Discovery Call</a>
               </Button>
             </div>
           </div>
