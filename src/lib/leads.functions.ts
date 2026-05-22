@@ -15,9 +15,41 @@ const LeadSchema = z.object({
   preferred_contact: z.string().trim().max(60).optional().or(z.literal("")),
   nda_required: z.boolean().optional(),
   source_page: z.string().trim().max(500).optional().or(z.literal("")),
+  referrer: z.string().trim().max(500).optional().or(z.literal("")),
   // honeypot — must be empty
   company_website: z.string().max(0).optional().or(z.literal("")),
 });
+
+const FREE_EMAIL_DOMAINS = new Set([
+  "gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "live.com",
+  "icloud.com", "aol.com", "proton.me", "protonmail.com", "gmx.com", "mail.com",
+]);
+
+function scoreLead(d: z.infer<typeof LeadSchema>): "High" | "Medium" | "Low" | "Unreviewed" {
+  let score = 0;
+  const domain = d.email.split("@")[1]?.toLowerCase() ?? "";
+  const isFree = FREE_EMAIL_DOMAINS.has(domain);
+  if (!isFree) score += 2;
+  if (d.company_name && d.company_name.length > 1) score += 1;
+  if (d.website_url && d.website_url.length > 3) score += 1;
+
+  const budget = (d.budget || "").toLowerCase();
+  if (/15,?000|retainer|ongoing/.test(budget)) score += 3;
+  else if (/7,?500|7500/.test(budget)) score += 2;
+  else if (/3,?000|3000/.test(budget)) score += 1;
+  else if (/< ?\$?1,?000|<1000/.test(budget)) score -= 1;
+
+  const timeline = (d.timeline || "").toLowerCase();
+  if (/asap|week/.test(timeline)) score += 1;
+
+  if ((d.project_details || "").length > 200) score += 1;
+  if (d.nda_required) score += 1;
+
+  if (score >= 5) return "High";
+  if (score >= 2) return "Medium";
+  if (score <= 0) return "Low";
+  return "Medium";
+}
 
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/resend";
 
@@ -68,6 +100,11 @@ export const submitLead = createServerFn({ method: "POST" })
       auth: { autoRefreshToken: false, persistSession: false },
     });
 
+    const lead_score = scoreLead(data);
+    const sourceCombined = data.referrer
+      ? `${data.source_page || ""} (ref: ${data.referrer})`.slice(0, 500)
+      : data.source_page || null;
+
     const row = {
       name: data.name,
       email: data.email,
@@ -80,7 +117,8 @@ export const submitLead = createServerFn({ method: "POST" })
       project_details: data.project_details || null,
       preferred_contact: data.preferred_contact || null,
       nda_required: !!data.nda_required,
-      source_page: data.source_page || null,
+      source_page: sourceCombined,
+      lead_score,
     };
 
     const { error } = await admin.from("leads").insert(row);
@@ -105,6 +143,7 @@ export const submitLead = createServerFn({ method: "POST" })
       ["Preferred contact", row.preferred_contact || "—"],
       ["NDA required", row.nda_required ? "Yes" : "No"],
       ["Source page", row.source_page || "—"],
+      ["Lead score", lead_score],
       ["Submitted", submittedAt],
     ];
 
