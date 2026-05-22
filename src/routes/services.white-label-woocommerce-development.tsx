@@ -549,7 +549,7 @@ function Showcase() {
     { tag: "Fashion", title: "Northbrook Co.", color: "from-violet-100 via-rose-50 to-background" },
     { tag: "Subscription", title: "Field Goods Co.", color: "from-emerald-100 via-teal-50 to-background" },
     { tag: "Electronics", title: "Volt & Wire", color: "from-slate-100 via-indigo-50 to-background" },
-    { tag: "Digital", title: "Mavenly Templates", color: "from-indigo-100 via-sky-50 to-background" },
+    { tag: "Home Goods", title: "Maplewood Home Goods", color: "from-indigo-100 via-sky-50 to-background" },
     { tag: "Retail", title: "Cedar & Stone", color: "from-amber-100 via-amber-50 to-background" },
   ];
   return (
