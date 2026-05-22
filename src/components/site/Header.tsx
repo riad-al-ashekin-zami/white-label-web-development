@@ -1,34 +1,31 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, ChevronDown } from "lucide-react";
+import {
+  Menu, X, ChevronDown,
+  Code2, Globe, ShoppingCart, Search,
+  Palette, LayoutTemplate, Handshake,
+  Wrench, ShieldCheck,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
-const serviceGroups = [
-  {
-    title: "Development",
-    items: [
-      { label: "Website Development", desc: "End-to-end white label builds", to: "/services/white-label-website-development" },
-      { label: "WordPress Development", desc: "Custom themes & plugins", to: "/services/white-label-wordpress-development" },
-      { label: "WooCommerce Development", desc: "Scalable online stores", to: "/services/white-label-woocommerce-development" },
-      { label: "SEO-Friendly Development", desc: "Built to rank from day one", to: "/services/seo-friendly-web-development" },
-    ],
-  },
-  {
-    title: "Design & Growth",
-    items: [
-      { label: "Website Design", desc: "Conversion-focused UI", to: "/services/white-label-website-design" },
-      { label: "Landing Pages", desc: "High-performance pages", to: "/services/white-label-landing-page-design" },
-      { label: "For SEO Agencies", desc: "Partner program", to: "/industries/seo-agencies" },
-    ],
-  },
-  {
-    title: "Care",
-    items: [
-      { label: "Website Maintenance", desc: "Ongoing care & updates", to: "/services/white-label-website-maintenance" },
-      { label: "Website Audit", desc: "Performance & SEO review", to: "/services/white-label-website-audit" },
-    ],
-  },
+type ServiceItem = {
+  label: string;
+  desc: string;
+  to: string;
+  icon: React.ComponentType<{ className?: string }>;
+};
+
+const services: ServiceItem[] = [
+  { label: "Website Development", desc: "End-to-end white label builds.", to: "/services/white-label-website-development", icon: Code2 },
+  { label: "WordPress Development", desc: "Custom themes & plugins.", to: "/services/white-label-wordpress-development", icon: Globe },
+  { label: "WooCommerce Stores", desc: "Scalable online shops.", to: "/services/white-label-woocommerce-development", icon: ShoppingCart },
+  { label: "SEO-Friendly Builds", desc: "Engineered to rank.", to: "/services/seo-friendly-web-development", icon: Search },
+  { label: "Website Design", desc: "Conversion-focused UI.", to: "/services/white-label-website-design", icon: Palette },
+  { label: "Landing Pages", desc: "High-performance pages.", to: "/services/white-label-landing-page-design", icon: LayoutTemplate },
+  { label: "Website Maintenance", desc: "Ongoing care & updates.", to: "/services/white-label-website-maintenance", icon: Wrench },
+  { label: "Website Audit", desc: "Performance & SEO review.", to: "/services/white-label-website-audit", icon: ShieldCheck },
+  { label: "For SEO Agencies", desc: "White label partner program.", to: "/industries/seo-agencies", icon: Handshake },
 ];
 
 const nav = [
@@ -62,10 +59,11 @@ export function Header() {
       }`}
     >
       <div className="container-page flex h-16 items-center justify-between md:h-20">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Whitelayer logo" width={36} height={36} className="h-9 w-9" />
-          <span className="text-base font-semibold tracking-tight text-ink">
-            Whitelayer<span className="text-brand">.</span>
+        <Link to="/" className="flex items-center gap-2.5">
+          <img src={logo} alt="White Label Website Development logo" width={36} height={36} className="h-9 w-9" />
+          <span className="text-sm font-semibold leading-tight tracking-tight text-ink sm:text-[15px]">
+            White Label<br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>Website Development
           </span>
         </Link>
 
@@ -85,32 +83,31 @@ export function Header() {
               className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-ink"
               onClick={() => setServicesOpen((v) => !v)}
             >
-              Services <ChevronDown className="h-3.5 w-3.5" />
+              Services <ChevronDown className={`h-3.5 w-3.5 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
             {servicesOpen && (
               <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2">
-                <div className="w-[720px] overflow-hidden rounded-xl border border-border bg-background p-4 shadow-elevated">
-                  <div className="grid grid-cols-3 gap-2">
-                    {serviceGroups.map((group) => (
-                      <div key={group.title}>
-                        <div className="px-3 pb-2 pt-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                          {group.title}
-                        </div>
-                        <div className="flex flex-col">
-                          {group.items.map((s) => (
-                            <Link
-                              key={s.to}
-                              to={s.to}
-                              className="group rounded-md px-3 py-2 transition-colors hover:bg-muted"
-                              onClick={() => setServicesOpen(false)}
-                            >
-                              <div className="text-sm font-medium text-ink">{s.label}</div>
-                              <div className="text-xs text-muted-foreground">{s.desc}</div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
+                <div className="w-[640px] overflow-hidden rounded-2xl border border-border bg-background p-3 shadow-elevated">
+                  <div className="grid grid-cols-2 gap-1">
+                    {services.map((s) => {
+                      const Icon = s.icon;
+                      return (
+                        <Link
+                          key={s.to}
+                          to={s.to}
+                          className="group flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-muted"
+                          onClick={() => setServicesOpen(false)}
+                        >
+                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-brand to-brand/70 text-white shadow-sm">
+                            <Icon className="h-5 w-5" />
+                          </span>
+                          <span className="min-w-0">
+                            <span className="block text-sm font-semibold text-ink">{s.label}</span>
+                            <span className="block truncate text-xs text-muted-foreground">{s.desc}</span>
+                          </span>
+                        </Link>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -161,7 +158,7 @@ export function Header() {
               <div className="px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                 Services
               </div>
-              {serviceGroups.flatMap((g) => g.items).map((s) => (
+              {services.map((s) => (
                 <Link
                   key={s.to}
                   to={s.to}
