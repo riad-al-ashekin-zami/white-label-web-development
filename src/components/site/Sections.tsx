@@ -11,34 +11,34 @@ import heroImg from "@/assets/hero-dashboard.jpg";
 /* ---------- HERO ---------- */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 md:pt-36">
+    <section className="relative overflow-hidden pt-24 md:pt-36">
       <div className="absolute inset-0 bg-hero-glow" aria-hidden />
       <div className="absolute inset-0 bg-grid-soft" aria-hidden />
       <div className="container-page relative">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-3 py-1 text-xs font-medium text-muted-foreground shadow-soft">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-3 py-1 text-[11px] font-medium text-muted-foreground shadow-soft md:text-xs">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               Trusted by 120+ agencies worldwide
             </div>
-            <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-[64px]">
-              Your silent <span className="text-gradient-brand">white label</span> web development team.
+            <h1 className="mt-5 text-balance text-[34px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[64px] lg:leading-[1.05]">
+              Your silent <span className="text-gradient-brand">white label</span> web team.
             </h1>
-            <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Scale your agency without hiring developers. We build SEO-first, conversion-ready websites under your brand — quietly, reliably, on time.
+            <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
+              Scale your agency without hiring developers. SEO-first, conversion-ready websites built under your brand — quietly, reliably, on time.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Button asChild size="lg" className="rounded-full px-6">
-                <a href="#contact">Book a Free Call <ArrowRight className="h-4 w-4" /></a>
+            <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:mt-8">
+              <Button asChild size="lg" className="h-12 rounded-full px-6">
+                <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-6">
+              <Button asChild variant="outline" size="lg" className="h-12 rounded-full px-6">
                 <a href="#portfolio">See our work</a>
               </Button>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> NDA friendly</span>
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> No client poaching</span>
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> Dedicated PM</span>
+            <div className="mt-6 grid grid-cols-3 gap-2 text-[11px] text-muted-foreground sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-2 sm:text-xs md:mt-8">
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 shrink-0 text-brand" /> NDA friendly</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 shrink-0 text-brand" /> No poaching</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 shrink-0 text-brand" /> Dedicated PM</span>
             </div>
           </div>
 
@@ -56,17 +56,16 @@ export function Hero() {
           </div>
         </div>
 
-        {/* stats */}
-        <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4">
+        <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:mt-20 md:grid-cols-4">
           {[
             { k: "1,200+", v: "Websites delivered" },
-            { k: "5–7 days", v: "Average turnaround" },
+            { k: "5–7 days", v: "Avg turnaround" },
             { k: "120+", v: "Agency partners" },
             { k: "24/7", v: "Project support" },
           ].map((s) => (
-            <div key={s.v} className="bg-background p-6 md:p-8">
-              <div className="text-2xl font-semibold tracking-tight text-ink md:text-3xl">{s.k}</div>
-              <div className="mt-1 text-sm text-muted-foreground">{s.v}</div>
+            <div key={s.v} className="bg-background p-5 md:p-8">
+              <div className="text-xl font-semibold tracking-tight text-ink md:text-3xl">{s.k}</div>
+              <div className="mt-1 text-xs text-muted-foreground md:text-sm">{s.v}</div>
             </div>
           ))}
         </div>
