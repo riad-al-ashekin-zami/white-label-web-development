@@ -35,7 +35,7 @@ const cols: Col[] = [
       { label: "Pricing", to: "/pricing" },
       { label: "Case Studies", to: "/portfolio" },
       { label: "FAQ", to: "/contact" },
-      { label: "Privacy Policy", href: "#" },
+      { label: "Privacy Policy", to: "/privacy" },
       { label: "Terms", href: "#" },
     ],
   },
