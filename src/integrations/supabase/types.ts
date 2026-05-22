@@ -51,11 +51,13 @@ export type Database = {
       }
       leads: {
         Row: {
+          admin_email_sent: boolean
           budget: string | null
           company_name: string | null
           created_at: string
           email: string
           id: string
+          last_email_error: string | null
           lead_score: string
           name: string
           nda_required: boolean
@@ -67,14 +69,17 @@ export type Database = {
           source_page: string | null
           status: string
           timeline: string | null
+          visitor_email_sent: boolean
           website_url: string | null
         }
         Insert: {
+          admin_email_sent?: boolean
           budget?: string | null
           company_name?: string | null
           created_at?: string
           email: string
           id?: string
+          last_email_error?: string | null
           lead_score?: string
           name: string
           nda_required?: boolean
@@ -86,14 +91,17 @@ export type Database = {
           source_page?: string | null
           status?: string
           timeline?: string | null
+          visitor_email_sent?: boolean
           website_url?: string | null
         }
         Update: {
+          admin_email_sent?: boolean
           budget?: string | null
           company_name?: string | null
           created_at?: string
           email?: string
           id?: string
+          last_email_error?: string | null
           lead_score?: string
           name?: string
           nda_required?: boolean
@@ -105,6 +113,7 @@ export type Database = {
           source_page?: string | null
           status?: string
           timeline?: string | null
+          visitor_email_sent?: boolean
           website_url?: string | null
         }
         Relationships: []
