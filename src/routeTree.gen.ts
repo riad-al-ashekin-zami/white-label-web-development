@@ -26,6 +26,9 @@ import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/ser
 import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './routes/services.white-label-landing-page-design'
 import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
 import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
+import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
+import { Route as AdminLeadsIdRouteImport } from './routes/admin.leads.$id'
 
 const ThankYouRoute = ThankYouRouteImport.update({
   id: '/thank-you',
@@ -120,6 +123,21 @@ const IndustriesSeoAgenciesRoute = IndustriesSeoAgenciesRouteImport.update({
   path: '/industries/seo-agencies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLeadsRoute = AdminLeadsRouteImport.update({
+  id: '/admin/leads',
+  path: '/admin/leads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLeadsIdRoute = AdminLeadsIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AdminLeadsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -130,6 +148,8 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
   '/thank-you': typeof ThankYouRoute
+  '/admin/leads': typeof AdminLeadsRouteWithChildren
+  '/admin/login': typeof AdminLoginRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -139,6 +159,7 @@ export interface FileRoutesByFullPath {
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
   '/services/white-label-woocommerce-development': typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
+  '/admin/leads/$id': typeof AdminLeadsIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -149,6 +170,8 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
   '/thank-you': typeof ThankYouRoute
+  '/admin/leads': typeof AdminLeadsRouteWithChildren
+  '/admin/login': typeof AdminLoginRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -158,6 +181,7 @@ export interface FileRoutesByTo {
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
   '/services/white-label-woocommerce-development': typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
+  '/admin/leads/$id': typeof AdminLeadsIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -169,6 +193,8 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
   '/thank-you': typeof ThankYouRoute
+  '/admin/leads': typeof AdminLeadsRouteWithChildren
+  '/admin/login': typeof AdminLoginRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -178,6 +204,7 @@ export interface FileRoutesById {
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
   '/services/white-label-woocommerce-development': typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
+  '/admin/leads/$id': typeof AdminLeadsIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -190,6 +217,8 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/process'
     | '/thank-you'
+    | '/admin/leads'
+    | '/admin/login'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -199,6 +228,7 @@ export interface FileRouteTypes {
     | '/services/white-label-website-maintenance'
     | '/services/white-label-woocommerce-development'
     | '/services/white-label-wordpress-development'
+    | '/admin/leads/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -209,6 +239,8 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/process'
     | '/thank-you'
+    | '/admin/leads'
+    | '/admin/login'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -218,6 +250,7 @@ export interface FileRouteTypes {
     | '/services/white-label-website-maintenance'
     | '/services/white-label-woocommerce-development'
     | '/services/white-label-wordpress-development'
+    | '/admin/leads/$id'
   id:
     | '__root__'
     | '/'
@@ -228,6 +261,8 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/process'
     | '/thank-you'
+    | '/admin/leads'
+    | '/admin/login'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -237,6 +272,7 @@ export interface FileRouteTypes {
     | '/services/white-label-website-maintenance'
     | '/services/white-label-woocommerce-development'
     | '/services/white-label-wordpress-development'
+    | '/admin/leads/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -248,6 +284,8 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   ProcessRoute: typeof ProcessRoute
   ThankYouRoute: typeof ThankYouRoute
+  AdminLeadsRoute: typeof AdminLeadsRouteWithChildren
+  AdminLoginRoute: typeof AdminLoginRoute
   IndustriesSeoAgenciesRoute: typeof IndustriesSeoAgenciesRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
   ServicesWhiteLabelLandingPageDesignRoute: typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -380,8 +418,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesSeoAgenciesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/leads': {
+      id: '/admin/leads'
+      path: '/admin/leads'
+      fullPath: '/admin/leads'
+      preLoaderRoute: typeof AdminLeadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/leads/$id': {
+      id: '/admin/leads/$id'
+      path: '/$id'
+      fullPath: '/admin/leads/$id'
+      preLoaderRoute: typeof AdminLeadsIdRouteImport
+      parentRoute: typeof AdminLeadsRoute
+    }
   }
 }
+
+interface AdminLeadsRouteChildren {
+  AdminLeadsIdRoute: typeof AdminLeadsIdRoute
+}
+
+const AdminLeadsRouteChildren: AdminLeadsRouteChildren = {
+  AdminLeadsIdRoute: AdminLeadsIdRoute,
+}
+
+const AdminLeadsRouteWithChildren = AdminLeadsRoute._addFileChildren(
+  AdminLeadsRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -392,6 +463,8 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   ProcessRoute: ProcessRoute,
   ThankYouRoute: ThankYouRoute,
+  AdminLeadsRoute: AdminLeadsRouteWithChildren,
+  AdminLoginRoute: AdminLoginRoute,
   IndustriesSeoAgenciesRoute: IndustriesSeoAgenciesRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
     ServicesSeoFriendlyWebDevelopmentRoute,
