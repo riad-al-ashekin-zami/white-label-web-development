@@ -17,7 +17,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-wordpress-development")({
   head: () => ({
     meta: [
-      { title: "White Label WordPress Development for Agencies — Whitelayer" },
+      { title: "White Label WordPress Development for Agencies — White Label Website Development" },
       {
         name: "description",
         content:
@@ -555,7 +555,7 @@ function Stack() {
 /* ---------- TESTIMONIALS ---------- */
 function Testimonials() {
   const items = [
-    { quote: "We've shipped 30+ WordPress sites with Whitelayer. Clean code, reliable timelines, and our clients have no idea they exist.", name: "Marcus L.", role: "Founder, SEO Agency" },
+    { quote: "We've shipped 30+ WordPress sites with White Label Website Development. Clean code, reliable timelines, and our clients have no idea they exist.", name: "Marcus L.", role: "Founder, SEO Agency" },
     { quote: "Their WordPress expertise is the real deal — proper architecture, real SEO awareness, and zero plugin chaos.", name: "Priya S.", role: "Head of Delivery, Marketing Agency" },
     { quote: "Maintenance is where they really shine. Multi-site monitoring and updates are completely off our plate.", name: "Daniel R.", role: "Owner, Digital Agency" },
   ];

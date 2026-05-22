@@ -15,13 +15,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "White Label Portfolio & Case Studies — Whitelayer" },
+      { title: "White Label Portfolio & Case Studies — White Label Website Development" },
       {
         name: "description",
         content:
           "Explore white label websites delivered for agencies across healthcare, real estate, ecommerce, contractors and more. Reliable, scalable, agency-safe execution.",
       },
-      { property: "og:title", content: "White Label Portfolio & Case Studies — Whitelayer" },
+      { property: "og:title", content: "White Label Portfolio & Case Studies — White Label Website Development" },
       {
         property: "og:description",
         content:
@@ -98,7 +98,7 @@ function PortfolioMock() {
     { tag: "Healthcare", title: "Northbridge Clinic", color: "from-emerald-100 to-emerald-50" },
     { tag: "Real Estate", title: "Harbor & Vine Realty", color: "from-amber-100 to-amber-50" },
     { tag: "Ecommerce", title: "Field Goods Co.", color: "from-rose-100 to-rose-50" },
-    { tag: "SaaS", title: "Mavenly", color: "from-indigo-100 to-indigo-50" },
+    { tag: "Legal", title: "Summit Legal Partners", color: "from-indigo-100 to-indigo-50" },
   ];
   return (
     <div className="relative">
@@ -108,7 +108,7 @@ function PortfolioMock() {
             <span className="h-2.5 w-2.5 rounded-full bg-rose-300" />
             <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
-            <span className="ml-3">portfolio.whitelayer.app</span>
+            <span className="ml-3">portfolio.whitelabelwebsitedevelopment.com</span>
           </div>
           <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
             12 active projects
@@ -308,7 +308,7 @@ const projects = [
   { cat: "Real Estate", title: "Marigold Estates", tech: ["Custom CMS"], color: "from-rose-100 to-rose-50" },
   { cat: "Ecommerce", title: "Lumen Apothecary", tech: ["Shopify"], color: "from-violet-100 to-violet-50" },
   { cat: "Agency", title: "Ridgeline Studio", tech: ["WordPress", "Custom"], color: "from-sky-100 to-sky-50" },
-  { cat: "SaaS", title: "Mavenly Platform", tech: ["Landing System"], color: "from-indigo-100 to-indigo-50" },
+  { cat: "Dental", title: "Riverstone Dental", tech: ["WordPress", "Local SEO"], color: "from-indigo-100 to-indigo-50" },
   { cat: "Service", title: "Northwind HVAC", tech: ["WordPress", "ACF"], color: "from-teal-100 to-teal-50" },
 ];
 
@@ -608,7 +608,7 @@ function Testimonials() {
   const items = [
     {
       quote:
-        "We’ve delivered over 40 client websites with Whitelayer. The quality is consistent, communication is clean, and our clients have no idea they exist. Exactly what a white label partner should be.",
+        "We’ve delivered over 40 client websites with White Label Website Development. The quality is consistent, communication is clean, and our clients have no idea they exist. Exactly what a white label partner should be.",
       name: "Marcus L.",
       role: "Founder, SEO Agency",
     },

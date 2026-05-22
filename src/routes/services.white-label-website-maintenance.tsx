@@ -18,7 +18,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-website-maintenance")({
   head: () => ({
     meta: [
-      { title: "White Label Website Maintenance for Agencies — Whitelayer" },
+      { title: "White Label Website Maintenance for Agencies — White Label Website Development" },
       {
         name: "description",
         content:

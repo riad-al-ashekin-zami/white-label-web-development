@@ -343,17 +343,17 @@ export function Portfolio() {
 /* ---------- TESTIMONIALS ---------- */
 const testimonials = [
   {
-    quote: "They've become an extension of our team. Three years in and we've never had a missed deadline.",
+    quote: "They helped us deliver multiple client websites without overwhelming our internal team. The workflow felt more like an in-house dev department than an outside vendor.",
     name: "Hannah Reid",
     role: "Founder, Northbeam SEO",
   },
   {
-    quote: "The communication discipline is what sells me. Daily updates, no chasing, and the code is genuinely clean.",
+    quote: "Communication and turnaround were noticeably more organized than the freelancers we'd used before. Weekly check-ins, clean staging links, and revisions handled inside the scope we agreed on.",
     name: "Marcus Patel",
-    role: "MD, Field Marketing Group",
+    role: "Operations Lead, Field Marketing Group",
   },
   {
-    quote: "We doubled our website output without hiring a single developer. They're invisible to our clients — exactly as it should be.",
+    quote: "Our agency needed a reliable backend partner for WordPress and landing page work. Six months in, every project has shipped on schedule and our clients still think we built it ourselves.",
     name: "Sara Bennett",
     role: "Owner, Bennett Digital",
   },

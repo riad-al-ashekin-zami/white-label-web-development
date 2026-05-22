@@ -30,13 +30,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Get a Free Quote — Whitelayer" },
+      { title: "Contact & Get a Free Quote — White Label Website Development" },
       {
         name: "description",
         content:
           "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response — built for agencies.",
       },
-      { property: "og:title", content: "Contact Whitelayer — Free Quote for Agencies" },
+      { property: "og:title", content: "Contact White Label Website Development — Free Quote for Agencies" },
       {
         property: "og:description",
         content:
