@@ -9,13 +9,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "White Label Website Development — White Label Web Development for Agencies" },
+      { title: "White Label Website Development — Web Development Partner for Agencies" },
       {
         name: "description",
         content:
           "The invisible white label web development partner for agencies, marketers and consultants. SEO-first websites built under your brand.",
       },
-      { property: "og:title", content: "White Label Website Development — White Label Web Development for Agencies" },
+      { property: "og:title", content: "White Label Website Development — Web Development Partner for Agencies" },
       {
         property: "og:description",
         content:
