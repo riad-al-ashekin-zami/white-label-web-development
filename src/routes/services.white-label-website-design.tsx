@@ -357,7 +357,7 @@ function Process() {
 function Showcase() {
   const items = [
     { tag: "Agency", title: "Ridgeline Studio", color: "from-sky-100 via-indigo-50 to-background" },
-    { tag: "SaaS", title: "Mavenly Platform", color: "from-violet-100 via-indigo-50 to-background" },
+    { tag: "HVAC", title: "BluePeak HVAC", color: "from-sky-100 via-indigo-50 to-background" },
     { tag: "Contractor", title: "Ironclad Roofing", color: "from-slate-100 via-slate-50 to-background" },
     { tag: "Ecommerce", title: "Lumen Apothecary", color: "from-rose-100 via-amber-50 to-background" },
     { tag: "Landing", title: "Northwind Launch", color: "from-emerald-100 via-teal-50 to-background" },
