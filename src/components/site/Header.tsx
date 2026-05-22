@@ -60,10 +60,10 @@ export function Header() {
     >
       <div className="container-page flex h-16 items-center justify-between md:h-20">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo} alt="White Label Website Development logo" width={36} height={36} className="h-9 w-9" />
-          <span className="text-sm font-semibold leading-tight tracking-tight text-ink sm:text-[15px]">
-            White Label<br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>Website Development
+          <img src={logo} alt="White Label Website Development logo" width={40} height={40} className="h-10 w-10 shrink-0 object-contain" />
+          <span className="flex flex-col text-[13px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-sm">
+            <span>White Label</span>
+            <span>Website Development</span>
           </span>
         </Link>
 
