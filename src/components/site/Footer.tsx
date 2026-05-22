@@ -36,7 +36,8 @@ const cols: Col[] = [
       { label: "Case Studies", to: "/portfolio" },
       { label: "FAQ", to: "/contact" },
       { label: "Privacy Policy", to: "/privacy" },
-      { label: "Terms", href: "#" },
+      { label: "Terms of Service", to: "/terms-of-service" },
+      { label: "NDA & Confidentiality", to: "/nda-confidentiality" },
     ],
   },
   {
@@ -121,8 +122,8 @@ export function Footer() {
           <p>© {new Date().getFullYear()} White Label Website Development. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link to="/privacy" className="hover:text-ink">Privacy</Link>
-            <a href="#" className="hover:text-ink">Terms</a>
-            <a href="#" className="hover:text-ink">NDA</a>
+            <Link to="/terms-of-service" className="hover:text-ink">Terms</Link>
+            <Link to="/nda-confidentiality" className="hover:text-ink">NDA</Link>
           </div>
         </div>
       </div>

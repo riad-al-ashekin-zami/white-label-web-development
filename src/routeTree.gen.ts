@@ -10,10 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
+import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as NdaConfidentialityRouteImport } from './routes/nda-confidentiality'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
 import { Route as AboutRouteImport } from './routes/about'
@@ -36,6 +38,11 @@ const ThankYouRoute = ThankYouRouteImport.update({
   path: '/thank-you',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
+  id: '/terms-of-service',
+  path: '/terms-of-service',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
   path: '/process',
@@ -54,6 +61,11 @@ const PricingRoute = PricingRouteImport.update({
 const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NdaConfidentialityRoute = NdaConfidentialityRouteImport.update({
+  id: '/nda-confidentiality',
+  path: '/nda-confidentiality',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -150,10 +162,12 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
   '/contact': typeof ContactRoute
+  '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/process': typeof ProcessRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
   '/thank-you': typeof ThankYouRoute
   '/admin/leads': typeof AdminLeadsRouteWithChildren
   '/admin/login': typeof AdminLoginRoute
@@ -173,10 +187,12 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
   '/contact': typeof ContactRoute
+  '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/process': typeof ProcessRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
   '/thank-you': typeof ThankYouRoute
   '/admin/leads': typeof AdminLeadsRouteWithChildren
   '/admin/login': typeof AdminLoginRoute
@@ -197,10 +213,12 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
   '/contact': typeof ContactRoute
+  '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/process': typeof ProcessRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
   '/thank-you': typeof ThankYouRoute
   '/admin/leads': typeof AdminLeadsRouteWithChildren
   '/admin/login': typeof AdminLoginRoute
@@ -222,10 +240,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/agency-partner'
     | '/contact'
+    | '/nda-confidentiality'
     | '/portfolio'
     | '/pricing'
     | '/privacy'
     | '/process'
+    | '/terms-of-service'
     | '/thank-you'
     | '/admin/leads'
     | '/admin/login'
@@ -245,10 +265,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/agency-partner'
     | '/contact'
+    | '/nda-confidentiality'
     | '/portfolio'
     | '/pricing'
     | '/privacy'
     | '/process'
+    | '/terms-of-service'
     | '/thank-you'
     | '/admin/leads'
     | '/admin/login'
@@ -268,10 +290,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/agency-partner'
     | '/contact'
+    | '/nda-confidentiality'
     | '/portfolio'
     | '/pricing'
     | '/privacy'
     | '/process'
+    | '/terms-of-service'
     | '/thank-you'
     | '/admin/leads'
     | '/admin/login'
@@ -292,10 +316,12 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AgencyPartnerRoute: typeof AgencyPartnerRoute
   ContactRoute: typeof ContactRoute
+  NdaConfidentialityRoute: typeof NdaConfidentialityRoute
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   ProcessRoute: typeof ProcessRoute
+  TermsOfServiceRoute: typeof TermsOfServiceRoute
   ThankYouRoute: typeof ThankYouRoute
   AdminLeadsRoute: typeof AdminLeadsRouteWithChildren
   AdminLoginRoute: typeof AdminLoginRoute
@@ -317,6 +343,13 @@ declare module '@tanstack/react-router' {
       path: '/thank-you'
       fullPath: '/thank-you'
       preLoaderRoute: typeof ThankYouRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-of-service': {
+      id: '/terms-of-service'
+      path: '/terms-of-service'
+      fullPath: '/terms-of-service'
+      preLoaderRoute: typeof TermsOfServiceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/process': {
@@ -345,6 +378,13 @@ declare module '@tanstack/react-router' {
       path: '/portfolio'
       fullPath: '/portfolio'
       preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nda-confidentiality': {
+      id: '/nda-confidentiality'
+      path: '/nda-confidentiality'
+      fullPath: '/nda-confidentiality'
+      preLoaderRoute: typeof NdaConfidentialityRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -479,10 +519,12 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AgencyPartnerRoute: AgencyPartnerRoute,
   ContactRoute: ContactRoute,
+  NdaConfidentialityRoute: NdaConfidentialityRoute,
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   ProcessRoute: ProcessRoute,
+  TermsOfServiceRoute: TermsOfServiceRoute,
   ThankYouRoute: ThankYouRoute,
   AdminLeadsRoute: AdminLeadsRouteWithChildren,
   AdminLoginRoute: AdminLoginRoute,
