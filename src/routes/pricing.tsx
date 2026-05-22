@@ -17,13 +17,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing & Agency Plans — Whitelayer" },
+      { title: "Pricing & Agency Plans — White Label Website Development" },
       {
         name: "description",
         content:
           "Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment.",
       },
-      { property: "og:title", content: "Pricing & Agency Plans — Whitelayer" },
+      { property: "og:title", content: "Pricing & Agency Plans — White Label Website Development" },
       {
         property: "og:description",
         content:

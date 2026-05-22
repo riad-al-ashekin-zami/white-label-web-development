@@ -17,7 +17,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
-      { title: "Our White Label Workflow & Process — Whitelayer" },
+      { title: "Our White Label Workflow & Process — White Label Website Development" },
       {
         name: "description",
         content:

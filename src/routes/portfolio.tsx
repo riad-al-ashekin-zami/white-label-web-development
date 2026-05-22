@@ -15,13 +15,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "White Label Portfolio & Case Studies — Whitelayer" },
+      { title: "White Label Portfolio & Case Studies — White Label Website Development" },
       {
         name: "description",
         content:
           "Explore white label websites delivered for agencies across healthcare, real estate, ecommerce, contractors and more. Reliable, scalable, agency-safe execution.",
       },
-      { property: "og:title", content: "White Label Portfolio & Case Studies — Whitelayer" },
+      { property: "og:title", content: "White Label Portfolio & Case Studies — White Label Website Development" },
       {
         property: "og:description",
         content:
@@ -108,7 +108,7 @@ function PortfolioMock() {
             <span className="h-2.5 w-2.5 rounded-full bg-rose-300" />
             <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
-            <span className="ml-3">portfolio.whitelayer.app</span>
+            <span className="ml-3">portfolio.whitelabelwebsitedevelopment.com</span>
           </div>
           <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
             12 active projects
@@ -608,7 +608,7 @@ function Testimonials() {
   const items = [
     {
       quote:
-        "We’ve delivered over 40 client websites with Whitelayer. The quality is consistent, communication is clean, and our clients have no idea they exist. Exactly what a white label partner should be.",
+        "We’ve delivered over 40 client websites with White Label Website Development. The quality is consistent, communication is clean, and our clients have no idea they exist. Exactly what a white label partner should be.",
       name: "Marcus L.",
       role: "Founder, SEO Agency",
     },

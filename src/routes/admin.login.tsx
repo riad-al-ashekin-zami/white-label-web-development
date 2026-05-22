@@ -11,7 +11,7 @@ import { Lock, ShieldCheck } from "lucide-react";
 export const Route = createFileRoute("/admin/login")({
   head: () => ({
     meta: [
-      { title: "Admin Sign In — Whitelayer" },
+      { title: "Admin Sign In — White Label Website Development" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -68,7 +68,7 @@ function AdminLogin() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@whitelayer.com"
+                placeholder="you@agency.com"
               />
             </div>
             <div className="space-y-1.5">

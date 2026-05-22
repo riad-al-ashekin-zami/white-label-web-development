@@ -17,7 +17,7 @@ import heroImg from "@/assets/hero-dashboard.jpg";
 export const Route = createFileRoute("/services/white-label-website-development")({
   head: () => ({
     meta: [
-      { title: "White Label Website Development for Agencies — Whitelayer" },
+      { title: "White Label Website Development for Agencies — White Label Website Development" },
       {
         name: "description",
         content:
@@ -235,7 +235,7 @@ function WhyAgencies() {
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border-2 border-ink bg-card p-8 shadow-elevated">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold text-ink">Whitelayer</h3>
+              <h3 className="text-lg font-semibold text-ink">White Label Website Development</h3>
               <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">Recommended</span>
             </div>
             <ul className="mt-6 space-y-3">
