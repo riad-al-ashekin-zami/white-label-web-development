@@ -1,19 +1,35 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Layers, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
-const services = [
-  { label: "White Label Website Development", to: "/services/white-label-website-development" },
-  { label: "White Label WordPress Development", to: "/services/white-label-wordpress-development" },
-  { label: "White Label Website Design", to: "/services/white-label-website-design" },
-  { label: "White Label SEO-Friendly Web Development", to: "/services/seo-friendly-web-development" },
-  { label: "White Label Web Development for SEO Agencies", to: "/industries/seo-agencies" },
-  { label: "White Label WooCommerce Development", to: "/services/white-label-woocommerce-development" },
-  { label: "White Label Landing Page Design & Development", to: "/services/white-label-landing-page-design" },
-  { label: "White Label Website Maintenance", to: "/services/white-label-website-maintenance" },
-  { label: "White Label Website Audit", to: "/services/white-label-website-audit" },
-] as const;
+const serviceGroups = [
+  {
+    title: "Development",
+    items: [
+      { label: "Website Development", desc: "End-to-end white label builds", to: "/services/white-label-website-development" },
+      { label: "WordPress Development", desc: "Custom themes & plugins", to: "/services/white-label-wordpress-development" },
+      { label: "WooCommerce Development", desc: "Scalable online stores", to: "/services/white-label-woocommerce-development" },
+      { label: "SEO-Friendly Development", desc: "Built to rank from day one", to: "/services/seo-friendly-web-development" },
+    ],
+  },
+  {
+    title: "Design & Growth",
+    items: [
+      { label: "Website Design", desc: "Conversion-focused UI", to: "/services/white-label-website-design" },
+      { label: "Landing Pages", desc: "High-performance pages", to: "/services/white-label-landing-page-design" },
+      { label: "For SEO Agencies", desc: "Partner program", to: "/industries/seo-agencies" },
+    ],
+  },
+  {
+    title: "Care",
+    items: [
+      { label: "Website Maintenance", desc: "Ongoing care & updates", to: "/services/white-label-website-maintenance" },
+      { label: "Website Audit", desc: "Performance & SEO review", to: "/services/white-label-website-audit" },
+    ],
+  },
+];
 
 const nav = [
   { label: "Home", to: "/" },
@@ -47,9 +63,7 @@ export function Header() {
     >
       <div className="container-page flex h-16 items-center justify-between md:h-20">
         <Link to="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-ink text-brand-foreground">
-            <Layers className="h-4 w-4" />
-          </span>
+          <img src={logo} alt="Whitelayer logo" width={36} height={36} className="h-9 w-9" />
           <span className="text-base font-semibold tracking-tight text-ink">
             Whitelayer<span className="text-brand">.</span>
           </span>
@@ -60,7 +74,7 @@ export function Header() {
             Home
           </Link>
 
-          {/* Services dropdown */}
+          {/* Services mega-menu */}
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -74,18 +88,30 @@ export function Header() {
               Services <ChevronDown className="h-3.5 w-3.5" />
             </button>
             {servicesOpen && (
-              <div className="absolute left-0 top-full w-[380px] pt-2">
-                <div className="overflow-hidden rounded-xl border border-border bg-background p-2 shadow-elevated">
-                  {services.map((s) => (
-                    <Link
-                      key={s.to}
-                      to={s.to}
-                      className="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-ink"
-                      onClick={() => setServicesOpen(false)}
-                    >
-                      {s.label}
-                    </Link>
-                  ))}
+              <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2">
+                <div className="w-[720px] overflow-hidden rounded-xl border border-border bg-background p-4 shadow-elevated">
+                  <div className="grid grid-cols-3 gap-2">
+                    {serviceGroups.map((group) => (
+                      <div key={group.title}>
+                        <div className="px-3 pb-2 pt-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                          {group.title}
+                        </div>
+                        <div className="flex flex-col">
+                          {group.items.map((s) => (
+                            <Link
+                              key={s.to}
+                              to={s.to}
+                              className="group rounded-md px-3 py-2 transition-colors hover:bg-muted"
+                              onClick={() => setServicesOpen(false)}
+                            >
+                              <div className="text-sm font-medium text-ink">{s.label}</div>
+                              <div className="text-xs text-muted-foreground">{s.desc}</div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
@@ -105,7 +131,7 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Button asChild className="rounded-full px-5">
-            <Link to="/contact">Book a Free Call</Link>
+            <Link to="/contact">Get a Free Quote</Link>
           </Button>
         </div>
 
@@ -135,7 +161,7 @@ export function Header() {
               <div className="px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                 Services
               </div>
-              {services.map((s) => (
+              {serviceGroups.flatMap((g) => g.items).map((s) => (
                 <Link
                   key={s.to}
                   to={s.to}
@@ -147,7 +173,7 @@ export function Header() {
               ))}
             </div>
             <Button asChild className="mt-3 rounded-full">
-              <Link to="/contact" onClick={() => setOpen(false)}>Book a Free Call</Link>
+              <Link to="/contact" onClick={() => setOpen(false)}>Get a Free Quote</Link>
             </Button>
           </div>
         </div>

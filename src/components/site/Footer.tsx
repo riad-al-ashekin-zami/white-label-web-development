@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Layers, Linkedin, Twitter, Github, Mail, ArrowRight } from "lucide-react";
+import { Linkedin, Twitter, Github, Mail, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 type Col = { title: string; links: { label: string; to?: string; href?: string }[] };
 
@@ -70,9 +71,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div>
             <Link to="/" className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-ink text-brand-foreground">
-                <Layers className="h-4 w-4" />
-              </span>
+              <img src={logo} alt="Whitelayer logo" width={36} height={36} loading="lazy" className="h-9 w-9" />
               <span className="text-base font-semibold tracking-tight text-ink">
                 Whitelayer<span className="text-brand">.</span>
               </span>
