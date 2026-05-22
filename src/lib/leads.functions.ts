@@ -1,6 +1,10 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
+import {
+  adminLeadEmail,
+  visitorConfirmationEmail,
+} from "./email-templates";
 
 const LeadSchema = z.object({
   name: z.string().trim().min(1).max(120),
@@ -53,38 +57,45 @@ function scoreLead(d: z.infer<typeof LeadSchema>): "High" | "Medium" | "Low" | "
 
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/resend";
 
+type SendResult = { ok: true } | { ok: false; error: string };
+
 async function sendEmail(payload: {
   from: string;
   to: string[];
   subject: string;
   html: string;
   reply_to?: string;
-}) {
+}): Promise<SendResult> {
   const LOVABLE_API_KEY = process.env.LOVABLE_API_KEY;
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
   if (!LOVABLE_API_KEY || !RESEND_API_KEY) {
-    console.warn("Resend keys missing — skipping email send");
-    return;
+    const error = "Email service not configured (missing API keys)";
+    console.warn(error);
+    return { ok: false, error };
   }
-  const res = await fetch(`${GATEWAY_URL}/emails`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${LOVABLE_API_KEY}`,
-      "X-Connection-Api-Key": RESEND_API_KEY,
-    },
-    body: JSON.stringify(payload),
-  });
-  if (!res.ok) {
-    const body = await res.text();
-    console.error(`Resend send failed [${res.status}]: ${body}`);
+  try {
+    const res = await fetch(`${GATEWAY_URL}/emails`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${LOVABLE_API_KEY}`,
+        "X-Connection-Api-Key": RESEND_API_KEY,
+      },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      const body = await res.text();
+      const error = `Resend ${res.status}: ${body.slice(0, 300)}`;
+      console.error(error);
+      return { ok: false, error };
+    }
+    return { ok: true };
+  } catch (e) {
+    const error = e instanceof Error ? e.message : String(e);
+    console.error("Resend network error:", error);
+    return { ok: false, error };
   }
 }
-
-const escapeHtml = (s: string) =>
-  s.replace(/[&<>"']/g, (c) =>
-    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!,
-  );
 
 export const submitLead = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => LeadSchema.parse(input))
@@ -121,89 +132,90 @@ export const submitLead = createServerFn({ method: "POST" })
       lead_score,
     };
 
-    const { error } = await admin.from("leads").insert(row);
-    if (error) {
+    const { data: inserted, error } = await admin
+      .from("leads")
+      .insert(row)
+      .select("id")
+      .single();
+
+    if (error || !inserted) {
       console.error("Lead insert failed:", error);
       throw new Error("Could not save your request. Please try again.");
     }
 
+    const leadId = inserted.id as string;
     const FROM = process.env.EMAIL_FROM || "Whitelayer <onboarding@resend.dev>";
     const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+    const APP_URL =
+      process.env.APP_URL ||
+      process.env.SITE_URL ||
+      "https://whitelayer.lovable.app";
+    const CALENDLY_URL = process.env.CALENDLY_URL || "https://calendly.com/";
     const submittedAt = new Date().toISOString();
 
-    const rows: [string, string][] = [
-      ["Name", row.name],
-      ["Email", row.email],
-      ["Phone", row.phone || "—"],
-      ["Company", row.company_name || "—"],
-      ["Website", row.website_url || "—"],
-      ["Service", row.service_needed || "—"],
-      ["Budget", row.budget || "—"],
-      ["Timeline", row.timeline || "—"],
-      ["Preferred contact", row.preferred_contact || "—"],
-      ["NDA required", row.nda_required ? "Yes" : "No"],
-      ["Source page", row.source_page || "—"],
-      ["Lead score", lead_score],
-      ["Submitted", submittedAt],
-    ];
+    const adminTpl = adminLeadEmail({
+      name: row.name,
+      email: row.email,
+      phone: row.phone,
+      company_name: row.company_name,
+      website_url: row.website_url,
+      service_needed: row.service_needed,
+      budget: row.budget,
+      timeline: row.timeline,
+      preferred_contact: row.preferred_contact,
+      nda_required: row.nda_required,
+      source_page: row.source_page,
+      lead_score,
+      project_details: row.project_details,
+      submitted_at: submittedAt,
+      dashboard_url: `${APP_URL.replace(/\/$/, "")}/admin/leads/${leadId}`,
+    });
 
-    const adminHtml = `
-      <div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#111">
-        <h2 style="margin:0 0 16px">New White Label Lead Received</h2>
-        <table style="width:100%;border-collapse:collapse;font-size:14px">
-          ${rows
-            .map(
-              ([k, v]) =>
-                `<tr><td style="padding:8px 10px;border-bottom:1px solid #eee;color:#666;width:160px">${escapeHtml(k)}</td><td style="padding:8px 10px;border-bottom:1px solid #eee">${escapeHtml(v)}</td></tr>`,
-            )
-            .join("")}
-        </table>
-        <h3 style="margin:20px 0 8px">Project details</h3>
-        <p style="white-space:pre-wrap;font-size:14px;line-height:1.55;background:#f7f7f8;padding:14px;border-radius:8px">${escapeHtml(row.project_details || "—")}</p>
-      </div>`;
+    const visitorTpl = visitorConfirmationEmail({
+      name: row.name,
+      service_needed: row.service_needed,
+      budget: row.budget,
+      timeline: row.timeline,
+      company_name: row.company_name,
+      calendly_url: CALENDLY_URL,
+    });
 
-    const visitorHtml = `
-      <div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#111">
-        <h2 style="margin:0 0 12px">We received your project request</h2>
-        <p style="font-size:15px;line-height:1.6;color:#333">Hi ${escapeHtml(row.name.split(" ")[0] || "there")},</p>
-        <p style="font-size:15px;line-height:1.6;color:#333">
-          Thanks for reaching out to Whitelayer. We received your project request and our team
-          will review the details and get back to you within one business day.
-        </p>
-        <p style="font-size:15px;line-height:1.6;color:#333">
-          If you want to move faster, you can also book a discovery call directly:
-        </p>
-        <p style="margin:18px 0">
-          <a href="https://calendly.com/" style="background:#111;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600">Book a discovery call</a>
-        </p>
-        <p style="font-size:14px;color:#666;line-height:1.6">
-          We look forward to learning more about your agency and how we can support your client projects.
-        </p>
-        <p style="font-size:14px;color:#666;margin-top:24px">— The Whitelayer Team</p>
-      </div>`;
-
-    // Fire-and-forget so a slow Resend doesn't block the redirect.
-    const sends: Promise<void>[] = [];
-    if (ADMIN_EMAIL) {
-      sends.push(
-        sendEmail({
+    const adminPromise = ADMIN_EMAIL
+      ? sendEmail({
           from: FROM,
           to: [ADMIN_EMAIL],
-          subject: "New White Label Lead Received",
-          html: adminHtml,
+          subject: adminTpl.subject,
+          html: adminTpl.html,
           reply_to: row.email,
-        }),
-      );
+        })
+      : Promise.resolve<SendResult>({ ok: false, error: "ADMIN_EMAIL not configured" });
+
+    const visitorPromise = sendEmail({
+      from: FROM,
+      to: [row.email],
+      subject: visitorTpl.subject,
+      html: visitorTpl.html,
+    });
+
+    const [adminRes, visitorRes] = await Promise.all([adminPromise, visitorPromise]);
+
+    const errors: string[] = [];
+    if (!adminRes.ok) errors.push(`admin: ${adminRes.error}`);
+    if (!visitorRes.ok) errors.push(`visitor: ${visitorRes.error}`);
+
+    // Best-effort status update — never block the user flow.
+    try {
+      await admin
+        .from("leads")
+        .update({
+          admin_email_sent: adminRes.ok,
+          visitor_email_sent: visitorRes.ok,
+          last_email_error: errors.length ? errors.join(" | ").slice(0, 1000) : null,
+        })
+        .eq("id", leadId);
+    } catch (e) {
+      console.error("Lead email status update failed:", e);
     }
-    sends.push(
-      sendEmail({
-        from: FROM,
-        to: [row.email],
-        subject: "We Received Your Project Request",
-        html: visitorHtml,
-      }),
-    );
-    await Promise.allSettled(sends);
 
     return { ok: true };
   });
