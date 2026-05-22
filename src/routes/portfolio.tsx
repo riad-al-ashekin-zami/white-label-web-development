@@ -308,7 +308,7 @@ const projects = [
   { cat: "Real Estate", title: "Marigold Estates", tech: ["Custom CMS"], color: "from-rose-100 to-rose-50" },
   { cat: "Ecommerce", title: "Lumen Apothecary", tech: ["Shopify"], color: "from-violet-100 to-violet-50" },
   { cat: "Agency", title: "Ridgeline Studio", tech: ["WordPress", "Custom"], color: "from-sky-100 to-sky-50" },
-  { cat: "SaaS", title: "Mavenly Platform", tech: ["Landing System"], color: "from-indigo-100 to-indigo-50" },
+  { cat: "Dental", title: "Riverstone Dental", tech: ["WordPress", "Local SEO"], color: "from-indigo-100 to-indigo-50" },
   { cat: "Service", title: "Northwind HVAC", tech: ["WordPress", "ACF"], color: "from-teal-100 to-teal-50" },
 ];
 
