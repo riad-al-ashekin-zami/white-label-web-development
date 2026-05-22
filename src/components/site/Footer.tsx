@@ -42,11 +42,12 @@ const cols: Col[] = [
   {
     title: "Contact",
     links: [
-      { label: "Email us", href: "mailto:hello@whitelayer.com" },
+      { label: "Email us", href: "mailto:hello@whitelabelwebsitedevelopment.com" },
       { label: "Book a call", href: "https://calendly.com/" },
       { label: "Get a quote", to: "/contact" },
     ],
   },
+
 ];
 
 export function Footer() {
@@ -70,12 +71,13 @@ export function Footer() {
 
         <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div>
-            <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="Whitelayer logo" width={36} height={36} loading="lazy" className="h-9 w-9" />
-              <span className="text-base font-semibold tracking-tight text-ink">
-                Whitelayer<span className="text-brand">.</span>
+            <Link to="/" className="flex items-center gap-2.5">
+              <img src={logo} alt="White Label Website Development logo" width={36} height={36} loading="lazy" className="h-9 w-9" />
+              <span className="text-[15px] font-semibold leading-tight tracking-tight text-ink">
+                White Label<br />Website Development
               </span>
             </Link>
+
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
               The invisible white label web development partner for agencies, marketers and consultants. Your brand. Our execution.
             </p>
@@ -115,7 +117,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Whitelayer. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} White Label Website Development. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-ink">Privacy Policy</a>
             <a href="#" className="hover:text-ink">Terms of Service</a>
