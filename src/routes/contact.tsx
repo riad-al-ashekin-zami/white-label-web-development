@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
+import { submitLead } from "@/lib/leads.functions";
 import { z } from "zod";
 import { toast } from "sonner";
 import {
@@ -173,8 +175,10 @@ function MultiStepForm() {
   const [step, setStep] = useState(0);
   const [data, setData] = useState<FormData>(initial);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [hp, setHp] = useState("");
+  const navigate = useNavigate();
+  const send = useServerFn(submitLead);
 
   const update = <K extends keyof FormData>(k: K, v: FormData[K]) => {
     setData((d) => ({ ...d, [k]: v }));
@@ -200,30 +204,37 @@ function MultiStepForm() {
   const submit = async () => {
     if (!validateStep()) return;
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 700));
-    setSubmitting(false);
-    setSubmitted(true);
-    toast.success("Request received", { description: "We'll reply within one business day." });
+    try {
+      await send({
+        data: {
+          name: data.name,
+          email: data.email,
+          phone: "",
+          company_name: data.agency,
+          website_url: data.website,
+          service_needed: data.service,
+          budget: data.budget,
+          timeline: data.timeline,
+          project_details: [
+            data.description,
+            data.features ? `\n\nKey features: ${data.features}` : "",
+            data.references ? `\n\nReferences: ${data.references}` : "",
+            `\n\nProject type: ${data.projectType} | Pages: ${data.pages} | Platform: ${data.platform}`,
+            `\nMaintenance: ${data.maintenance} | White-label: ${data.whiteLabel}`,
+          ].join(""),
+          preferred_contact: data.comms,
+          nda_required: data.nda,
+          source_page: typeof window !== "undefined" ? window.location.pathname : "/contact",
+          company_website: hp,
+        },
+      });
+      navigate({ to: "/thank-you" });
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong. Please try again or contact us directly.");
+      setSubmitting(false);
+    }
   };
-
-  if (submitted) {
-    return (
-      <div className="rounded-xl bg-background p-10 text-center">
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
-          <CheckCircle2 className="h-7 w-7" />
-        </div>
-        <h3 className="mt-6 text-2xl font-semibold text-ink">Request received</h3>
-        <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-          Thanks {data.name.split(" ")[0] || "there"} — your project brief landed in our queue. A PM will reach you at <span className="font-medium text-ink">{data.email}</span> within one business day.
-        </p>
-        <div className="mt-8 flex justify-center gap-3">
-          <Button variant="outline" className="rounded-full" onClick={() => { setSubmitted(false); setStep(0); setData(initial); }}>
-            Submit another
-          </Button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="rounded-xl bg-background p-6 md:p-8">
