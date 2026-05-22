@@ -120,7 +120,7 @@ export function Footer() {
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:mt-14 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} White Label Website Development. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <a href="#" className="hover:text-ink">Privacy</a>
+            <Link to="/privacy" className="hover:text-ink">Privacy</Link>
             <a href="#" className="hover:text-ink">Terms</a>
             <a href="#" className="hover:text-ink">NDA</a>
           </div>
