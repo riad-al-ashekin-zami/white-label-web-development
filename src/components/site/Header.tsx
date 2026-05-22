@@ -142,34 +142,44 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
-          <div className="container-page flex flex-col gap-1 py-4">
-            {nav.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-ink"
-              >
-                {item.label}
-              </Link>
-            ))}
-            <div className="mt-2 border-t border-border pt-2">
-              <div className="px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                Services
-              </div>
-              {services.map((s) => (
+        <div className="animate-fade-in border-t border-border bg-background lg:hidden">
+          <div className="container-page max-h-[calc(100dvh-4rem)] overflow-y-auto py-4">
+            <div className="flex flex-col gap-0.5">
+              {nav.map((item) => (
                 <Link
-                  key={s.to}
-                  to={s.to}
+                  key={item.to}
+                  to={item.to}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-ink"
+                  className="rounded-lg px-3 py-3 text-[15px] font-medium text-ink active:bg-muted"
                 >
-                  {s.label}
+                  {item.label}
                 </Link>
               ))}
             </div>
-            <Button asChild className="mt-3 rounded-full">
+            <div className="mt-4 border-t border-border pt-4">
+              <div className="px-1 pb-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                Services
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {services.map((s) => {
+                  const Icon = s.icon;
+                  return (
+                    <Link
+                      key={s.to}
+                      to={s.to}
+                      onClick={() => setOpen(false)}
+                      className="flex items-start gap-2 rounded-xl border border-border bg-surface-elevated p-3 active:scale-[0.98]"
+                    >
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-brand to-brand/70 text-white">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span className="text-[13px] font-medium leading-tight text-ink">{s.label}</span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+            <Button asChild className="mt-5 h-12 w-full rounded-full">
               <Link to="/contact" onClick={() => setOpen(false)}>Get a Free Quote</Link>
             </Button>
           </div>

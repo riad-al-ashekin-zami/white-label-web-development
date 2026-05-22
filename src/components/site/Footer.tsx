@@ -52,60 +52,61 @@ const cols: Col[] = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
-      <div className="container-page py-16">
+    <footer className="border-t border-border bg-surface pb-24 lg:pb-0">
+      <div className="container-page py-12 md:py-16">
         {/* Footer CTA */}
-        <div className="mb-14 flex flex-col items-start justify-between gap-5 rounded-2xl border border-border bg-surface-elevated p-7 md:flex-row md:items-center md:p-10">
+        <div className="mb-10 flex flex-col items-start justify-between gap-4 rounded-2xl border border-border bg-surface-elevated p-5 md:mb-14 md:flex-row md:items-center md:gap-5 md:p-10">
           <div>
-            <h3 className="text-balance text-2xl font-semibold tracking-tight text-ink md:text-3xl">
+            <h3 className="text-balance text-xl font-semibold tracking-tight text-ink md:text-3xl">
               Need a reliable white label partner?
             </h3>
             <p className="mt-2 text-sm text-muted-foreground">
               Send us your project. We'll reply within one business day.
             </p>
           </div>
-          <Button asChild size="lg" className="rounded-full px-6">
+          <Button asChild size="lg" className="h-12 w-full rounded-full px-6 md:w-auto">
             <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
           </Button>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
-          <div>
-            <Link to="/" className="flex items-center gap-2.5">
-              <img src={logo} alt="White Label Website Development logo" width={36} height={36} loading="lazy" className="h-9 w-9" />
-              <span className="text-[15px] font-semibold leading-tight tracking-tight text-ink">
-                White Label<br />Website Development
-              </span>
-            </Link>
-
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              The invisible white label web development partner for agencies, marketers and consultants. Your brand. Our execution.
-            </p>
-            <div className="mt-6 flex items-center gap-2">
-              {[Linkedin, Twitter, Github, Mail].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:border-ink hover:text-ink"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
+        {/* Brand */}
+        <div className="mb-10 md:mb-12">
+          <Link to="/" className="flex items-center gap-2.5">
+            <img src={logo} alt="White Label Website Development logo" width={36} height={36} loading="lazy" className="h-9 w-9" />
+            <span className="text-[15px] font-semibold leading-tight tracking-tight text-ink">
+              White Label<br />Website Development
+            </span>
+          </Link>
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+            The invisible white label web development partner for agencies, marketers and consultants. Your brand. Our execution.
+          </p>
+          <div className="mt-5 flex items-center gap-2">
+            {[Linkedin, Twitter, Github, Mail].map((Icon, i) => (
+              <a
+                key={i}
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:border-ink hover:text-ink"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
           </div>
+        </div>
 
+        {/* Link columns: 2-col on mobile, 4-col on desktop */}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4 md:gap-10">
           {cols.map((col) => (
             <div key={col.title}>
               <h4 className="text-sm font-semibold text-ink">{col.title}</h4>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-3 space-y-2.5 md:mt-4 md:space-y-3">
                 {col.links.map((l) => (
                   <li key={l.label}>
                     {l.to ? (
-                      <Link to={l.to} className="text-sm text-muted-foreground transition-colors hover:text-ink">
+                      <Link to={l.to} className="block text-[13px] leading-snug text-muted-foreground transition-colors hover:text-ink">
                         {l.label}
                       </Link>
                     ) : (
-                      <a href={l.href} className="text-sm text-muted-foreground transition-colors hover:text-ink">
+                      <a href={l.href} className="block text-[13px] leading-snug text-muted-foreground transition-colors hover:text-ink">
                         {l.label}
                       </a>
                     )}
@@ -116,11 +117,11 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:mt-14 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} White Label Website Development. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-ink">Privacy Policy</a>
-            <a href="#" className="hover:text-ink">Terms of Service</a>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <a href="#" className="hover:text-ink">Privacy</a>
+            <a href="#" className="hover:text-ink">Terms</a>
             <a href="#" className="hover:text-ink">NDA</a>
           </div>
         </div>

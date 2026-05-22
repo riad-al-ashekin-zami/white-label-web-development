@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import faviconUrl from "@/assets/logo.png?url";
+import { MobileCTABar } from "@/components/site/MobileCTABar";
 
 function NotFoundComponent() {
   return (
@@ -121,6 +122,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
+      <MobileCTABar />
     </QueryClientProvider>
   );
 }

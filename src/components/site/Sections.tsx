@@ -11,34 +11,34 @@ import heroImg from "@/assets/hero-dashboard.jpg";
 /* ---------- HERO ---------- */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 md:pt-36">
+    <section className="relative overflow-hidden pt-24 md:pt-36">
       <div className="absolute inset-0 bg-hero-glow" aria-hidden />
       <div className="absolute inset-0 bg-grid-soft" aria-hidden />
       <div className="container-page relative">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-3 py-1 text-xs font-medium text-muted-foreground shadow-soft">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-3 py-1 text-[11px] font-medium text-muted-foreground shadow-soft md:text-xs">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               Trusted by 120+ agencies worldwide
             </div>
-            <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-[64px]">
-              Your silent <span className="text-gradient-brand">white label</span> web development team.
+            <h1 className="mt-5 text-balance text-[34px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[64px] lg:leading-[1.05]">
+              Your silent <span className="text-gradient-brand">white label</span> web team.
             </h1>
-            <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Scale your agency without hiring developers. We build SEO-first, conversion-ready websites under your brand — quietly, reliably, on time.
+            <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
+              Scale your agency without hiring developers. SEO-first, conversion-ready websites built under your brand — quietly, reliably, on time.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Button asChild size="lg" className="rounded-full px-6">
-                <a href="#contact">Book a Free Call <ArrowRight className="h-4 w-4" /></a>
+            <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:mt-8">
+              <Button asChild size="lg" className="h-12 rounded-full px-6">
+                <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-6">
+              <Button asChild variant="outline" size="lg" className="h-12 rounded-full px-6">
                 <a href="#portfolio">See our work</a>
               </Button>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> NDA friendly</span>
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> No client poaching</span>
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> Dedicated PM</span>
+            <div className="mt-6 grid grid-cols-3 gap-2 text-[11px] text-muted-foreground sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-2 sm:text-xs md:mt-8">
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 shrink-0 text-brand" /> NDA friendly</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 shrink-0 text-brand" /> No poaching</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 shrink-0 text-brand" /> Dedicated PM</span>
             </div>
           </div>
 
@@ -56,17 +56,16 @@ export function Hero() {
           </div>
         </div>
 
-        {/* stats */}
-        <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4">
+        <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:mt-20 md:grid-cols-4">
           {[
             { k: "1,200+", v: "Websites delivered" },
-            { k: "5–7 days", v: "Average turnaround" },
+            { k: "5–7 days", v: "Avg turnaround" },
             { k: "120+", v: "Agency partners" },
             { k: "24/7", v: "Project support" },
           ].map((s) => (
-            <div key={s.v} className="bg-background p-6 md:p-8">
-              <div className="text-2xl font-semibold tracking-tight text-ink md:text-3xl">{s.k}</div>
-              <div className="mt-1 text-sm text-muted-foreground">{s.v}</div>
+            <div key={s.v} className="bg-background p-5 md:p-8">
+              <div className="text-xl font-semibold tracking-tight text-ink md:text-3xl">{s.k}</div>
+              <div className="mt-1 text-xs text-muted-foreground md:text-sm">{s.v}</div>
             </div>
           ))}
         </div>
@@ -79,9 +78,9 @@ export function Hero() {
 function SectionHeader({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
   return (
     <div className="mx-auto max-w-2xl text-center">
-      <div className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">{eyebrow}</div>
-      <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-ink md:text-4xl">{title}</h2>
-      {sub && <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">{sub}</p>}
+      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand md:text-xs">{eyebrow}</div>
+      <h2 className="mt-3 text-balance text-[26px] font-semibold leading-tight tracking-tight text-ink sm:text-3xl md:text-4xl">{title}</h2>
+      {sub && <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground md:mt-4 md:text-base">{sub}</p>}
     </div>
   );
 }
@@ -98,18 +97,18 @@ const audiences = [
 
 export function WhoWeHelp() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Who we help"
           title="Built for the people who sell websites"
           sub="We work exclusively with agencies, freelancers and consultants — never your clients directly."
         />
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-3 md:mt-14 md:gap-4 lg:grid-cols-3">
           {audiences.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="group rounded-2xl border border-border bg-card p-6 transition-all hover:border-ink/20 hover:shadow-soft"
+              className="group rounded-2xl border border-border bg-card p-4 transition-all hover:border-ink/20 hover:shadow-soft md:p-6"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand">
                 <Icon className="h-5 w-5" />
@@ -136,16 +135,16 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="bg-surface py-24 md:py-32">
+    <section id="services" className="bg-surface py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Services"
           title="Production-grade web development, on demand"
           sub="Everything your agency needs to deliver websites at scale — under your brand."
         />
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
           {services.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="group flex flex-col bg-background p-8 transition-colors hover:bg-surface-elevated">
+            <div key={title} className="group flex flex-col bg-background p-5 transition-colors hover:bg-surface-elevated md:p-8">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink text-brand-foreground">
                 <Icon className="h-5 w-5" />
               </div>
@@ -177,14 +176,14 @@ const reasons = [
 
 export function WhyUs() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Why agencies choose us"
           title="Operational trust, built into every project"
           sub="The reasons agency owners renew with us — quarter after quarter."
         />
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-4 md:mt-14 md:gap-6 lg:grid-cols-3">
           {reasons.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="flex gap-4 rounded-xl p-2">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-border bg-surface-elevated text-brand">
@@ -212,16 +211,16 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="bg-surface py-24 md:py-32">
+    <section id="process" className="bg-surface py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Process"
           title="A workflow built for agencies"
           sub="Predictable, transparent and engineered to make you look great in front of your clients."
         />
-        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:mt-16 lg:grid-cols-4">
           {steps.map((s) => (
-            <div key={s.n} className="relative bg-background p-8">
+            <div key={s.n} className="relative bg-background p-5 md:p-8">
               <div className="text-xs font-semibold tracking-[0.18em] text-brand">{s.n}</div>
               <h3 className="mt-4 text-lg font-semibold text-ink">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
@@ -245,7 +244,7 @@ const promises = [
 
 export function WhiteLabel() {
   return (
-    <section id="white-label" className="py-24 md:py-32">
+    <section id="white-label" className="py-16 md:py-32">
       <div className="container-page">
         <div className="relative overflow-hidden rounded-3xl border border-border bg-ink p-10 text-brand-foreground md:p-16">
           <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-brand/40 blur-3xl" aria-hidden />
@@ -297,14 +296,14 @@ const projects = [
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="bg-surface py-24 md:py-32">
+    <section id="portfolio" className="bg-surface py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Portfolio"
           title="Selected white label projects"
           sub="Real work delivered for agency partners — names anonymized for confidentiality."
         />
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-14 md:gap-6 lg:grid-cols-3">
           {projects.map((p) => (
             <div key={p.title} className="group overflow-hidden rounded-2xl border border-border bg-background shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-elevated">
               <div className={`relative aspect-[4/3] bg-gradient-to-br ${p.color}`}>
@@ -362,13 +361,13 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
           eyebrow="Testimonials"
           title="Agency owners, in their own words"
         />
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-14 md:gap-6 lg:grid-cols-3">
           {testimonials.map((t) => (
             <figure key={t.name} className="flex flex-col rounded-2xl border border-border bg-card p-7 shadow-soft">
               <div className="flex gap-0.5 text-brand">
@@ -394,7 +393,7 @@ export function Testimonials() {
 /* ---------- FINAL CTA ---------- */
 export function FinalCTA() {
   return (
-    <section id="contact" className="pb-24 md:pb-32">
+    <section id="contact" className="pb-20 md:pb-32">
       <div className="container-page">
         <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-surface-elevated to-brand-soft p-10 text-center md:p-20">
           <div className="absolute inset-0 bg-grid-soft opacity-60" aria-hidden />
