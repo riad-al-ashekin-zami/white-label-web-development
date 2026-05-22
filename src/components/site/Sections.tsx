@@ -108,7 +108,7 @@ export function WhoWeHelp() {
           {audiences.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="group rounded-2xl border border-border bg-card p-6 transition-all hover:border-ink/20 hover:shadow-soft"
+              className="group rounded-2xl border border-border bg-card p-4 transition-all hover:border-ink/20 hover:shadow-soft md:p-6"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand">
                 <Icon className="h-5 w-5" />
@@ -144,7 +144,7 @@ export function Services() {
         />
         <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
           {services.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="group flex flex-col bg-background p-8 transition-colors hover:bg-surface-elevated">
+            <div key={title} className="group flex flex-col bg-background p-5 transition-colors hover:bg-surface-elevated md:p-8">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink text-brand-foreground">
                 <Icon className="h-5 w-5" />
               </div>
@@ -220,7 +220,7 @@ export function Process() {
         />
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:mt-16 lg:grid-cols-4">
           {steps.map((s) => (
-            <div key={s.n} className="relative bg-background p-8">
+            <div key={s.n} className="relative bg-background p-5 md:p-8">
               <div className="text-xs font-semibold tracking-[0.18em] text-brand">{s.n}</div>
               <h3 className="mt-4 text-lg font-semibold text-ink">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
