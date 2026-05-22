@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
@@ -26,6 +27,11 @@ import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './route
 import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
 import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
 
+const ThankYouRoute = ThankYouRouteImport.update({
+  id: '/thank-you',
+  path: '/thank-you',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
   path: '/process',
@@ -123,6 +129,7 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
+  '/thank-you': typeof ThankYouRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -141,6 +148,7 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
+  '/thank-you': typeof ThankYouRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -160,6 +168,7 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
+  '/thank-you': typeof ThankYouRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -180,6 +189,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/process'
+    | '/thank-you'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -198,6 +208,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/process'
+    | '/thank-you'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -216,6 +227,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/process'
+    | '/thank-you'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -235,6 +247,7 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   ProcessRoute: typeof ProcessRoute
+  ThankYouRoute: typeof ThankYouRoute
   IndustriesSeoAgenciesRoute: typeof IndustriesSeoAgenciesRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
   ServicesWhiteLabelLandingPageDesignRoute: typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -248,6 +261,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/thank-you': {
+      id: '/thank-you'
+      path: '/thank-you'
+      fullPath: '/thank-you'
+      preLoaderRoute: typeof ThankYouRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/process': {
       id: '/process'
       path: '/process'
@@ -371,6 +391,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   ProcessRoute: ProcessRoute,
+  ThankYouRoute: ThankYouRoute,
   IndustriesSeoAgenciesRoute: IndustriesSeoAgenciesRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
     ServicesSeoFriendlyWebDevelopmentRoute,
@@ -390,13 +411,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
