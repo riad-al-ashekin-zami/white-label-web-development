@@ -224,7 +224,8 @@ function MultiStepForm() {
           ].join(""),
           preferred_contact: data.comms,
           nda_required: data.nda,
-          source_page: typeof window !== "undefined" ? window.location.pathname : "/contact",
+          source_page: typeof window !== "undefined" ? window.location.pathname + window.location.search : "/contact",
+          referrer: typeof document !== "undefined" ? document.referrer : "",
           company_website: hp,
         },
       });
