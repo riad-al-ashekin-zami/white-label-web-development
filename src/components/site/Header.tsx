@@ -29,7 +29,7 @@ const serviceGroups = [
       { label: "Website Audit", desc: "Performance & SEO review", to: "/services/white-label-website-audit" },
     ],
   },
-] as const;
+];
 
 const nav = [
   { label: "Home", to: "/" },
