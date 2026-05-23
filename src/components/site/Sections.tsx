@@ -25,14 +25,14 @@ export function Hero() {
               <span className="text-gradient-brand">White Label Website Development</span> for agencies.
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
-              Scale your agency without hiring developers. SEO-first, conversion-ready websites built under your brand — quietly, reliably, on time.
+              A dedicated white label web development partner for SEO agencies, marketing teams, and consultants — WordPress, WooCommerce, and landing pages built under your brand, SEO-ready, and Core Web Vitals optimized.
             </p>
             <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:mt-8">
               <Button asChild size="lg" className="h-12 rounded-full px-6">
                 <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-12 rounded-full px-6">
-                <a href="#portfolio">See our work</a>
+                <Link to="/portfolio">See agency projects</Link>
               </Button>
             </div>
             <div className="mt-6 grid grid-cols-3 gap-2 text-[11px] text-muted-foreground sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-2 sm:text-xs md:mt-8">
