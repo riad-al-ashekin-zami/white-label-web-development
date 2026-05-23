@@ -66,10 +66,10 @@ function Hero() {
               Built for SEO Agencies
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              SEO-focused web development <span className="text-brand">under your brand</span>.
+              <span className="text-brand">White Label Web Development for SEO Agencies</span> that need reliable backend delivery.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              A specialized backend development partner for SEO agencies — technical SEO, Core Web Vitals, local and multi-location architecture, all delivered fully white label.
+              A specialized SEO agency backend development partner — technical SEO implementation, multi-location architecture, local landing pages and Core Web Vitals work, all shipped quietly under your brand so your strategy team can keep selling and scaling.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
