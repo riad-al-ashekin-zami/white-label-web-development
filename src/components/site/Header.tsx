@@ -17,7 +17,7 @@ type ServiceItem = {
 };
 
 const services: ServiceItem[] = [
-  { label: "Website Development", desc: "End-to-end white label builds.", to: "/services/white-label-website-development", icon: Code2 },
+  { label: "Website Development", desc: "End-to-end white label builds.", to: "/", icon: Code2 },
   { label: "WordPress Development", desc: "Custom themes & plugins.", to: "/services/white-label-wordpress-development", icon: Globe },
   { label: "WooCommerce Stores", desc: "Scalable online shops.", to: "/services/white-label-woocommerce-development", icon: ShoppingCart },
   { label: "SEO-Friendly Builds", desc: "Engineered to rank.", to: "/services/seo-friendly-web-development", icon: Search },

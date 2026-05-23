@@ -22,7 +22,7 @@ export function Hero() {
               Trusted by 120+ agencies worldwide
             </div>
             <h1 className="mt-5 text-balance text-[34px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[64px] lg:leading-[1.05]">
-              Your silent <span className="text-gradient-brand">white label</span> web team.
+              <span className="text-gradient-brand">White Label Website Development</span> for agencies.
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
               Scale your agency without hiring developers. SEO-first, conversion-ready websites built under your brand — quietly, reliably, on time.
