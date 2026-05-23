@@ -66,10 +66,10 @@ function Hero() {
               SEO-Friendly Web Development
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              Web development built for <span className="text-brand">rankings, speed &amp; conversions</span>.
+              <span className="text-brand">SEO-Friendly Web Development</span> for agencies that rank, load fast and convert.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              SEO-aware white label development for agencies. Core Web Vitals, schema, semantic HTML and crawl-ready architecture — delivered cleanly under your brand.
+              Technical SEO web development built for SEO and marketing agencies — semantic HTML, schema, crawl-ready architecture and Core Web Vitals tuning shipped cleanly under your brand. Hand your team a site that's already optimized on day one.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
