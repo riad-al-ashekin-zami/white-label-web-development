@@ -270,6 +270,8 @@ const faqs = [
   { q: "How fast is your turnaround?", a: "Most websites ship in 5–7 business days. Larger custom builds get a committed timeline before kickoff." },
   { q: "How do revisions work?", a: "Each project includes two structured revision rounds with annotated feedback. Additional rounds are quoted upfront — no scope creep." },
   { q: "Do you provide ongoing maintenance?", a: "Yes. We offer monthly maintenance plans covering updates, backups, security patches and content edits." },
+  { q: "Do you work with agencies remotely across North America?", a: "Yes. We partner with SEO, marketing and digital agencies across the United States, Canada and worldwide. Our team overlaps with both US Eastern and Pacific business hours, so daily standups and async updates fit your workflow." },
+  { q: "Can you handle multi-location and local SEO websites?", a: "Yes. We build scalable city-page architectures, service-area templates and multi-location WordPress sites engineered for local SEO — schema, internal linking and Core Web Vitals included." },
 ];
 
 export function FAQ() {

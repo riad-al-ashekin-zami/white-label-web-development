@@ -127,15 +127,15 @@ function HeroAndForm() {
               Let's build your <span className="text-gradient-brand">next client project</span>.
             </h1>
             <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Tell us about a one-off build, an ongoing white label partnership, or a maintenance plan for your client portfolio. We respond within one business day.
+              Tell us about a one-off build, an ongoing white label partnership, or a maintenance plan for your client portfolio. We work remotely with agencies across the United States, Canada and worldwide — and respond within one business day.
             </p>
             <ul className="mt-8 space-y-3">
               {[
                 { icon: Timer, label: "Response within 1 business day" },
                 { icon: FileLock2, label: "NDA friendly — sent before kickoff" },
                 { icon: EyeOff, label: "100% white label delivery" },
-                { icon: Headphones, label: "Dedicated PM on every engagement" },
-                { icon: Workflow, label: "Agency-focused operational workflow" },
+                { icon: Headphones, label: "Dedicated PM, US Eastern & Pacific overlap" },
+                { icon: Workflow, label: "Remote agency-focused workflow" },
               ].map(({ icon: Icon, label }) => (
                 <li key={label} className="flex items-center gap-3 text-sm text-ink">
                   <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface-elevated text-brand">

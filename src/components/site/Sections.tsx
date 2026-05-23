@@ -25,7 +25,7 @@ export function Hero() {
               <span className="text-gradient-brand">White Label Website Development</span> for agencies.
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
-              A dedicated white label web development partner for SEO agencies, marketing teams, and consultants — WordPress, WooCommerce, and landing pages built under your brand, SEO-ready, and Core Web Vitals optimized.
+              A dedicated white label web development partner for SEO agencies, marketing teams and consultants across North America and globally — WordPress, WooCommerce and landing pages built under your brand, SEO-ready, Core Web Vitals optimized and delivered remotely.
             </p>
             <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:mt-8">
               <Button asChild size="lg" className="h-12 rounded-full px-6">

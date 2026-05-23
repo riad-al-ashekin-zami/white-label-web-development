@@ -110,7 +110,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               logo: `${SITE_URL}/favicon.png`,
               sameAs: [],
               description:
-                "White label website development partner for SEO, marketing and digital agencies. NDA-friendly, SEO-ready builds delivered under your brand.",
+                "White label website development partner for SEO, marketing and digital agencies across North America and globally. Remote, NDA-friendly, SEO-ready builds delivered under your brand.",
+              areaServed: [
+                { "@type": "Country", name: "United States" },
+                { "@type": "Country", name: "Canada" },
+                { "@type": "Place", name: "North America" },
+                { "@type": "Place", name: "Global" },
+              ],
+              knowsAbout: [
+                "White label website development",
+                "White label WordPress development",
+                "White label WooCommerce development",
+                "SEO-friendly web development",
+                "Technical SEO implementation",
+                "Core Web Vitals optimization",
+                "Multi-location and local SEO websites",
+                "White label landing page design",
+                "White label website maintenance",
+              ],
             },
             {
               "@type": "WebSite",
