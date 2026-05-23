@@ -31,7 +31,7 @@ export const Route = createFileRoute("/pricing")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Pricing\", \"item\": \"https://whitelabelwebsitedevelopment.com/pricing\"}]}, {\"@type\": \"WebPage\", \"name\": \"Pricing & Agency Plans \\— White Label Website Development\", \"description\": \"Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment.\", \"url\": \"https://whitelabelwebsitedevelopment.com/pricing\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Pricing\", \"item\": \"https://whitelabelwebsitedevelopment.com/pricing\"}]}, {\"@type\": \"WebPage\", \"name\": \"Pricing & Agency Plans \— White Label Website Development\", \"description\": \"Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment.\", \"url\": \"https://whitelabelwebsitedevelopment.com/pricing\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
