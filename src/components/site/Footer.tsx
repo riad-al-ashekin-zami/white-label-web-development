@@ -119,7 +119,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:mt-14 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} White Label Website Development. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} White Label Website Development. Remote white label fulfillment for agencies across the USA, Canada and globally.</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link to="/privacy" className="hover:text-ink">Privacy</Link>
             <Link to="/terms-of-service" className="hover:text-ink">Terms</Link>
