@@ -66,10 +66,10 @@ function Hero() {
               White Label Website Design
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              Premium UI/UX design <span className="text-brand">delivered under your brand</span>.
+              <span className="text-brand">White Label Website Design</span> for agencies, freelancers and studios.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Outsource website design to a modern, agency-first team — conversion-focused layouts, responsive UI, and clean visual systems your clients will love.
+              Outsource web design to a modern, agency-first studio. Conversion-focused UI, responsive layouts and developer-ready Figma files delivered under your agency brand — so your team ships premium design without expanding payroll.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
