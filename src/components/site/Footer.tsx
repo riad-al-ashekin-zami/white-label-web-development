@@ -19,7 +19,7 @@ const cols: Col[] = [
   {
     title: "Services",
     links: [
-      { label: "White Label Website Development", to: "/services/white-label-website-development" },
+      { label: "White Label Website Development", to: "/" },
       { label: "WordPress Development", to: "/services/white-label-wordpress-development" },
       { label: "Website Design", to: "/services/white-label-website-design" },
       { label: "SEO-Friendly Development", to: "/services/seo-friendly-web-development" },
