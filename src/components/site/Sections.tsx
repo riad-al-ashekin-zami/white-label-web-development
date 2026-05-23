@@ -262,7 +262,7 @@ export function WhiteLabel() {
               </p>
               <div className="mt-8">
                 <Button asChild size="lg" className="rounded-full bg-background px-6 text-ink hover:bg-background/90">
-                  <a href="#contact">Request our NDA <ArrowRight className="h-4 w-4" /></a>
+                  <Link to="/nda-confidentiality">Request our NDA <ArrowRight className="h-4 w-4" /></Link>
                 </Button>
               </div>
             </div>
