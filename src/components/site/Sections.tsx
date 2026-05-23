@@ -125,12 +125,12 @@ export function WhoWeHelp() {
 
 /* ---------- SERVICES ---------- */
 const services = [
-  { icon: Code2, title: "White Label WordPress", desc: "Custom themes, ACF, Elementor or Gutenberg — built clean and fully editable." },
-  { icon: MonitorSmartphone, title: "Website Design", desc: "Modern, conversion-focused designs delivered in Figma or directly to dev." },
-  { icon: ShoppingCart, title: "WooCommerce Development", desc: "Scalable storefronts with payments, shipping and inventory wired in." },
-  { icon: Rocket, title: "Landing Page Development", desc: "High-converting pages built for ad campaigns, launches and lead gen." },
-  { icon: Wrench, title: "Website Maintenance", desc: "Updates, backups, security patches and content edits — handled monthly." },
-  { icon: Gauge, title: "Speed Optimization", desc: "Core Web Vitals tuned, lighthouse scores you can sell to your clients." },
+  { icon: Code2, title: "White Label WordPress Development", desc: "Custom themes, ACF, Elementor or Gutenberg — clean, editable, SEO-ready.", to: "/services/white-label-wordpress-development" },
+  { icon: MonitorSmartphone, title: "White Label Website Design", desc: "Modern, conversion-focused web design delivered in Figma or to dev.", to: "/services/white-label-website-design" },
+  { icon: ShoppingCart, title: "White Label WooCommerce Development", desc: "Scalable storefronts with payments, shipping and inventory wired in.", to: "/services/white-label-woocommerce-development" },
+  { icon: Rocket, title: "White Label Landing Page Design", desc: "High-converting landing pages for ad campaigns, launches and lead gen.", to: "/services/white-label-landing-page-design" },
+  { icon: Wrench, title: "White Label Website Maintenance", desc: "Updates, backups, security patches and content edits — handled monthly.", to: "/services/white-label-website-maintenance" },
+  { icon: Gauge, title: "SEO-Friendly Web Development", desc: "Core Web Vitals tuned, schema-ready code, Lighthouse scores you can sell.", to: "/services/seo-friendly-web-development" },
 ];
 
 export function Services() {
@@ -138,21 +138,21 @@ export function Services() {
     <section id="services" className="bg-surface py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
-          eyebrow="Services"
-          title="Production-grade web development, on demand"
-          sub="Everything your agency needs to deliver websites at scale — under your brand."
+          eyebrow="White label services"
+          title="Production-grade web development for agencies, on demand"
+          sub="Everything your agency needs to deliver WordPress, WooCommerce, and landing page projects at scale — under your brand."
         />
         <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
-          {services.map(({ icon: Icon, title, desc }) => (
+          {services.map(({ icon: Icon, title, desc, to }) => (
             <div key={title} className="group flex flex-col bg-background p-5 transition-colors hover:bg-surface-elevated md:p-8">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink text-brand-foreground">
                 <Icon className="h-5 w-5" />
               </div>
               <h3 className="mt-6 text-lg font-semibold text-ink">{title}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-              <a href="#contact" className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand">
-                Learn more <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-              </a>
+              <Link to={to} className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand">
+                Explore service <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+              </Link>
             </div>
           ))}
         </div>
