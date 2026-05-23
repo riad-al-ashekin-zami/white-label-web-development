@@ -25,8 +25,8 @@ export const Route = createFileRoute("/")({
         content:
           "Scale your agency without hiring developers. SEO-ready white label website development delivered under your brand.",
       },
-      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/" } as never,
     ],
+    links: [{ rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/" }],
   }),
   component: Index,
 });
