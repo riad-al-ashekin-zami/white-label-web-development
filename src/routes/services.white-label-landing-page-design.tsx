@@ -66,10 +66,10 @@ function Hero() {
               White Label Landing Pages
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              High-converting landing pages <span className="text-brand">under your brand</span>.
+              <span className="text-brand">White Label Landing Page Design</span> &amp; development for PPC and lead-gen campaigns.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Conversion-focused landing pages built fast for agencies running PPC, local SEO and lead generation campaigns — fully white label, mobile-first and campaign-ready.
+              Conversion-focused landing page development for agencies running paid ads, local SEO and outbound campaigns. Mobile-first builds, fast deploys, A/B-ready structure — quietly delivered under your agency brand.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
