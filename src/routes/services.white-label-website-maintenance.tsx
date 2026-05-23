@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight, AlertTriangle, Clock, ShieldAlert, Plug, Zap, Bug, MailWarning, Users as UsersIcon,
   ShieldCheck, Activity, Bell, Workflow, FileBarChart2, Headphones, Search,
