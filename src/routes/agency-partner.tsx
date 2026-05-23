@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight, Handshake, TrendingUp, UserMinus, Workflow, Layers as LayersIcon, Search,
   Wrench, Gauge, ShieldCheck, MessageSquareOff, Users as UsersIcon, Coins,
