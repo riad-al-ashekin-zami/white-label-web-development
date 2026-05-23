@@ -17,20 +17,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-website-design")({
   head: () => ({
     meta: [
-      { title: "White Label Website Design for Agencies — White Label Website Development" },
+      { title: "White Label Website Design for Agencies \u2014 White Label Website Development" },
+      { name: "description", content: "Premium white label website design for SEO, marketing, branding and creative agencies. Modern UI/UX, conversion-focused layouts, responsive \u2014 delivered under your brand." },
+      { property: "og:title", content: "White Label Website Design for Agencies \u2014 White Label Website Development" },
+      { property: "og:description", content: "Premium white label website design for SEO, marketing, branding and creative agencies. Modern UI/UX, conversion-focused layouts, responsive \u2014 delivered under your brand." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-website-design" },
+      { name: "twitter:title", content: "White Label Website Design for Agencies \u2014 White Label Website Development" },
+      { name: "twitter:description", content: "Premium white label website design for SEO, marketing, branding and creative agencies. Modern UI/UX, conversion-focused layouts, responsive \u2014 delivered under your brand." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-website-design" },
+    ],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Premium white label website design for SEO, marketing, branding and creative agencies. Modern UI/UX, conversion-focused layouts, responsive — delivered under your brand.",
-      },
-      { property: "og:title", content: "White Label Website Design for Agencies" },
-      {
-        property: "og:description",
-        content:
-          "Scale your agency with premium UI/UX design. NDA-friendly, conversion-focused, fully under your brand.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Services\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"White Label Website Design\", \"item\": \"https://whitelabelwebsitedevelopment.com/services/white-label-website-design\"}]}, {\"@type\": \"Service\", \"name\": \"White Label Website Design\", \"description\": \"Conversion-focused white label website design delivered in Figma or directly to development.\", \"url\": \"https://whitelabelwebsitedevelopment.com/services/white-label-website-design\", \"provider\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#organization\"}, \"areaServed\": \"Global\", \"serviceType\": \"White Label Website Design\", \"audience\": {\"@type\": \"Audience\", \"audienceType\": \"Marketing and SEO agencies\"}}]}",
       },
     ],
   }),
+  
   component: DesignPage,
 });
 

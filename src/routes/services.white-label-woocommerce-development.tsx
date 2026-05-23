@@ -18,20 +18,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-woocommerce-development")({
   head: () => ({
     meta: [
-      { title: "White Label WooCommerce & Ecommerce Development — White Label Website Development" },
+      { title: "White Label WooCommerce & Ecommerce Development \u2014 White Label Website Development" },
+      { name: "description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance \u2014 under your brand." },
+      { property: "og:title", content: "White Label WooCommerce & Ecommerce Development \u2014 White Label Website Development" },
+      { property: "og:description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance \u2014 under your brand." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-woocommerce-development" },
+      { name: "twitter:title", content: "White Label WooCommerce & Ecommerce Development \u2014 White Label Website Development" },
+      { name: "twitter:description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance \u2014 under your brand." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-woocommerce-development" },
+    ],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance — under your brand.",
-      },
-      { property: "og:title", content: "White Label WooCommerce & Ecommerce Development" },
-      {
-        property: "og:description",
-        content:
-          "Scale your agency with expert white label ecommerce fulfillment. NDA-friendly, conversion-focused, fully under your brand.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Services\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"White Label WooCommerce Development\", \"item\": \"https://whitelabelwebsitedevelopment.com/services/white-label-woocommerce-development\"}]}, {\"@type\": \"Service\", \"name\": \"White Label WooCommerce Development\", \"description\": \"Scalable WooCommerce storefronts with payments, shipping and inventory, built under your agency brand.\", \"url\": \"https://whitelabelwebsitedevelopment.com/services/white-label-woocommerce-development\", \"provider\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#organization\"}, \"areaServed\": \"Global\", \"serviceType\": \"White Label WooCommerce Development\", \"audience\": {\"@type\": \"Audience\", \"audienceType\": \"Marketing and SEO agencies\"}}]}",
       },
     ],
   }),
+  
   component: EcomPage,
 });
 

@@ -18,20 +18,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-website-maintenance")({
   head: () => ({
     meta: [
-      { title: "White Label Website Maintenance for Agencies — White Label Website Development" },
+      { title: "White Label Website Maintenance for Agencies \u2014 White Label Website Development" },
+      { name: "description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes \u2014 delivered under your brand." },
+      { property: "og:title", content: "White Label Website Maintenance for Agencies \u2014 White Label Website Development" },
+      { property: "og:description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes \u2014 delivered under your brand." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance" },
+      { name: "twitter:title", content: "White Label Website Maintenance for Agencies \u2014 White Label Website Development" },
+      { name: "twitter:description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes \u2014 delivered under your brand." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance" },
+    ],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes — delivered under your brand.",
-      },
-      { property: "og:title", content: "White Label Website Maintenance for Agencies" },
-      {
-        property: "og:description",
-        content:
-          "Outsource client website maintenance under your brand. Proactive monitoring, fast support, white label reports.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Services\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"White Label Website Maintenance\", \"item\": \"https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance\"}]}, {\"@type\": \"Service\", \"name\": \"White Label Website Maintenance\", \"description\": \"Monthly white label website maintenance, updates, backups, security patches and content edits for agencies.\", \"url\": \"https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance\", \"provider\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#organization\"}, \"areaServed\": \"Global\", \"serviceType\": \"White Label Website Maintenance\", \"audience\": {\"@type\": \"Audience\", \"audienceType\": \"Marketing and SEO agencies\"}}]}",
       },
     ],
   }),
+  
   component: MaintenancePage,
 });
 

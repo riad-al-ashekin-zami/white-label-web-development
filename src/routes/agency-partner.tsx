@@ -18,20 +18,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/agency-partner")({
   head: () => ({
     meta: [
-      { title: "Agency Partner Program — White Label Website Development White Label Partnership" },
+      { title: "Agency Partner Program \u2014 White Label Website Development White Label Partnership" },
+      { name: "description", content: "Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching." },
+      { property: "og:title", content: "Agency Partner Program \u2014 White Label Website Development White Label Partnership" },
+      { property: "og:description", content: "Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/agency-partner" },
+      { name: "twitter:title", content: "Agency Partner Program \u2014 White Label Website Development White Label Partnership" },
+      { name: "twitter:description", content: "Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/agency-partner" },
+    ],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching.",
-      },
-      { property: "og:title", content: "Agency Partner Program — White Label Website Development" },
-      {
-        property: "og:description",
-        content:
-          "The reliable backend fulfillment partner for SEO, marketing and digital agencies.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Agency Partner\", \"item\": \"https://whitelabelwebsitedevelopment.com/agency-partner\"}]}, {\"@type\": \"WebPage\", \"name\": \"Agency Partner Program \\u2014 White Label Website Development White Label Partnership\", \"description\": \"Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching.\", \"url\": \"https://whitelabelwebsitedevelopment.com/agency-partner\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
+  
   component: AgencyPartnerPage,
 });
 

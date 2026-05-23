@@ -18,20 +18,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-website-audit")({
   head: () => ({
     meta: [
-      { title: "White Label Website Audit & Technical Review — White Label Website Development" },
+      { title: "White Label Website Audit & Technical Review \u2014 White Label Website Development" },
+      { name: "description", content: "Professional white label website audits for agencies \u2014 technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand." },
+      { property: "og:title", content: "White Label Website Audit & Technical Review \u2014 White Label Website Development" },
+      { property: "og:description", content: "Professional white label website audits for agencies \u2014 technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-website-audit" },
+      { name: "twitter:title", content: "White Label Website Audit & Technical Review \u2014 White Label Website Development" },
+      { name: "twitter:description", content: "Professional white label website audits for agencies \u2014 technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-website-audit" },
+    ],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Professional white label website audits for agencies — technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand.",
-      },
-      { property: "og:title", content: "White Label Website Audit & Technical Review" },
-      {
-        property: "og:description",
-        content:
-          "Outsource technical website audits to a reliable white label partner. Agency-ready reports, deep technical analysis, actionable recommendations.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Services\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"White Label Website Audit\", \"item\": \"https://whitelabelwebsitedevelopment.com/services/white-label-website-audit\"}]}, {\"@type\": \"Service\", \"name\": \"White Label Website Audit\", \"description\": \"Performance, SEO and accessibility website audits delivered as white label reports to agencies.\", \"url\": \"https://whitelabelwebsitedevelopment.com/services/white-label-website-audit\", \"provider\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#organization\"}, \"areaServed\": \"Global\", \"serviceType\": \"White Label Website Audit\", \"audience\": {\"@type\": \"Audience\", \"audienceType\": \"Marketing and SEO agencies\"}}]}",
       },
     ],
   }),
+  
   component: AuditPage,
 });
 
