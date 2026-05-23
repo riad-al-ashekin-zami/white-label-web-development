@@ -21,6 +21,9 @@ const HOME_FAQS = [
   { q: "What platforms do you build on?", a: "WordPress (custom themes, ACF, Gutenberg, Elementor), WooCommerce, Webflow, Shopify, and custom React/Next.js stacks." },
   { q: "How fast is your turnaround?", a: "Most websites ship in 5–7 business days. Larger custom builds get a committed timeline before kickoff." },
   { q: "How do revisions work?", a: "Each project includes two structured revision rounds with annotated feedback. Additional rounds are quoted upfront — no scope creep." },
+  { q: "Do you work with agencies remotely across North America?", a: "Yes. We work fully remote and partner with agencies across the United States, Canada and worldwide. Our team overlaps with both US Eastern and Pacific business hours for synchronous communication." },
+  { q: "Can you handle multi-location and local SEO websites?", a: "Yes. We build scalable city-page architectures, service-area templates and multi-location WordPress sites engineered for local SEO — schema, internal linking and Core Web Vitals included." },
+  { q: "Do you support SEO agencies with technical SEO implementation?", a: "Absolutely. SEO agencies are our core audience. We implement technical SEO recommendations, semantic HTML, structured data and performance fixes directly into the build." },
 ];
 
 export const Route = createFileRoute("/")({
