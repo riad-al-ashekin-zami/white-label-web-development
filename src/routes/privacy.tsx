@@ -24,7 +24,7 @@ export const Route = createFileRoute("/privacy")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Privacy Policy\", \"item\": \"https://whitelabelwebsitedevelopment.com/privacy\"}]}, {\"@type\": \"WebPage\", \"name\": \"Privacy Policy \— White Label Website Development\", \"description\": \"How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default.\", \"url\": \"https://whitelabelwebsitedevelopment.com/privacy\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Privacy Policy\", \"item\": \"https://whitelabelwebsitedevelopment.com/privacy\"}]}, {\"@type\": \"WebPage\", \"name\": \"Privacy Policy — White Label Website Development\", \"description\": \"How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default.\", \"url\": \"https://whitelabelwebsitedevelopment.com/privacy\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),

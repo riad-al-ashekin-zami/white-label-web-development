@@ -44,7 +44,7 @@ export const Route = createFileRoute("/contact")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Contact\", \"item\": \"https://whitelabelwebsitedevelopment.com/contact\"}]}, {\"@type\": \"ContactPage\", \"name\": \"Contact & Get a Free Quote \— White Label Website Development\", \"description\": \"Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response \— built for agencies.\", \"url\": \"https://whitelabelwebsitedevelopment.com/contact\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Contact\", \"item\": \"https://whitelabelwebsitedevelopment.com/contact\"}]}, {\"@type\": \"ContactPage\", \"name\": \"Contact & Get a Free Quote — White Label Website Development\", \"description\": \"Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response — built for agencies.\", \"url\": \"https://whitelabelwebsitedevelopment.com/contact\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
