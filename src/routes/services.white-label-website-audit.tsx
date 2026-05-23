@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { RelatedServices } from "@/components/site/RelatedServices";
 
 export const Route = createFileRoute("/services/white-label-website-audit")({
   head: () => ({
@@ -742,6 +743,7 @@ function AuditPage() {
         <Testimonials />
         <FAQ />
         <CTA />
+        <RelatedServices currentKey="audit" />
       </main>
       <Footer />
     </div>

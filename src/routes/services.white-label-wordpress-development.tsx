@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { RelatedServices } from "@/components/site/RelatedServices";
 
 export const Route = createFileRoute("/services/white-label-wordpress-development")({
   head: () => ({
@@ -670,6 +671,7 @@ function WPPage() {
         <Testimonials />
         <FAQ />
         <CTA />
+        <RelatedServices currentKey="wordpress" />
       </main>
       <Footer />
     </div>

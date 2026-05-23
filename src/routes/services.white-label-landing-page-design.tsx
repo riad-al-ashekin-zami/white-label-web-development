@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { RelatedServices } from "@/components/site/RelatedServices";
 
 export const Route = createFileRoute("/services/white-label-landing-page-design")({
   head: () => ({
@@ -688,6 +689,7 @@ function LandingPage() {
         <Testimonials />
         <FAQ />
         <CTA />
+        <RelatedServices currentKey="landing" />
       </main>
       <Footer />
     </div>
