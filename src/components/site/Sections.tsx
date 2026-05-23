@@ -47,7 +47,7 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-2xl border border-border bg-surface-elevated p-2 shadow-elevated">
               <img
                 src={heroImg}
-                alt="Agency project workflow dashboard"
+                alt="White label web development workflow dashboard for agency project delivery"
                 width={1280}
                 height={960}
                 className="h-auto w-full rounded-xl"
