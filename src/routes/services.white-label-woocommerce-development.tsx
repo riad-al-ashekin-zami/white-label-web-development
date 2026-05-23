@@ -67,10 +67,10 @@ function Hero() {
               White Label WooCommerce &amp; Ecommerce
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              Reliable ecommerce development <span className="text-brand">under your brand</span>.
+              <span className="text-brand">White Label WooCommerce Development</span> for agencies and ecommerce consultants.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Scalable WooCommerce and Shopify fulfillment for agencies — conversion-focused stores, optimized checkout, secure payments and long-term maintenance.
+              Scalable WooCommerce stores built for agencies — conversion-optimized checkout, mobile-first product pages, ecommerce SEO and payment integrations. Delivered as a white label backend partner your team can resell with confidence.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
