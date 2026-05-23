@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { RelatedServices } from "@/components/site/RelatedServices";
 
 export const Route = createFileRoute("/services/seo-friendly-web-development")({
   head: () => ({
@@ -735,6 +736,7 @@ function SEOPage() {
         <Testimonials />
         <FAQ />
         <CTA />
+        <RelatedServices currentKey="seo" />
       </main>
       <Footer />
     </div>

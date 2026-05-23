@@ -25,14 +25,14 @@ export function Hero() {
               <span className="text-gradient-brand">White Label Website Development</span> for agencies.
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
-              Scale your agency without hiring developers. SEO-first, conversion-ready websites built under your brand — quietly, reliably, on time.
+              A dedicated white label web development partner for SEO agencies, marketing teams, and consultants — WordPress, WooCommerce, and landing pages built under your brand, SEO-ready, and Core Web Vitals optimized.
             </p>
             <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:mt-8">
               <Button asChild size="lg" className="h-12 rounded-full px-6">
                 <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-12 rounded-full px-6">
-                <a href="#portfolio">See our work</a>
+                <Link to="/portfolio">See agency projects</Link>
               </Button>
             </div>
             <div className="mt-6 grid grid-cols-3 gap-2 text-[11px] text-muted-foreground sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-2 sm:text-xs md:mt-8">
@@ -47,7 +47,7 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-2xl border border-border bg-surface-elevated p-2 shadow-elevated">
               <img
                 src={heroImg}
-                alt="Agency project workflow dashboard"
+                alt="White label web development workflow dashboard for agency project delivery"
                 width={1280}
                 height={960}
                 className="h-auto w-full rounded-xl"
@@ -125,12 +125,12 @@ export function WhoWeHelp() {
 
 /* ---------- SERVICES ---------- */
 const services = [
-  { icon: Code2, title: "White Label WordPress", desc: "Custom themes, ACF, Elementor or Gutenberg — built clean and fully editable." },
-  { icon: MonitorSmartphone, title: "Website Design", desc: "Modern, conversion-focused designs delivered in Figma or directly to dev." },
-  { icon: ShoppingCart, title: "WooCommerce Development", desc: "Scalable storefronts with payments, shipping and inventory wired in." },
-  { icon: Rocket, title: "Landing Page Development", desc: "High-converting pages built for ad campaigns, launches and lead gen." },
-  { icon: Wrench, title: "Website Maintenance", desc: "Updates, backups, security patches and content edits — handled monthly." },
-  { icon: Gauge, title: "Speed Optimization", desc: "Core Web Vitals tuned, lighthouse scores you can sell to your clients." },
+  { icon: Code2, title: "White Label WordPress Development", desc: "Custom themes, ACF, Elementor or Gutenberg — clean, editable, SEO-ready.", to: "/services/white-label-wordpress-development" },
+  { icon: MonitorSmartphone, title: "White Label Website Design", desc: "Modern, conversion-focused web design delivered in Figma or to dev.", to: "/services/white-label-website-design" },
+  { icon: ShoppingCart, title: "White Label WooCommerce Development", desc: "Scalable storefronts with payments, shipping and inventory wired in.", to: "/services/white-label-woocommerce-development" },
+  { icon: Rocket, title: "White Label Landing Page Design", desc: "High-converting landing pages for ad campaigns, launches and lead gen.", to: "/services/white-label-landing-page-design" },
+  { icon: Wrench, title: "White Label Website Maintenance", desc: "Updates, backups, security patches and content edits — handled monthly.", to: "/services/white-label-website-maintenance" },
+  { icon: Gauge, title: "SEO-Friendly Web Development", desc: "Core Web Vitals tuned, schema-ready code, Lighthouse scores you can sell.", to: "/services/seo-friendly-web-development" },
 ];
 
 export function Services() {
@@ -138,21 +138,21 @@ export function Services() {
     <section id="services" className="bg-surface py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
-          eyebrow="Services"
-          title="Production-grade web development, on demand"
-          sub="Everything your agency needs to deliver websites at scale — under your brand."
+          eyebrow="White label services"
+          title="Production-grade web development for agencies, on demand"
+          sub="Everything your agency needs to deliver WordPress, WooCommerce, and landing page projects at scale — under your brand."
         />
         <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
-          {services.map(({ icon: Icon, title, desc }) => (
+          {services.map(({ icon: Icon, title, desc, to }) => (
             <div key={title} className="group flex flex-col bg-background p-5 transition-colors hover:bg-surface-elevated md:p-8">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink text-brand-foreground">
                 <Icon className="h-5 w-5" />
               </div>
               <h3 className="mt-6 text-lg font-semibold text-ink">{title}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-              <a href="#contact" className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand">
-                Learn more <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-              </a>
+              <Link to={to} className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand">
+                Explore service <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+              </Link>
             </div>
           ))}
         </div>
@@ -262,7 +262,7 @@ export function WhiteLabel() {
               </p>
               <div className="mt-8">
                 <Button asChild size="lg" className="rounded-full bg-background px-6 text-ink hover:bg-background/90">
-                  <a href="#contact">Request our NDA <ArrowRight className="h-4 w-4" /></a>
+                  <Link to="/nda-confidentiality">Request our NDA <ArrowRight className="h-4 w-4" /></Link>
                 </Button>
               </div>
             </div>
