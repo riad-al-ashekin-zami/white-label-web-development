@@ -17,13 +17,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
-      { title: "Our White Label Workflow & Process \\u2014 White Label Website Development" },
-      { name: "description", content: "A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support \\u2014 operationally engineered." },
-      { property: "og:title", content: "Our White Label Workflow & Process \\u2014 White Label Website Development" },
-      { property: "og:description", content: "A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support \\u2014 operationally engineered." },
+      { title: "Our White Label Workflow & Process — White Label Website Development" },
+      { name: "description", content: "A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support — operationally engineered." },
+      { property: "og:title", content: "Our White Label Workflow & Process — White Label Website Development" },
+      { property: "og:description", content: "A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support — operationally engineered." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/process" },
-      { name: "twitter:title", content: "Our White Label Workflow & Process \\u2014 White Label Website Development" },
-      { name: "twitter:description", content: "A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support \\u2014 operationally engineered." },
+      { name: "twitter:title", content: "Our White Label Workflow & Process — White Label Website Development" },
+      { name: "twitter:description", content: "A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support — operationally engineered." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/process" },
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/process")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Process\", \"item\": \"https://whitelabelwebsitedevelopment.com/process\"}]}, {\"@type\": \"WebPage\", \"name\": \"Our White Label Workflow & Process \\\\u2014 White Label Website Development\", \"description\": \"A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support \\\\u2014 operationally engineered.\", \"url\": \"https://whitelabelwebsitedevelopment.com/process\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Process\", \"item\": \"https://whitelabelwebsitedevelopment.com/process\"}]}, {\"@type\": \"WebPage\", \"name\": \"Our White Label Workflow & Process \\— White Label Website Development\", \"description\": \"A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support \\— operationally engineered.\", \"url\": \"https://whitelabelwebsitedevelopment.com/process\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),

@@ -18,13 +18,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-website-audit")({
   head: () => ({
     meta: [
-      { title: "White Label Website Audit & Technical Review \\u2014 White Label Website Development" },
-      { name: "description", content: "Professional white label website audits for agencies \\u2014 technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand." },
-      { property: "og:title", content: "White Label Website Audit & Technical Review \\u2014 White Label Website Development" },
-      { property: "og:description", content: "Professional white label website audits for agencies \\u2014 technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand." },
+      { title: "White Label Website Audit & Technical Review — White Label Website Development" },
+      { name: "description", content: "Professional white label website audits for agencies — technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand." },
+      { property: "og:title", content: "White Label Website Audit & Technical Review — White Label Website Development" },
+      { property: "og:description", content: "Professional white label website audits for agencies — technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-website-audit" },
-      { name: "twitter:title", content: "White Label Website Audit & Technical Review \\u2014 White Label Website Development" },
-      { name: "twitter:description", content: "Professional white label website audits for agencies \\u2014 technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand." },
+      { name: "twitter:title", content: "White Label Website Audit & Technical Review — White Label Website Development" },
+      { name: "twitter:description", content: "Professional white label website audits for agencies — technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-website-audit" },

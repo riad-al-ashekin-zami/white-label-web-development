@@ -17,13 +17,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-wordpress-development")({
   head: () => ({
     meta: [
-      { title: "White Label WordPress Development for Agencies \\u2014 White Label Website Development" },
-      { name: "description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO \\u2014 delivered under your brand." },
-      { property: "og:title", content: "White Label WordPress Development for Agencies \\u2014 White Label Website Development" },
-      { property: "og:description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO \\u2014 delivered under your brand." },
+      { title: "White Label WordPress Development for Agencies — White Label Website Development" },
+      { name: "description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO — delivered under your brand." },
+      { property: "og:title", content: "White Label WordPress Development for Agencies — White Label Website Development" },
+      { property: "og:description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO — delivered under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development" },
-      { name: "twitter:title", content: "White Label WordPress Development for Agencies \\u2014 White Label Website Development" },
-      { name: "twitter:description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO \\u2014 delivered under your brand." },
+      { name: "twitter:title", content: "White Label WordPress Development for Agencies — White Label Website Development" },
+      { name: "twitter:description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO — delivered under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development" },

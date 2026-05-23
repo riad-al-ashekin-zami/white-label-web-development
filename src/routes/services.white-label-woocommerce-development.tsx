@@ -18,13 +18,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-woocommerce-development")({
   head: () => ({
     meta: [
-      { title: "White Label WooCommerce & Ecommerce Development \\u2014 White Label Website Development" },
-      { name: "description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance \\u2014 under your brand." },
-      { property: "og:title", content: "White Label WooCommerce & Ecommerce Development \\u2014 White Label Website Development" },
-      { property: "og:description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance \\u2014 under your brand." },
+      { title: "White Label WooCommerce & Ecommerce Development — White Label Website Development" },
+      { name: "description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance — under your brand." },
+      { property: "og:title", content: "White Label WooCommerce & Ecommerce Development — White Label Website Development" },
+      { property: "og:description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance — under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-woocommerce-development" },
-      { name: "twitter:title", content: "White Label WooCommerce & Ecommerce Development \\u2014 White Label Website Development" },
-      { name: "twitter:description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance \\u2014 under your brand." },
+      { name: "twitter:title", content: "White Label WooCommerce & Ecommerce Development — White Label Website Development" },
+      { name: "twitter:description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance — under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-woocommerce-development" },

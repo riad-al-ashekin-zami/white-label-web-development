@@ -18,13 +18,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-website-maintenance")({
   head: () => ({
     meta: [
-      { title: "White Label Website Maintenance for Agencies \\u2014 White Label Website Development" },
-      { name: "description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes \\u2014 delivered under your brand." },
-      { property: "og:title", content: "White Label Website Maintenance for Agencies \\u2014 White Label Website Development" },
-      { property: "og:description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes \\u2014 delivered under your brand." },
+      { title: "White Label Website Maintenance for Agencies — White Label Website Development" },
+      { name: "description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes — delivered under your brand." },
+      { property: "og:title", content: "White Label Website Maintenance for Agencies — White Label Website Development" },
+      { property: "og:description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes — delivered under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance" },
-      { name: "twitter:title", content: "White Label Website Maintenance for Agencies \\u2014 White Label Website Development" },
-      { name: "twitter:description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes \\u2014 delivered under your brand." },
+      { name: "twitter:title", content: "White Label Website Maintenance for Agencies — White Label Website Development" },
+      { name: "twitter:description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes — delivered under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance" },

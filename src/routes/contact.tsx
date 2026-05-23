@@ -30,13 +30,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Get a Free Quote \\u2014 White Label Website Development" },
-      { name: "description", content: "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response \\u2014 built for agencies." },
-      { property: "og:title", content: "Contact & Get a Free Quote \\u2014 White Label Website Development" },
-      { property: "og:description", content: "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response \\u2014 built for agencies." },
+      { title: "Contact & Get a Free Quote — White Label Website Development" },
+      { name: "description", content: "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response — built for agencies." },
+      { property: "og:title", content: "Contact & Get a Free Quote — White Label Website Development" },
+      { property: "og:description", content: "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response — built for agencies." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/contact" },
-      { name: "twitter:title", content: "Contact & Get a Free Quote \\u2014 White Label Website Development" },
-      { name: "twitter:description", content: "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response \\u2014 built for agencies." },
+      { name: "twitter:title", content: "Contact & Get a Free Quote — White Label Website Development" },
+      { name: "twitter:description", content: "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response — built for agencies." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/contact" },
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/contact")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Contact\", \"item\": \"https://whitelabelwebsitedevelopment.com/contact\"}]}, {\"@type\": \"ContactPage\", \"name\": \"Contact & Get a Free Quote \\\\u2014 White Label Website Development\", \"description\": \"Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response \\\\u2014 built for agencies.\", \"url\": \"https://whitelabelwebsitedevelopment.com/contact\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Contact\", \"item\": \"https://whitelabelwebsitedevelopment.com/contact\"}]}, {\"@type\": \"ContactPage\", \"name\": \"Contact & Get a Free Quote \\— White Label Website Development\", \"description\": \"Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response \\— built for agencies.\", \"url\": \"https://whitelabelwebsitedevelopment.com/contact\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
