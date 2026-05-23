@@ -79,7 +79,7 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            The invisible white label web development partner for agencies, marketers and consultants. Your brand. Our execution.
+            The invisible white label web development partner for agencies, marketers and consultants — supporting SEO and digital agencies across North America and remote partners worldwide. Your brand. Our execution.
           </p>
           <div className="mt-5 flex items-center gap-2">
             {[Linkedin, Twitter, Github, Mail].map((Icon, i) => (
