@@ -65,10 +65,10 @@ function Hero() {
               Pricing &amp; Agency Plans
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              Scalable white label pricing <span className="text-brand">built for agencies</span>.
+              <span className="text-brand">White Label Web Development Pricing</span> built for agency margins.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Flexible fulfillment plans for projects, landing pages, ecommerce and ongoing maintenance — designed to keep your margins predictable and your delivery reliable.
+              Transparent agency development pricing across projects, landing pages, ecommerce builds and white label maintenance retainers — engineered so your team keeps healthy markups while we handle delivery quietly under your brand.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">

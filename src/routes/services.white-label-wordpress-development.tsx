@@ -66,10 +66,10 @@ function Hero() {
               White Label WordPress Development
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              Reliable WordPress fulfillment <span className="text-brand">under your brand</span>.
+              <span className="text-brand">White Label WordPress Development</span> for agencies and freelancers.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Outsource WordPress projects to a structured, agency-first development team — clean code, SEO-aware builds, NDA-protected delivery, and predictable timelines.
+              Hire a dedicated white label WordPress developer team — custom themes, ACF, Gutenberg, Elementor and WooCommerce builds. SEO-friendly WordPress structure, clean code and editor-ready handovers, all delivered quietly under your agency brand.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">

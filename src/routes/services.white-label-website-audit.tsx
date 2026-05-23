@@ -67,10 +67,10 @@ function Hero() {
               White Label Website Audits
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              Professional technical audits <span className="text-brand">under your brand</span>.
+              <span className="text-brand">White Label Website Audit</span> services for agencies and SEO teams.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              SEO-aware, performance-focused website audits for agencies — delivered as agency-ready reports with deep technical analysis and clear, actionable recommendations.
+              Technical SEO, Core Web Vitals, accessibility and UX audits delivered as polished, agency-ready reports — branded as yours, ready to send straight to your client with prioritized fixes and a clear remediation roadmap.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">

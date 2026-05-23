@@ -64,10 +64,10 @@ function Hero() {
               Portfolio &amp; Case Studies
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              White label projects <span className="text-brand">built for agencies</span>.
+              <span className="text-brand">White Label Web Development Portfolio</span> for agencies and consultants.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Websites delivered under agency brands across multiple industries — engineered for performance, SEO, and long-term scalability. Confidential, reliable, agency-safe execution.
+              Selected WordPress, WooCommerce and landing page projects delivered under agency brands across industries — built for SEO, Core Web Vitals and conversion. Names anonymized for confidentiality, results made real.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">

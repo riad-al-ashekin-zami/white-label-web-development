@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight, AlertTriangle, Clock, ShieldAlert, Plug, Zap, Bug, MailWarning, Users as UsersIcon,
   ShieldCheck, Activity, Bell, Workflow, FileBarChart2, Headphones, Search,
@@ -68,17 +68,17 @@ function Hero() {
               White Label Website Maintenance
             </div>
             <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl">
-              Stress-free <span className="text-gradient-brand">website maintenance</span> for your client portfolio.
+              <span className="text-gradient-brand">White Label Website Maintenance</span> for agencies and their client portfolios.
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              We monitor, update, secure and fix your clients' websites — quietly, under your brand. So your team can focus on growth, not patches.
+              Outsourced WordPress maintenance, security monitoring, plugin updates, backups and content edits — handled monthly under your agency brand. A predictable retainer your team can resell with healthy margins.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <a href="#pricing">Get Maintenance Pricing <ArrowRight className="h-4 w-4" /></a>
+                <a href="#pricing">See maintenance plans <ArrowRight className="h-4 w-4" /></a>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-6">
-                <a href="#contact">Book a Discovery Call</a>
+                <Link to="/contact">Start your agency partnership</Link>
               </Button>
             </div>
             <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-muted-foreground sm:flex sm:flex-wrap">
