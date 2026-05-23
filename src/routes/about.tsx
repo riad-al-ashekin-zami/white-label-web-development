@@ -16,12 +16,12 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us \u2014 White Label Website Development | White Label Development Partner" },
+      { title: "About Us \\u2014 White Label Website Development | White Label Development Partner" },
       { name: "description", content: "We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery." },
-      { property: "og:title", content: "About Us \u2014 White Label Website Development | White Label Development Partner" },
+      { property: "og:title", content: "About Us \\u2014 White Label Website Development | White Label Development Partner" },
       { property: "og:description", content: "We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/about" },
-      { name: "twitter:title", content: "About Us \u2014 White Label Website Development | White Label Development Partner" },
+      { name: "twitter:title", content: "About Us \\u2014 White Label Website Development | White Label Development Partner" },
       { name: "twitter:description", content: "We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery." },
     ],
     links: [
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/about")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"About\", \"item\": \"https://whitelabelwebsitedevelopment.com/about\"}]}, {\"@type\": \"AboutPage\", \"name\": \"About Us \\u2014 White Label Website Development | White Label Development Partner\", \"description\": \"We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery.\", \"url\": \"https://whitelabelwebsitedevelopment.com/about\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"About\", \"item\": \"https://whitelabelwebsitedevelopment.com/about\"}]}, {\"@type\": \"AboutPage\", \"name\": \"About Us \\\\u2014 White Label Website Development | White Label Development Partner\", \"description\": \"We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery.\", \"url\": \"https://whitelabelwebsitedevelopment.com/about\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),

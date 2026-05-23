@@ -17,12 +17,12 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/services/white-label-landing-page-design")({
   head: () => ({
     meta: [
-      { title: "White Label Landing Page Design & Development \u2014 White Label Website Development" },
+      { title: "White Label Landing Page Design & Development \\u2014 White Label Website Development" },
       { name: "description", content: "High-converting white label landing pages for agencies. PPC, local SEO, lead gen and SaaS pages built fast, mobile-first and under your brand." },
-      { property: "og:title", content: "White Label Landing Page Design & Development \u2014 White Label Website Development" },
+      { property: "og:title", content: "White Label Landing Page Design & Development \\u2014 White Label Website Development" },
       { property: "og:description", content: "High-converting white label landing pages for agencies. PPC, local SEO, lead gen and SaaS pages built fast, mobile-first and under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-landing-page-design" },
-      { name: "twitter:title", content: "White Label Landing Page Design & Development \u2014 White Label Website Development" },
+      { name: "twitter:title", content: "White Label Landing Page Design & Development \\u2014 White Label Website Development" },
       { name: "twitter:description", content: "High-converting white label landing pages for agencies. PPC, local SEO, lead gen and SaaS pages built fast, mobile-first and under your brand." },
     ],
     links: [
