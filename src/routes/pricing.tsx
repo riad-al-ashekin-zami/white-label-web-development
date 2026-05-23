@@ -18,19 +18,24 @@ export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
       { title: "Pricing & Agency Plans — White Label Website Development" },
-      {
-        name: "description",
-        content:
-          "Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment.",
-      },
+      { name: "description", content: "Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment." },
       { property: "og:title", content: "Pricing & Agency Plans — White Label Website Development" },
+      { property: "og:description", content: "Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/pricing" },
+      { name: "twitter:title", content: "Pricing & Agency Plans — White Label Website Development" },
+      { name: "twitter:description", content: "Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/pricing" },
+    ],
+    scripts: [
       {
-        property: "og:description",
-        content:
-          "Scalable white label fulfillment pricing for SEO, marketing and creative agencies — projects, retainers, and dedicated agency partnership plans.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Pricing\", \"item\": \"https://whitelabelwebsitedevelopment.com/pricing\"}]}, {\"@type\": \"WebPage\", \"name\": \"Pricing & Agency Plans — White Label Website Development\", \"description\": \"Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment.\", \"url\": \"https://whitelabelwebsitedevelopment.com/pricing\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
+  
   component: PricingPage,
 });
 

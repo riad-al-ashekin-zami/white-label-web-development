@@ -16,19 +16,24 @@ export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
       { title: "White Label Portfolio & Case Studies — White Label Website Development" },
-      {
-        name: "description",
-        content:
-          "Explore white label websites delivered for agencies across healthcare, real estate, ecommerce, contractors and more. Reliable, scalable, agency-safe execution.",
-      },
+      { name: "description", content: "Explore white label websites delivered for agencies across healthcare, real estate, ecommerce, contractors and more. Reliable, scalable, agency-safe execution." },
       { property: "og:title", content: "White Label Portfolio & Case Studies — White Label Website Development" },
+      { property: "og:description", content: "Explore white label websites delivered for agencies across healthcare, real estate, ecommerce, contractors and more. Reliable, scalable, agency-safe execution." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/portfolio" },
+      { name: "twitter:title", content: "White Label Portfolio & Case Studies — White Label Website Development" },
+      { name: "twitter:description", content: "Explore white label websites delivered for agencies across healthcare, real estate, ecommerce, contractors and more. Reliable, scalable, agency-safe execution." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/portfolio" },
+    ],
+    scripts: [
       {
-        property: "og:description",
-        content:
-          "Proven white label web development for agencies. Premium execution, NDA-friendly delivery, multi-industry experience.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Portfolio\", \"item\": \"https://whitelabelwebsitedevelopment.com/portfolio\"}]}, {\"@type\": \"CollectionPage\", \"name\": \"White Label Portfolio & Case Studies — White Label Website Development\", \"description\": \"Explore white label websites delivered for agencies across healthcare, real estate, ecommerce, contractors and more. Reliable, scalable, agency-safe execution.\", \"url\": \"https://whitelabelwebsitedevelopment.com/portfolio\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
+  
   component: PortfolioPage,
 });
 

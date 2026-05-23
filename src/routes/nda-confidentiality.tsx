@@ -10,12 +10,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/nda-confidentiality")({
   head: () => ({
     meta: [
-      { title: "NDA & Confidentiality — White Label Website Development" },
+      { title: "NDA & Confidentiality \u2014 White Label Website Development" },
       { name: "description", content: "How we protect agency and client confidentiality: NDA-friendly operations, white label delivery, no client poaching, and secure data handling." },
-      { property: "og:title", content: "NDA & Confidentiality — White Label Website Development" },
-      { property: "og:description", content: "Agency-safe, NDA-friendly white label backend development. Your clients stay yours. Always." },
+      { property: "og:title", content: "NDA & Confidentiality \u2014 White Label Website Development" },
+      { property: "og:description", content: "How we protect agency and client confidentiality: NDA-friendly operations, white label delivery, no client poaching, and secure data handling." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/nda-confidentiality" },
+      { name: "twitter:title", content: "NDA & Confidentiality \u2014 White Label Website Development" },
+      { name: "twitter:description", content: "How we protect agency and client confidentiality: NDA-friendly operations, white label delivery, no client poaching, and secure data handling." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/nda-confidentiality" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"NDA & Confidentiality\", \"item\": \"https://whitelabelwebsitedevelopment.com/nda-confidentiality\"}]}, {\"@type\": \"WebPage\", \"name\": \"NDA & Confidentiality — White Label Website Development\", \"description\": \"How we protect agency and client confidentiality: NDA-friendly operations, white label delivery, no client poaching, and secure data handling.\", \"url\": \"https://whitelabelwebsitedevelopment.com/nda-confidentiality\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+      },
     ],
   }),
+  
   component: NDAPage,
 });
 

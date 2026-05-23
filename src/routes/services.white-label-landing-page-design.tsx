@@ -18,19 +18,24 @@ export const Route = createFileRoute("/services/white-label-landing-page-design"
   head: () => ({
     meta: [
       { title: "White Label Landing Page Design & Development — White Label Website Development" },
+      { name: "description", content: "High-converting white label landing pages for agencies. PPC, local SEO, lead gen and SaaS pages built fast, mobile-first and under your brand." },
+      { property: "og:title", content: "White Label Landing Page Design & Development — White Label Website Development" },
+      { property: "og:description", content: "High-converting white label landing pages for agencies. PPC, local SEO, lead gen and SaaS pages built fast, mobile-first and under your brand." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-landing-page-design" },
+      { name: "twitter:title", content: "White Label Landing Page Design & Development — White Label Website Development" },
+      { name: "twitter:description", content: "High-converting white label landing pages for agencies. PPC, local SEO, lead gen and SaaS pages built fast, mobile-first and under your brand." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-landing-page-design" },
+    ],
+    scripts: [
       {
-        name: "description",
-        content:
-          "High-converting white label landing pages for agencies. PPC, local SEO, lead gen and SaaS pages built fast, mobile-first and under your brand.",
-      },
-      { property: "og:title", content: "White Label Landing Page Design & Development" },
-      {
-        property: "og:description",
-        content:
-          "Scale campaign fulfillment with reliable white label landing page design and development — conversion-focused, mobile-first, agency-safe.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Services\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"White Label Landing Page Development\", \"item\": \"https://whitelabelwebsitedevelopment.com/services/white-label-landing-page-design\"}]}, {\"@type\": \"Service\", \"name\": \"White Label Landing Page Development\", \"description\": \"High-converting landing pages for ads, launches and lead generation, built under your agency brand.\", \"url\": \"https://whitelabelwebsitedevelopment.com/services/white-label-landing-page-design\", \"provider\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#organization\"}, \"areaServed\": \"Global\", \"serviceType\": \"White Label Landing Page Development\", \"audience\": {\"@type\": \"Audience\", \"audienceType\": \"Marketing and SEO agencies\"}}]}",
       },
     ],
   }),
+  
   component: LandingPage,
 });
 

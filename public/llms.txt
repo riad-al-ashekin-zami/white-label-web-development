@@ -1,0 +1,32 @@
+# White Label Website Development
+
+> White label website development partner for SEO, marketing and digital agencies. SEO-ready WordPress, WooCommerce and custom builds delivered under your brand — NDA friendly, dedicated PM, on schedule.
+
+We are an invisible backend production team. Agencies brief us, we build under their brand, and their clients never know we exist. Confidential by design, structured workflow, and SEO-first development practices.
+
+## Services
+
+- [White Label Website Development](/): End-to-end white label website development for agencies — keyword-optimized homepage.
+- [White Label WordPress Development](/services/white-label-wordpress-development): Custom WordPress themes, ACF, Gutenberg, Elementor, no plugin bloat.
+- [White Label Website Design](/services/white-label-website-design): Conversion-focused UI design delivered in Figma or directly to dev.
+- [White Label WooCommerce Development](/services/white-label-woocommerce-development): Scalable storefronts with payments, shipping and inventory.
+- [SEO-Friendly Web Development](/services/seo-friendly-web-development): Schema, Core Web Vitals, semantic HTML, technical SEO built in.
+- [Landing Page Development](/services/white-label-landing-page-design): High-converting pages for ads, launches and lead gen.
+- [White Label Website Maintenance](/services/white-label-website-maintenance): Monthly updates, backups, security patches and content edits.
+- [White Label Website Audit](/services/white-label-website-audit): Performance, SEO and accessibility audits with action plans.
+
+## Company
+
+- [About](/about): How White Label Website Development operates as an agency-first partner.
+- [Process](/process): Discovery, design, development, QA, delivery, ongoing support.
+- [Portfolio](/portfolio): Anonymized white label case studies across multiple industries.
+- [Pricing](/pricing): Project pricing, retainers, and dedicated agency partnership plans.
+- [Agency Partner Program](/agency-partner): Long-term white label partnership for SEO and marketing agencies.
+- [For SEO Agencies](/industries/seo-agencies): How SEO agencies use our team as their backend dev department.
+- [Contact](/contact): Free quote and confidential discovery call.
+
+## Optional
+
+- [Privacy Policy](/privacy)
+- [Terms of Service](/terms-of-service)
+- [NDA & Confidentiality](/nda-confidentiality)

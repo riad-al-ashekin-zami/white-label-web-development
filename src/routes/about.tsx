@@ -17,19 +17,24 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us — White Label Website Development | White Label Development Partner" },
+      { name: "description", content: "We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery." },
+      { property: "og:title", content: "About Us — White Label Website Development | White Label Development Partner" },
+      { property: "og:description", content: "We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/about" },
+      { name: "twitter:title", content: "About Us — White Label Website Development | White Label Development Partner" },
+      { name: "twitter:description", content: "We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/about" },
+    ],
+    scripts: [
       {
-        name: "description",
-        content:
-          "We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery.",
-      },
-      { property: "og:title", content: "About White Label Website Development — Built for Agencies" },
-      {
-        property: "og:description",
-        content:
-          "A mature, agency-first white label development team built around reliability, NDAs, and long-term partnership.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"About\", \"item\": \"https://whitelabelwebsitedevelopment.com/about\"}]}, {\"@type\": \"AboutPage\", \"name\": \"About Us — White Label Website Development | White Label Development Partner\", \"description\": \"We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery.\", \"url\": \"https://whitelabelwebsitedevelopment.com/about\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
+  
   component: AboutPage,
 });
 

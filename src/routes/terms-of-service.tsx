@@ -10,12 +10,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/terms-of-service")({
   head: () => ({
     meta: [
-      { title: "Terms of Service — White Label Website Development" },
+      { title: "Terms of Service \u2014 White Label Website Development" },
       { name: "description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Website Development." },
-      { property: "og:title", content: "Terms of Service — White Label Website Development" },
-      { property: "og:description", content: "Partnership terms built for agencies, freelancers and consultants — clear, modern and agency-safe." },
+      { property: "og:title", content: "Terms of Service \u2014 White Label Website Development" },
+      { property: "og:description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Website Development." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/terms-of-service" },
+      { name: "twitter:title", content: "Terms of Service \u2014 White Label Website Development" },
+      { name: "twitter:description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Website Development." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/terms-of-service" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Terms of Service\", \"item\": \"https://whitelabelwebsitedevelopment.com/terms-of-service\"}]}, {\"@type\": \"WebPage\", \"name\": \"Terms of Service — White Label Website Development\", \"description\": \"Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Website Development.\", \"url\": \"https://whitelabelwebsitedevelopment.com/terms-of-service\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+      },
     ],
   }),
+  
   component: TermsPage,
 });
 

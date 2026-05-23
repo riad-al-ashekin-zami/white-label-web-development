@@ -18,19 +18,24 @@ export const Route = createFileRoute("/services/seo-friendly-web-development")({
   head: () => ({
     meta: [
       { title: "White Label SEO-Friendly Web Development — White Label Website Development" },
+      { name: "description", content: "Technical, SEO-aware white label web development for SEO agencies. Core Web Vitals, schema, semantic HTML and crawl-ready architecture — delivered under your brand." },
+      { property: "og:title", content: "White Label SEO-Friendly Web Development — White Label Website Development" },
+      { property: "og:description", content: "Technical, SEO-aware white label web development for SEO agencies. Core Web Vitals, schema, semantic HTML and crawl-ready architecture — delivered under your brand." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/seo-friendly-web-development" },
+      { name: "twitter:title", content: "White Label SEO-Friendly Web Development — White Label Website Development" },
+      { name: "twitter:description", content: "Technical, SEO-aware white label web development for SEO agencies. Core Web Vitals, schema, semantic HTML and crawl-ready architecture — delivered under your brand." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/seo-friendly-web-development" },
+    ],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Technical, SEO-aware white label web development for SEO agencies. Core Web Vitals, schema, semantic HTML and crawl-ready architecture — delivered under your brand.",
-      },
-      { property: "og:title", content: "White Label SEO-Friendly Web Development" },
-      {
-        property: "og:description",
-        content:
-          "Websites built for rankings, speed and conversions. NDA-friendly, technical, agency-safe — under your brand.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Services\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"SEO-Friendly Web Development\", \"item\": \"https://whitelabelwebsitedevelopment.com/services/seo-friendly-web-development\"}]}, {\"@type\": \"Service\", \"name\": \"SEO-Friendly Web Development\", \"description\": \"SEO-first web development with schema, semantic HTML and Core Web Vitals optimization for agency clients.\", \"url\": \"https://whitelabelwebsitedevelopment.com/services/seo-friendly-web-development\", \"provider\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#organization\"}, \"areaServed\": \"Global\", \"serviceType\": \"SEO-Friendly Web Development\", \"audience\": {\"@type\": \"Audience\", \"audienceType\": \"Marketing and SEO agencies\"}}]}",
       },
     ],
   }),
+  
   component: SEOPage,
 });
 

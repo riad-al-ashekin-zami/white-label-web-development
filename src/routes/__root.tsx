@@ -69,31 +69,60 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const SITE_URL = "https://whitelabelwebsitedevelopment.com";
+const SITE_NAME = "White Label Website Development";
+const DEFAULT_OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dd80d172-8474-4ae9-b770-0dd06458bdaf/id-preview-ed50dfb7--91452c44-6c28-44e0-ab00-c7282b9a4cfe.lovable.app-1778362315882.png";
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Invisible backend web development partner for agencies, offering scalable, premium solutions." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Invisible backend web development partner for agencies, offering scalable, premium solutions." },
+      { name: "theme-color", content: "#ffffff" },
+      { name: "format-detection", content: "telephone=no" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Invisible backend web development partner for agencies, offering scalable, premium solutions." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dd80d172-8474-4ae9-b770-0dd06458bdaf/id-preview-ed50dfb7--91452c44-6c28-44e0-ab00-c7282b9a4cfe.lovable.app-1778362315882.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dd80d172-8474-4ae9-b770-0dd06458bdaf/id-preview-ed50dfb7--91452c44-6c28-44e0-ab00-c7282b9a4cfe.lovable.app-1778362315882.png" },
+      { property: "og:site_name", content: SITE_NAME },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:image", content: DEFAULT_OG_IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: DEFAULT_OG_IMAGE },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: faviconUrl },
       { rel: "apple-touch-icon", href: faviconUrl },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": `${SITE_URL}/#organization`,
+              name: SITE_NAME,
+              url: SITE_URL,
+              logo: `${SITE_URL}/favicon.png`,
+              sameAs: [],
+              description:
+                "White label website development partner for SEO, marketing and digital agencies. NDA-friendly, SEO-ready builds delivered under your brand.",
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
+              url: SITE_URL,
+              name: SITE_NAME,
+              publisher: { "@id": `${SITE_URL}/#organization` },
+              inLanguage: "en-US",
+            },
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

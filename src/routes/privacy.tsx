@@ -11,19 +11,24 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: "Privacy Policy — White Label Website Development" },
-      {
-        name: "description",
-        content:
-          "How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default.",
-      },
+      { name: "description", content: "How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default." },
       { property: "og:title", content: "Privacy Policy — White Label Website Development" },
+      { property: "og:description", content: "How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/privacy" },
+      { name: "twitter:title", content: "Privacy Policy — White Label Website Development" },
+      { name: "twitter:description", content: "How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/privacy" },
+    ],
+    scripts: [
       {
-        property: "og:description",
-        content:
-          "Confidential, agency-first handling of project information. Read how we protect agency and client data.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Privacy Policy\", \"item\": \"https://whitelabelwebsitedevelopment.com/privacy\"}]}, {\"@type\": \"WebPage\", \"name\": \"Privacy Policy — White Label Website Development\", \"description\": \"How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default.\", \"url\": \"https://whitelabelwebsitedevelopment.com/privacy\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
+  
   component: PrivacyPage,
 });
 

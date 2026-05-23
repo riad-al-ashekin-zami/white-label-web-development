@@ -18,19 +18,24 @@ export const Route = createFileRoute("/services/white-label-wordpress-developmen
   head: () => ({
     meta: [
       { title: "White Label WordPress Development for Agencies — White Label Website Development" },
+      { name: "description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO — delivered under your brand." },
+      { property: "og:title", content: "White Label WordPress Development for Agencies — White Label Website Development" },
+      { property: "og:description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO — delivered under your brand." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development" },
+      { name: "twitter:title", content: "White Label WordPress Development for Agencies — White Label Website Development" },
+      { name: "twitter:description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO — delivered under your brand." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development" },
+    ],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO — delivered under your brand.",
-      },
-      { property: "og:title", content: "White Label WordPress Development for Agencies" },
-      {
-        property: "og:description",
-        content:
-          "Scale your agency with expert white label WordPress fulfillment. NDA-friendly, SEO-aware, fully under your brand.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Services\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"White Label WordPress Development\", \"item\": \"https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development\"}]}, {\"@type\": \"Service\", \"name\": \"White Label WordPress Development\", \"description\": \"Custom WordPress theme, ACF, Gutenberg and Elementor development delivered under your agency brand.\", \"url\": \"https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development\", \"provider\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#organization\"}, \"areaServed\": \"Global\", \"serviceType\": \"White Label WordPress Development\", \"audience\": {\"@type\": \"Audience\", \"audienceType\": \"Marketing and SEO agencies\"}}]}",
       },
     ],
   }),
+  
   component: WPPage,
 });
 

@@ -31,19 +31,24 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact & Get a Free Quote — White Label Website Development" },
+      { name: "description", content: "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response — built for agencies." },
+      { property: "og:title", content: "Contact & Get a Free Quote — White Label Website Development" },
+      { property: "og:description", content: "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response — built for agencies." },
+      { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/contact" },
+      { name: "twitter:title", content: "Contact & Get a Free Quote — White Label Website Development" },
+      { name: "twitter:description", content: "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response — built for agencies." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/contact" },
+    ],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response — built for agencies.",
-      },
-      { property: "og:title", content: "Contact White Label Website Development — Free Quote for Agencies" },
-      {
-        property: "og:description",
-        content:
-          "Tell us about your project or partnership. We respond within one business day.",
+        type: "application/ld+json",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Contact\", \"item\": \"https://whitelabelwebsitedevelopment.com/contact\"}]}, {\"@type\": \"ContactPage\", \"name\": \"Contact & Get a Free Quote — White Label Website Development\", \"description\": \"Start a confidential white label development partnership. NDA friendly, dedicated PM, fast response — built for agencies.\", \"url\": \"https://whitelabelwebsitedevelopment.com/contact\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
+  
   component: ContactPage,
 });
 
