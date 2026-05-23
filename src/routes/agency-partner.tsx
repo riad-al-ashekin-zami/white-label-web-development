@@ -66,17 +66,17 @@ function Hero() {
               Agency Partner Program
             </div>
             <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl">
-              Your trusted <span className="text-gradient-brand">white label</span> development partner.
+              Your long-term <span className="text-gradient-brand">white label agency partner</span> for web development fulfillment.
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Scale your agency without building an internal team. We deliver development, maintenance and technical execution under your brand — while you keep the client relationship.
+              Become a partner agency and get a dedicated backend development team — WordPress, WooCommerce, landing pages, audits and maintenance — delivered under your brand. Priority capacity, SLAs and a no-poach guarantee for the agencies we work with.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <a href="#contact">Become an Agency Partner <ArrowRight className="h-4 w-4" /></a>
+                <Link to="/contact">Start your agency partnership <ArrowRight className="h-4 w-4" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-6">
-                <a href="#contact">Book a Partnership Call</a>
+                <Link to="/contact">Book a partnership call</Link>
               </Button>
             </div>
             <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-muted-foreground sm:flex sm:flex-wrap">
