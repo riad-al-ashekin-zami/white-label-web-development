@@ -27,7 +27,7 @@ const company: LinkItem[] = [
 ];
 
 const resources: LinkItem[] = [
-  { label: "Email us", href: "mailto:hello@whitelabelwebsitedevelopment.com" },
+  { label: "Email us", href: "mailto:whitelabelwebsitedevelopment@gmail.com" },
   { label: "Book a call", href: "https://calendly.com/" },
   { label: "Get a quote", to: "/contact" },
   { label: "NDA & Confidentiality", to: "/nda-confidentiality" },
@@ -114,14 +114,16 @@ export function Footer() {
 
             <div className="mt-5 flex items-center gap-2">
               {[
-                { Icon: Linkedin, href: "#", label: "LinkedIn" },
-                { Icon: Twitter, href: "#", label: "Twitter" },
-                { Icon: Github, href: "#", label: "GitHub" },
-                { Icon: Mail, href: "mailto:hello@whitelabelwebsitedevelopment.com", label: "Email" },
+                { Icon: Facebook, href: "https://www.facebook.com/whitelabelwebsitedevelopment/", label: "Facebook" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/company/white-label-website-development/", label: "LinkedIn" },
+                { Icon: Instagram, href: "https://www.instagram.com/whitelabelwebsitedevelopment", label: "Instagram" },
+                { Icon: Mail, href: "mailto:whitelabelwebsitedevelopment@gmail.com", label: "Email" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                   aria-label={label}
                   className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:border-ink hover:text-ink"
                 >
@@ -155,8 +157,8 @@ export function Footer() {
             <Link to="/privacy" className="hover:text-ink">Privacy</Link>
             <Link to="/terms-of-service" className="hover:text-ink">Terms</Link>
             <Link to="/nda-confidentiality" className="hover:text-ink">NDA</Link>
-            <a href="mailto:hello@whitelabelwebsitedevelopment.com" className="hover:text-ink">
-              hello@whitelabelwebsitedevelopment.com
+            <a href="mailto:whitelabelwebsitedevelopment@gmail.com" className="hover:text-ink">
+              whitelabelwebsitedevelopment@gmail.com
             </a>
           </div>
         </div>
