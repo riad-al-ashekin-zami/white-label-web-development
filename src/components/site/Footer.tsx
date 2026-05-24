@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Linkedin, Twitter, Github, Mail, ArrowRight, MapPin, Clock, ShieldCheck } from "lucide-react";
+import { Linkedin, Facebook, Instagram, Mail, ArrowRight, MapPin, Clock, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
