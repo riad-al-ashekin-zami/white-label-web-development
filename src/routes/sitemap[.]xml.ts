@@ -17,6 +17,7 @@ const entries: SitemapEntry[] = [
   { path: "/pricing", changefreq: "monthly", priority: "0.8" },
   { path: "/contact", changefreq: "monthly", priority: "0.9" },
   { path: "/agency-partner", changefreq: "monthly", priority: "0.8" },
+  { path: "/white-label-services", changefreq: "monthly", priority: "0.9" },
   { path: "/industries/seo-agencies", changefreq: "monthly", priority: "0.7" },
   { path: "/services/white-label-wordpress-development", changefreq: "monthly", priority: "0.9" },
   { path: "/services/white-label-website-design", changefreq: "monthly", priority: "0.9" },
