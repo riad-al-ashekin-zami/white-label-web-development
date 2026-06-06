@@ -18,12 +18,12 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/agency-partner")({
   head: () => ({
     meta: [
-      { title: "Agency Partner Program — White Label Website Development White Label Partnership" },
+      { title: "Agency Partner Program — White Label Website Development" },
       { name: "description", content: "Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching." },
-      { property: "og:title", content: "Agency Partner Program — White Label Website Development White Label Partnership" },
+      { property: "og:title", content: "Agency Partner Program — White Label Website Development" },
       { property: "og:description", content: "Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/agency-partner" },
-      { name: "twitter:title", content: "Agency Partner Program — White Label Website Development White Label Partnership" },
+      { name: "twitter:title", content: "Agency Partner Program — White Label Website Development" },
       { name: "twitter:description", content: "Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching." },
     ],
     links: [

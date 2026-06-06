@@ -18,13 +18,13 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/seo-friendly-web-development")({
   head: () => ({
     meta: [
-      { title: "White Label SEO-Friendly Web Development — White Label Website Development" },
-      { name: "description", content: "Technical, SEO-aware white label web development for SEO agencies. Core Web Vitals, schema, semantic HTML and crawl-ready architecture — delivered under your brand." },
-      { property: "og:title", content: "White Label SEO-Friendly Web Development — White Label Website Development" },
-      { property: "og:description", content: "Technical, SEO-aware white label web development for SEO agencies. Core Web Vitals, schema, semantic HTML and crawl-ready architecture — delivered under your brand." },
+      { title: "White Label SEO-Friendly Web Development" },
+      { name: "description", content: "SEO-aware white label web development for agencies — Core Web Vitals, schema, semantic HTML and crawl-ready architecture under your brand." },
+      { property: "og:title", content: "White Label SEO-Friendly Web Development" },
+      { property: "og:description", content: "SEO-aware white label web development for agencies — Core Web Vitals, schema, semantic HTML and crawl-ready architecture under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/seo-friendly-web-development" },
-      { name: "twitter:title", content: "White Label SEO-Friendly Web Development — White Label Website Development" },
-      { name: "twitter:description", content: "Technical, SEO-aware white label web development for SEO agencies. Core Web Vitals, schema, semantic HTML and crawl-ready architecture — delivered under your brand." },
+      { name: "twitter:title", content: "White Label SEO-Friendly Web Development" },
+      { name: "twitter:description", content: "SEO-aware white label web development for agencies — Core Web Vitals, schema, semantic HTML and crawl-ready architecture under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/seo-friendly-web-development" },

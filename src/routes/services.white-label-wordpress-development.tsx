@@ -18,13 +18,13 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-wordpress-development")({
   head: () => ({
     meta: [
-      { title: "White Label WordPress Development for Agencies — White Label Website Development" },
-      { name: "description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO — delivered under your brand." },
-      { property: "og:title", content: "White Label WordPress Development for Agencies — White Label Website Development" },
-      { property: "og:description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO — delivered under your brand." },
+      { title: "White Label WordPress Development for Agencies" },
+      { name: "description", content: "White label WordPress development for agencies — custom themes, Elementor, WooCommerce and SEO performance delivered under your brand." },
+      { property: "og:title", content: "White Label WordPress Development for Agencies" },
+      { property: "og:description", content: "White label WordPress development for agencies — custom themes, Elementor, WooCommerce and SEO performance delivered under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development" },
-      { name: "twitter:title", content: "White Label WordPress Development for Agencies — White Label Website Development" },
-      { name: "twitter:description", content: "Reliable white label WordPress development for SEO, marketing and creative agencies. Custom themes, Elementor, WooCommerce, performance and SEO — delivered under your brand." },
+      { name: "twitter:title", content: "White Label WordPress Development for Agencies" },
+      { name: "twitter:description", content: "White label WordPress development for agencies — custom themes, Elementor, WooCommerce and SEO performance delivered under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development" },

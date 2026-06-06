@@ -18,12 +18,12 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/industries/seo-agencies")({
   head: () => ({
     meta: [
-      { title: "White Label Web Development for SEO Agencies — White Label Website Development" },
+      { title: "White Label Web Development for SEO Agencies" },
       { name: "description", content: "SEO-aware white label web development for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand." },
-      { property: "og:title", content: "White Label Web Development for SEO Agencies — White Label Website Development" },
+      { property: "og:title", content: "White Label Web Development for SEO Agencies" },
       { property: "og:description", content: "SEO-aware white label web development for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/industries/seo-agencies" },
-      { name: "twitter:title", content: "White Label Web Development for SEO Agencies — White Label Website Development" },
+      { name: "twitter:title", content: "White Label Web Development for SEO Agencies" },
       { name: "twitter:description", content: "SEO-aware white label web development for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand." },
     ],
     links: [
