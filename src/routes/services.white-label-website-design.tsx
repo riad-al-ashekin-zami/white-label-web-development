@@ -18,13 +18,13 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-website-design")({
   head: () => ({
     meta: [
-      { title: "White Label Website Design for Agencies — White Label Website Development" },
-      { name: "description", content: "Premium white label website design for SEO, marketing, branding and creative agencies. Modern UI/UX, conversion-focused layouts, responsive — delivered under your brand." },
-      { property: "og:title", content: "White Label Website Design for Agencies — White Label Website Development" },
-      { property: "og:description", content: "Premium white label website design for SEO, marketing, branding and creative agencies. Modern UI/UX, conversion-focused layouts, responsive — delivered under your brand." },
+      { title: "White Label Website Design for Agencies" },
+      { name: "description", content: "Premium white label website design for agencies — modern UI/UX, conversion-focused layouts and responsive builds delivered under your brand." },
+      { property: "og:title", content: "White Label Website Design for Agencies" },
+      { property: "og:description", content: "Premium white label website design for agencies — modern UI/UX, conversion-focused layouts and responsive builds delivered under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-website-design" },
-      { name: "twitter:title", content: "White Label Website Design for Agencies — White Label Website Development" },
-      { name: "twitter:description", content: "Premium white label website design for SEO, marketing, branding and creative agencies. Modern UI/UX, conversion-focused layouts, responsive — delivered under your brand." },
+      { name: "twitter:title", content: "White Label Website Design for Agencies" },
+      { name: "twitter:description", content: "Premium white label website design for agencies — modern UI/UX, conversion-focused layouts and responsive builds delivered under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-website-design" },

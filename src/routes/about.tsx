@@ -16,13 +16,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — White Label Website Development | White Label Development Partner" },
-      { name: "description", content: "We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery." },
-      { property: "og:title", content: "About Us — White Label Website Development | White Label Development Partner" },
-      { property: "og:description", content: "We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery." },
+      { title: "About — White Label Website Development" },
+      { name: "description", content: "The invisible white label development partner agencies trust to deliver SEO-ready WordPress, WooCommerce and custom sites under their brand." },
+      { property: "og:title", content: "About — White Label Website Development" },
+      { property: "og:description", content: "The invisible white label development partner agencies trust to deliver SEO-ready WordPress, WooCommerce and custom sites under their brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/about" },
-      { name: "twitter:title", content: "About Us — White Label Website Development | White Label Development Partner" },
-      { name: "twitter:description", content: "We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery." },
+      { name: "twitter:title", content: "About — White Label Website Development" },
+      { name: "twitter:description", content: "The invisible white label development partner agencies trust to deliver SEO-ready WordPress, WooCommerce and custom sites under their brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/about" },

@@ -19,13 +19,13 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-woocommerce-development")({
   head: () => ({
     meta: [
-      { title: "White Label WooCommerce & Ecommerce Development — White Label Website Development" },
-      { name: "description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance — under your brand." },
-      { property: "og:title", content: "White Label WooCommerce & Ecommerce Development — White Label Website Development" },
-      { property: "og:description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance — under your brand." },
+      { title: "White Label WooCommerce Development for Agencies" },
+      { name: "description", content: "White label WooCommerce and ecommerce development for agencies — conversion-focused stores, optimized checkout, payments and SEO." },
+      { property: "og:title", content: "White Label WooCommerce Development for Agencies" },
+      { property: "og:description", content: "White label WooCommerce and ecommerce development for agencies — conversion-focused stores, optimized checkout, payments and SEO." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-woocommerce-development" },
-      { name: "twitter:title", content: "White Label WooCommerce & Ecommerce Development — White Label Website Development" },
-      { name: "twitter:description", content: "Reliable white label WooCommerce and ecommerce development for agencies. Conversion-focused stores, optimized checkout, payments, SEO and maintenance — under your brand." },
+      { name: "twitter:title", content: "White Label WooCommerce Development for Agencies" },
+      { name: "twitter:description", content: "White label WooCommerce and ecommerce development for agencies — conversion-focused stores, optimized checkout, payments and SEO." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-woocommerce-development" },

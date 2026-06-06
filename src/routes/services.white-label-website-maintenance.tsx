@@ -19,13 +19,13 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-website-maintenance")({
   head: () => ({
     meta: [
-      { title: "White Label Website Maintenance for Agencies — White Label Website Development" },
-      { name: "description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes — delivered under your brand." },
-      { property: "og:title", content: "White Label Website Maintenance for Agencies — White Label Website Development" },
-      { property: "og:description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes — delivered under your brand." },
+      { title: "White Label Website Maintenance for Agencies" },
+      { name: "description", content: "White label website maintenance for agencies — updates, security, backups, monitoring and emergency fixes under your brand." },
+      { property: "og:title", content: "White Label Website Maintenance for Agencies" },
+      { property: "og:description", content: "White label website maintenance for agencies — updates, security, backups, monitoring and emergency fixes under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance" },
-      { name: "twitter:title", content: "White Label Website Maintenance for Agencies — White Label Website Development" },
-      { name: "twitter:description", content: "Reliable white label website maintenance for agencies. Updates, security, backups, monitoring and emergency fixes — delivered under your brand." },
+      { name: "twitter:title", content: "White Label Website Maintenance for Agencies" },
+      { name: "twitter:description", content: "White label website maintenance for agencies — updates, security, backups, monitoring and emergency fixes under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance" },

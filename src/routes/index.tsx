@@ -10,9 +10,9 @@ import {
 } from "@/components/site/ServiceSections";
 import { SiteLinks } from "@/components/site/SiteLinks";
 
-const HOME_TITLE = "White Label Website Development for Agencies | Invisible Web Dev Partner";
+const HOME_TITLE = "White Label Website Development for Agencies";
 const HOME_DESC =
-  "White label website development for SEO, marketing and digital agencies. SEO-ready WordPress, WooCommerce and custom builds delivered under your brand — NDA friendly, on schedule.";
+  "White label WordPress, WooCommerce and custom web development for agencies. SEO-ready builds delivered under your brand — NDA friendly, on schedule.";
 const HOME_URL = "https://whitelabelwebsitedevelopment.com/";
 
 const HOME_FAQS = [
