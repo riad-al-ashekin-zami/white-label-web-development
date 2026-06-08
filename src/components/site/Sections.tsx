@@ -48,8 +48,11 @@ export function Hero() {
               <img
                 src={heroImg}
                 alt="White label web development workflow dashboard for agency project delivery"
-                width={1280}
-                height={960}
+                width={1200}
+                height={1200}
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
                 className="h-auto w-full rounded-xl"
               />
             </div>
