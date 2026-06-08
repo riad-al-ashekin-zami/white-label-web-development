@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-dashboard.jpg";
+import heroImg from "@/assets/hero-dashboard.webp";
 
 /* ---------- HERO ---------- */
 export function Hero() {
