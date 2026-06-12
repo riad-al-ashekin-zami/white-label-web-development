@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { toast } from "sonner";
-
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mvznwdra";
+import { submitLead } from "@/lib/leads.functions";
 import {
   ArrowRight, ArrowLeft, CheckCircle2, Mail, MessageSquare, Slack, Phone,
   Globe, Workflow, Headphones, ShieldCheck, EyeOff, FileLock2, UserX, Lock,
