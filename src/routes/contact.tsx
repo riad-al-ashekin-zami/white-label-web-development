@@ -183,7 +183,6 @@ function MultiStepForm() {
   const [submitting, setSubmitting] = useState(false);
   const [hp, setHp] = useState("");
   const navigate = useNavigate();
-  const send = useServerFn(submitLead);
 
   const update = <K extends keyof FormData>(k: K, v: FormData[K]) => {
     setData((d) => ({ ...d, [k]: v }));
