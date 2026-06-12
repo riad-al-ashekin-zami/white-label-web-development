@@ -207,32 +207,38 @@ function MultiStepForm() {
 
   const submit = async () => {
     if (!validateStep()) return;
+    if (hp) { navigate({ to: "/thank-you" }); return; } // honeypot
     setSubmitting(true);
     try {
-      await send({
-        data: {
-          name: data.name,
-          email: data.email,
-          phone: "",
-          company_name: data.agency,
-          website_url: data.website,
-          service_needed: data.service,
-          budget: data.budget,
-          timeline: data.timeline,
-          project_details: [
-            data.description,
-            data.features ? `\n\nKey features: ${data.features}` : "",
-            data.references ? `\n\nReferences: ${data.references}` : "",
-            `\n\nProject type: ${data.projectType} | Pages: ${data.pages} | Platform: ${data.platform}`,
-            `\nMaintenance: ${data.maintenance} | White-label: ${data.whiteLabel}`,
-          ].join(""),
-          preferred_contact: data.comms,
-          nda_required: data.nda,
-          source_page: typeof window !== "undefined" ? window.location.pathname + window.location.search : "/contact",
-          referrer: typeof document !== "undefined" ? document.referrer : "",
-          company_website: hp,
-        },
+      const payload = {
+        name: data.name,
+        email: data.email,
+        agency: data.agency,
+        website: data.website,
+        service: data.service,
+        project_type: data.projectType,
+        pages: data.pages,
+        platform: data.platform,
+        timeline: data.timeline,
+        budget: data.budget,
+        description: data.description,
+        references: data.references,
+        features: data.features,
+        maintenance: data.maintenance,
+        white_label: data.whiteLabel,
+        preferred_contact: data.comms,
+        nda_required: data.nda ? "Yes" : "No",
+        source_page: typeof window !== "undefined" ? window.location.pathname + window.location.search : "/contact",
+        referrer: typeof document !== "undefined" ? document.referrer : "",
+        _subject: `New lead: ${data.agency} — ${data.service}`,
+        _replyto: data.email,
+      };
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
       });
+      if (!res.ok) throw new Error(`Formspree ${res.status}`);
       navigate({ to: "/thank-you" });
     } catch (err) {
       console.error(err);
