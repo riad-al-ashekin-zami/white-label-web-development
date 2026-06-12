@@ -183,6 +183,7 @@ function MultiStepForm() {
   const [submitting, setSubmitting] = useState(false);
   const [hp, setHp] = useState("");
   const navigate = useNavigate();
+  const send = useServerFn(submitLead);
 
   const update = <K extends keyof FormData>(k: K, v: FormData[K]) => {
     setData((d) => ({ ...d, [k]: v }));
@@ -210,35 +211,34 @@ function MultiStepForm() {
     if (hp) { navigate({ to: "/thank-you" }); return; } // honeypot
     setSubmitting(true);
     try {
-      const payload = {
-        name: data.name,
-        email: data.email,
-        agency: data.agency,
-        website: data.website,
-        service: data.service,
-        project_type: data.projectType,
-        pages: data.pages,
-        platform: data.platform,
-        timeline: data.timeline,
-        budget: data.budget,
-        description: data.description,
-        references: data.references,
-        features: data.features,
-        maintenance: data.maintenance,
-        white_label: data.whiteLabel,
-        preferred_contact: data.comms,
-        nda_required: data.nda ? "Yes" : "No",
-        source_page: typeof window !== "undefined" ? window.location.pathname + window.location.search : "/contact",
-        referrer: typeof document !== "undefined" ? document.referrer : "",
-        _subject: `New lead: ${data.agency} — ${data.service}`,
-        _replyto: data.email,
-      };
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
+      const projectDetails = [
+        data.description,
+        data.references ? `\n\nReferences: ${data.references}` : "",
+        data.features ? `\n\nRequired features: ${data.features}` : "",
+        `\n\nProject type: ${data.projectType}`,
+        `\nPages: ${data.pages}`,
+        `\nPlatform: ${data.platform}`,
+        `\nMaintenance: ${data.maintenance}`,
+        `\nWhite label: ${data.whiteLabel}`,
+      ].join("");
+
+      await send({
+        data: {
+          name: data.name,
+          email: data.email,
+          company_name: data.agency,
+          website_url: data.website,
+          service_needed: data.service,
+          budget: data.budget,
+          timeline: data.timeline,
+          project_details: projectDetails,
+          preferred_contact: data.comms,
+          nda_required: data.nda,
+          source_page: typeof window !== "undefined" ? window.location.pathname + window.location.search : "/contact",
+          referrer: typeof document !== "undefined" ? document.referrer : "",
+          company_website: hp,
+        },
       });
-      if (!res.ok) throw new Error(`Formspree ${res.status}`);
       navigate({ to: "/thank-you" });
     } catch (err) {
       console.error(err);
