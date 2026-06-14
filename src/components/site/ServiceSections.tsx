@@ -288,7 +288,7 @@ export function FAQ() {
         </div>
         <p className="mt-8 text-center text-sm text-muted-foreground">
           Ready to discuss scope and budget? <Link to="/pricing" className="font-semibold text-brand hover:underline">View our pricing</Link>.
-        </div>
+        </p>
       </div>
     </section>
   );
