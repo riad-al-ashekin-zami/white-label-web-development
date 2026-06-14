@@ -5,9 +5,7 @@ import {
   CheckCircle2, XCircle, Briefcase, Stethoscope, Home, Hammer, Building2, Store,
   Globe, TrendingUp, DollarSign, Zap,
 } from "lucide-react";
-import {
-  Accordion, AccordionContent, AccordionItem, AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Link } from "@tanstack/react-router";
 
 function SectionHeader({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
   return (
@@ -262,36 +260,34 @@ export function PartnerBenefits() {
 
 /* ---------- FAQ ---------- */
 const faqs = [
-  { q: "What is white label website development?", a: "White label website development is when an outside production team builds websites under your agency's brand. Your client sees your logo, your domain, your communication — we stay invisible in the background." },
-  { q: "Do you sign an NDA?", a: "Yes. We sign a mutual NDA before any briefing call. Confidentiality is the foundation of every white label relationship." },
-  { q: "Do you communicate with our clients?", a: "Never directly. All communication runs through your team. We stay completely invisible to your clients." },
-  { q: "Can we use our own branding?", a: "Absolutely. Every deliverable — staging URLs, documentation, handover files — is presented under your branding." },
-  { q: "What platforms do you build on?", a: "WordPress (custom themes, ACF, Gutenberg, Elementor), WooCommerce, Webflow, Shopify, and custom React/Next.js stacks." },
-  { q: "How fast is your turnaround?", a: "Most websites ship in 5–7 business days. Larger custom builds get a committed timeline before kickoff." },
-  { q: "How do revisions work?", a: "Each project includes two structured revision rounds with annotated feedback. Additional rounds are quoted upfront — no scope creep." },
-  { q: "Do you provide ongoing maintenance?", a: "Yes. We offer monthly maintenance plans covering updates, backups, security patches and content edits." },
-  { q: "Do you work with agencies remotely across North America?", a: "Yes. We partner with SEO, marketing and digital agencies across the United States, Canada and worldwide. Our team overlaps with both US Eastern and Pacific business hours, so daily standups and async updates fit your workflow." },
-  { q: "Can you handle multi-location and local SEO websites?", a: "Yes. We build scalable city-page architectures, service-area templates and multi-location WordPress sites engineered for local SEO — schema, internal linking and Core Web Vitals included." },
+  { q: "What is white label web development?", a: "White label web development is when a specialized development team builds websites on behalf of an agency, freelancer or consultant — entirely under their brand. The white label web developer handles design, coding, testing and deployment while staying invisible to the agency's end client. It lets agencies offer professional web development services without maintaining an in-house development team." },
+  { q: "How is a white label web developer different from a freelancer?", a: "A white label web developer operates as a structured production partner with dedicated project managers, QA processes, version control and documented workflows. Unlike freelancers who often work alone and communicate inconsistently, a white label web development agency provides reliable turnaround, scalable capacity and formal confidentiality through NDAs — agency-grade infrastructure without the freelancer risk." },
+  { q: "Do you sign an NDA before starting work?", a: "Yes. We sign a mutual NDA before every engagement. Your client relationships, project details and brand identity stay fully protected. We never contact your clients directly, and all communication happens through agency-safe channels." },
+  { q: "Do you communicate with our clients?", a: "Never. We work strictly behind your brand. All communication runs through your team, and we appear nowhere in the delivery. Your client believes the work was produced in-house — which is exactly the point of white label web development." },
+  { q: "Can we use our own branding?", a: "Absolutely. Every deliverable ships under your branding, on your domain, presented as your agency's work. Staging links, handover files and documentation carry your brand, never ours." },
+  { q: "What platforms do your white label web developers build on?", a: "Our white label web development team builds on WordPress (custom themes, Elementor, Divi, Gutenberg, ACF), WooCommerce, Shopify, Webflow and custom HTML/CSS/JS. WordPress is our strongest capability, covering the majority of projects we deliver for agency partners." },
+  { q: "How fast is your turnaround?", a: "Most standard websites ship in 5–7 business days. Complex builds like multi-page WordPress sites or WooCommerce stores typically take 2–3 weeks depending on scope. Every project gets a hard committed timeline before work begins." },
+  { q: "How do revisions work?", a: "Every project includes structured revision rounds with clearly defined scope. You review on a private staging URL, submit consolidated feedback, and our team implements changes within 24–48 hours — preventing scope creep while delivering exactly what your client needs." },
+  { q: "Do you provide ongoing website maintenance?", a: "Yes. We offer white label website maintenance packages covering WordPress core and plugin updates, daily backups, security monitoring, uptime checks and monthly content edits — billed monthly and delivered under your brand." },
+  { q: "Do you work with agencies remotely across North America?", a: "Yes. We partner with agencies across the United States and Canada, plus remote partners worldwide. Our team overlaps with US Eastern and Pacific business hours, and we work asynchronously for partners in other time zones." },
+  { q: "Can you handle multi-location and local SEO websites?", a: "Yes. We build multi-location websites with proper local SEO structure — location-specific schema, optimized landing pages, NAP consistency and crawlable architecture — so your SEO team can rank each location effectively." },
 ];
 
 export function FAQ() {
   return (
     <section className="bg-surface py-16 md:py-32">
       <div className="container-page max-w-3xl">
-        <SectionHeader eyebrow="FAQ" title="White label website development — answers for agencies" />
-        <div className="mt-10 md:mt-12">
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((f, i) => (
-              <AccordionItem key={f.q} value={`item-${i}`} className="border-border">
-                <AccordionTrigger className="text-left text-base font-semibold text-ink hover:no-underline">
-                  {f.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  {f.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        <SectionHeader eyebrow="FAQ" title="White Label Web Development — FAQs for Agencies" />
+        <div className="mt-10 divide-y divide-border border-y border-border md:mt-12">
+          {faqs.map((f) => (
+            <article key={f.q} className="py-6">
+              <h3 className="text-base font-semibold text-ink">{f.q}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+            </article>
+          ))}
+        </div>
+        <p className="mt-8 text-center text-sm text-muted-foreground">
+          Ready to discuss scope and budget? <Link to="/pricing" className="font-semibold text-brand hover:underline">View our pricing</Link>.
         </div>
       </div>
     </section>
