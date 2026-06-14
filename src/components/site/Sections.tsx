@@ -128,12 +128,12 @@ export function WhoWeHelp() {
 
 /* ---------- SERVICES ---------- */
 const services = [
-  { icon: Code2, title: "White Label WordPress Development", desc: "Custom themes, ACF, Elementor or Gutenberg — clean, editable, SEO-ready.", to: "/services/white-label-wordpress-development" },
-  { icon: MonitorSmartphone, title: "White Label Website Design", desc: "Modern, conversion-focused web design delivered in Figma or to dev.", to: "/services/white-label-website-design" },
-  { icon: ShoppingCart, title: "White Label WooCommerce Development", desc: "Scalable storefronts with payments, shipping and inventory wired in.", to: "/services/white-label-woocommerce-development" },
-  { icon: Rocket, title: "White Label Landing Page Design", desc: "High-converting landing pages for ad campaigns, launches and lead gen.", to: "/services/white-label-landing-page-design" },
-  { icon: Wrench, title: "White Label Website Maintenance", desc: "Updates, backups, security patches and content edits — handled monthly.", to: "/services/white-label-website-maintenance" },
-  { icon: Gauge, title: "SEO-Friendly Web Development", desc: "Core Web Vitals tuned, schema-ready code, Lighthouse scores you can sell.", to: "/services/seo-friendly-web-development" },
+  { icon: Code2, title: "White Label WordPress Development", desc: "Custom themes, ACF, Elementor, Divi and Gutenberg — all built with clean, editable, SEO-ready code. Every WordPress site is mobile-optimized and safe for your client's team to manage.", to: "/services/white-label-wordpress-development" },
+  { icon: MonitorSmartphone, title: "White Label Website Design", desc: "Modern, conversion-focused web design delivered in Figma or built straight to dev. UX-driven layouts that match your agency's standards.", to: "/services/white-label-website-design" },
+  { icon: ShoppingCart, title: "White Label WooCommerce Development", desc: "Scalable ecommerce storefronts with payment gateways, shipping calculators and inventory management wired in and tested. WooCommerce stores that convert and scale.", to: "/services/white-label-woocommerce-development" },
+  { icon: Rocket, title: "White Label Landing Page Design", desc: "High-converting landing pages for ad campaigns, product launches and lead gen. Fast turnaround, A/B-test ready, built to hit your performance benchmarks.", to: "/services/white-label-landing-page-design" },
+  { icon: Wrench, title: "White Label Website Maintenance", desc: "WordPress updates, daily backups, security patches and monthly content edits — handled under your brand so you can offer recurring revenue to clients.", to: "/services/white-label-website-maintenance" },
+  { icon: Gauge, title: "SEO-Friendly Web Development", desc: "Core Web Vitals tuned, schema-ready code and Lighthouse scores you can sell. SEO-first development baked into every build.", to: "/services/seo-friendly-web-development" },
 ];
 
 export function Services() {
@@ -142,8 +142,8 @@ export function Services() {
       <div className="container-page">
         <SectionHeader
           eyebrow="White label services"
-          title="Production-grade web development for agencies, on demand"
-          sub="Everything your agency needs to deliver WordPress, WooCommerce, and landing page projects at scale — under your brand."
+          title="White Label Web Development Services"
+          sub="Everything your agency needs to deliver professional websites at scale. Our white label web development services cover the full production lifecycle — from design and development to launch and ongoing maintenance, all under your brand."
         />
         <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
           {services.map(({ icon: Icon, title, desc, to }) => (
@@ -166,15 +166,12 @@ export function Services() {
 
 /* ---------- WHY US ---------- */
 const reasons = [
-  { icon: Timer, title: "Fast turnaround", desc: "Most projects ship in 5–7 business days." },
-  { icon: Search, title: "SEO-ready code", desc: "Schema, semantic HTML, fast Core Web Vitals." },
-  { icon: Users, title: "Dedicated PM", desc: "One point of contact across every project." },
-  { icon: ShieldCheck, title: "White label delivery", desc: "Your branding, your domain, your client." },
-  { icon: EyeOff, title: "NDA friendly", desc: "Mutual NDAs signed before kickoff." },
-  { icon: Smartphone, title: "Mobile optimized", desc: "Responsive across every breakpoint." },
-  { icon: FileCode2, title: "Clean code", desc: "Maintainable, documented, no plugin bloat." },
-  { icon: RefreshCw, title: "Revision workflow", desc: "Structured rounds with clear scope." },
-  { icon: MessageSquare, title: "Agency comms", desc: "Slack, ClickUp, Asana — we plug in." },
+  { icon: Timer, title: "Fast, Predictable Turnaround", desc: "Most projects ship in 5–7 business days. Bigger builds get a committed timeline you can plan client launches around." },
+  { icon: Search, title: "SEO-First Development", desc: "Schema markup, semantic HTML, optimized Core Web Vitals and clean crawlable code — your SEO team will thank your white label web developer." },
+  { icon: Users, title: "Dedicated Project Manager", desc: "One human point of contact who responds in hours, not days, over Slack, ClickUp, Asana or email — your choice." },
+  { icon: ShieldCheck, title: "100% White Label & NDA Protected", desc: "Your branding, your domain, your client relationship. Mutual NDAs signed before kickoff. We never contact your clients." },
+  { icon: RefreshCw, title: "Scalable Capacity", desc: "Run 1 project or 30 in parallel. Add white label web development capacity in days, not quarters. Say yes to bigger pipelines." },
+  { icon: FileCode2, title: "Higher Profit Margins", desc: "Resell at your rate with no recruiting, onboarding, benefits or bench time. One vendor, one PM, one invoice across every project." },
 ];
 
 export function WhyUs() {
@@ -183,8 +180,8 @@ export function WhyUs() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Why agencies choose us"
-          title="Operational trust, built into every project"
-          sub="The reasons agency owners renew with us — quarter after quarter."
+          title="Why Agencies Choose Us as Their White Label Web Development Partner"
+          sub="Agency owners renew with us quarter after quarter because we operate like an in-house team — without the payroll. Here's what makes our white label web development different from typical freelancers and generic dev shops."
         />
         <div className="mt-10 grid grid-cols-2 gap-4 md:mt-14 md:gap-6 lg:grid-cols-3">
           {reasons.map(({ icon: Icon, title, desc }) => (
