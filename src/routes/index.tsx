@@ -8,7 +8,6 @@ import {
 import {
   Problem, Comparison, FAQ,
 } from "@/components/site/ServiceSections";
-import { SiteLinks } from "@/components/site/SiteLinks";
 
 const HOME_TITLE = "White Label Web Development for Agencies | Developers";
 const HOME_DESC =
@@ -90,7 +89,6 @@ function Index() {
         <Portfolio />
         <Testimonials />
         <FAQ />
-        <SiteLinks />
         <FinalCTA />
       </main>
       <Footer />
