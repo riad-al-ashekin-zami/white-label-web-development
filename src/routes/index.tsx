@@ -10,7 +10,7 @@ import {
 } from "@/components/site/ServiceSections";
 import { SiteLinks } from "@/components/site/SiteLinks";
 
-const HOME_TITLE = "White Label Web Development for Agencies | White Label Web Developers";
+const HOME_TITLE = "White Label Web Development for Agencies | Developers";
 const HOME_DESC =
   "White label web development for agencies — WordPress, WooCommerce & landing pages built under your brand. NDA-friendly developers, 5–7 day turnaround.";
 const HOME_URL = "https://whitelabelwebsitedevelopment.com/";
@@ -49,13 +49,13 @@ export const Route = createFileRoute("/")({
           "@graph": [
             {
               "@type": "Service",
-              name: "White Label Website Development",
+              name: "White Label Web Development",
               description:
                 "End-to-end white label website development for SEO, marketing and digital agencies. WordPress, WooCommerce, custom builds — delivered under your brand.",
               url: HOME_URL,
               provider: { "@id": "https://whitelabelwebsitedevelopment.com/#organization" },
               areaServed: "Global",
-              serviceType: "White Label Website Development",
+              serviceType: "White Label Web Development",
               audience: { "@type": "Audience", audienceType: "Marketing, SEO and digital agencies" },
             },
             {
