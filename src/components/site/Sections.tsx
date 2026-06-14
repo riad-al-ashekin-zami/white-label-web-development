@@ -22,17 +22,17 @@ export function Hero() {
               Trusted by 120+ agencies worldwide
             </div>
             <h1 className="mt-5 text-balance text-[34px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[64px] lg:leading-[1.05]">
-              <span className="text-gradient-brand">White Label Website Development</span> for agencies.
+              <span className="text-gradient-brand">White Label Web Development</span> for Agencies
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
-              A dedicated white label web development partner for SEO agencies, marketing teams and consultants across North America and globally — WordPress, WooCommerce and landing pages built under your brand, SEO-ready, Core Web Vitals optimized and delivered remotely.
+              We're the white label web development partner behind 120+ agencies, marketing teams and consultants across North America and globally. Our white label web developers build WordPress, WooCommerce and landing page websites under your brand — SEO-ready, Core Web Vitals optimized, and delivered remotely in 5–7 business days.
             </p>
             <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:mt-8">
               <Button asChild size="lg" className="h-12 rounded-full px-6">
                 <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-12 rounded-full px-6">
-                <Link to="/portfolio">See agency projects</Link>
+                <Link to="/portfolio">See Agency Projects</Link>
               </Button>
             </div>
             <div className="mt-6 grid grid-cols-3 gap-2 text-[11px] text-muted-foreground sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-2 sm:text-xs md:mt-8">
@@ -47,7 +47,7 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-2xl border border-border bg-surface-elevated p-2 shadow-elevated">
               <img
                 src={heroImg}
-                alt="White label web development workflow dashboard for agency project delivery"
+                alt="White label web development dashboard showing agency project workflow and delivery"
                 width={1200}
                 height={1200}
                 fetchPriority="high"
@@ -90,12 +90,12 @@ function SectionHeader({ eyebrow, title, sub }: { eyebrow: string; title: string
 
 /* ---------- WHO WE HELP ---------- */
 const audiences = [
-  { icon: Search, title: "SEO Agencies", desc: "Hand off SEO-ready websites we build to your specs — fast turnarounds, clean schema, Core Web Vitals optimized." },
-  { icon: Megaphone, title: "Marketing Agencies", desc: "Pixel-perfect landing pages and full sites that ship on schedule for your campaigns." },
-  { icon: User, title: "Freelancers", desc: "Take on bigger projects without hiring. We become your invisible production team." },
-  { icon: Palette, title: "Designers", desc: "Send us your Figma — we build it cleanly in WordPress, Webflow or custom code." },
-  { icon: Briefcase, title: "Consultants", desc: "Deliver complete digital solutions to your clients without operational overhead." },
-  { icon: Building2, title: "Digital Agencies", desc: "Scale fulfillment capacity instantly with a partner that protects your brand." },
+  { icon: Search, title: "SEO Agencies", desc: "We're the white label web development partner SEO agencies trust for client site builds. Every website ships with clean semantic HTML, schema markup, optimized Core Web Vitals and crawlable architecture — so your SEO team never has to clean up after a developer." },
+  { icon: Megaphone, title: "Marketing Agencies", desc: "Pixel-perfect landing pages and full websites that ship on your campaign schedule. Our white label web developers work from your briefs, match your design specs, and deliver private staging links you can present to clients as your own work." },
+  { icon: User, title: "Freelancers", desc: "Take on bigger web development projects without hiring. We become your invisible production team — a reliable white label web developer for WordPress, WooCommerce and custom builds, project after project." },
+  { icon: Palette, title: "Web Designers", desc: "Send us your Figma, Sketch or XD files. Our developers build them cleanly in WordPress, Elementor, Webflow or custom code — responsive, fast-loading, and ready for client handover." },
+  { icon: Briefcase, title: "Consultants", desc: "Deliver complete digital solutions to your clients without operational overhead. We handle the full white label web development workflow while you stay focused on advisory work." },
+  { icon: Building2, title: "Digital Agencies", desc: "Scale fulfillment capacity instantly with a white label web development partner that protects your brand. Run more projects in parallel without expanding your internal team." },
 ];
 
 export function WhoWeHelp() {
@@ -104,8 +104,8 @@ export function WhoWeHelp() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Who we help"
-          title="Built for the people who sell websites"
-          sub="We work exclusively with agencies, freelancers and consultants — never your clients directly."
+          title="Built for the People Who Sell Websites"
+          sub="We work exclusively with agencies, freelancers and consultants — never your clients directly. Whatever you sell, our white label web developers build it under your name."
         />
         <div className="mt-10 grid grid-cols-2 gap-3 md:mt-14 md:gap-4 lg:grid-cols-3">
           {audiences.map(({ icon: Icon, title, desc }) => (
