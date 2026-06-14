@@ -2,29 +2,30 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import {
-  Hero, WhoWeHelp, Services, WhyUs, Process, WhiteLabel,
+  Hero, WhatIsWhiteLabel, WhoWeHelp, Services, WhyUs, Process,
   Portfolio, Testimonials, FinalCTA,
 } from "@/components/site/Sections";
 import {
-  Problem, Solution, IncludedServices, Comparison, Types, PartnerBenefits, FAQ,
+  Problem, Comparison, FAQ,
 } from "@/components/site/ServiceSections";
-import { SiteLinks } from "@/components/site/SiteLinks";
 
-const HOME_TITLE = "White Label Website Development for Agencies";
+const HOME_TITLE = "White Label Web Development for Agencies | Developers";
 const HOME_DESC =
-  "White label WordPress, WooCommerce and custom web development for agencies. SEO-ready builds delivered under your brand — NDA friendly, on schedule.";
+  "White label web development for agencies — WordPress, WooCommerce & landing pages built under your brand. NDA-friendly developers, 5–7 day turnaround.";
 const HOME_URL = "https://whitelabelwebsitedevelopment.com/";
 
 const HOME_FAQS = [
-  { q: "What is white label website development?", a: "White label website development is when an outside production team builds websites under your agency's brand. Your client sees your logo, your domain, your communication — we stay invisible in the background." },
-  { q: "Do you sign an NDA?", a: "Yes. We sign a mutual NDA before any briefing call. Confidentiality is the foundation of every white label relationship." },
-  { q: "Do you communicate with our clients?", a: "Never directly. All communication runs through your team. We stay completely invisible to your clients." },
-  { q: "What platforms do you build on?", a: "WordPress (custom themes, ACF, Gutenberg, Elementor), WooCommerce, Webflow, Shopify, and custom React/Next.js stacks." },
-  { q: "How fast is your turnaround?", a: "Most websites ship in 5–7 business days. Larger custom builds get a committed timeline before kickoff." },
-  { q: "How do revisions work?", a: "Each project includes two structured revision rounds with annotated feedback. Additional rounds are quoted upfront — no scope creep." },
-  { q: "Do you work with agencies remotely across North America?", a: "Yes. We work fully remote and partner with agencies across the United States, Canada and worldwide. Our team overlaps with both US Eastern and Pacific business hours for synchronous communication." },
-  { q: "Can you handle multi-location and local SEO websites?", a: "Yes. We build scalable city-page architectures, service-area templates and multi-location WordPress sites engineered for local SEO — schema, internal linking and Core Web Vitals included." },
-  { q: "Do you support SEO agencies with technical SEO implementation?", a: "Absolutely. SEO agencies are our core audience. We implement technical SEO recommendations, semantic HTML, structured data and performance fixes directly into the build." },
+  { q: "What is white label web development?", a: "White label web development is when a specialized development team builds websites on behalf of an agency, freelancer or consultant — entirely under their brand. The white label web developer handles design, coding, testing and deployment while staying invisible to the agency's end client. It lets agencies offer professional web development services without maintaining an in-house development team." },
+  { q: "How is a white label web developer different from a freelancer?", a: "A white label web developer operates as a structured production partner with dedicated project managers, QA processes, version control and documented workflows. Unlike freelancers, a white label web development agency provides reliable turnaround, scalable capacity and formal confidentiality through NDAs." },
+  { q: "Do you sign an NDA before starting work?", a: "Yes. We sign a mutual NDA before every engagement. Your client relationships, project details and brand identity stay fully protected. We never contact your clients directly." },
+  { q: "Do you communicate with our clients?", a: "Never. We work strictly behind your brand. All communication runs through your team, and we appear nowhere in the delivery." },
+  { q: "Can we use our own branding?", a: "Absolutely. Every deliverable ships under your branding, on your domain, presented as your agency's work." },
+  { q: "What platforms do your white label web developers build on?", a: "Our team builds on WordPress, WooCommerce, Shopify, Webflow and custom HTML/CSS/JS. WordPress is our strongest capability." },
+  { q: "How fast is your turnaround?", a: "Most standard websites ship in 5–7 business days. Complex WordPress sites or WooCommerce stores typically take 2–3 weeks depending on scope." },
+  { q: "How do revisions work?", a: "Every project includes structured revision rounds with clearly defined scope. You review on a private staging URL and our team implements consolidated feedback within 24–48 hours." },
+  { q: "Do you provide ongoing website maintenance?", a: "Yes. We offer white label website maintenance covering updates, daily backups, security monitoring, uptime checks and monthly content edits." },
+  { q: "Do you work with agencies remotely across North America?", a: "Yes. We partner with agencies across the United States and Canada, plus remote partners worldwide, with overlap across US Eastern and Pacific hours." },
+  { q: "Can you handle multi-location and local SEO websites?", a: "Yes. We build multi-location websites with location-specific schema, optimized landing pages, NAP consistency and crawlable architecture." },
 ];
 
 export const Route = createFileRoute("/")({
@@ -47,13 +48,13 @@ export const Route = createFileRoute("/")({
           "@graph": [
             {
               "@type": "Service",
-              name: "White Label Website Development",
+              name: "White Label Web Development",
               description:
                 "End-to-end white label website development for SEO, marketing and digital agencies. WordPress, WooCommerce, custom builds — delivered under your brand.",
               url: HOME_URL,
               provider: { "@id": "https://whitelabelwebsitedevelopment.com/#organization" },
               areaServed: "Global",
-              serviceType: "White Label Website Development",
+              serviceType: "White Label Web Development",
               audience: { "@type": "Audience", audienceType: "Marketing, SEO and digital agencies" },
             },
             {
@@ -78,21 +79,16 @@ function Index() {
       <Header />
       <main>
         <Hero />
+        <WhatIsWhiteLabel />
         <WhoWeHelp />
         <Problem />
-        <Solution />
+        <Process />
         <Services />
-        <IncludedServices />
         <WhyUs />
         <Comparison />
-        <Process />
-        <Types />
-        <WhiteLabel />
         <Portfolio />
-        <PartnerBenefits />
         <Testimonials />
         <FAQ />
-        <SiteLinks />
         <FinalCTA />
       </main>
       <Footer />

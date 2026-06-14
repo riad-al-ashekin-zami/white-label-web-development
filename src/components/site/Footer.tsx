@@ -58,7 +58,7 @@ export function Footer() {
         <div className="mb-12 flex flex-col items-start justify-between gap-4 rounded-2xl border border-border bg-gradient-to-br from-surface-elevated to-brand-soft/40 p-6 md:flex-row md:items-center md:gap-6 md:p-8">
           <div className="max-w-xl">
             <h3 className="text-balance text-xl font-semibold tracking-tight text-ink md:text-2xl">
-              Need a reliable white label partner?
+               Need a reliable white label web development partner?
             </h3>
             <p className="mt-1.5 text-sm text-muted-foreground">
               Send us your brief. We reply within one business day — NDA on request.
@@ -92,7 +92,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-muted-foreground">
-              The invisible white label web partner for agencies, marketers and consultants —
+               The invisible white label web development partner for agencies, marketers and consultants —
               supporting SEO and digital teams across North America and remote partners worldwide.
             </p>
 
