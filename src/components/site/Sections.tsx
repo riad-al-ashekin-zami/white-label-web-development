@@ -203,10 +203,10 @@ export function WhyUs() {
 
 /* ---------- PROCESS ---------- */
 const steps = [
-  { n: "01", title: "Send Requirements", desc: "Brief us via your tool of choice. We confirm scope, timeline and price within hours." },
-  { n: "02", title: "We Build", desc: "Your dedicated PM and dev team get to work. Daily updates, no surprises." },
-  { n: "03", title: "Review & Revisions", desc: "Structured revision rounds with a private staging URL — fully under your brand." },
-  { n: "04", title: "Deliver to Your Client", desc: "We hand off polished files. You ship. We stay invisible." },
+  { n: "01", title: "Send Your Requirements", desc: "Brief us via Slack, ClickUp, Asana, email or your tool of choice. Your dedicated project manager confirms scope, timeline and a fixed price within hours — before any work begins." },
+  { n: "02", title: "Your White Label Web Developers Build", desc: "Your PM and development team get to work with daily progress updates and a private staging URL. Every site is built with clean semantic HTML, responsive across all breakpoints, and tuned for Core Web Vitals from day one." },
+  { n: "03", title: "Review, Revisions & QA", desc: "You review on a private staging URL under your brand. We run structured revision rounds with clear scope, and our QA team tests across browsers, devices and screen sizes before launch." },
+  { n: "04", title: "Deliver to Your Client", desc: "We hand off polished, production-ready files. You ship under your brand. Your client never knows a white label web development team was involved. We stay invisible — that's the promise." },
 ];
 
 export function Process() {
@@ -214,9 +214,9 @@ export function Process() {
     <section id="process" className="bg-surface py-16 md:py-32">
       <div className="container-page">
         <SectionHeader
-          eyebrow="Process"
-          title="A workflow built for agencies"
-          sub="Predictable, transparent and engineered to make you look great in front of your clients."
+          eyebrow="How we work"
+          title="How Our White Label Web Development Process Works"
+          sub="We replaced freelancer chaos with a structured white label web development workflow your agency can plan around. Every project runs on the same proven pipeline — whether it's a single landing page or 30 WordPress builds running in parallel."
         />
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:mt-16 lg:grid-cols-4">
           {steps.map((s) => (
@@ -300,8 +300,8 @@ export function Portfolio() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Portfolio"
-          title="Selected white label projects"
-          sub="Real work delivered for agency partners — names anonymized for confidentiality."
+          title="Selected White Label Web Development Projects"
+          sub="Real websites delivered for agency partners — client names anonymized for confidentiality."
         />
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-14 md:gap-6 lg:grid-cols-3">
           {projects.map((p) => (
@@ -399,10 +399,10 @@ export function FinalCTA() {
           <div className="absolute inset-0 bg-grid-soft opacity-60" aria-hidden />
           <div className="relative mx-auto max-w-2xl">
             <h2 className="text-balance text-3xl font-semibold tracking-tight text-ink md:text-5xl">
-              Ready to scale your agency?
+               Ready to Scale Your Agency?
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-              Book a confidential 20-minute call. We'll map your fulfillment bottlenecks and show how a white label partner removes them.
+               Book a confidential 20-minute call. We'll map your fulfillment bottlenecks and show how a white label web development partner removes them — so you can take on more clients without hiring a single developer.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
