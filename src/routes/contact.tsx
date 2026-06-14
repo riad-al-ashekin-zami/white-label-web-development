@@ -89,7 +89,7 @@ const stepSchemas = [
     whiteLabel: z.enum(["yes", "no"]),
   }),
   z.object({
-    comms: z.string().min(1, "Pick a preferred channel"),
+    comms: z.literal("Email"),
     nda: z.boolean(),
     consent: z.literal(true, { errorMap: () => ({ message: "Please confirm to continue" }) }),
   }),
@@ -99,14 +99,14 @@ type FormData = {
   name: string; agency: string; email: string; website: string;
   service: string; projectType: string; pages: string; platform: string; timeline: string; budget: string;
   description: string; references: string; features: string; maintenance: "yes" | "no" | "maybe"; whiteLabel: "yes" | "no";
-  comms: string; nda: boolean; consent: boolean;
+  comms: "Email"; nda: boolean; consent: boolean;
 };
 
 const initial: FormData = {
   name: "", agency: "", email: "", website: "",
   service: "", projectType: "", pages: "", platform: "", timeline: "", budget: "",
   description: "", references: "", features: "", maintenance: "maybe", whiteLabel: "yes",
-  comms: "", nda: false, consent: false,
+  comms: "Email", nda: false, consent: false,
 };
 
 /* ---------- HERO + FORM ---------- */
@@ -388,24 +388,10 @@ function MultiStepForm() {
 
       {step === 3 && (
         <div className="space-y-5">
-          <Field label="Preferred communication" error={errors.comms}>
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-              {[
-                { v: "Email", icon: Mail },
-                { v: "Slack", icon: Slack },
-                { v: "Call", icon: Phone },
-                { v: "Async", icon: MessageSquare },
-              ].map(({ v, icon: Icon }) => (
-                <button
-                  key={v}
-                  type="button"
-                  onClick={() => update("comms", v)}
-                  className={`flex flex-col items-center gap-1.5 rounded-lg border px-3 py-3 text-sm transition-colors ${data.comms === v ? "border-ink bg-surface text-ink" : "border-border bg-background text-muted-foreground hover:bg-surface"}`}
-                >
-                  <Icon className="h-4 w-4" />
-                  {v}
-                </button>
-              ))}
+          <Field label="Preferred communication">
+            <div className="flex items-center gap-3 rounded-lg border border-ink bg-surface px-4 py-3 text-sm text-ink">
+              <Mail className="h-4 w-4 text-brand" />
+              <span>Email</span>
             </div>
           </Field>
 
