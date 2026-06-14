@@ -88,6 +88,27 @@ function SectionHeader({ eyebrow, title, sub }: { eyebrow: string; title: string
   );
 }
 
+/* ---------- WHAT IS WHITE LABEL WEB DEVELOPMENT ---------- */
+export function WhatIsWhiteLabel() {
+  return (
+    <section className="py-16 md:py-32">
+      <div className="container-page max-w-4xl">
+        <h2 className="text-balance text-[26px] font-semibold leading-tight tracking-tight text-ink sm:text-3xl md:text-4xl">
+          What Is White Label Web Development?
+        </h2>
+        <div className="mt-6 space-y-5 text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p>
+            White label web development is a partnership model where a specialized development team builds websites on behalf of agencies, freelancers and consultants — entirely under their brand. The agency sells the finished website to their end client, while the white label web developer stays completely invisible. No direct client contact, no branding exposure, full NDA protection from start to finish.
+          </p>
+          <p>
+            For agencies that sell websites but don't keep developers in-house, a white label web development partner removes the cost and risk of hiring, managing and retaining technical staff. You focus on sales, strategy and client relationships. Your white label web development agency handles design, development, QA and delivery — on your timeline, under your brand, at a margin you control.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- WHO WE HELP ---------- */
 const audiences = [
   { icon: Search, title: "SEO Agencies", desc: "We're the white label web development partner SEO agencies trust for client site builds. Every website ships with clean semantic HTML, schema markup, optimized Core Web Vitals and crawlable architecture — so your SEO team never has to clean up after a developer." },
