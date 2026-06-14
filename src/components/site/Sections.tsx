@@ -1,7 +1,7 @@
 import {
   ArrowRight, Search, Megaphone, User, Palette, Briefcase, Building2,
   Code2, MonitorSmartphone, ShoppingCart, Rocket, Wrench, Gauge,
-  Timer, ShieldCheck, Users, EyeOff, Smartphone, FileCode2, RefreshCw, MessageSquare,
+  Timer, ShieldCheck, Users, FileCode2, RefreshCw,
   CheckCircle2, Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
