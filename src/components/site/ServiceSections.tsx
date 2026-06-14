@@ -35,8 +35,8 @@ export function Problem() {
       <div className="container-page">
         <SectionHeader
           eyebrow="The problem"
-          title="Agency growth shouldn't depend on unreliable developers"
-          sub="Most agencies hit the same fulfillment wall. Here's what we hear from new partners every week."
+          title="Agency Growth Shouldn't Depend on Unreliable Developers"
+          sub="Most agencies hit the same fulfillment wall. Here's what we hear from new partners every week — and exactly what a white label web development partner is built to fix."
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
           {problems.map(({ icon: Icon, title, desc }) => (
@@ -154,13 +154,13 @@ export function Comparison() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Why agencies work with us"
-          title="A partner built around your operating model"
-          sub="Compare us to the typical freelancer or generic dev shop."
+          title="A White Label Web Development Partner Built Around Your Operating Model"
+          sub="See how a dedicated white label web development partner compares to the typical freelancer or generic dev shop."
         />
         <div className="mt-10 grid gap-5 md:mt-14 md:gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border-2 border-ink bg-card p-6 shadow-elevated md:p-8">
             <div className="flex items-center justify-between gap-3">
-              <h3 className="text-base font-semibold text-ink md:text-lg">White Label Website Development</h3>
+              <h3 className="text-base font-semibold text-ink md:text-lg">White Label Web Development</h3>
               <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">Recommended</span>
             </div>
             <ul className="mt-5 space-y-3 md:mt-6">
