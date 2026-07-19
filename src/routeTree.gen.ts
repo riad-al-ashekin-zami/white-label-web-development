@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WhiteLabelServicesRouteImport } from './routes/white-label-services'
+import { Route as WebsitesForSaleRouteImport } from './routes/websites-for-sale'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -19,7 +20,6 @@ import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as NdaConfidentialityRouteImport } from './routes/nda-confidentiality'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as BuyWebsiteRouteImport } from './routes/buy-website'
 import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -38,6 +38,11 @@ import { Route as AdminLeadsIdRouteImport } from './routes/admin.leads.$id'
 const WhiteLabelServicesRoute = WhiteLabelServicesRouteImport.update({
   id: '/white-label-services',
   path: '/white-label-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebsitesForSaleRoute = WebsitesForSaleRouteImport.update({
+  id: '/websites-for-sale',
+  path: '/websites-for-sale',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ThankYouRoute = ThankYouRouteImport.update({
@@ -83,11 +88,6 @@ const NdaConfidentialityRoute = NdaConfidentialityRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BuyWebsiteRoute = BuyWebsiteRouteImport.update({
-  id: '/buy-website',
-  path: '/buy-website',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AgencyPartnerRoute = AgencyPartnerRouteImport.update({
@@ -172,7 +172,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
-  '/buy-website': typeof BuyWebsiteRoute
   '/contact': typeof ContactRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/portfolio': typeof PortfolioRoute
@@ -182,6 +181,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/thank-you': typeof ThankYouRoute
+  '/websites-for-sale': typeof WebsitesForSaleRoute
   '/white-label-services': typeof WhiteLabelServicesRoute
   '/admin/leads': typeof AdminLeadsRouteWithChildren
   '/admin/login': typeof AdminLoginRoute
@@ -199,7 +199,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
-  '/buy-website': typeof BuyWebsiteRoute
   '/contact': typeof ContactRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/portfolio': typeof PortfolioRoute
@@ -209,6 +208,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/thank-you': typeof ThankYouRoute
+  '/websites-for-sale': typeof WebsitesForSaleRoute
   '/white-label-services': typeof WhiteLabelServicesRoute
   '/admin/leads': typeof AdminLeadsRouteWithChildren
   '/admin/login': typeof AdminLoginRoute
@@ -227,7 +227,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
-  '/buy-website': typeof BuyWebsiteRoute
   '/contact': typeof ContactRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/portfolio': typeof PortfolioRoute
@@ -237,6 +236,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/thank-you': typeof ThankYouRoute
+  '/websites-for-sale': typeof WebsitesForSaleRoute
   '/white-label-services': typeof WhiteLabelServicesRoute
   '/admin/leads': typeof AdminLeadsRouteWithChildren
   '/admin/login': typeof AdminLoginRoute
@@ -256,7 +256,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
-    | '/buy-website'
     | '/contact'
     | '/nda-confidentiality'
     | '/portfolio'
@@ -266,6 +265,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms-of-service'
     | '/thank-you'
+    | '/websites-for-sale'
     | '/white-label-services'
     | '/admin/leads'
     | '/admin/login'
@@ -283,7 +283,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
-    | '/buy-website'
     | '/contact'
     | '/nda-confidentiality'
     | '/portfolio'
@@ -293,6 +292,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms-of-service'
     | '/thank-you'
+    | '/websites-for-sale'
     | '/white-label-services'
     | '/admin/leads'
     | '/admin/login'
@@ -310,7 +310,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
-    | '/buy-website'
     | '/contact'
     | '/nda-confidentiality'
     | '/portfolio'
@@ -320,6 +319,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms-of-service'
     | '/thank-you'
+    | '/websites-for-sale'
     | '/white-label-services'
     | '/admin/leads'
     | '/admin/login'
@@ -338,7 +338,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AgencyPartnerRoute: typeof AgencyPartnerRoute
-  BuyWebsiteRoute: typeof BuyWebsiteRoute
   ContactRoute: typeof ContactRoute
   NdaConfidentialityRoute: typeof NdaConfidentialityRoute
   PortfolioRoute: typeof PortfolioRoute
@@ -348,6 +347,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsOfServiceRoute: typeof TermsOfServiceRoute
   ThankYouRoute: typeof ThankYouRoute
+  WebsitesForSaleRoute: typeof WebsitesForSaleRoute
   WhiteLabelServicesRoute: typeof WhiteLabelServicesRoute
   AdminLeadsRoute: typeof AdminLeadsRouteWithChildren
   AdminLoginRoute: typeof AdminLoginRoute
@@ -368,6 +368,13 @@ declare module '@tanstack/react-router' {
       path: '/white-label-services'
       fullPath: '/white-label-services'
       preLoaderRoute: typeof WhiteLabelServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/websites-for-sale': {
+      id: '/websites-for-sale'
+      path: '/websites-for-sale'
+      fullPath: '/websites-for-sale'
+      preLoaderRoute: typeof WebsitesForSaleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/thank-you': {
@@ -431,13 +438,6 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/buy-website': {
-      id: '/buy-website'
-      path: '/buy-website'
-      fullPath: '/buy-website'
-      preLoaderRoute: typeof BuyWebsiteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/agency-partner': {
@@ -557,7 +557,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AgencyPartnerRoute: AgencyPartnerRoute,
-  BuyWebsiteRoute: BuyWebsiteRoute,
   ContactRoute: ContactRoute,
   NdaConfidentialityRoute: NdaConfidentialityRoute,
   PortfolioRoute: PortfolioRoute,
@@ -567,6 +566,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsOfServiceRoute: TermsOfServiceRoute,
   ThankYouRoute: ThankYouRoute,
+  WebsitesForSaleRoute: WebsitesForSaleRoute,
   WhiteLabelServicesRoute: WhiteLabelServicesRoute,
   AdminLeadsRoute: AdminLeadsRouteWithChildren,
   AdminLoginRoute: AdminLoginRoute,

@@ -13,12 +13,12 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-const PAGE_TITLE = "Buy a Ready-Made Website | White Label Web Development";
+const PAGE_TITLE = "Websites For Sale | White Label Web Development";
 const PAGE_DESC =
-  "Interested in one of our ready-made websites or premium domains? Send us the domain name and we'll get back with pricing, previews and transfer details.";
-const PAGE_URL = "https://whitelabelwebsitedevelopment.com/buy-website";
+  "Browse and inquire about our premium ready-made websites and domains. Tell us which domain you want and we'll send pricing, previews and transfer details.";
+const PAGE_URL = "https://whitelabelwebsitedevelopment.com/websites-for-sale";
 
-export const Route = createFileRoute("/buy-website")({
+export const Route = createFileRoute("/websites-for-sale")({
   head: () => ({
     meta: [
       { title: PAGE_TITLE },
