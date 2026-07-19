@@ -82,7 +82,7 @@ function BuyWebsitePage() {
           domain: parsed.data.domain,
           description: parsed.data.description,
           _subject: `Buy Website inquiry: ${parsed.data.domain}`,
-          source_page: "/buy-website",
+          source_page: "/websites-for-sale",
         }),
       }).catch((e) => {
         console.error("Formspree error:", e);
@@ -98,7 +98,7 @@ function BuyWebsitePage() {
           service_needed: "Buy Ready-Made Website",
           project_details: parsed.data.description,
           preferred_contact: "Email",
-          source_page: "/buy-website",
+          source_page: "/websites-for-sale",
           company_website: form.company_website,
         },
       });
