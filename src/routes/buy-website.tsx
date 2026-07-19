@@ -72,7 +72,24 @@ function BuyWebsitePage() {
     setErrors({});
     setSubmitting(true);
     try {
-      await send({
+      const formspreePromise = fetch("https://formspree.io/f/xnjedypj", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: parsed.data.name,
+          email: parsed.data.email,
+          phone: parsed.data.phone,
+          domain: parsed.data.domain,
+          description: parsed.data.description,
+          _subject: `Buy Website inquiry: ${parsed.data.domain}`,
+          source_page: "/buy-website",
+        }),
+      }).catch((e) => {
+        console.error("Formspree error:", e);
+        return null;
+      });
+
+      const leadPromise = send({
         data: {
           name: parsed.data.name,
           email: parsed.data.email,
@@ -85,6 +102,8 @@ function BuyWebsitePage() {
           company_website: form.company_website,
         },
       });
+
+      await Promise.all([formspreePromise, leadPromise]);
       toast.success("Request sent! We'll email you shortly.");
       navigate({ to: "/thank-you" });
     } catch (err) {
