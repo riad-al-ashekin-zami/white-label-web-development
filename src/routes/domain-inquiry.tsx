@@ -13,12 +13,12 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-const PAGE_TITLE = "Websites For Sale | White Label Web Development";
+const PAGE_TITLE = "Domain Inquiry | White Label Web Development";
 const PAGE_DESC =
-  "Browse and inquire about our premium ready-made websites and domains. Tell us which domain you want and we'll send pricing, previews and transfer details.";
-const PAGE_URL = "https://whitelabelwebsitedevelopment.com/websites-for-sale";
+  "Have a domain or website you'd like to discuss with us? Send us the details and we'll get back to you shortly.";
+const PAGE_URL = "https://whitelabelwebsitedevelopment.com/domain-inquiry";
 
-export const Route = createFileRoute("/websites-for-sale")({
+export const Route = createFileRoute("/domain-inquiry")({
   head: () => ({
     meta: [
       { title: PAGE_TITLE },
@@ -82,7 +82,7 @@ function BuyWebsitePage() {
           domain: parsed.data.domain,
           description: parsed.data.description,
           _subject: `Buy Website inquiry: ${parsed.data.domain}`,
-          source_page: "/websites-for-sale",
+          source_page: "/domain-inquiry",
         }),
       }).catch((e) => {
         console.error("Formspree error:", e);
@@ -98,7 +98,7 @@ function BuyWebsitePage() {
           service_needed: "Buy Ready-Made Website",
           project_details: parsed.data.description,
           preferred_contact: "Email",
-          source_page: "/websites-for-sale",
+          source_page: "/domain-inquiry",
           company_website: form.company_website,
         },
       });
