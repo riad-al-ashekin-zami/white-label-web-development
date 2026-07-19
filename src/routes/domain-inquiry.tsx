@@ -15,7 +15,7 @@ import { Footer } from "@/components/site/Footer";
 
 const PAGE_TITLE = "Domain Inquiry | White Label Web Development";
 const PAGE_DESC =
-  "Browse and inquire about our premium ready-made websites and domains. Tell us which domain you want and we'll send pricing, previews and transfer details.";
+  "Have a domain or website you'd like to discuss with us? Send us the details and we'll get back to you shortly.";
 const PAGE_URL = "https://whitelabelwebsitedevelopment.com/domain-inquiry";
 
 export const Route = createFileRoute("/domain-inquiry")({
