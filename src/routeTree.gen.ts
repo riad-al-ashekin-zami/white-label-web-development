@@ -19,6 +19,7 @@ import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as NdaConfidentialityRouteImport } from './routes/nda-confidentiality'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BuyWebsiteRouteImport } from './routes/buy-website'
 import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -82,6 +83,11 @@ const NdaConfidentialityRoute = NdaConfidentialityRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuyWebsiteRoute = BuyWebsiteRouteImport.update({
+  id: '/buy-website',
+  path: '/buy-website',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AgencyPartnerRoute = AgencyPartnerRouteImport.update({
@@ -166,6 +172,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/buy-website': typeof BuyWebsiteRoute
   '/contact': typeof ContactRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/portfolio': typeof PortfolioRoute
@@ -192,6 +199,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/buy-website': typeof BuyWebsiteRoute
   '/contact': typeof ContactRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/portfolio': typeof PortfolioRoute
@@ -219,6 +227,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/buy-website': typeof BuyWebsiteRoute
   '/contact': typeof ContactRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/portfolio': typeof PortfolioRoute
@@ -247,6 +256,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
+    | '/buy-website'
     | '/contact'
     | '/nda-confidentiality'
     | '/portfolio'
@@ -273,6 +283,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
+    | '/buy-website'
     | '/contact'
     | '/nda-confidentiality'
     | '/portfolio'
@@ -299,6 +310,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
+    | '/buy-website'
     | '/contact'
     | '/nda-confidentiality'
     | '/portfolio'
@@ -326,6 +338,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AgencyPartnerRoute: typeof AgencyPartnerRoute
+  BuyWebsiteRoute: typeof BuyWebsiteRoute
   ContactRoute: typeof ContactRoute
   NdaConfidentialityRoute: typeof NdaConfidentialityRoute
   PortfolioRoute: typeof PortfolioRoute
@@ -418,6 +431,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/buy-website': {
+      id: '/buy-website'
+      path: '/buy-website'
+      fullPath: '/buy-website'
+      preLoaderRoute: typeof BuyWebsiteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/agency-partner': {
@@ -537,6 +557,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AgencyPartnerRoute: AgencyPartnerRoute,
+  BuyWebsiteRoute: BuyWebsiteRoute,
   ContactRoute: ContactRoute,
   NdaConfidentialityRoute: NdaConfidentialityRoute,
   PortfolioRoute: PortfolioRoute,
@@ -566,13 +587,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
