@@ -61,6 +61,7 @@ function BuyWebsitePage() {
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (submitting) return;
     const parsed = Schema.safeParse(form);
     if (!parsed.success) {
       const errs: Record<string, string> = {};
@@ -71,47 +72,56 @@ function BuyWebsitePage() {
     }
     setErrors({});
     setSubmitting(true);
-    try {
-      const formspreePromise = fetch("https://formspree.io/f/xnjedypj", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name: parsed.data.name,
-          email: parsed.data.email,
-          phone: parsed.data.phone,
-          domain: parsed.data.domain,
-          description: parsed.data.description,
-          _subject: `Buy Website inquiry: ${parsed.data.domain}`,
-          source_page: "/domain-inquiry",
-        }),
-      }).catch((e) => {
-        console.error("Formspree error:", e);
-        return null;
+
+    // Fire both channels in parallel, but never let one failure block the other.
+    const formspreePromise = fetch("https://formspree.io/f/xnjedypj", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        name: parsed.data.name,
+        email: parsed.data.email,
+        phone: parsed.data.phone,
+        domain: parsed.data.domain,
+        description: parsed.data.description,
+        _subject: `Domain inquiry: ${parsed.data.domain}`,
+        source_page: "/domain-inquiry",
+      }),
+    })
+      .then((r) => (r.ok ? { ok: true as const } : Promise.reject(new Error(`Formspree ${r.status}`))))
+      .catch((err) => {
+        console.error("Formspree error:", err);
+        return { ok: false as const };
       });
 
-      const leadPromise = send({
-        data: {
-          name: parsed.data.name,
-          email: parsed.data.email,
-          phone: parsed.data.phone,
-          website_url: parsed.data.domain,
-          service_needed: "Buy Ready-Made Website",
-          project_details: parsed.data.description,
-          preferred_contact: "Email",
-          source_page: "/domain-inquiry",
-          company_website: form.company_website,
-        },
+    const leadPromise = send({
+      data: {
+        name: parsed.data.name,
+        email: parsed.data.email,
+        phone: parsed.data.phone,
+        website_url: parsed.data.domain,
+        service_needed: "Domain Inquiry",
+        project_details: parsed.data.description,
+        preferred_contact: "Email",
+        source_page: "/domain-inquiry",
+        company_website: form.company_website,
+      },
+    })
+      .then(() => ({ ok: true as const }))
+      .catch((err) => {
+        console.error("Lead submit error:", err);
+        return { ok: false as const };
       });
 
-      await Promise.all([formspreePromise, leadPromise]);
+    const [fs, lead] = await Promise.all([formspreePromise, leadPromise]);
+
+    if (fs.ok || lead.ok) {
       toast.success("Request sent! We'll email you shortly.");
       navigate({ to: "/thank-you" });
-    } catch (err) {
-      console.error(err);
-      toast.error("Could not send your request. Please try again.");
-    } finally {
-      setSubmitting(false);
+      return;
     }
+
+    setSubmitting(false);
+    toast.error("Could not send your request. Please try again or email us directly.");
   }
 
   return (
