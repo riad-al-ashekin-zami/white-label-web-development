@@ -17,6 +17,7 @@ import { Route as ProcessRouteImport } from './routes/process'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as NdaConfidentialityRouteImport } from './routes/nda-confidentiality'
 import { Route as DomainInquiryRouteImport } from './routes/domain-inquiry'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -73,6 +74,11 @@ const PricingRoute = PricingRouteImport.update({
 const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NdaConfidentialityRoute = NdaConfidentialityRouteImport.update({
@@ -175,6 +181,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
+  '/partners': typeof PartnersRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
@@ -202,6 +209,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
+  '/partners': typeof PartnersRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
@@ -230,6 +238,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
+  '/partners': typeof PartnersRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
@@ -259,6 +268,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/domain-inquiry'
     | '/nda-confidentiality'
+    | '/partners'
     | '/portfolio'
     | '/pricing'
     | '/privacy'
@@ -286,6 +296,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/domain-inquiry'
     | '/nda-confidentiality'
+    | '/partners'
     | '/portfolio'
     | '/pricing'
     | '/privacy'
@@ -313,6 +324,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/domain-inquiry'
     | '/nda-confidentiality'
+    | '/partners'
     | '/portfolio'
     | '/pricing'
     | '/privacy'
@@ -341,6 +353,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DomainInquiryRoute: typeof DomainInquiryRoute
   NdaConfidentialityRoute: typeof NdaConfidentialityRoute
+  PartnersRoute: typeof PartnersRoute
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -417,6 +430,13 @@ declare module '@tanstack/react-router' {
       path: '/portfolio'
       fullPath: '/portfolio'
       preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/nda-confidentiality': {
@@ -560,6 +580,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DomainInquiryRoute: DomainInquiryRoute,
   NdaConfidentialityRoute: NdaConfidentialityRoute,
+  PartnersRoute: PartnersRoute,
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
