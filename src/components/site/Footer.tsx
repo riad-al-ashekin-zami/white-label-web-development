@@ -24,6 +24,7 @@ const company: LinkItem[] = [
   { label: "Pricing", to: "/pricing" },
   { label: "Agency Partner", to: "/agency-partner" },
   { label: "Contact", to: "/contact" },
+  { label: "Partners", to: "/partners" },
 ];
 
 const resources: LinkItem[] = [
