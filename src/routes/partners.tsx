@@ -41,9 +41,21 @@ const PARTNERS = [
 export const Route = createFileRoute("/partners")({
   head: () => ({
     meta: [
-      { title: "Partners" },
-      { name: "robots", content: "noindex" },
+      { title: "Partners | White Label Website Development" },
+      {
+        name: "description",
+        content:
+          "A directory of partner websites we collaborate with across web development, SEO, hospitality, real estate and local services.",
+      },
+      { property: "og:title", content: "Partners | White Label Website Development" },
+      {
+        property: "og:description",
+        content: "A directory of partner websites across web development, SEO and local services.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/partners" }],
   }),
   component: PartnersPage,
 });
