@@ -31,7 +31,7 @@ const entries: SitemapEntry[] = [
   { path: "/blog/how-does-white-label-web-development-work", changefreq: "monthly", priority: "0.7" },
   { path: "/blog/white-label-development-vs-in-house-developers", changefreq: "monthly", priority: "0.7" },
   { path: "/blog/white-label-web-development-pricing", changefreq: "monthly", priority: "0.7" },
-  { path: "/blog/white-label-what-is-white-label-web-development", changefreq: "monthly", priority: "0.7" },
+  { path: "/blog/what-is-white-label-web-development", changefreq: "monthly", priority: "0.7" },
   { path: "/blog/white-label-wordpress-development-for-agencies", changefreq: "monthly", priority: "0.7" },
   { path: "/partners", changefreq: "monthly", priority: "0.5" },
   { path: "/privacy", changefreq: "yearly", priority: "0.3" },
