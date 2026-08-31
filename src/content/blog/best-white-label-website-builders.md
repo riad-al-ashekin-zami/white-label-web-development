@@ -779,6 +779,12 @@ Always check the provider's current pricing before making a decision.
 
 ## Calculate Cost Per Client
 
+[VISUAL: Website Builder Cost-per-Client Formula Graphic]
+
+*Filename: `white-label-website-builder-cost-per-client.webp` — Alt: Formula for calculating white label website builder cost per client*
+
+
+
 Suppose your total platform expense is $300 per month and you have 30 paying clients.
 
 Your base software cost is:
