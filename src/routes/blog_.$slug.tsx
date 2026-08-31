@@ -14,7 +14,9 @@ import { getPost } from "@/content/posts";
 const FAQ_HEADINGS = [
   "# White Label Website Builder FAQs",
   "# Frequently Asked Questions",
+  "## Frequently Asked Questions",
   "# FAQs",
+  "## FAQs",
 ];
 
 function slugify(text: string): string {
