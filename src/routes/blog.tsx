@@ -48,8 +48,17 @@ function BlogIndex() {
                 key={p.slug}
                 to="/blog/$slug"
                 params={{ slug: p.slug }}
-                className="group flex flex-col rounded-2xl border border-border bg-background p-6 shadow-sm transition-colors hover:border-brand/50"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-background shadow-sm transition-colors hover:border-brand/50"
               >
+                {p.image && (
+                  <img
+                    src={p.image}
+                    alt={p.imageAlt ?? p.title}
+                    loading="lazy"
+                    className="aspect-[2/1] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                )}
+                <div className="flex flex-1 flex-col p-6">
                 <span className="text-xs font-semibold uppercase tracking-wider text-brand">{p.category}</span>
                 <h2 className="mt-3 text-xl font-semibold tracking-tight text-ink">{p.title}</h2>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
@@ -65,6 +74,7 @@ function BlogIndex() {
                 <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
                   Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </span>
+                </div>
               </Link>
             ))}
           </div>
