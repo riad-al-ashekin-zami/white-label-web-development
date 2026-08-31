@@ -1,4 +1,5 @@
 import bestBuilders from "./blog/best-white-label-website-builders.md?raw";
+import bestBuildersImage from "@/assets/best-white-label-website-builders-2026.jpg.asset.json";
 
 export type Post = {
   slug: string;
@@ -8,6 +9,8 @@ export type Post = {
   readingTime: string;
   category: string;
   content: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export const posts: Post[] = [
@@ -20,6 +23,8 @@ export const posts: Post[] = [
     readingTime: "28 min read",
     category: "Agency Growth",
     content: bestBuilders,
+    image: bestBuildersImage.url,
+    imageAlt: "Best white label website builders for agencies and resellers in 2026",
   },
 ];
 
