@@ -3,7 +3,34 @@ import { ArrowLeft, CalendarDays, Clock } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Prose } from "@/components/site/Prose";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { getPost } from "@/content/posts";
+
+const FAQ_HEADING = "# White Label Website Builder FAQs";
+
+function splitFaq(content: string): {
+  body: string;
+  faqs: { q: string; a: string }[];
+} {
+  const idx = content.indexOf(FAQ_HEADING);
+  if (idx === -1) return { body: content, faqs: [] };
+  const body = content.slice(0, idx);
+  const faqSection = content.slice(idx + FAQ_HEADING.length);
+  const faqs = faqSection
+    .split(/^## /m)
+    .slice(1)
+    .map((chunk) => {
+      const [q, ...rest] = chunk.split("\n");
+      return { q: q.trim(), a: rest.join("\n").trim() };
+    })
+    .filter((f) => f.q && f.a);
+  return { body, faqs };
+}
 
 export const Route = createFileRoute("/blog_/$slug")({
   loader: ({ params }) => {
