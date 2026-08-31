@@ -74,6 +74,7 @@ function BlogIndex() {
                 <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
                   Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </span>
+                </div>
               </Link>
             ))}
           </div>
