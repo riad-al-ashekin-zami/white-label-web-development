@@ -15,6 +15,9 @@ export const Route = createFileRoute("/blog_/$slug")({
     const post = loaderData?.post;
     if (!post) return {};
     const url = `https://whitelabelwebsitedevelopment.com/blog/${post.slug}`;
+    const imageUrl = post.image
+      ? `https://whitelabelwebsitedevelopment.com${post.image}`
+      : undefined;
     return {
       meta: [
         { title: "12 Best White Label Website Builders for Agencies (2026)" },
@@ -23,9 +26,11 @@ export const Route = createFileRoute("/blog_/$slug")({
         { property: "og:description", content: post.description },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
+        ...(imageUrl ? [{ property: "og:image", content: imageUrl }] : []),
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: post.title },
         { name: "twitter:description", content: post.description },
+        ...(imageUrl ? [{ name: "twitter:image", content: imageUrl }] : []),
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
