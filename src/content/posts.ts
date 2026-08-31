@@ -1,5 +1,7 @@
 import bestBuilders from "./blog/best-white-label-website-builders.md?raw";
 import bestBuildersImage from "@/assets/best-white-label-website-builders-2026.jpg.asset.json";
+import howItWorks from "./blog/how-does-white-label-web-development-work.md?raw";
+import howItWorksImage from "@/assets/white-label-web-development-workflow.png.asset.json";
 import whatIsWhiteLabel from "./blog/what-is-white-label-web-development.md?raw";
 import whatIsWhiteLabelImage from "@/assets/what-is-white-label-web-development.jpg.asset.json";
 
@@ -16,6 +18,18 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+  {
+    slug: "how-does-white-label-web-development-work",
+    title: "How Does White Label Web Development Work? Complete Workflow Explained",
+    description:
+      "Learn how white label web development works from first client inquiry through launch and maintenance: workflow stages, roles, pricing, revisions, and FAQ.",
+    date: "2026-08-31",
+    readingTime: "30 min read",
+    category: "Agency Growth",
+    content: howItWorks,
+    image: howItWorksImage.url,
+    imageAlt: "White label web development workflow from client to agency to partner to website",
+  },
   {
     slug: "what-is-white-label-web-development",
     title: "What Is White Label Web Development? Complete 2026 Guide",

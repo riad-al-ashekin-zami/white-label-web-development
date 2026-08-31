@@ -11,25 +11,42 @@ import {
 } from "@/components/ui/accordion";
 import { getPost } from "@/content/posts";
 
-const FAQ_HEADING = "# White Label Website Builder FAQs";
+const FAQ_HEADINGS = [
+  "# White Label Website Builder FAQs",
+  "# Frequently Asked Questions",
+  "# FAQs",
+];
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
 
 function splitFaq(content: string): {
   body: string;
   faqs: { q: string; a: string }[];
+  faqId?: string;
 } {
-  const idx = content.indexOf(FAQ_HEADING);
-  if (idx === -1) return { body: content, faqs: [] };
-  const body = content.slice(0, idx);
-  const faqSection = content.slice(idx + FAQ_HEADING.length);
-  const faqs = faqSection
-    .split(/^## /m)
-    .slice(1)
-    .map((chunk) => {
-      const [q, ...rest] = chunk.split("\n");
-      return { q: q.trim(), a: rest.join("\n").trim() };
-    })
-    .filter((f) => f.q && f.a);
-  return { body, faqs };
+  for (const heading of FAQ_HEADINGS) {
+    const idx = content.indexOf(heading);
+    if (idx !== -1) {
+      const body = content.slice(0, idx);
+      const faqSection = content.slice(idx + heading.length);
+      const faqs = faqSection
+        .split(/^## /m)
+        .slice(1)
+        .map((chunk) => {
+          const [q, ...rest] = chunk.split("\n");
+          return { q: q.trim(), a: rest.join("\n").trim() };
+        })
+        .filter((f) => f.q && f.a);
+      return { body, faqs, faqId: slugify(heading.replace(/^#\s*/, "")) };
+    }
+  }
+  return { body: content, faqs: [] };
 }
 
 export const Route = createFileRoute("/blog_/$slug")({
@@ -96,7 +113,7 @@ export const Route = createFileRoute("/blog_/$slug")({
 
 function BlogPost() {
   const { post } = Route.useLoaderData();
-  const { body, faqs } = splitFaq(post.content.replace(/^#\s.+\n/, ""));
+  const { body, faqs, faqId } = splitFaq(post.content.replace(/^#\s.+\n/, ""));
 
   return (
     <>
@@ -137,7 +154,7 @@ function BlogPost() {
             <Prose markdown={body} />
 
             {faqs.length > 0 && (
-              <section id="white-label-website-builder-faqs" className="mt-16 scroll-mt-28">
+              <section id={faqId ?? "faqs"} className="mt-16 scroll-mt-28">
                 <span className="mb-4 block h-1.5 w-12 rounded-full bg-brand" />
                 <h2 className="text-3xl font-semibold tracking-tight text-ink md:text-4xl">
                   White Label Website Builder FAQs
