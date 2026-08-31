@@ -950,6 +950,15 @@ Use custom development where differentiation or functionality requires it.
 
 If you're evaluating a project and aren't sure which approach is appropriate, a [white label website audit](https://whitelabelwebsitedevelopment.com/services/white-label-website-audit) can help identify technical and performance requirements before committing to a delivery method.
 
+[VISUAL: Builder vs Custom Development Decision Tree]
+
+> ### Not Sure Whether a Builder Is Enough?
+>
+> Platform limitations are cheapest to discover before onboarding, not after fifty client sites are live. An audit of the technical, performance and SEO requirements will tell you whether a builder covers the project or whether it needs development.
+>
+> **[Request a Website Audit](https://whitelabelwebsitedevelopment.com/services/white-label-website-audit)**
+
+
 ---
 
 # White Label Website Builder vs White Label Website Development
