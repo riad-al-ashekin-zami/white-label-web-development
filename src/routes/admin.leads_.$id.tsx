@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { createFileRoute, Link, useParams } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 import { AdminGuard } from "@/components/admin/AdminGuard";
 import { Button } from "@/components/ui/button";
