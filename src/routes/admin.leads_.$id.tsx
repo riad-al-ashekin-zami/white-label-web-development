@@ -43,6 +43,9 @@ type Lead = {
   source_page: string | null;
   status: string;
   lead_score: string;
+  ip_address: string | null;
+  country: string | null;
+  user_agent: string | null;
 };
 
 type Note = {
@@ -232,6 +235,12 @@ function LeadDetailPage() {
             <Field k="Lead score" v={<span className="font-medium text-ink">{lead.lead_score}</span>} />
             <Field k="Status" v={<span className="font-medium text-ink">{lead.status}</span>} />
             <Field k="Created" v={new Date(lead.created_at).toLocaleString()} />
+          </Card>
+          <Card title="Tracking">
+            <Field k="IP address" v={lead.ip_address || "—"} />
+            <Field k="Country" v={lead.country || "—"} />
+            <Field k="Browser / device" v={<span className="break-all text-xs">{lead.user_agent || "—"}</span>} />
+            <Field k="Source page" v={<span className="break-all text-xs">{lead.source_page || "—"}</span>} />
           </Card>
           <Card title="Quick actions">
             <div className="flex flex-col gap-2">
