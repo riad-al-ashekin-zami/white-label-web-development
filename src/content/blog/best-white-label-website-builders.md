@@ -1476,6 +1476,36 @@ Estimate your cost at:
 
 The cheapest platform at 10 clients may not remain cheapest at 500.
 
+<a id="checklist"></a>
+
+## White Label Website Builder Checklist
+
+Work through this list with each shortlisted platform before you migrate a single client.
+
+- [ ] Custom agency branding across every client-facing screen
+- [ ] Custom login URL and custom domain (including previews)
+- [ ] Client dashboard you can present as your own
+- [ ] Granular user permissions and role restrictions
+- [ ] Responsive editor that non-technical clients can actually use
+- [ ] Full SEO controls: titles, meta, URLs, redirects, canonicals, schema, sitemaps
+- [ ] Realistic Core Web Vitals potential on real templates
+- [ ] Hosting, SSL and backups included or clearly priced
+- [ ] Ecommerce support at the level your clients need
+- [ ] AI functionality that survives white labeling
+- [ ] API access for provisioning and integrations
+- [ ] Automated account and site provisioning
+- [ ] Export or migration path if you leave
+- [ ] Reliable, responsive support with a clear escalation route
+- [ ] Predictable pricing at 10, 100 and 500 clients
+- [ ] Clear reseller and commercial licensing terms
+
+Any box you cannot tick is not automatically a dealbreaker — but it is a cost you will pay later, either in support hours, lost deals, or a migration you did not plan for. Score each platform against the list rather than against marketing pages.
+
+[VISUAL: White Label Website Builder Evaluation Checklist]
+
+*Filename: `white-label-website-builder-checklist.webp` — Alt: White label website builder evaluation checklist for agencies*
+
+
 ---
 
 # When You Should NOT Use a White Label Website Builder
