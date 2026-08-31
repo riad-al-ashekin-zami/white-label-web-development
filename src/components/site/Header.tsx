@@ -36,6 +36,7 @@ const nav = [
   { label: "Pricing", to: "/pricing" },
   { label: "About", to: "/about" },
   { label: "Blog", to: "/blog" },
+  { label: "Archive", to: "/blog/archive" },
   { label: "Contact", to: "/contact" },
 ] as const;
 
