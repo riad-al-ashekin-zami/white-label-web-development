@@ -80,9 +80,17 @@ function BlogArchive() {
                         <Link
                           to="/blog/$slug"
                           params={{ slug: p.slug }}
-                          className="group flex flex-col gap-2 p-5 transition-colors hover:bg-muted md:flex-row md:items-center md:justify-between md:gap-6"
+                          className="group flex flex-col gap-4 p-5 transition-colors hover:bg-muted md:flex-row md:items-center md:gap-6"
                         >
-                          <div className="min-w-0">
+                          {p.image && (
+                            <img
+                              src={p.image}
+                              alt={p.imageAlt ?? p.title}
+                              loading="lazy"
+                              className="h-32 w-full shrink-0 rounded-xl border border-border object-cover md:h-24 md:w-40"
+                            />
+                          )}
+                          <div className="min-w-0 flex-1">
                             <span className="inline-flex rounded-full border border-border px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                               {p.category}
                             </span>

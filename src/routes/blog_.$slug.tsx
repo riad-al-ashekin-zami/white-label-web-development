@@ -89,6 +89,15 @@ function BlogPost() {
               </span>
             </div>
 
+            {post.image && (
+              <img
+                src={post.image}
+                alt={post.imageAlt ?? post.title}
+                fetchPriority="high"
+                className="mt-8 w-full rounded-2xl border border-border object-cover shadow-sm"
+              />
+            )}
+
             <hr className="mt-8 border-border" />
 
             <Prose markdown={post.content.replace(/^#\s.+\n/, "")} />
