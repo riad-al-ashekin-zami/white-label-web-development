@@ -204,6 +204,7 @@ function LeadsListPage() {
                 <th className="px-4 py-3 font-medium">Company</th>
                 <th className="px-4 py-3 font-medium">Email</th>
                 <th className="px-4 py-3 font-medium">Service</th>
+                <th className="px-4 py-3 font-medium">Details</th>
                 <th className="px-4 py-3 font-medium">Budget</th>
                 <th className="px-4 py-3 font-medium">Timeline</th>
                 <th className="px-4 py-3 font-medium">Score</th>
