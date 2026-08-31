@@ -2,6 +2,8 @@ import bestBuilders from "./blog/best-white-label-website-builders.md?raw";
 import bestBuildersImage from "@/assets/best-white-label-website-builders-2026.jpg.asset.json";
 import howItWorks from "./blog/how-does-white-label-web-development-work.md?raw";
 import howItWorksImage from "@/assets/how-does-white-label-web-development-work.jpg.asset.json";
+import inHouse from "./blog/white-label-development-vs-in-house-developers.md?raw";
+import inHouseImage from "@/assets/white-label-development-vs-in-house-developers.jpg.asset.json";
 import pricing from "./blog/white-label-web-development-pricing.md?raw";
 import pricingImage from "@/assets/white-label-web-development-pricing.jpg.asset.json";
 import whatIsWhiteLabel from "./blog/what-is-white-label-web-development.md?raw";
@@ -20,6 +22,18 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+  {
+    slug: "white-label-development-vs-in-house-developers",
+    title: "White Label Development vs In-House Developers: Which Is Better for Agencies?",
+    description:
+      "Compare white label development vs in-house developers for agencies: cost, control, scalability, quality, hybrid models, and which to choose.",
+    date: "2026-08-31",
+    readingTime: "28 min read",
+    category: "Agency Growth",
+    content: inHouse,
+    image: inHouseImage.url,
+    imageAlt: "White label development vs in-house developers comparison for agencies",
+  },
   {
     slug: "white-label-web-development-pricing",
     title: "White Label Web Development Pricing: Costs, Markups & Agency Margins",
