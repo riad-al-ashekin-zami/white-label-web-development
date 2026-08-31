@@ -35,6 +35,8 @@ type Lead = {
   timeline: string | null;
   lead_score: string;
   status: string;
+  project_details: string | null;
+  website_url: string | null;
 };
 
 const STATUS_OPTIONS = ["New", "Contacted", "Call Scheduled", "Proposal Sent", "Won", "Lost"];
@@ -76,7 +78,7 @@ function LeadsListPage() {
     setLoading(true);
     const { data, error } = await supabase
       .from("leads")
-      .select("id, created_at, name, email, company_name, service_needed, budget, timeline, lead_score, status")
+      .select("id, created_at, name, email, company_name, service_needed, budget, timeline, lead_score, status, project_details, website_url")
       .order("created_at", { ascending: false })
       .limit(500);
     setLoading(false);
@@ -202,6 +204,7 @@ function LeadsListPage() {
                 <th className="px-4 py-3 font-medium">Company</th>
                 <th className="px-4 py-3 font-medium">Email</th>
                 <th className="px-4 py-3 font-medium">Service</th>
+                <th className="px-4 py-3 font-medium">Details</th>
                 <th className="px-4 py-3 font-medium">Budget</th>
                 <th className="px-4 py-3 font-medium">Timeline</th>
                 <th className="px-4 py-3 font-medium">Score</th>
@@ -212,10 +215,10 @@ function LeadsListPage() {
             </thead>
             <tbody className="divide-y divide-border">
               {loading && (
-                <tr><td colSpan={10} className="px-4 py-10 text-center text-muted-foreground">Loading leads…</td></tr>
+                <tr><td colSpan={11} className="px-4 py-10 text-center text-muted-foreground">Loading leads…</td></tr>
               )}
               {!loading && filtered.length === 0 && (
-                <tr><td colSpan={10} className="px-4 py-10 text-center text-muted-foreground">No leads match your filters.</td></tr>
+                <tr><td colSpan={11} className="px-4 py-10 text-center text-muted-foreground">No leads match your filters.</td></tr>
               )}
               {filtered.map((l) => (
                 <tr key={l.id} className="hover:bg-muted/30">
@@ -229,6 +232,12 @@ function LeadsListPage() {
                     <a href={`mailto:${l.email}`} className="hover:text-ink">{l.email}</a>
                   </td>
                   <td className="px-4 py-3 text-muted-foreground">{l.service_needed || "—"}</td>
+                  <td className="max-w-[260px] px-4 py-3 text-xs text-muted-foreground">
+                    <span className="line-clamp-2" title={l.project_details ?? undefined}>
+                      {l.website_url ? <span className="font-medium text-ink">{l.website_url} — </span> : null}
+                      {l.project_details || "—"}
+                    </span>
+                  </td>
                   <td className="px-4 py-3 text-muted-foreground">{l.budget || "—"}</td>
                   <td className="px-4 py-3 text-muted-foreground">{l.timeline || "—"}</td>
                   <td className="px-4 py-3">
