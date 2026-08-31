@@ -1,6 +1,7 @@
 import bestBuilders from "./blog/best-white-label-website-builders.md?raw";
 import bestBuildersImage from "@/assets/best-white-label-website-builders-2026.jpg.asset.json";
 import whatIsWhiteLabel from "./blog/what-is-white-label-web-development.md?raw";
+import whatIsWhiteLabelImage from "@/assets/what-is-white-label-web-development.jpg.asset.json";
 
 export type Post = {
   slug: string;
@@ -24,6 +25,8 @@ export const posts: Post[] = [
     readingTime: "30 min read",
     category: "Agency Growth",
     content: whatIsWhiteLabel,
+    image: whatIsWhiteLabelImage.url,
+    imageAlt: "What is white label web development — your brand, our code",
   },
   {
     slug: "best-white-label-website-builders",
