@@ -19,6 +19,7 @@ const services: LinkItem[] = [
 
 const company: LinkItem[] = [
   { label: "About", to: "/about" },
+  { label: "Blog", to: "/blog" },
   { label: "Process", to: "/process" },
   { label: "Portfolio", to: "/portfolio" },
   { label: "Pricing", to: "/pricing" },
