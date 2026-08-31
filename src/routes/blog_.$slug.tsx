@@ -113,7 +113,7 @@ export const Route = createFileRoute("/blog_/$slug")({
 
 function BlogPost() {
   const { post } = Route.useLoaderData();
-  const { body, faqs } = splitFaq(post.content.replace(/^#\s.+\n/, ""));
+  const { body, faqs, faqId } = splitFaq(post.content.replace(/^#\s.+\n/, ""));
 
   return (
     <>
