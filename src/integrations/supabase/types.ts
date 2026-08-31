@@ -54,9 +54,11 @@ export type Database = {
           admin_email_sent: boolean
           budget: string | null
           company_name: string | null
+          country: string | null
           created_at: string
           email: string
           id: string
+          ip_address: string | null
           last_email_error: string | null
           lead_score: string
           name: string
@@ -69,6 +71,7 @@ export type Database = {
           source_page: string | null
           status: string
           timeline: string | null
+          user_agent: string | null
           visitor_email_sent: boolean
           website_url: string | null
         }
@@ -76,9 +79,11 @@ export type Database = {
           admin_email_sent?: boolean
           budget?: string | null
           company_name?: string | null
+          country?: string | null
           created_at?: string
           email: string
           id?: string
+          ip_address?: string | null
           last_email_error?: string | null
           lead_score?: string
           name: string
@@ -91,6 +96,7 @@ export type Database = {
           source_page?: string | null
           status?: string
           timeline?: string | null
+          user_agent?: string | null
           visitor_email_sent?: boolean
           website_url?: string | null
         }
@@ -98,9 +104,11 @@ export type Database = {
           admin_email_sent?: boolean
           budget?: string | null
           company_name?: string | null
+          country?: string | null
           created_at?: string
           email?: string
           id?: string
+          ip_address?: string | null
           last_email_error?: string | null
           lead_score?: string
           name?: string
@@ -113,6 +121,7 @@ export type Database = {
           source_page?: string | null
           status?: string
           timeline?: string | null
+          user_agent?: string | null
           visitor_email_sent?: boolean
           website_url?: string | null
         }
