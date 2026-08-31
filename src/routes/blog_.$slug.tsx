@@ -14,7 +14,9 @@ import { getPost } from "@/content/posts";
 const FAQ_HEADINGS = [
   "# White Label Website Builder FAQs",
   "# Frequently Asked Questions",
+  "## Frequently Asked Questions",
   "# FAQs",
+  "## FAQs",
 ];
 
 function slugify(text: string): string {
@@ -31,10 +33,16 @@ function splitFaq(content: string): {
   faqId?: string;
 } {
   for (const heading of FAQ_HEADINGS) {
-    const idx = content.indexOf(heading);
-    if (idx !== -1) {
+    // Match the heading only when it starts a line.
+    const pattern = new RegExp(
+      `(?:^|\n)${heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\n`,
+    );
+    const match = content.match(pattern);
+    if (match && match.index !== undefined) {
+      const idx = match.index;
+      const headingLength = match[0].length;
       const body = content.slice(0, idx);
-      const faqSection = content.slice(idx + heading.length);
+      const faqSection = content.slice(idx + headingLength);
       const faqs = faqSection
         .split(/^## /m)
         .slice(1)

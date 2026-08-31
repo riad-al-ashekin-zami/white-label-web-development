@@ -8,6 +8,8 @@ import pricing from "./blog/white-label-web-development-pricing.md?raw";
 import pricingImage from "@/assets/white-label-web-development-pricing.jpg.asset.json";
 import whatIsWhiteLabel from "./blog/what-is-white-label-web-development.md?raw";
 import whatIsWhiteLabelImage from "@/assets/what-is-white-label-web-development.jpg.asset.json";
+import wordpressAgencies from "./blog/white-label-wordpress-development-for-agencies.md?raw";
+import wordpressAgenciesImage from "@/assets/white-label-wordpress-development-for-agencies.jpg.asset.json";
 
 export type Post = {
   slug: string;
@@ -22,6 +24,18 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+  {
+    slug: "white-label-wordpress-development-for-agencies",
+    title: "White Label WordPress Development for Agencies: Complete Guide",
+    description:
+      "Learn how white label WordPress development works for agencies: services, pricing, workflow, partner selection, NDAs, and scaling.",
+    date: "2026-08-31",
+    readingTime: "38 min read",
+    category: "Agency Growth",
+    content: wordpressAgencies,
+    image: wordpressAgenciesImage.url,
+    imageAlt: "White label WordPress development workflow for agencies",
+  },
   {
     slug: "white-label-development-vs-in-house-developers",
     title: "White Label Development vs In-House Developers: Which Is Better for Agencies?",
