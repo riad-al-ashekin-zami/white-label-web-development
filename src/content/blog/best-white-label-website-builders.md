@@ -154,6 +154,13 @@ This means a white label builder can become much more than an internal productiv
 
 It can become part of the product your agency sells.
 
+[VISUAL: White Label Website Builder Workflow Diagram]
+
+*Platform Provider → Your Agency Branding → Client Dashboard → Client Website. Filename: `white-label-website-builder-workflow.webp` — Alt: How a white label website builder works for agencies and clients*
+
+> **Agency tip:** Before committing to a platform, build at least one complete test site and let a non-technical person edit it without your help. Unrestricted client editing is one of the most common sources of unplanned support hours.
+
+
 ---
 
 # The 12 Best White Label Website Builders and Solutions for 2026
