@@ -173,8 +173,8 @@ function LeadsListPage() {
       </div>
 
       <div className="mt-6 rounded-xl border border-border bg-surface-elevated p-4">
-        <div className="flex flex-wrap items-center gap-3">
-          <div className="relative min-w-[240px] flex-1">
+        <div className="flex flex-col gap-3 lg:flex-row lg:flex-wrap lg:items-center">
+          <div className="relative min-w-0 flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
               value={search}
@@ -183,11 +183,13 @@ function LeadsListPage() {
               className="pl-9"
             />
           </div>
-          <FilterSelect label="Status" value={status} onChange={setStatus} options={STATUS_OPTIONS} />
-          <FilterSelect label="Score" value={score} onChange={setScore} options={SCORE_OPTIONS} />
-          <FilterSelect label="Service" value={service} onChange={setService} options={services} />
-          <FilterSelect label="Budget" value={budget} onChange={setBudget} options={budgets} />
-          <FilterSelect label="Date" value={dateRange} onChange={setDateRange} options={["7d", "30d", "90d"]} renderLabel={(v) => ({ "7d": "Last 7 days", "30d": "Last 30 days", "90d": "Last 90 days" }[v] || v)} />
+          <div className="flex flex-wrap gap-2">
+            <FilterSelect label="Status" value={status} onChange={setStatus} options={STATUS_OPTIONS} />
+            <FilterSelect label="Score" value={score} onChange={setScore} options={SCORE_OPTIONS} />
+            <FilterSelect label="Service" value={service} onChange={setService} options={services} />
+            <FilterSelect label="Budget" value={budget} onChange={setBudget} options={budgets} />
+            <FilterSelect label="Date" value={dateRange} onChange={setDateRange} options={["7d", "30d", "90d"]} renderLabel={(v) => ({ "7d": "Last 7 days", "30d": "Last 30 days", "90d": "Last 90 days" }[v] || v)} />
+          </div>
           <div className="ml-auto text-xs text-muted-foreground">
             <Filter className="mr-1 inline h-3 w-3" />
             {filtered.length} of {leads.length}
@@ -195,86 +197,97 @@ function LeadsListPage() {
         </div>
       </div>
 
-      <div className="mt-4 overflow-hidden rounded-xl border border-border bg-surface-elevated">
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead className="bg-muted/40 text-left text-xs uppercase tracking-wider text-muted-foreground">
-              <tr>
-                <th className="px-4 py-3 font-medium">Name</th>
-                <th className="px-4 py-3 font-medium">Company</th>
-                <th className="px-4 py-3 font-medium">Email</th>
-                <th className="px-4 py-3 font-medium">Service</th>
-                <th className="px-4 py-3 font-medium">Details</th>
-                <th className="px-4 py-3 font-medium">Budget</th>
-                <th className="px-4 py-3 font-medium">Timeline</th>
-                <th className="px-4 py-3 font-medium">Score</th>
-                <th className="px-4 py-3 font-medium">Status</th>
-                <th className="px-4 py-3 font-medium">Created</th>
-                <th className="sticky right-0 bg-muted/40 px-4 py-3 font-medium"></th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-border">
-              {loading && (
-                <tr><td colSpan={11} className="px-4 py-10 text-center text-muted-foreground">Loading leads…</td></tr>
-              )}
-              {!loading && filtered.length === 0 && (
-                <tr><td colSpan={11} className="px-4 py-10 text-center text-muted-foreground">No leads match your filters.</td></tr>
-              )}
-              {filtered.map((l) => (
-                <tr key={l.id} className="hover:bg-muted/30">
-                  <td className="px-4 py-3 font-medium text-ink">
-                    <Link to="/admin/leads/$id" params={{ id: l.id }} className="hover:underline">
-                      {l.name}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-3 text-muted-foreground">{l.company_name || "—"}</td>
-                  <td className="px-4 py-3 text-muted-foreground">
-                    <a href={`mailto:${l.email}`} className="hover:text-ink">{l.email}</a>
-                  </td>
-                  <td className="px-4 py-3 text-muted-foreground">{l.service_needed || "—"}</td>
-                  <td className="max-w-[260px] px-4 py-3 text-xs text-muted-foreground">
-                    <span className="line-clamp-2" title={l.project_details ?? undefined}>
-                      {l.website_url ? <span className="font-medium text-ink">{l.website_url} — </span> : null}
-                      {l.project_details || "—"}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 text-muted-foreground">{l.budget || "—"}</td>
-                  <td className="px-4 py-3 text-muted-foreground">{l.timeline || "—"}</td>
-                  <td className="px-4 py-3">
+      <div className="mt-6">
+        {loading && (
+          <div className="rounded-xl border border-border bg-surface-elevated p-10 text-center text-sm text-muted-foreground">
+            Loading leads…
+          </div>
+        )}
+        {!loading && filtered.length === 0 && (
+          <div className="rounded-xl border border-border bg-surface-elevated p-10 text-center text-sm text-muted-foreground">
+            No leads match your filters.
+          </div>
+        )}
+        {!loading && filtered.length > 0 && (
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {filtered.map((l) => (
+              <div key={l.id} className="flex flex-col justify-between rounded-xl border border-border bg-surface-elevated p-5 shadow-soft transition-shadow hover:shadow-elevated">
+                <div>
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <Link
+                        to="/admin/leads/$id"
+                        params={{ id: l.id }}
+                        className="block truncate font-semibold text-ink hover:text-brand"
+                      >
+                        {l.name}
+                      </Link>
+                      <a href={`mailto:${l.email}`} className="mt-0.5 block truncate text-xs text-muted-foreground hover:text-ink">
+                        {l.email}
+                      </a>
+                    </div>
                     <span className={scoreBadge(l.lead_score)}>
                       {l.lead_score === "High" ? <Flame className="h-3 w-3" /> : <CircleDot className="h-3 w-3" />}
                       {l.lead_score}
                     </span>
-                  </td>
-                  <td className="px-4 py-3">
-                    <Select value={l.status} onValueChange={(v) => updateStatus(l.id, v)}>
-                      <SelectTrigger className="h-7 w-[140px] text-xs">
-                        <span className={statusBadge(l.status)}>{l.status}</span>
-                      </SelectTrigger>
-                      <SelectContent>
-                        {STATUS_OPTIONS.map((s) => (
-                          <SelectItem key={s} value={s}>{s}</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </td>
-                  <td className="px-4 py-3 text-xs text-muted-foreground">
-                    {new Date(l.created_at).toLocaleDateString()}
-                  </td>
-                  <td className="sticky right-0 bg-surface-elevated px-4 py-3 text-right shadow-[-8px_0_8px_-8px_rgba(0,0,0,0.15)]">
+                  </div>
+
+                  <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                    <div className="min-w-0">
+                      <div className="text-xs text-muted-foreground">Company</div>
+                      <div className="truncate text-ink">{l.company_name || "—"}</div>
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs text-muted-foreground">Service</div>
+                      <div className="truncate text-ink">{l.service_needed || "—"}</div>
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs text-muted-foreground">Budget</div>
+                      <div className="truncate text-ink">{l.budget || "—"}</div>
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs text-muted-foreground">Timeline</div>
+                      <div className="truncate text-ink">{l.timeline || "—"}</div>
+                    </div>
+                  </div>
+
+                  <div className="mt-3">
+                    <div className="text-xs text-muted-foreground">Details</div>
+                    <p className="mt-0.5 line-clamp-2 text-xs text-muted-foreground">
+                      {l.website_url ? <span className="font-medium text-ink">{l.website_url} — </span> : null}
+                      {l.project_details || "—"}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-5 flex items-center justify-between gap-3 border-t border-border pt-4">
+                  <Select value={l.status} onValueChange={(v) => updateStatus(l.id, v)}>
+                    <SelectTrigger className="h-8 w-[130px] text-xs">
+                      <span className={statusBadge(l.status)}>{l.status}</span>
+                    </SelectTrigger>
+                    <SelectContent>
+                      {STATUS_OPTIONS.map((s) => (
+                        <SelectItem key={s} value={s}>{s}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <div className="flex items-center gap-3">
+                    <span className="text-xs text-muted-foreground">
+                      {new Date(l.created_at).toLocaleDateString()}
+                    </span>
                     <Link
                       to="/admin/leads/$id"
                       params={{ id: l.id }}
-                      className="inline-flex items-center gap-1 rounded-md border border-border bg-background px-2.5 py-1 text-xs font-medium text-brand hover:bg-muted"
+                      className="inline-flex items-center gap-1 rounded-lg border border-border bg-background px-2.5 py-1.5 text-xs font-medium text-brand hover:bg-muted"
                     >
                       Open <ExternalLink className="h-3 w-3" />
                     </Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -291,7 +304,7 @@ function FilterSelect({
 }) {
   return (
     <Select value={value} onValueChange={onChange}>
-      <SelectTrigger className="h-9 w-[160px] text-sm">
+      <SelectTrigger className="h-9 w-[130px] text-sm">
         <SelectValue placeholder={label} />
       </SelectTrigger>
       <SelectContent>
