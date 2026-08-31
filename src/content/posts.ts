@@ -3,7 +3,7 @@ import bestBuildersImage from "@/assets/best-white-label-website-builders-2026.j
 import howItWorks from "./blog/how-does-white-label-web-development-work.md?raw";
 import howItWorksImage from "@/assets/how-does-white-label-web-development-work.jpg.asset.json";
 import pricing from "./blog/white-label-web-development-pricing.md?raw";
-import pricingImage from "@/assets/white-label-web-development-pricing.png.asset.json";
+import pricingImage from "@/assets/white-label-web-development-pricing.jpg.asset.json";
 import whatIsWhiteLabel from "./blog/what-is-white-label-web-development.md?raw";
 import whatIsWhiteLabelImage from "@/assets/what-is-white-label-web-development.jpg.asset.json";
 
