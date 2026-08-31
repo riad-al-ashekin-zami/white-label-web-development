@@ -232,6 +232,12 @@ function LeadsListPage() {
                     <a href={`mailto:${l.email}`} className="hover:text-ink">{l.email}</a>
                   </td>
                   <td className="px-4 py-3 text-muted-foreground">{l.service_needed || "—"}</td>
+                  <td className="max-w-[260px] px-4 py-3 text-xs text-muted-foreground">
+                    <span className="line-clamp-2" title={l.project_details ?? undefined}>
+                      {l.website_url ? <span className="font-medium text-ink">{l.website_url} — </span> : null}
+                      {l.project_details || "—"}
+                    </span>
+                  </td>
                   <td className="px-4 py-3 text-muted-foreground">{l.budget || "—"}</td>
                   <td className="px-4 py-3 text-muted-foreground">{l.timeline || "—"}</td>
                   <td className="px-4 py-3">
