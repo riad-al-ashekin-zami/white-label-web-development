@@ -21,6 +21,7 @@ import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as NdaConfidentialityRouteImport } from './routes/nda-confidentiality'
 import { Route as DomainInquiryRouteImport } from './routes/domain-inquiry'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -94,6 +95,11 @@ const DomainInquiryRoute = DomainInquiryRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AgencyPartnerRoute = AgencyPartnerRouteImport.update({
@@ -178,6 +184,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
@@ -206,6 +213,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
@@ -235,6 +243,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
@@ -265,6 +274,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
+    | '/blog'
     | '/contact'
     | '/domain-inquiry'
     | '/nda-confidentiality'
@@ -293,6 +303,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
+    | '/blog'
     | '/contact'
     | '/domain-inquiry'
     | '/nda-confidentiality'
@@ -321,6 +332,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
+    | '/blog'
     | '/contact'
     | '/domain-inquiry'
     | '/nda-confidentiality'
@@ -350,6 +362,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AgencyPartnerRoute: typeof AgencyPartnerRoute
+  BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
   DomainInquiryRoute: typeof DomainInquiryRoute
   NdaConfidentialityRoute: typeof NdaConfidentialityRoute
@@ -461,6 +474,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/agency-partner': {
       id: '/agency-partner'
       path: '/agency-partner'
@@ -566,6 +586,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AgencyPartnerRoute: AgencyPartnerRoute,
+  BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
   DomainInquiryRoute: DomainInquiryRoute,
   NdaConfidentialityRoute: NdaConfidentialityRoute,
