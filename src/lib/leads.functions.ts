@@ -1,4 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
+import { getRequestHeader } from "@tanstack/react-start/server";
 import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
 import {
@@ -111,6 +112,17 @@ export const submitLead = createServerFn({ method: "POST" })
       auth: { autoRefreshToken: false, persistSession: false },
     });
 
+    // Request metadata (best-effort; Cloudflare headers when present)
+    const fwd = getRequestHeader("x-forwarded-for") || "";
+    const ipRaw =
+      getRequestHeader("cf-connecting-ip") ||
+      getRequestHeader("x-real-ip") ||
+      fwd.split(",")[0]?.trim() ||
+      "";
+    const ip_address = ipRaw.slice(0, 64) || null;
+    const country = (getRequestHeader("cf-ipcountry") || "").slice(0, 8) || null;
+    const user_agent = (getRequestHeader("user-agent") || "").slice(0, 500) || null;
+
     const lead_score = scoreLead(data);
     const sourceCombined = data.referrer
       ? `${data.source_page || ""} (ref: ${data.referrer})`.slice(0, 500)
@@ -130,6 +142,9 @@ export const submitLead = createServerFn({ method: "POST" })
       nda_required: !!data.nda_required,
       source_page: sourceCombined,
       lead_score,
+      ip_address,
+      country,
+      user_agent,
     };
 
     const { data: inserted, error } = await admin
