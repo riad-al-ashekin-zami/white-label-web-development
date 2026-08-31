@@ -25,6 +25,18 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "white-label-wordpress-development-for-agencies",
+    title: "White Label WordPress Development for Agencies: Complete Guide",
+    description:
+      "Learn how white label WordPress development works for agencies: services, pricing, workflow, partner selection, NDAs, and scaling.",
+    date: "2026-08-31",
+    readingTime: "38 min read",
+    category: "Agency Growth",
+    content: wordpressAgencies,
+    image: wordpressAgenciesImage.url,
+    imageAlt: "White label WordPress development workflow for agencies",
+  },
+  {
     slug: "white-label-development-vs-in-house-developers",
     title: "White Label Development vs In-House Developers: Which Is Better for Agencies?",
     description:
