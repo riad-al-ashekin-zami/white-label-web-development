@@ -1,5 +1,7 @@
 import bestBuilders from "./blog/best-white-label-website-builders.md?raw";
 import bestBuildersImage from "@/assets/best-white-label-website-builders-2026.jpg.asset.json";
+import howItWorks from "./blog/how-does-white-label-web-development-work.md?raw";
+import howItWorksImage from "@/assets/white-label-web-development-workflow.png.asset.json";
 import whatIsWhiteLabel from "./blog/what-is-white-label-web-development.md?raw";
 import whatIsWhiteLabelImage from "@/assets/what-is-white-label-web-development.jpg.asset.json";
 
