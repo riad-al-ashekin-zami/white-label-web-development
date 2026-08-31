@@ -1,5 +1,6 @@
 import bestBuilders from "./blog/best-white-label-website-builders.md?raw";
 import bestBuildersImage from "@/assets/best-white-label-website-builders-2026.jpg.asset.json";
+import whatIsWhiteLabel from "./blog/what-is-white-label-web-development.md?raw";
 
 export type Post = {
   slug: string;
@@ -14,6 +15,16 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+  {
+    slug: "what-is-white-label-web-development",
+    title: "What Is White Label Web Development? Complete 2026 Guide",
+    description:
+      "Learn what white label web development is, how it works, its benefits, costs, services, and how agencies use white label partners to scale.",
+    date: "2026-08-31",
+    readingTime: "30 min read",
+    category: "Agency Growth",
+    content: whatIsWhiteLabel,
+  },
   {
     slug: "best-white-label-website-builders",
     title: "12 Best White Label Website Builders for Agencies (2026)",
