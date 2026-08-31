@@ -215,10 +215,10 @@ function LeadsListPage() {
             </thead>
             <tbody className="divide-y divide-border">
               {loading && (
-                <tr><td colSpan={10} className="px-4 py-10 text-center text-muted-foreground">Loading leads…</td></tr>
+                <tr><td colSpan={11} className="px-4 py-10 text-center text-muted-foreground">Loading leads…</td></tr>
               )}
               {!loading && filtered.length === 0 && (
-                <tr><td colSpan={10} className="px-4 py-10 text-center text-muted-foreground">No leads match your filters.</td></tr>
+                <tr><td colSpan={11} className="px-4 py-10 text-center text-muted-foreground">No leads match your filters.</td></tr>
               )}
               {filtered.map((l) => (
                 <tr key={l.id} className="hover:bg-muted/30">
