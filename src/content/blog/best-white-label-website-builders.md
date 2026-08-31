@@ -25,12 +25,12 @@ If what you actually need is production capacity rather than another piece of so
 - [How White Label Website Builders Work](#how-does-a-white-label-website-builder-work)
 - [Best White Label Website Builders by Use Case](#best-white-label-website-builders-by-use-case)
 - [The 12 Best White Label Website Builders for 2026](#the-12-best-white-label-website-builders-and-solutions-for-2026)
-  - [Duda](#1-duda--best-overall-white-label-website-builder-for-agencies)
-  - [Brizy](#2-brizy--best-white-label-ai-website-builder-for-resellers)
-  - [Simvoly](#3-simvoly--best-for-building-your-own-branded-website-saas)
-  - [Site.pro](#4-sitepro--best-white-label-website-builder-for-hosting-companies)
-  - [Wix Studio](#5-wix-studio--best-for-agencies-that-want-the-wix-ecosystem)
-  - [WordPress](#6-wordpress--best-for-maximum-ownership-and-customization)
+  - [Duda](#1-duda-best-overall-white-label-website-builder-for-agencies)
+  - [Brizy](#2-brizy-best-white-label-ai-website-builder-for-resellers)
+  - [Simvoly](#3-simvoly-best-for-building-your-own-branded-website-saas)
+  - [Site.pro](#4-sitepro-best-white-label-website-builder-for-hosting-companies)
+  - [Wix Studio](#5-wix-studio-best-for-agencies-that-want-the-wix-ecosystem)
+  - [WordPress](#6-wordpress-best-for-maximum-ownership-and-customization)
 - [Best White Label AI Website Builder](#best-white-label-ai-website-builder-for-agencies)
 - [Best Builder for Agencies](#best-white-label-website-builder-for-agencies)
 - [Best Builder for Resellers](#best-white-label-website-builder-for-resellers)
@@ -46,8 +46,8 @@ If what you actually need is production capacity rather than another piece of so
 - [SaaS Use Cases](#white-label-website-builder-for-saas-companies)
 - [Open-Source and Self-Hosted Options](#open-source-and-self-hosted-white-label-website-builders)
 - [How to Evaluate a Platform](#how-to-evaluate-a-white-label-website-builder-before-buying)
-- [Selection Checklist](#checklist)
-- [How to Choose the Right Platform](#how-to-choose)
+- [Selection Checklist](#white-label-website-builder-checklist)
+- [How to Choose the Right Platform](#how-to-choose-the-right-white-label-website-builder)
 - [Final Recommendations](#our-final-recommendations)
 - [FAQs](#white-label-website-builder-faqs)
 - [Final Thoughts](#final-thoughts)
@@ -1555,8 +1555,6 @@ Estimate your cost at:
 
 The cheapest platform at 10 clients may not remain cheapest at 500.
 
-<a id="checklist"></a>
-
 ## White Label Website Builder Checklist
 
 Work through this list with each shortlisted platform before you migrate a single client.
@@ -1674,8 +1672,6 @@ The long-term questions matter more:
 Those questions determine whether a website builder becomes infrastructure or technical debt.
 
 ---
-
-<a id="how-to-choose"></a>
 
 # How to Choose the Right White Label Website Builder
 
