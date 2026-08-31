@@ -33,6 +33,7 @@ import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/ser
 import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './routes/services.white-label-landing-page-design'
 import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
 import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
+import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
 import { Route as AdminLeadsIdRouteImport } from './routes/admin.leads_.$id'
@@ -164,6 +165,11 @@ const IndustriesSeoAgenciesRoute = IndustriesSeoAgenciesRouteImport.update({
   path: '/industries/seo-agencies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog_/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminLoginRoute = AdminLoginRouteImport.update({
   id: '/admin/login',
   path: '/admin/login',
@@ -199,6 +205,7 @@ export interface FileRoutesByFullPath {
   '/white-label-services': typeof WhiteLabelServicesRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -228,6 +235,7 @@ export interface FileRoutesByTo {
   '/white-label-services': typeof WhiteLabelServicesRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -258,6 +266,7 @@ export interface FileRoutesById {
   '/white-label-services': typeof WhiteLabelServicesRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
+  '/blog_/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -289,6 +298,7 @@ export interface FileRouteTypes {
     | '/white-label-services'
     | '/admin/leads'
     | '/admin/login'
+    | '/blog/$slug'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -318,6 +328,7 @@ export interface FileRouteTypes {
     | '/white-label-services'
     | '/admin/leads'
     | '/admin/login'
+    | '/blog/$slug'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -347,6 +358,7 @@ export interface FileRouteTypes {
     | '/white-label-services'
     | '/admin/leads'
     | '/admin/login'
+    | '/blog_/$slug'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -377,6 +389,7 @@ export interface RootRouteChildren {
   WhiteLabelServicesRoute: typeof WhiteLabelServicesRoute
   AdminLeadsRoute: typeof AdminLeadsRoute
   AdminLoginRoute: typeof AdminLoginRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   IndustriesSeoAgenciesRoute: typeof IndustriesSeoAgenciesRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
   ServicesWhiteLabelLandingPageDesignRoute: typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -558,6 +571,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesSeoAgenciesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/$slug': {
+      id: '/blog_/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/login': {
       id: '/admin/login'
       path: '/admin/login'
@@ -601,6 +621,7 @@ const rootRouteChildren: RootRouteChildren = {
   WhiteLabelServicesRoute: WhiteLabelServicesRoute,
   AdminLeadsRoute: AdminLeadsRoute,
   AdminLoginRoute: AdminLoginRoute,
+  BlogSlugRoute: BlogSlugRoute,
   IndustriesSeoAgenciesRoute: IndustriesSeoAgenciesRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
     ServicesSeoFriendlyWebDevelopmentRoute,
