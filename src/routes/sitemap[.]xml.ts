@@ -27,7 +27,6 @@ const entries: SitemapEntry[] = [
   { path: "/services/white-label-website-audit", changefreq: "monthly", priority: "0.8" },
   { path: "/services/seo-friendly-web-development", changefreq: "monthly", priority: "0.9" },
   { path: "/blog", changefreq: "weekly", priority: "0.7" },
-  { path: "/blog/archive", changefreq: "weekly", priority: "0.5" },
   { path: "/blog/best-white-label-website-builders", changefreq: "monthly", priority: "0.7" },
   { path: "/blog/how-does-white-label-web-development-work", changefreq: "monthly", priority: "0.7" },
   { path: "/blog/white-label-web-development-pricing", changefreq: "monthly", priority: "0.7" },
