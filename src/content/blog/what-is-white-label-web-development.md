@@ -1741,4 +1741,3 @@ Keep your client relationship while adding development capacity behind your bran
 
 **[Get a Quote →](https://whitelabelwebsitedevelopment.com/contact)**
 
-Avoid stock photography, excessive text, generic handshake imagery, or cluttered illustrations.
