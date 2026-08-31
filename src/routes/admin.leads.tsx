@@ -210,7 +210,7 @@ function LeadsListPage() {
                 <th className="px-4 py-3 font-medium">Score</th>
                 <th className="px-4 py-3 font-medium">Status</th>
                 <th className="px-4 py-3 font-medium">Created</th>
-                <th className="px-4 py-3 font-medium"></th>
+                <th className="sticky right-0 bg-muted/40 px-4 py-3 font-medium"></th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
@@ -261,11 +261,11 @@ function LeadsListPage() {
                   <td className="px-4 py-3 text-xs text-muted-foreground">
                     {new Date(l.created_at).toLocaleDateString()}
                   </td>
-                  <td className="px-4 py-3 text-right">
+                  <td className="sticky right-0 bg-surface-elevated px-4 py-3 text-right shadow-[-8px_0_8px_-8px_rgba(0,0,0,0.15)]">
                     <Link
                       to="/admin/leads/$id"
                       params={{ id: l.id }}
-                      className="inline-flex items-center gap-1 text-xs font-medium text-brand hover:underline"
+                      className="inline-flex items-center gap-1 rounded-md border border-border bg-background px-2.5 py-1 text-xs font-medium text-brand hover:bg-muted"
                     >
                       Open <ExternalLink className="h-3 w-3" />
                     </Link>
