@@ -8,6 +8,8 @@ import pricing from "./blog/white-label-web-development-pricing.md?raw";
 import pricingImage from "@/assets/white-label-web-development-pricing.jpg.asset.json";
 import whatIsWhiteLabel from "./blog/what-is-white-label-web-development.md?raw";
 import whatIsWhiteLabelImage from "@/assets/what-is-white-label-web-development.jpg.asset.json";
+import wordpressAgencies from "./blog/white-label-wordpress-development-for-agencies.md?raw";
+import wordpressAgenciesImage from "@/assets/white-label-wordpress-development-for-agencies.jpg.asset.json";
 
 export type Post = {
   slug: string;
