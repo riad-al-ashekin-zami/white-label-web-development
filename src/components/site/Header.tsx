@@ -35,6 +35,7 @@ const nav = [
   { label: "Agency Partner", to: "/agency-partner" },
   { label: "Pricing", to: "/pricing" },
   { label: "About", to: "/about" },
+  { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
 ] as const;
 

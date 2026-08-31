@@ -21,6 +21,7 @@ import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as NdaConfidentialityRouteImport } from './routes/nda-confidentiality'
 import { Route as DomainInquiryRouteImport } from './routes/domain-inquiry'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -32,6 +33,7 @@ import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/ser
 import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './routes/services.white-label-landing-page-design'
 import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
 import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
+import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
 import { Route as AdminLeadsIdRouteImport } from './routes/admin.leads_.$id'
@@ -96,6 +98,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AgencyPartnerRoute = AgencyPartnerRouteImport.update({
   id: '/agency-partner',
   path: '/agency-partner',
@@ -158,6 +165,11 @@ const IndustriesSeoAgenciesRoute = IndustriesSeoAgenciesRouteImport.update({
   path: '/industries/seo-agencies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog_/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminLoginRoute = AdminLoginRouteImport.update({
   id: '/admin/login',
   path: '/admin/login',
@@ -178,6 +190,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
@@ -192,6 +205,7 @@ export interface FileRoutesByFullPath {
   '/white-label-services': typeof WhiteLabelServicesRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -206,6 +220,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
@@ -220,6 +235,7 @@ export interface FileRoutesByTo {
   '/white-label-services': typeof WhiteLabelServicesRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -235,6 +251,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/agency-partner': typeof AgencyPartnerRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
@@ -249,6 +266,7 @@ export interface FileRoutesById {
   '/white-label-services': typeof WhiteLabelServicesRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
+  '/blog_/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -265,6 +283,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
+    | '/blog'
     | '/contact'
     | '/domain-inquiry'
     | '/nda-confidentiality'
@@ -279,6 +298,7 @@ export interface FileRouteTypes {
     | '/white-label-services'
     | '/admin/leads'
     | '/admin/login'
+    | '/blog/$slug'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -293,6 +313,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
+    | '/blog'
     | '/contact'
     | '/domain-inquiry'
     | '/nda-confidentiality'
@@ -307,6 +328,7 @@ export interface FileRouteTypes {
     | '/white-label-services'
     | '/admin/leads'
     | '/admin/login'
+    | '/blog/$slug'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -321,6 +343,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/agency-partner'
+    | '/blog'
     | '/contact'
     | '/domain-inquiry'
     | '/nda-confidentiality'
@@ -335,6 +358,7 @@ export interface FileRouteTypes {
     | '/white-label-services'
     | '/admin/leads'
     | '/admin/login'
+    | '/blog_/$slug'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -350,6 +374,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AgencyPartnerRoute: typeof AgencyPartnerRoute
+  BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
   DomainInquiryRoute: typeof DomainInquiryRoute
   NdaConfidentialityRoute: typeof NdaConfidentialityRoute
@@ -364,6 +389,7 @@ export interface RootRouteChildren {
   WhiteLabelServicesRoute: typeof WhiteLabelServicesRoute
   AdminLeadsRoute: typeof AdminLeadsRoute
   AdminLoginRoute: typeof AdminLoginRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   IndustriesSeoAgenciesRoute: typeof IndustriesSeoAgenciesRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
   ServicesWhiteLabelLandingPageDesignRoute: typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -461,6 +487,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/agency-partner': {
       id: '/agency-partner'
       path: '/agency-partner'
@@ -538,6 +571,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesSeoAgenciesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/$slug': {
+      id: '/blog_/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/login': {
       id: '/admin/login'
       path: '/admin/login'
@@ -566,6 +606,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AgencyPartnerRoute: AgencyPartnerRoute,
+  BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
   DomainInquiryRoute: DomainInquiryRoute,
   NdaConfidentialityRoute: NdaConfidentialityRoute,
@@ -580,6 +621,7 @@ const rootRouteChildren: RootRouteChildren = {
   WhiteLabelServicesRoute: WhiteLabelServicesRoute,
   AdminLeadsRoute: AdminLeadsRoute,
   AdminLoginRoute: AdminLoginRoute,
+  BlogSlugRoute: BlogSlugRoute,
   IndustriesSeoAgenciesRoute: IndustriesSeoAgenciesRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
     ServicesSeoFriendlyWebDevelopmentRoute,
