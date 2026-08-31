@@ -33,7 +33,6 @@ import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/ser
 import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './routes/services.white-label-landing-page-design'
 import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
 import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
-import { Route as BlogArchiveRouteImport } from './routes/blog_.archive'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
@@ -166,11 +165,6 @@ const IndustriesSeoAgenciesRoute = IndustriesSeoAgenciesRouteImport.update({
   path: '/industries/seo-agencies',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogArchiveRoute = BlogArchiveRouteImport.update({
-  id: '/blog_/archive',
-  path: '/blog/archive',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/blog_/$slug',
   path: '/blog/$slug',
@@ -212,7 +206,6 @@ export interface FileRoutesByFullPath {
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/blog/archive': typeof BlogArchiveRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -243,7 +236,6 @@ export interface FileRoutesByTo {
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/blog/archive': typeof BlogArchiveRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -275,7 +267,6 @@ export interface FileRoutesById {
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
   '/blog_/$slug': typeof BlogSlugRoute
-  '/blog_/archive': typeof BlogArchiveRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -308,7 +299,6 @@ export interface FileRouteTypes {
     | '/admin/leads'
     | '/admin/login'
     | '/blog/$slug'
-    | '/blog/archive'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -339,7 +329,6 @@ export interface FileRouteTypes {
     | '/admin/leads'
     | '/admin/login'
     | '/blog/$slug'
-    | '/blog/archive'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -370,7 +359,6 @@ export interface FileRouteTypes {
     | '/admin/leads'
     | '/admin/login'
     | '/blog_/$slug'
-    | '/blog_/archive'
     | '/industries/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
@@ -402,7 +390,6 @@ export interface RootRouteChildren {
   AdminLeadsRoute: typeof AdminLeadsRoute
   AdminLoginRoute: typeof AdminLoginRoute
   BlogSlugRoute: typeof BlogSlugRoute
-  BlogArchiveRoute: typeof BlogArchiveRoute
   IndustriesSeoAgenciesRoute: typeof IndustriesSeoAgenciesRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
   ServicesWhiteLabelLandingPageDesignRoute: typeof ServicesWhiteLabelLandingPageDesignRoute
@@ -584,13 +571,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesSeoAgenciesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog_/archive': {
-      id: '/blog_/archive'
-      path: '/blog/archive'
-      fullPath: '/blog/archive'
-      preLoaderRoute: typeof BlogArchiveRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/blog_/$slug': {
       id: '/blog_/$slug'
       path: '/blog/$slug'
@@ -642,7 +622,6 @@ const rootRouteChildren: RootRouteChildren = {
   AdminLeadsRoute: AdminLeadsRoute,
   AdminLoginRoute: AdminLoginRoute,
   BlogSlugRoute: BlogSlugRoute,
-  BlogArchiveRoute: BlogArchiveRoute,
   IndustriesSeoAgenciesRoute: IndustriesSeoAgenciesRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
     ServicesSeoFriendlyWebDevelopmentRoute,
