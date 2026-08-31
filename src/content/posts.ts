@@ -21,6 +21,18 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "white-label-web-development-pricing",
+    title: "White Label Web Development Pricing: Costs, Markups & Agency Margins",
+    description:
+      "Learn how white label web development pricing works: costs, markups, margins, pricing models, scope creep, recurring revenue, and how to build profitable agency pricing.",
+    date: "2026-08-31",
+    readingTime: "32 min read",
+    category: "Agency Growth",
+    content: pricing,
+    image: pricingImage.url,
+    imageAlt: "White label web development pricing, markups, and agency margin strategy",
+  },
+  {
     slug: "how-does-white-label-web-development-work",
     title: "How Does White Label Web Development Work? Complete Workflow Explained",
     description:
@@ -30,7 +42,7 @@ export const posts: Post[] = [
     category: "Agency Growth",
     content: howItWorks,
     image: howItWorksImage.url,
-    imageAlt: "White label web development workflow from client to agency to partner to website",
+    imageAlt: "How white label web development works: client to agency to delivered website",
   },
   {
     slug: "what-is-white-label-web-development",
