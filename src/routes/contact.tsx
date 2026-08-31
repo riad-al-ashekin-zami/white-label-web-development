@@ -147,26 +147,54 @@ function ContactPage() {
       return;
     }
 
-    try {
-      await send({
-        data: {
-          name: parsed.data.name,
-          email: parsed.data.email,
-          phone: parsed.data.phone,
-          service_needed: parsed.data.subject,
-          project_details: parsed.data.description,
-          preferred_contact: "Email",
-          source_page: "/contact",
-          company_website: form.company_website,
-        },
+    // Fire both channels in parallel, but never let one failure block the other.
+    const formspreePromise = fetch("https://formspree.io/f/mvznwdra", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        name: parsed.data.name,
+        email: parsed.data.email,
+        phone: parsed.data.phone,
+        subject: parsed.data.subject,
+        description: parsed.data.description,
+        _subject: `Contact inquiry: ${parsed.data.subject}`,
+        source_page: "/contact",
+      }),
+    })
+      .then((r) => (r.ok ? { ok: true as const } : Promise.reject(new Error(`Formspree ${r.status}`))))
+      .catch((err) => {
+        console.error("Formspree error:", err);
+        return { ok: false as const };
       });
+
+    const leadPromise = send({
+      data: {
+        name: parsed.data.name,
+        email: parsed.data.email,
+        phone: parsed.data.phone,
+        service_needed: parsed.data.subject,
+        project_details: parsed.data.description,
+        preferred_contact: "Email",
+        source_page: "/contact",
+        company_website: form.company_website,
+      },
+    })
+      .then(() => ({ ok: true as const }))
+      .catch((err) => {
+        console.error("Lead submit error:", err);
+        return { ok: false as const };
+      });
+
+    const [fs, lead] = await Promise.all([formspreePromise, leadPromise]);
+
+    if (fs.ok || lead.ok) {
       toast.success("Message sent! We'll email you shortly.");
       navigate({ to: "/thank-you" });
-    } catch (err) {
-      console.error(err);
-      toast.error("Could not send your message. Please try again or email us directly.");
-      setSubmitting(false);
+      return;
     }
+
+    setSubmitting(false);
+    toast.error("Could not send your message. Please try again or email us directly.");
   }
 
   return (
