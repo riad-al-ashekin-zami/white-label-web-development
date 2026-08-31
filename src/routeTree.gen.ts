@@ -34,7 +34,7 @@ import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/
 import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
-import { Route as AdminLeadsIdRouteImport } from './routes/admin.leads.$id'
+import { Route as AdminLeadsIdRouteImport } from './routes/admin.leads_.$id'
 
 const WhiteLabelServicesRoute = WhiteLabelServicesRouteImport.update({
   id: '/white-label-services',
@@ -169,9 +169,9 @@ const AdminLeadsRoute = AdminLeadsRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminLeadsIdRoute = AdminLeadsIdRouteImport.update({
-  id: '/$id',
-  path: '/$id',
-  getParentRoute: () => AdminLeadsRoute,
+  id: '/admin/leads_/$id',
+  path: '/admin/leads/$id',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -190,7 +190,7 @@ export interface FileRoutesByFullPath {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/thank-you': typeof ThankYouRoute
   '/white-label-services': typeof WhiteLabelServicesRoute
-  '/admin/leads': typeof AdminLeadsRouteWithChildren
+  '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
@@ -218,7 +218,7 @@ export interface FileRoutesByTo {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/thank-you': typeof ThankYouRoute
   '/white-label-services': typeof WhiteLabelServicesRoute
-  '/admin/leads': typeof AdminLeadsRouteWithChildren
+  '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
@@ -247,7 +247,7 @@ export interface FileRoutesById {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/thank-you': typeof ThankYouRoute
   '/white-label-services': typeof WhiteLabelServicesRoute
-  '/admin/leads': typeof AdminLeadsRouteWithChildren
+  '/admin/leads': typeof AdminLeadsRoute
   '/admin/login': typeof AdminLoginRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
@@ -257,7 +257,7 @@ export interface FileRoutesById {
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
   '/services/white-label-woocommerce-development': typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
-  '/admin/leads/$id': typeof AdminLeadsIdRoute
+  '/admin/leads_/$id': typeof AdminLeadsIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -343,7 +343,7 @@ export interface FileRouteTypes {
     | '/services/white-label-website-maintenance'
     | '/services/white-label-woocommerce-development'
     | '/services/white-label-wordpress-development'
-    | '/admin/leads/$id'
+    | '/admin/leads_/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -362,7 +362,7 @@ export interface RootRouteChildren {
   TermsOfServiceRoute: typeof TermsOfServiceRoute
   ThankYouRoute: typeof ThankYouRoute
   WhiteLabelServicesRoute: typeof WhiteLabelServicesRoute
-  AdminLeadsRoute: typeof AdminLeadsRouteWithChildren
+  AdminLeadsRoute: typeof AdminLeadsRoute
   AdminLoginRoute: typeof AdminLoginRoute
   IndustriesSeoAgenciesRoute: typeof IndustriesSeoAgenciesRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
@@ -372,6 +372,7 @@ export interface RootRouteChildren {
   ServicesWhiteLabelWebsiteMaintenanceRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRoute
   ServicesWhiteLabelWoocommerceDevelopmentRoute: typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   ServicesWhiteLabelWordpressDevelopmentRoute: typeof ServicesWhiteLabelWordpressDevelopmentRoute
+  AdminLeadsIdRoute: typeof AdminLeadsIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -551,27 +552,15 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLeadsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/admin/leads/$id': {
-      id: '/admin/leads/$id'
-      path: '/$id'
+    '/admin/leads_/$id': {
+      id: '/admin/leads_/$id'
+      path: '/admin/leads/$id'
       fullPath: '/admin/leads/$id'
       preLoaderRoute: typeof AdminLeadsIdRouteImport
-      parentRoute: typeof AdminLeadsRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface AdminLeadsRouteChildren {
-  AdminLeadsIdRoute: typeof AdminLeadsIdRoute
-}
-
-const AdminLeadsRouteChildren: AdminLeadsRouteChildren = {
-  AdminLeadsIdRoute: AdminLeadsIdRoute,
-}
-
-const AdminLeadsRouteWithChildren = AdminLeadsRoute._addFileChildren(
-  AdminLeadsRouteChildren,
-)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -589,7 +578,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsOfServiceRoute: TermsOfServiceRoute,
   ThankYouRoute: ThankYouRoute,
   WhiteLabelServicesRoute: WhiteLabelServicesRoute,
-  AdminLeadsRoute: AdminLeadsRouteWithChildren,
+  AdminLeadsRoute: AdminLeadsRoute,
   AdminLoginRoute: AdminLoginRoute,
   IndustriesSeoAgenciesRoute: IndustriesSeoAgenciesRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
@@ -604,6 +593,7 @@ const rootRouteChildren: RootRouteChildren = {
     ServicesWhiteLabelWoocommerceDevelopmentRoute,
   ServicesWhiteLabelWordpressDevelopmentRoute:
     ServicesWhiteLabelWordpressDevelopmentRoute,
+  AdminLeadsIdRoute: AdminLeadsIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

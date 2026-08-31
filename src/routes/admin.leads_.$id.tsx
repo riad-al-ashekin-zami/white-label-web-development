@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { createFileRoute, Link, useParams } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 import { AdminGuard } from "@/components/admin/AdminGuard";
 import { Button } from "@/components/ui/button";
@@ -10,7 +10,7 @@ import {
 import { ArrowLeft, Trash2, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 
-export const Route = createFileRoute("/admin/leads/$id")({
+export const Route = createFileRoute("/admin/leads_/$id")({
   head: () => ({
     meta: [
       { title: "Lead Detail — Admin" },
@@ -53,7 +53,7 @@ type Note = {
 };
 
 function LeadDetailPage() {
-  const { id } = useParams({ from: "/admin/leads/$id" });
+  const { id } = Route.useParams();
   const [lead, setLead] = useState<Lead | null>(null);
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(true);
