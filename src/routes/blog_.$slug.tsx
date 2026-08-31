@@ -154,7 +154,7 @@ function BlogPost() {
             <Prose markdown={body} />
 
             {faqs.length > 0 && (
-              <section id="white-label-website-builder-faqs" className="mt-16 scroll-mt-28">
+              <section id={faqId ?? "faqs"} className="mt-16 scroll-mt-28">
                 <span className="mb-4 block h-1.5 w-12 rounded-full bg-brand" />
                 <h2 className="text-3xl font-semibold tracking-tight text-ink md:text-4xl">
                   White Label Website Builder FAQs
