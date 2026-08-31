@@ -35,6 +35,8 @@ type Lead = {
   timeline: string | null;
   lead_score: string;
   status: string;
+  project_details: string | null;
+  website_url: string | null;
 };
 
 const STATUS_OPTIONS = ["New", "Contacted", "Call Scheduled", "Proposal Sent", "Won", "Lost"];
@@ -76,7 +78,7 @@ function LeadsListPage() {
     setLoading(true);
     const { data, error } = await supabase
       .from("leads")
-      .select("id, created_at, name, email, company_name, service_needed, budget, timeline, lead_score, status")
+      .select("id, created_at, name, email, company_name, service_needed, budget, timeline, lead_score, status, project_details, website_url")
       .order("created_at", { ascending: false })
       .limit(500);
     setLoading(false);
