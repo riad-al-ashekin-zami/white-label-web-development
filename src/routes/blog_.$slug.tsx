@@ -51,6 +51,7 @@ export const Route = createFileRoute("/blog_/$slug")({
                 "@type": "BlogPosting",
                 headline: post.title,
                 description: post.description,
+                ...(imageUrl ? { image: imageUrl } : {}),
                 datePublished: post.date,
                 dateModified: post.date,
                 mainEntityOfPage: url,
