@@ -47,7 +47,7 @@ export const Route = createFileRoute("/blog_/$slug")({
       : undefined;
     return {
       meta: [
-        { title: "12 Best White Label Website Builders for Agencies (2026)" },
+        { title: post.title },
         { name: "description", content: post.description },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.description },
