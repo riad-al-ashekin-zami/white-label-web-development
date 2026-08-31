@@ -3,7 +3,34 @@ import { ArrowLeft, CalendarDays, Clock } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Prose } from "@/components/site/Prose";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { getPost } from "@/content/posts";
+
+const FAQ_HEADING = "# White Label Website Builder FAQs";
+
+function splitFaq(content: string): {
+  body: string;
+  faqs: { q: string; a: string }[];
+} {
+  const idx = content.indexOf(FAQ_HEADING);
+  if (idx === -1) return { body: content, faqs: [] };
+  const body = content.slice(0, idx);
+  const faqSection = content.slice(idx + FAQ_HEADING.length);
+  const faqs = faqSection
+    .split(/^## /m)
+    .slice(1)
+    .map((chunk) => {
+      const [q, ...rest] = chunk.split("\n");
+      return { q: q.trim(), a: rest.join("\n").trim() };
+    })
+    .filter((f) => f.q && f.a);
+  return { body, faqs };
+}
 
 export const Route = createFileRoute("/blog_/$slug")({
   loader: ({ params }) => {
@@ -69,6 +96,7 @@ export const Route = createFileRoute("/blog_/$slug")({
 
 function BlogPost() {
   const { post } = Route.useLoaderData();
+  const { body, faqs } = splitFaq(post.content.replace(/^#\s.+\n/, ""));
 
   return (
     <>
@@ -106,9 +134,34 @@ function BlogPost() {
 
             <hr className="mt-8 border-border" />
 
-            <Prose markdown={post.content.replace(/^#\s.+\n/, "")} />
+            <Prose markdown={body} />
 
-            <div className="mt-16 rounded-2xl border border-border bg-surface-muted/50 p-8 text-center">
+            {faqs.length > 0 && (
+              <section id="white-label-website-builder-faqs" className="mt-16 scroll-mt-28">
+                <span className="mb-4 block h-1.5 w-12 rounded-full bg-brand" />
+                <h2 className="text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+                  White Label Website Builder FAQs
+                </h2>
+                <Accordion type="single" collapsible className="mt-8 space-y-3">
+                  {faqs.map((f, i) => (
+                    <AccordionItem
+                      key={i}
+                      value={`faq-${i}`}
+                      className="rounded-xl border border-border bg-surface-elevated px-5 shadow-sm transition-colors data-[state=open]:border-brand/40"
+                    >
+                      <AccordionTrigger className="py-4 text-left text-[15px] font-semibold text-ink hover:no-underline">
+                        {f.q}
+                      </AccordionTrigger>
+                      <AccordionContent className="pb-5 text-[15px] leading-relaxed text-muted-foreground">
+                        <Prose markdown={f.a} />
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </section>
+            )}
+
+            <div className="mt-16 rounded-2xl border border-brand/20 bg-brand/[0.04] p-8 text-center shadow-sm">
               <h2 className="text-2xl font-semibold tracking-tight text-ink">
                 Need production capacity, not another builder?
               </h2>
