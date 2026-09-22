@@ -2,7 +2,7 @@ import {
   ArrowRight, Search, Megaphone, User, Palette, Briefcase, Building2,
   Code2, MonitorSmartphone, ShoppingCart, Rocket, Wrench, Gauge,
   Timer, ShieldCheck, Users, FileCode2, RefreshCw,
-  CheckCircle2, Star,
+  CheckCircle2, Star, MapPin, Phone, Globe,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
@@ -434,6 +434,64 @@ export function FinalCTA() {
               </Button>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- BUSINESS NAP ---------- */
+export function BusinessNAP() {
+  return (
+    <section className="border-y border-border bg-surface py-12 md:py-16" aria-labelledby="business-contact-heading">
+      <div className="container-page">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-16">
+          <div>
+            <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand md:text-xs">
+              Fort Worth web design
+            </div>
+            <h2 id="business-contact-heading" className="mt-3 text-balance text-2xl font-semibold leading-tight text-ink md:text-3xl">
+              Roadrunner Media Website Design
+            </h2>
+            <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground md:text-base">
+              White label web development and website design support for agencies and small businesses.
+            </p>
+          </div>
+
+          <address className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border not-italic sm:grid-cols-3">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=3925%20Bryce%20Ave%2C%20Fort%20Worth%2C%20TX%2076107"
+              target="_blank"
+              rel="noreferrer"
+              className="group flex min-h-28 items-start gap-3 bg-background p-5 transition-colors hover:bg-surface-elevated"
+            >
+              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-brand" />
+              <span>
+                <span className="block text-xs font-semibold uppercase text-muted-foreground">Address</span>
+                <span className="mt-1 block text-sm font-medium leading-relaxed text-ink">3925 Bryce Ave, Fort Worth, TX 76107, United States</span>
+              </span>
+            </a>
+            <a
+              href="tel:+18172017558"
+              className="group flex min-h-28 items-start gap-3 bg-background p-5 transition-colors hover:bg-surface-elevated"
+            >
+              <Phone className="mt-0.5 h-5 w-5 shrink-0 text-brand" />
+              <span>
+                <span className="block text-xs font-semibold uppercase text-muted-foreground">Phone</span>
+                <span className="mt-1 block text-sm font-medium text-ink">+1 817-201-7558</span>
+              </span>
+            </a>
+            <a
+              href="https://whitelabelwebsitedevelopment.com"
+              className="group flex min-h-28 items-start gap-3 bg-background p-5 transition-colors hover:bg-surface-elevated"
+            >
+              <Globe className="mt-0.5 h-5 w-5 shrink-0 text-brand" />
+              <span className="min-w-0">
+                <span className="block text-xs font-semibold uppercase text-muted-foreground">Website</span>
+                <span className="mt-1 block break-words text-sm font-medium leading-relaxed text-ink">whitelabelwebsitedevelopment.com</span>
+              </span>
+            </a>
+          </address>
         </div>
       </div>
     </section>

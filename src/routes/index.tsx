@@ -3,7 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import {
   Hero, WhatIsWhiteLabel, WhoWeHelp, Services, WhyUs, Process,
-  Portfolio, Testimonials, FinalCTA,
+  Portfolio, Testimonials, FinalCTA, BusinessNAP,
 } from "@/components/site/Sections";
 import {
   Problem, Comparison, FAQ,
@@ -68,6 +68,26 @@ export const Route = createFileRoute("/")({
                 acceptedAnswer: { "@type": "Answer", text: f.a },
               })),
             },
+            {
+              "@type": "ProfessionalService",
+              "@id": `${HOME_URL}#fort-worth-business`,
+              name: "Roadrunner Media Website Design",
+              url: HOME_URL,
+              telephone: "+1-817-201-7558",
+              description: "White label web development and website design support for agencies and small businesses.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "3925 Bryce Ave",
+                addressLocality: "Fort Worth",
+                addressRegion: "TX",
+                postalCode: "76107",
+                addressCountry: "US",
+              },
+              areaServed: {
+                "@type": "City",
+                name: "Fort Worth",
+              },
+            },
           ],
         }),
       },
@@ -93,6 +113,7 @@ function Index() {
         <Testimonials />
         <FAQ />
         <FinalCTA />
+        <BusinessNAP />
       </main>
       <Footer />
     </div>
