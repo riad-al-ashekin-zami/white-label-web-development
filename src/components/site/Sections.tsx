@@ -22,7 +22,7 @@ export function Hero() {
               Trusted by 120+ agencies worldwide
             </div>
             <h1 className="mt-5 text-balance text-[34px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[64px] lg:leading-[1.05]">
-              We're <span className="text-gradient-brand">White Label Web Development</span> for Agency in Texax
+              We're <span className="text-gradient-brand">White Label Web Development</span> for Agency in Texas
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
               We're the white label web development partner behind 120+ agencies, marketing teams and consultants across North America and globally. Our <a href="#services" className="font-medium text-ink underline decoration-border underline-offset-4 hover:decoration-ink">white label web developers</a> handle web design, WordPress, WooCommerce and landing page builds under your brand — SEO-ready, Core Web Vitals optimized, and delivered remotely in 5–7 business days.
@@ -89,20 +89,49 @@ function SectionHeader({ eyebrow, title, sub }: { eyebrow: string; title: string
 }
 
 /* ---------- WHAT IS WHITE LABEL WEB DEVELOPMENT ---------- */
+const modelCards = [
+  { icon: Users, title: "Your client hires you", desc: "You sell web development under your brand at your price. You keep full control of the client relationship and the project scope." },
+  { icon: Code2, title: "We build behind the scenes", desc: "Our white label web developers handle design, coding, QA and deployment — completely invisible to your end client." },
+  { icon: ShieldCheck, title: "You deliver under your brand", desc: "The finished website ships with your branding, your domain and your invoice. We never contact your client or claim credit." },
+];
+
 export function WhatIsWhiteLabel() {
   return (
     <section className="py-16 md:py-32">
-      <div className="container-page max-w-4xl">
-        <h2 className="text-balance text-[26px] font-semibold leading-tight tracking-tight text-ink sm:text-3xl md:text-4xl">
-          What Is White Label Web Development?
-        </h2>
-        <div className="mt-6 space-y-5 text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-          <p>
-            White label web development is a partnership model where a specialized development team builds websites on behalf of agencies, freelancers and consultants — entirely under their brand. The agency sells the finished website to their end client, while the white label web developer stays completely invisible. No direct client contact, no branding exposure, full NDA protection from start to finish.
-          </p>
-          <p>
-            For agencies that sell websites but don't keep developers in-house, a white label web development partner removes the cost and risk of hiring, managing and retaining technical staff. You focus on sales, strategy and client relationships. Our white label web development agency works as the production team behind your web design agency or website design company, handling design, development, QA and delivery — on your timeline, under your brand, at a margin you control.
-          </p>
+      <div className="container-page">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+          <div>
+            <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand md:text-xs">The model</div>
+            <h2 className="mt-3 text-balance text-[26px] font-semibold leading-tight tracking-tight text-ink sm:text-3xl md:text-4xl">
+              What Is White Label Web Development?
+            </h2>
+            <div className="mt-6 space-y-4 text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p>
+                A simple partnership model: a specialized development team builds websites on behalf of your agency — entirely under your brand. You sell the project, we deliver the work, your client sees only your name.
+              </p>
+              <p>
+                No direct client contact, no branding exposure, full NDA protection. You get production capacity without hiring, payroll risk or bench time.
+              </p>
+            </div>
+            <div className="mt-8">
+              <Button asChild size="lg" className="h-12 rounded-full px-6">
+                <Link to="/contact">Become a partner <ArrowRight className="ml-1.5 h-4 w-4" /></Link>
+              </Button>
+            </div>
+          </div>
+          <div className="grid gap-4">
+            {modelCards.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="flex gap-4 rounded-2xl border border-border bg-surface-elevated p-5 shadow-soft">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand text-brand-foreground">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-ink">{title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
