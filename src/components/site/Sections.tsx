@@ -22,7 +22,7 @@ export function Hero() {
               Trusted by 120+ agencies worldwide
             </div>
             <h1 className="mt-5 text-balance text-[34px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[64px] lg:leading-[1.05]">
-              <span className="text-gradient-brand">White Label Web Development</span> for Agencies
+              We're <span className="text-gradient-brand">White Label Web Development</span> for Agency in Texax
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
               We're the white label web development partner behind 120+ agencies, marketing teams and consultants across North America and globally. Our <a href="#services" className="font-medium text-ink underline decoration-border underline-offset-4 hover:decoration-ink">white label web developers</a> handle web design, WordPress, WooCommerce and landing page builds under your brand — SEO-ready, Core Web Vitals optimized, and delivered remotely in 5–7 business days.
