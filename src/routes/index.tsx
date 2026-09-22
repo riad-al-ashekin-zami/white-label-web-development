@@ -9,7 +9,7 @@ import {
   Problem, Comparison, FAQ,
 } from "@/components/site/ServiceSections";
 
-const HOME_TITLE = "We're White Label Web Development Agency in Texas";
+const HOME_TITLE = "We're White Label Web Design & Development Agency in Texas";
 const HOME_DESC =
   "White label web development, web design and WordPress builds for agencies. NDA-friendly delivery under your brand with a 5–7 day turnaround.";
 const HOME_URL = "https://whitelabelwebsitedevelopment.com/";
