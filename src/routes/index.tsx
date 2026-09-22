@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import {
-  Hero, WhatIsWhiteLabel, WhoWeHelp, Services, WhyUs, Process,
+  Hero, WhatIsWhiteLabel, WhoWeHelp, TexasCustomers, Services, WhyUs, Process,
   Portfolio, Testimonials, FinalCTA, BusinessNAP,
 } from "@/components/site/Sections";
 import {
@@ -108,6 +108,7 @@ function Index() {
         <Process />
         <Services />
         <WhyUs />
+        <TexasCustomers />
         <Comparison />
         <Portfolio />
         <Testimonials />
