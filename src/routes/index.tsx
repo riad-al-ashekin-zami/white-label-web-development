@@ -108,6 +108,7 @@ function Index() {
         <Process />
         <Services />
         <WhyUs />
+        <TexasCustomers />
         <Comparison />
         <Portfolio />
         <Testimonials />
