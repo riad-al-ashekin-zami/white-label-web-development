@@ -176,6 +176,44 @@ export function WhoWeHelp() {
   );
 }
 
+/* ---------- TEXAS DIRECT CUSTOMERS ---------- */
+const texasCustomers = [
+  { icon: Building2, title: "Small Business Owners", desc: "Local shops, contractors, clinics and service businesses across Texas get fast, mobile-friendly websites that rank locally." },
+  { icon: Rocket, title: "Startups & Entrepreneurs", desc: "Launch-ready MVPs, landing pages and product sites built to validate ideas and convert early customers." },
+  { icon: ShoppingCart, title: "E-commerce Stores", desc: "WooCommerce and Shopify stores with payment, shipping and inventory systems built for Texas online sellers." },
+  { icon: Briefcase, title: "Professional Services", desc: "Attorneys, accountants, consultants, healthcare providers and real estate professionals who need credible, lead-generating sites." },
+  { icon: MapPin, title: "Fort Worth Businesses", desc: "Local website design for Fort Worth companies. We build SEO-ready sites that help you show up in local searches." },
+  { icon: MonitorSmartphone, title: "Brick-and-Mortar Going Digital", desc: "Restaurants, salons, retail stores and local franchises ready to take bookings, orders and inquiries online." },
+];
+
+export function TexasCustomers() {
+  return (
+    <section className="bg-surface py-16 md:py-32">
+      <div className="container-page">
+        <SectionHeader
+          eyebrow="Who we serve in Texas"
+          title="Built for Texas Businesses That Need Websites"
+          sub="Not just agencies. We also design and build websites directly for Texas businesses, startups and professionals who want reliable web design and development without the agency markup."
+        />
+        <div className="mt-10 grid grid-cols-2 gap-3 md:mt-14 md:gap-4 lg:grid-cols-3">
+          {texasCustomers.map(({ icon: Icon, title, desc }) => (
+            <div
+              key={title}
+              className="group rounded-2xl border border-border bg-card p-4 transition-all hover:border-ink/20 hover:shadow-soft md:p-6"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand">
+                <Icon className="h-5 w-5" />
+              </div>
+              <h3 className="mt-5 text-lg font-semibold text-ink">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- SERVICES ---------- */
 const services = [
   { icon: Code2, title: "White Label WordPress Development", desc: "Custom themes, ACF, Elementor, Divi and Gutenberg — all built with clean, editable, SEO-ready code. Every WordPress site is mobile-optimized and safe for your client's team to manage.", to: "/services/white-label-wordpress-development" },
