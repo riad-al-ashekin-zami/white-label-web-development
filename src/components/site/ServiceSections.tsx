@@ -271,6 +271,7 @@ const faqs = [
   { q: "Do you provide ongoing website maintenance?", a: "Yes. We offer white label website maintenance packages covering WordPress core and plugin updates, daily backups, security monitoring, uptime checks and monthly content edits — billed monthly and delivered under your brand." },
   { q: "Do you work with agencies remotely across North America?", a: "Yes. We partner with agencies across the United States and Canada, plus remote partners worldwide. Our team overlaps with US Eastern and Pacific business hours, and we work asynchronously for partners in other time zones." },
   { q: "Can you handle multi-location and local SEO websites?", a: "Yes. We build multi-location websites with proper local SEO structure — location-specific schema, optimized landing pages, NAP consistency and crawlable architecture — so your SEO team can rank each location effectively." },
+  { q: "Do you provide website design for Fort Worth agencies and small businesses?", a: "Yes. We provide remote white label website design for Fort Worth agencies serving local companies. Our team works behind your brand as website designers for small business projects, delivering responsive web design and SEO-ready development without presenting ourselves as a local Fort Worth office." },
 ];
 
 export function FAQ() {

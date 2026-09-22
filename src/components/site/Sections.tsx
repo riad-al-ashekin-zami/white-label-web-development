@@ -25,7 +25,7 @@ export function Hero() {
               <span className="text-gradient-brand">White Label Web Development</span> for Agencies
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
-              We're the white label web development partner behind 120+ agencies, marketing teams and consultants across North America and globally. Our <a href="#services" className="font-medium text-ink underline decoration-border underline-offset-4 hover:decoration-ink">white label web developers</a> build WordPress, WooCommerce and landing page websites under your brand — SEO-ready, Core Web Vitals optimized, and delivered remotely in 5–7 business days.
+              We're the white label web development partner behind 120+ agencies, marketing teams and consultants across North America and globally. Our <a href="#services" className="font-medium text-ink underline decoration-border underline-offset-4 hover:decoration-ink">white label web developers</a> handle web design, WordPress, WooCommerce and landing page builds under your brand — SEO-ready, Core Web Vitals optimized, and delivered remotely in 5–7 business days.
             </p>
             <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:mt-8">
               <Button asChild size="lg" className="h-12 rounded-full px-6">
@@ -101,7 +101,7 @@ export function WhatIsWhiteLabel() {
             White label web development is a partnership model where a specialized development team builds websites on behalf of agencies, freelancers and consultants — entirely under their brand. The agency sells the finished website to their end client, while the white label web developer stays completely invisible. No direct client contact, no branding exposure, full NDA protection from start to finish.
           </p>
           <p>
-            For agencies that sell websites but don't keep developers in-house, a white label web development partner removes the cost and risk of hiring, managing and retaining technical staff. You focus on sales, strategy and client relationships. Your white label web development agency handles design, development, QA and delivery — on your timeline, under your brand, at a margin you control.
+            For agencies that sell websites but don't keep developers in-house, a white label web development partner removes the cost and risk of hiring, managing and retaining technical staff. You focus on sales, strategy and client relationships. Our white label web development agency works as the production team behind your web design agency or website design company, handling design, development, QA and delivery — on your timeline, under your brand, at a margin you control.
           </p>
         </div>
       </div>
@@ -114,7 +114,7 @@ const audiences = [
   { icon: Search, title: "SEO Agencies", desc: "We're the white label web development partner SEO agencies trust for client site builds. Every website ships with clean semantic HTML, schema markup, optimized Core Web Vitals and crawlable architecture — so your SEO team never has to clean up after a developer." },
   { icon: Megaphone, title: "Marketing Agencies", desc: "Pixel-perfect landing pages and full websites that ship on your campaign schedule. Our white label web developers work from your briefs, match your design specs, and deliver private staging links you can present to clients as your own work." },
   { icon: User, title: "Freelancers", desc: "Take on bigger web development projects without hiring. We become your invisible production team — a reliable white label web developer for WordPress, WooCommerce and custom builds, project after project." },
-  { icon: Palette, title: "Web Designers", desc: "Send us your Figma, Sketch or XD files. Our developers build them cleanly in WordPress, Elementor, Webflow or custom code — responsive, fast-loading, and ready for client handover." },
+  { icon: Palette, title: "Web Design Agencies", desc: "Send us your Figma, Sketch or XD files. We provide the white label web design and development capacity your web design agency needs — responsive, fast-loading, and ready for client handover." },
   { icon: Briefcase, title: "Consultants", desc: "Deliver complete digital solutions to your clients without operational overhead. We handle the full white label web development workflow while you stay focused on advisory work." },
   { icon: Building2, title: "Digital Agencies", desc: "Scale fulfillment capacity instantly with a white label web development partner that protects your brand. Run more projects in parallel without expanding your internal team." },
 ];
@@ -150,7 +150,7 @@ export function WhoWeHelp() {
 /* ---------- SERVICES ---------- */
 const services = [
   { icon: Code2, title: "White Label WordPress Development", desc: "Custom themes, ACF, Elementor, Divi and Gutenberg — all built with clean, editable, SEO-ready code. Every WordPress site is mobile-optimized and safe for your client's team to manage.", to: "/services/white-label-wordpress-development" },
-  { icon: MonitorSmartphone, title: "White Label Website Design", desc: "Modern, conversion-focused web design delivered in Figma or built straight to dev. UX-driven layouts that match your agency's standards.", to: "/services/white-label-website-design" },
+  { icon: MonitorSmartphone, title: "White Label Website Design", desc: "Modern, conversion-focused web design delivered in Figma or built straight to development. Give your website design company experienced website designers for small business projects without adding payroll.", to: "/services/white-label-website-design" },
   { icon: ShoppingCart, title: "White Label WooCommerce Development", desc: "Scalable ecommerce storefronts with payment gateways, shipping calculators and inventory management wired in and tested. WooCommerce stores that convert and scale.", to: "/services/white-label-woocommerce-development" },
   { icon: Rocket, title: "White Label Landing Page Design", desc: "High-converting landing pages for ad campaigns, product launches and lead gen. Fast turnaround, A/B-test ready, built to hit your performance benchmarks.", to: "/services/white-label-landing-page-design" },
   { icon: Wrench, title: "White Label Website Maintenance", desc: "WordPress updates, daily backups, security patches and monthly content edits — handled under your brand so you can offer recurring revenue to clients.", to: "/services/white-label-website-maintenance" },
@@ -164,7 +164,7 @@ export function Services() {
         <SectionHeader
           eyebrow="White label services"
           title="White Label Web Development Services"
-          sub="Everything your agency needs to deliver professional websites at scale. Our white label web development services cover the full production lifecycle — from design and development to launch and ongoing maintenance, all under your brand."
+           sub="Everything your agency needs to deliver professional websites at scale. Our white label web development services give each web design agency and web development agency a complete production lifecycle — from design and development to launch and maintenance, all under your brand."
         />
         <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
           {services.map(({ icon: Icon, title, desc, to }) => (

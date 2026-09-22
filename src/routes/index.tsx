@@ -9,9 +9,9 @@ import {
   Problem, Comparison, FAQ,
 } from "@/components/site/ServiceSections";
 
-const HOME_TITLE = "White Label Web Development for Agencies | Developers";
+const HOME_TITLE = "White Label Web Development for Agencies";
 const HOME_DESC =
-  "White label web development for agencies — WordPress, WooCommerce & landing pages built under your brand. NDA-friendly developers, 5–7 day turnaround.";
+  "White label web development, web design and WordPress builds for agencies. NDA-friendly delivery under your brand with a 5–7 day turnaround.";
 const HOME_URL = "https://whitelabelwebsitedevelopment.com/";
 
 const HOME_FAQS = [
@@ -26,6 +26,7 @@ const HOME_FAQS = [
   { q: "Do you provide ongoing website maintenance?", a: "Yes. We offer white label website maintenance covering updates, daily backups, security monitoring, uptime checks and monthly content edits." },
   { q: "Do you work with agencies remotely across North America?", a: "Yes. We partner with agencies across the United States and Canada, plus remote partners worldwide, with overlap across US Eastern and Pacific hours." },
   { q: "Can you handle multi-location and local SEO websites?", a: "Yes. We build multi-location websites with location-specific schema, optimized landing pages, NAP consistency and crawlable architecture." },
+  { q: "Do you provide website design for Fort Worth agencies and small businesses?", a: "Yes. We provide remote white label website design for Fort Worth agencies serving local companies. Our team works behind your brand as website designers for small business projects, delivering responsive web design and SEO-ready development without presenting ourselves as a local Fort Worth office." },
 ];
 
 export const Route = createFileRoute("/")({
@@ -36,6 +37,8 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: HOME_TITLE },
       { property: "og:description", content: HOME_DESC },
       { property: "og:url", content: HOME_URL },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: HOME_TITLE },
       { name: "twitter:description", content: HOME_DESC },
     ],
