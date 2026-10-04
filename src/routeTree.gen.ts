@@ -9,103 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WhiteLabelServicesRouteImport } from './routes/white-label-services'
-import { Route as ThankYouRouteImport } from './routes/thank-you'
-import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ProcessRouteImport } from './routes/process'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as PricingRouteImport } from './routes/pricing'
-import { Route as PortfolioRouteImport } from './routes/portfolio'
-import { Route as PartnersRouteImport } from './routes/partners'
-import { Route as NdaConfidentialityRouteImport } from './routes/nda-confidentiality'
-import { Route as DomainInquiryRouteImport } from './routes/domain-inquiry'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as BlogRouteImport } from './routes/blog'
-import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ServicesWhiteLabelWordpressDevelopmentRouteImport } from './routes/services.white-label-wordpress-development'
-import { Route as ServicesWhiteLabelWoocommerceDevelopmentRouteImport } from './routes/services.white-label-woocommerce-development'
-import { Route as ServicesWhiteLabelWebsiteMaintenanceRouteImport } from './routes/services.white-label-website-maintenance'
-import { Route as ServicesWhiteLabelWebsiteDesignRouteImport } from './routes/services.white-label-website-design'
-import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/services.white-label-website-audit'
-import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './routes/services.white-label-landing-page-design'
-import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
-import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
-import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
-import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DomainInquiryRouteImport } from './routes/domain-inquiry'
+import { Route as NdaConfidentialityRouteImport } from './routes/nda-confidentiality'
+import { Route as PartnersRouteImport } from './routes/partners'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ProcessRouteImport } from './routes/process'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
+import { Route as ThankYouRouteImport } from './routes/thank-you'
+import { Route as WhiteLabelServicesRouteImport } from './routes/white-label-services'
 import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
+import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
+import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
+import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
+import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './routes/services.white-label-landing-page-design'
+import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/services.white-label-website-audit'
+import { Route as ServicesWhiteLabelWebsiteDesignRouteImport } from './routes/services.white-label-website-design'
+import { Route as ServicesWhiteLabelWebsiteMaintenanceRouteImport } from './routes/services.white-label-website-maintenance'
+import { Route as ServicesWhiteLabelWoocommerceDevelopmentRouteImport } from './routes/services.white-label-woocommerce-development'
+import { Route as ServicesWhiteLabelWordpressDevelopmentRouteImport } from './routes/services.white-label-wordpress-development'
 import { Route as AdminLeadsIdRouteImport } from './routes/admin.leads_.$id'
 
-const WhiteLabelServicesRoute = WhiteLabelServicesRouteImport.update({
-  id: '/white-label-services',
-  path: '/white-label-services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ThankYouRoute = ThankYouRouteImport.update({
-  id: '/thank-you',
-  path: '/thank-you',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
-  id: '/terms-of-service',
-  path: '/terms-of-service',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProcessRoute = ProcessRouteImport.update({
-  id: '/process',
-  path: '/process',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PricingRoute = PricingRouteImport.update({
-  id: '/pricing',
-  path: '/pricing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortfolioRoute = PortfolioRouteImport.update({
-  id: '/portfolio',
-  path: '/portfolio',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnersRoute = PartnersRouteImport.update({
-  id: '/partners',
-  path: '/partners',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const NdaConfidentialityRoute = NdaConfidentialityRouteImport.update({
-  id: '/nda-confidentiality',
-  path: '/nda-confidentiality',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DomainInquiryRoute = DomainInquiryRouteImport.update({
-  id: '/domain-inquiry',
-  path: '/domain-inquiry',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AgencyPartnerRoute = AgencyPartnerRouteImport.update({
-  id: '/agency-partner',
-  path: '/agency-partner',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -113,39 +48,100 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const AgencyPartnerRoute = AgencyPartnerRouteImport.update({
+  id: '/agency-partner',
+  path: '/agency-partner',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesWhiteLabelWordpressDevelopmentRoute =
-  ServicesWhiteLabelWordpressDevelopmentRouteImport.update({
-    id: '/services/white-label-wordpress-development',
-    path: '/services/white-label-wordpress-development',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesWhiteLabelWoocommerceDevelopmentRoute =
-  ServicesWhiteLabelWoocommerceDevelopmentRouteImport.update({
-    id: '/services/white-label-woocommerce-development',
-    path: '/services/white-label-woocommerce-development',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesWhiteLabelWebsiteMaintenanceRoute =
-  ServicesWhiteLabelWebsiteMaintenanceRouteImport.update({
-    id: '/services/white-label-website-maintenance',
-    path: '/services/white-label-website-maintenance',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesWhiteLabelWebsiteDesignRoute =
-  ServicesWhiteLabelWebsiteDesignRouteImport.update({
-    id: '/services/white-label-website-design',
-    path: '/services/white-label-website-design',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesWhiteLabelWebsiteAuditRoute =
-  ServicesWhiteLabelWebsiteAuditRouteImport.update({
-    id: '/services/white-label-website-audit',
-    path: '/services/white-label-website-audit',
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DomainInquiryRoute = DomainInquiryRouteImport.update({
+  id: '/domain-inquiry',
+  path: '/domain-inquiry',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NdaConfidentialityRoute = NdaConfidentialityRouteImport.update({
+  id: '/nda-confidentiality',
+  path: '/nda-confidentiality',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProcessRoute = ProcessRouteImport.update({
+  id: '/process',
+  path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
+  id: '/terms-of-service',
+  path: '/terms-of-service',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThankYouRoute = ThankYouRouteImport.update({
+  id: '/thank-you',
+  path: '/thank-you',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhiteLabelServicesRoute = WhiteLabelServicesRouteImport.update({
+  id: '/white-label-services',
+  path: '/white-label-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLeadsRoute = AdminLeadsRouteImport.update({
+  id: '/admin/leads',
+  path: '/admin/leads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog_/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesSeoAgenciesRoute = IndustriesSeoAgenciesRouteImport.update({
+  id: '/industries/seo-agencies',
+  path: '/industries/seo-agencies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesSeoFriendlyWebDevelopmentRoute =
+  ServicesSeoFriendlyWebDevelopmentRouteImport.update({
+    id: '/services/seo-friendly-web-development',
+    path: '/services/seo-friendly-web-development',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesWhiteLabelLandingPageDesignRoute =
@@ -154,32 +150,36 @@ const ServicesWhiteLabelLandingPageDesignRoute =
     path: '/services/white-label-landing-page-design',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ServicesSeoFriendlyWebDevelopmentRoute =
-  ServicesSeoFriendlyWebDevelopmentRouteImport.update({
-    id: '/services/seo-friendly-web-development',
-    path: '/services/seo-friendly-web-development',
+const ServicesWhiteLabelWebsiteAuditRoute =
+  ServicesWhiteLabelWebsiteAuditRouteImport.update({
+    id: '/services/white-label-website-audit',
+    path: '/services/white-label-website-audit',
     getParentRoute: () => rootRouteImport,
   } as any)
-const IndustriesSeoAgenciesRoute = IndustriesSeoAgenciesRouteImport.update({
-  id: '/industries/seo-agencies',
-  path: '/industries/seo-agencies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/blog_/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AdminLoginRoute = AdminLoginRouteImport.update({
-  id: '/admin/login',
-  path: '/admin/login',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AdminLeadsRoute = AdminLeadsRouteImport.update({
-  id: '/admin/leads',
-  path: '/admin/leads',
-  getParentRoute: () => rootRouteImport,
-} as any)
+const ServicesWhiteLabelWebsiteDesignRoute =
+  ServicesWhiteLabelWebsiteDesignRouteImport.update({
+    id: '/services/white-label-website-design',
+    path: '/services/white-label-website-design',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesWhiteLabelWebsiteMaintenanceRoute =
+  ServicesWhiteLabelWebsiteMaintenanceRouteImport.update({
+    id: '/services/white-label-website-maintenance',
+    path: '/services/white-label-website-maintenance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesWhiteLabelWoocommerceDevelopmentRoute =
+  ServicesWhiteLabelWoocommerceDevelopmentRouteImport.update({
+    id: '/services/white-label-woocommerce-development',
+    path: '/services/white-label-woocommerce-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesWhiteLabelWordpressDevelopmentRoute =
+  ServicesWhiteLabelWordpressDevelopmentRouteImport.update({
+    id: '/services/white-label-wordpress-development',
+    path: '/services/white-label-wordpress-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AdminLeadsIdRoute = AdminLeadsIdRouteImport.update({
   id: '/admin/leads_/$id',
   path: '/admin/leads/$id',
@@ -403,102 +403,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/white-label-services': {
-      id: '/white-label-services'
-      path: '/white-label-services'
-      fullPath: '/white-label-services'
-      preLoaderRoute: typeof WhiteLabelServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/thank-you': {
-      id: '/thank-you'
-      path: '/thank-you'
-      fullPath: '/thank-you'
-      preLoaderRoute: typeof ThankYouRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/terms-of-service': {
-      id: '/terms-of-service'
-      path: '/terms-of-service'
-      fullPath: '/terms-of-service'
-      preLoaderRoute: typeof TermsOfServiceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/process': {
-      id: '/process'
-      path: '/process'
-      fullPath: '/process'
-      preLoaderRoute: typeof ProcessRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pricing': {
-      id: '/pricing'
-      path: '/pricing'
-      fullPath: '/pricing'
-      preLoaderRoute: typeof PricingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portfolio': {
-      id: '/portfolio'
-      path: '/portfolio'
-      fullPath: '/portfolio'
-      preLoaderRoute: typeof PortfolioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partners': {
-      id: '/partners'
-      path: '/partners'
-      fullPath: '/partners'
-      preLoaderRoute: typeof PartnersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/nda-confidentiality': {
-      id: '/nda-confidentiality'
-      path: '/nda-confidentiality'
-      fullPath: '/nda-confidentiality'
-      preLoaderRoute: typeof NdaConfidentialityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/domain-inquiry': {
-      id: '/domain-inquiry'
-      path: '/domain-inquiry'
-      fullPath: '/domain-inquiry'
-      preLoaderRoute: typeof DomainInquiryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/agency-partner': {
-      id: '/agency-partner'
-      path: '/agency-partner'
-      fullPath: '/agency-partner'
-      preLoaderRoute: typeof AgencyPartnerRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -508,74 +417,109 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/agency-partner': {
+      id: '/agency-partner'
+      path: '/agency-partner'
+      fullPath: '/agency-partner'
+      preLoaderRoute: typeof AgencyPartnerRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/white-label-wordpress-development': {
-      id: '/services/white-label-wordpress-development'
-      path: '/services/white-label-wordpress-development'
-      fullPath: '/services/white-label-wordpress-development'
-      preLoaderRoute: typeof ServicesWhiteLabelWordpressDevelopmentRouteImport
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/white-label-woocommerce-development': {
-      id: '/services/white-label-woocommerce-development'
-      path: '/services/white-label-woocommerce-development'
-      fullPath: '/services/white-label-woocommerce-development'
-      preLoaderRoute: typeof ServicesWhiteLabelWoocommerceDevelopmentRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/white-label-website-maintenance': {
-      id: '/services/white-label-website-maintenance'
-      path: '/services/white-label-website-maintenance'
-      fullPath: '/services/white-label-website-maintenance'
-      preLoaderRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRouteImport
+    '/domain-inquiry': {
+      id: '/domain-inquiry'
+      path: '/domain-inquiry'
+      fullPath: '/domain-inquiry'
+      preLoaderRoute: typeof DomainInquiryRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/white-label-website-design': {
-      id: '/services/white-label-website-design'
-      path: '/services/white-label-website-design'
-      fullPath: '/services/white-label-website-design'
-      preLoaderRoute: typeof ServicesWhiteLabelWebsiteDesignRouteImport
+    '/nda-confidentiality': {
+      id: '/nda-confidentiality'
+      path: '/nda-confidentiality'
+      fullPath: '/nda-confidentiality'
+      preLoaderRoute: typeof NdaConfidentialityRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/white-label-website-audit': {
-      id: '/services/white-label-website-audit'
-      path: '/services/white-label-website-audit'
-      fullPath: '/services/white-label-website-audit'
-      preLoaderRoute: typeof ServicesWhiteLabelWebsiteAuditRouteImport
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/white-label-landing-page-design': {
-      id: '/services/white-label-landing-page-design'
-      path: '/services/white-label-landing-page-design'
-      fullPath: '/services/white-label-landing-page-design'
-      preLoaderRoute: typeof ServicesWhiteLabelLandingPageDesignRouteImport
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/seo-friendly-web-development': {
-      id: '/services/seo-friendly-web-development'
-      path: '/services/seo-friendly-web-development'
-      fullPath: '/services/seo-friendly-web-development'
-      preLoaderRoute: typeof ServicesSeoFriendlyWebDevelopmentRouteImport
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/industries/seo-agencies': {
-      id: '/industries/seo-agencies'
-      path: '/industries/seo-agencies'
-      fullPath: '/industries/seo-agencies'
-      preLoaderRoute: typeof IndustriesSeoAgenciesRouteImport
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog_/$slug': {
-      id: '/blog_/$slug'
-      path: '/blog/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
+    '/process': {
+      id: '/process'
+      path: '/process'
+      fullPath: '/process'
+      preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-of-service': {
+      id: '/terms-of-service'
+      path: '/terms-of-service'
+      fullPath: '/terms-of-service'
+      preLoaderRoute: typeof TermsOfServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/thank-you': {
+      id: '/thank-you'
+      path: '/thank-you'
+      fullPath: '/thank-you'
+      preLoaderRoute: typeof ThankYouRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/white-label-services': {
+      id: '/white-label-services'
+      path: '/white-label-services'
+      fullPath: '/white-label-services'
+      preLoaderRoute: typeof WhiteLabelServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/leads': {
+      id: '/admin/leads'
+      path: '/admin/leads'
+      fullPath: '/admin/leads'
+      preLoaderRoute: typeof AdminLeadsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/login': {
@@ -585,11 +529,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/admin/leads': {
-      id: '/admin/leads'
-      path: '/admin/leads'
-      fullPath: '/admin/leads'
-      preLoaderRoute: typeof AdminLeadsRouteImport
+    '/blog_/$slug': {
+      id: '/blog_/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/seo-agencies': {
+      id: '/industries/seo-agencies'
+      path: '/industries/seo-agencies'
+      fullPath: '/industries/seo-agencies'
+      preLoaderRoute: typeof IndustriesSeoAgenciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/seo-friendly-web-development': {
+      id: '/services/seo-friendly-web-development'
+      path: '/services/seo-friendly-web-development'
+      fullPath: '/services/seo-friendly-web-development'
+      preLoaderRoute: typeof ServicesSeoFriendlyWebDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/white-label-landing-page-design': {
+      id: '/services/white-label-landing-page-design'
+      path: '/services/white-label-landing-page-design'
+      fullPath: '/services/white-label-landing-page-design'
+      preLoaderRoute: typeof ServicesWhiteLabelLandingPageDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/white-label-website-audit': {
+      id: '/services/white-label-website-audit'
+      path: '/services/white-label-website-audit'
+      fullPath: '/services/white-label-website-audit'
+      preLoaderRoute: typeof ServicesWhiteLabelWebsiteAuditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/white-label-website-design': {
+      id: '/services/white-label-website-design'
+      path: '/services/white-label-website-design'
+      fullPath: '/services/white-label-website-design'
+      preLoaderRoute: typeof ServicesWhiteLabelWebsiteDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/white-label-website-maintenance': {
+      id: '/services/white-label-website-maintenance'
+      path: '/services/white-label-website-maintenance'
+      fullPath: '/services/white-label-website-maintenance'
+      preLoaderRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/white-label-woocommerce-development': {
+      id: '/services/white-label-woocommerce-development'
+      path: '/services/white-label-woocommerce-development'
+      fullPath: '/services/white-label-woocommerce-development'
+      preLoaderRoute: typeof ServicesWhiteLabelWoocommerceDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/white-label-wordpress-development': {
+      id: '/services/white-label-wordpress-development'
+      path: '/services/white-label-wordpress-development'
+      fullPath: '/services/white-label-wordpress-development'
+      preLoaderRoute: typeof ServicesWhiteLabelWordpressDevelopmentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/leads_/$id': {
