@@ -11,6 +11,7 @@ import whatIsWhiteLabelImage from "@/assets/what-is-white-label-web-development.
 import wordpressAgencies from "./blog/white-label-wordpress-development-for-agencies.md?raw";
 import wordpressAgenciesImage from "@/assets/white-label-wordpress-development-for-agencies.jpg.asset.json";
 import topBenefits from "./blog/top-5-benefits-of-white-label-web-development-for-digital-agencies.md?raw";
+import topBenefitsImage from "@/assets/top-6-white-label-companies-benefits.jpg.asset.json";
 
 export type Post = {
   slug: string;
@@ -35,6 +36,8 @@ export const posts: Post[] = [
     readingTime: "6 min read",
     category: "Agency Growth",
     content: topBenefits,
+    image: topBenefitsImage.url,
+    imageAlt: "Top 6 white label web development companies and 5 benefits for digital agencies",
     showRelatedCta: false,
   },
   {
