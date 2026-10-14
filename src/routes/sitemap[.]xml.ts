@@ -27,6 +27,7 @@ const entries: SitemapEntry[] = [
   { path: "/services/white-label-website-audit", changefreq: "monthly", priority: "0.8" },
   { path: "/services/seo-friendly-web-development", changefreq: "monthly", priority: "0.9" },
   { path: "/blog", changefreq: "weekly", priority: "0.7" },
+  { path: "/blog/top-5-benefits-of-white-label-web-development-for-digital-agencies", changefreq: "monthly", priority: "0.7" },
   { path: "/blog/best-white-label-website-builders", changefreq: "monthly", priority: "0.7" },
   { path: "/blog/how-does-white-label-web-development-work", changefreq: "monthly", priority: "0.7" },
   { path: "/blog/white-label-development-vs-in-house-developers", changefreq: "monthly", priority: "0.7" },
@@ -43,12 +44,10 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const today = new Date().toISOString().slice(0, 10);
         const urls = entries.map((e) =>
           [
             `  <url>`,
             `    <loc>${BASE_URL}${e.path}</loc>`,
-            `    <lastmod>${today}</lastmod>`,
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
             `  </url>`,

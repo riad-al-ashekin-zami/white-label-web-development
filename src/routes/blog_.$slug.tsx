@@ -67,8 +67,8 @@ export const Route = createFileRoute("/blog_/$slug")({
     const post = loaderData?.post;
     if (!post) return {};
     const url = `https://whitelabelwebsitedevelopment.com/blog/${post.slug}`;
-    const imageUrl = post.image
-      ? `https://whitelabelwebsitedevelopment.com${post.image}`
+    const imageUrl = post.image?.startsWith("https://")
+      ? post.image
       : undefined;
     return {
       meta: [
@@ -186,7 +186,7 @@ function BlogPost() {
               </section>
             )}
 
-            <div className="mt-16 rounded-2xl border border-brand/20 bg-brand/[0.04] p-8 text-center shadow-sm">
+            {post.showRelatedCta !== false && <div className="mt-16 rounded-2xl border border-brand/20 bg-brand/[0.04] p-8 text-center shadow-sm">
               <h2 className="text-2xl font-semibold tracking-tight text-ink">
                 Need production capacity, not another builder?
               </h2>
@@ -199,7 +199,7 @@ function BlogPost() {
               >
                 Get a free white label quote
               </Link>
-            </div>
+            </div>}
           </div>
         </article>
         <div className="h-20 md:h-28" />

@@ -10,6 +10,7 @@ import whatIsWhiteLabel from "./blog/what-is-white-label-web-development.md?raw"
 import whatIsWhiteLabelImage from "@/assets/what-is-white-label-web-development.jpg.asset.json";
 import wordpressAgencies from "./blog/white-label-wordpress-development-for-agencies.md?raw";
 import wordpressAgenciesImage from "@/assets/white-label-wordpress-development-for-agencies.jpg.asset.json";
+import topBenefits from "./blog/top-5-benefits-of-white-label-web-development-for-digital-agencies.md?raw";
 
 export type Post = {
   slug: string;
@@ -21,9 +22,21 @@ export type Post = {
   content: string;
   image?: string;
   imageAlt?: string;
+  showRelatedCta?: boolean;
 };
 
 export const posts: Post[] = [
+  {
+    slug: "top-5-benefits-of-white-label-web-development-for-digital-agencies",
+    title: "Top 5 Benefits of White Label Web Development for Digital Agencies",
+    description:
+      "Using a white label development service is a way for digital agencies to increase their capabilities technologically without building a development department within the organization.",
+    date: "2026-10-14",
+    readingTime: "6 min read",
+    category: "Agency Growth",
+    content: topBenefits,
+    showRelatedCta: false,
+  },
   {
     slug: "white-label-wordpress-development-for-agencies",
     title: "White Label WordPress Development for Agencies: Complete Guide",
