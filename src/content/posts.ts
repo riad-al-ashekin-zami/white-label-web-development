@@ -36,6 +36,8 @@ export const posts: Post[] = [
     readingTime: "6 min read",
     category: "Agency Growth",
     content: topBenefits,
+    image: topBenefitsImage.url,
+    imageAlt: "Top 6 white label web development companies and 5 benefits for digital agencies",
     showRelatedCta: false,
   },
   {
