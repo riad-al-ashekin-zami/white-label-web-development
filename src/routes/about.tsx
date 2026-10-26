@@ -17,6 +17,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — White Label Web Development" },
+      { name: "robots", content: "noindex, nofollow" },
       { name: "description", content: "The invisible white label development partner agencies trust to deliver SEO-ready WordPress, WooCommerce and custom sites under their brand." },
       { property: "og:title", content: "About — White Label Web Development" },
       { property: "og:description", content: "The invisible white label development partner agencies trust to deliver SEO-ready WordPress, WooCommerce and custom sites under their brand." },
