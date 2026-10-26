@@ -24,9 +24,9 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-const PAGE_TITLE = "Contact Us | White Label Website Development";
+const PAGE_TITLE = "Contact Us | White Label Web Development";
 const PAGE_DESC =
-  "Get in touch for white label website development. Fast, confidential, built for agencies across the US, Canada and worldwide.";
+  "Get in touch for white label web development. Fast, confidential, built for agencies across the US, Canada and worldwide.";
 const PAGE_URL = "https://whitelabelwebsitedevelopment.com/contact";
 
 export const Route = createFileRoute("/contact")({
@@ -283,7 +283,7 @@ function ContactPage() {
                   id="subject"
                   value={form.subject}
                   onChange={set("subject")}
-                  placeholder="e.g. White label website development partnership"
+                  placeholder="e.g. White label web development partnership"
                   className="mt-1.5"
                 />
                 {errors.subject && <p className="mt-1 text-xs text-destructive">{errors.subject}</p>}

@@ -159,7 +159,7 @@ export const submitLead = createServerFn({ method: "POST" })
     }
 
     const leadId = inserted.id as string;
-    const FROM = process.env.EMAIL_FROM || "White Label Website Development <onboarding@resend.dev>";
+    const FROM = process.env.EMAIL_FROM || "White Label Web Development <onboarding@resend.dev>";
     const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
     const APP_URL =
       process.env.APP_URL ||

@@ -71,7 +71,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
 }
 
 const SITE_URL = "https://whitelabelwebsitedevelopment.com";
-const SITE_NAME = "White Label Website Development";
+const SITE_NAME = "White Label Web Development";
 const DEFAULT_OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dd80d172-8474-4ae9-b770-0dd06458bdaf/id-preview-ed50dfb7--91452c44-6c28-44e0-ab00-c7282b9a4cfe.lovable.app-1778362315882.png";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
@@ -113,7 +113,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               logo: `${SITE_URL}/favicon.png`,
               sameAs: [],
               description:
-                "White label website development partner for SEO, marketing and digital agencies across North America and globally. Remote, NDA-friendly, SEO-ready builds delivered under your brand.",
+                "White label web development partner for SEO, marketing and digital agencies across North America and globally. Remote, NDA-friendly, SEO-ready builds delivered under your brand.",
               areaServed: [
                 { "@type": "Country", name: "United States" },
                 { "@type": "Country", name: "Canada" },
@@ -121,7 +121,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                 { "@type": "Place", name: "Global" },
               ],
               knowsAbout: [
-                "White label website development",
+                "White label web development",
                 "White label WordPress development",
                 "White label WooCommerce development",
                 "SEO-friendly web development",

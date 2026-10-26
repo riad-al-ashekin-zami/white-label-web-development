@@ -10,13 +10,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/terms-of-service")({
   head: () => ({
     meta: [
-      { title: "Terms of Service \u2014 White Label Website Development" },
-      { name: "description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Website Development." },
-      { property: "og:title", content: "Terms of Service \u2014 White Label Website Development" },
-      { property: "og:description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Website Development." },
+      { title: "Terms of Service \u2014 White Label Web Development" },
+      { name: "description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Web Development." },
+      { property: "og:title", content: "Terms of Service \u2014 White Label Web Development" },
+      { property: "og:description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Web Development." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/terms-of-service" },
-      { name: "twitter:title", content: "Terms of Service \u2014 White Label Website Development" },
-      { name: "twitter:description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Website Development." },
+      { name: "twitter:title", content: "Terms of Service \u2014 White Label Web Development" },
+      { name: "twitter:description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Web Development." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/terms-of-service" },
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/terms-of-service")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Terms of Service\", \"item\": \"https://whitelabelwebsitedevelopment.com/terms-of-service\"}]}, {\"@type\": \"WebPage\", \"name\": \"Terms of Service — White Label Website Development\", \"description\": \"Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Website Development.\", \"url\": \"https://whitelabelwebsitedevelopment.com/terms-of-service\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Terms of Service\", \"item\": \"https://whitelabelwebsitedevelopment.com/terms-of-service\"}]}, {\"@type\": \"WebPage\", \"name\": \"Terms of Service — White Label Web Development\", \"description\": \"Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Web Development.\", \"url\": \"https://whitelabelwebsitedevelopment.com/terms-of-service\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/terms-of-service")({
 const lastUpdated = "May 22, 2026";
 
 const services = [
-  { icon: Code2, t: "White Label Website Development", d: "Custom builds delivered under your brand for agency clients." },
+  { icon: Code2, t: "White Label Web Development", d: "Custom builds delivered under your brand for agency clients." },
   { icon: Code2, t: "WordPress Development", d: "Themes, ACF, Elementor and Gutenberg builds, cleanly structured." },
   { icon: MonitorSmartphone, t: "Website Design", d: "Conversion-focused design delivered in Figma or directly to dev." },
   { icon: Rocket, t: "Landing Pages", d: "High-performing pages for ad campaigns, launches and lead gen." },
@@ -148,7 +148,7 @@ function TermsPage() {
           <div className="container-page">
             <div className="mx-auto max-w-3xl rounded-2xl border border-border bg-surface-elevated p-6 md:p-8">
               <p className="text-[15px] leading-relaxed text-ink">
-                These terms describe how White Label Website Development ("we", "us") works with agencies, freelancers and consultants ("you"). Engaging us for a project means you agree to the terms below.
+                These terms describe how White Label Web Development ("we", "us") works with agencies, freelancers and consultants ("you"). Engaging us for a project means you agree to the terms below.
               </p>
               <div className="mt-6 grid gap-2 sm:grid-cols-2">
                 {[

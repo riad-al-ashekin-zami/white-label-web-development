@@ -94,7 +94,7 @@ export function AdminGuard({ children }: { children: ReactNode }) {
           <div className="flex items-center gap-6">
             <Link to="/admin/leads" className="flex items-center gap-2 text-sm font-semibold text-ink">
               <LayoutGrid className="h-4 w-4 text-brand" />
-              White Label Website Development Admin
+              White Label Web Development Admin
             </Link>
             <nav className="hidden gap-4 md:flex">
               <Link
