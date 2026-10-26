@@ -61,7 +61,7 @@ export function Header() {
     >
       <div className="container-page flex h-16 items-center justify-between md:h-20">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo} alt="White Label Website Development logo" width={40} height={40} className="h-10 w-10 shrink-0 object-contain" />
+          <img src={logo} alt="White Label Web Development logo" width={40} height={40} className="h-10 w-10 shrink-0 object-contain" />
           <span className="flex flex-col text-[13px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-sm">
             <span>White Label</span>
             <span>Website Development</span>

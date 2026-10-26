@@ -83,7 +83,7 @@ export function Footer() {
             <Link to="/" className="flex items-center gap-2.5">
               <img
                 src={logo}
-                alt="White Label Website Development logo"
+                alt="White Label Web Development logo"
                 width={36}
                 height={36}
                 loading="lazy"
@@ -154,7 +154,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} White Label Website Development. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} White Label Web Development. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link to="/privacy" className="hover:text-ink">Privacy</Link>
             <Link to="/terms-of-service" className="hover:text-ink">Terms</Link>

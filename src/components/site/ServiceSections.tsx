@@ -68,7 +68,7 @@ export function Solution() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Our solution"
-          title="A white label website development team engineered for agencies"
+          title="A white label web development team engineered for agencies"
           sub="We replaced freelancer chaos with a production studio your agency can plan around."
         />
         <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:mt-14 md:grid-cols-2 lg:grid-cols-3">
@@ -108,7 +108,7 @@ export function IncludedServices() {
         <SectionHeader
           eyebrow="What's included"
           title="Everything your agency needs to deliver websites"
-          sub="A full white label website development stack — order what you need, when you need it."
+          sub="A full white label web development stack — order what you need, when you need it."
         />
         <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-5">
           {included.map(({ icon: Icon, title, desc }) => (
@@ -239,7 +239,7 @@ export function PartnerBenefits() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Agency partner benefits"
-          title="Why a white label website development partner beats hiring"
+          title="Why a white label web development partner beats hiring"
           sub="The economics of fulfillment — done the modern way."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 md:mt-14 md:gap-6 lg:grid-cols-3">

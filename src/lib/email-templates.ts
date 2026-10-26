@@ -1,7 +1,7 @@
 // Reusable transactional email templates for the lead workflow.
 // Minimal, premium B2B style: white bg, dark text, indigo accent, mobile-friendly.
 
-const BRAND = "White Label Website Development";
+const BRAND = "White Label Web Development";
 const ACCENT = "#4f46e5"; // indigo-600
 const TEXT = "#0f172a"; // slate-900
 const MUTED = "#475569"; // slate-600

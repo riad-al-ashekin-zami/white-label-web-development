@@ -150,7 +150,7 @@ Another may be quoting only the initial build.
 
 ## What Determines the Cost of a White Label Website?
 
-Several variables affect white label website development costs.
+Several variables affect white label web development costs.
 
 ### Website Size
 

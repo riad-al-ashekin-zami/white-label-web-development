@@ -41,13 +41,13 @@ const PARTNERS = [
 export const Route = createFileRoute("/partners")({
   head: () => ({
     meta: [
-      { title: "Partners | White Label Website Development" },
+      { title: "Partners | White Label Web Development" },
       {
         name: "description",
         content:
           "A directory of partner websites we collaborate with across web development, SEO, hospitality, real estate and local services.",
       },
-      { property: "og:title", content: "Partners | White Label Website Development" },
+      { property: "og:title", content: "Partners | White Label Web Development" },
       {
         property: "og:description",
         content: "A directory of partner websites across web development, SEO and local services.",

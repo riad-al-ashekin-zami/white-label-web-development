@@ -10,13 +10,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — White Label Website Development" },
-      { name: "description", content: "How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default." },
-      { property: "og:title", content: "Privacy Policy — White Label Website Development" },
-      { property: "og:description", content: "How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default." },
+      { title: "Privacy Policy — White Label Web Development" },
+      { name: "description", content: "How White Label Web Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default." },
+      { property: "og:title", content: "Privacy Policy — White Label Web Development" },
+      { property: "og:description", content: "How White Label Web Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/privacy" },
-      { name: "twitter:title", content: "Privacy Policy — White Label Website Development" },
-      { name: "twitter:description", content: "How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default." },
+      { name: "twitter:title", content: "Privacy Policy — White Label Web Development" },
+      { name: "twitter:description", content: "How White Label Web Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/privacy" },
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/privacy")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Privacy Policy\", \"item\": \"https://whitelabelwebsitedevelopment.com/privacy\"}]}, {\"@type\": \"WebPage\", \"name\": \"Privacy Policy — White Label Website Development\", \"description\": \"How White Label Website Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default.\", \"url\": \"https://whitelabelwebsitedevelopment.com/privacy\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Privacy Policy\", \"item\": \"https://whitelabelwebsitedevelopment.com/privacy\"}]}, {\"@type\": \"WebPage\", \"name\": \"Privacy Policy — White Label Web Development\", \"description\": \"How White Label Web Development collects, uses and protects information from agencies, freelancers and consultants. Agency-safe, NDA-friendly, confidential by default.\", \"url\": \"https://whitelabelwebsitedevelopment.com/privacy\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
@@ -131,7 +131,7 @@ function PrivacyPage() {
           <div className="container-page">
             <div className="mx-auto max-w-3xl rounded-2xl border border-border bg-surface-elevated p-6 md:p-8">
               <p className="text-[15px] leading-relaxed text-ink">
-                White Label Website Development ("we", "us", "our") provides white label web development services to agencies, freelancers and consultants. This policy explains what information we collect when you visit our site or work with us, how we use it, and the safeguards we apply to protect your agency and your clients.
+                White Label Web Development ("we", "us", "our") provides white label web development services to agencies, freelancers and consultants. This policy explains what information we collect when you visit our site or work with us, how we use it, and the safeguards we apply to protect your agency and your clients.
               </p>
               <div className="mt-6 grid gap-2 sm:grid-cols-2">
                 {[

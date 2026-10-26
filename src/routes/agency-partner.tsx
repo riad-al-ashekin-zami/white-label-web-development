@@ -18,12 +18,12 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/agency-partner")({
   head: () => ({
     meta: [
-      { title: "Agency Partner Program — White Label Website Development" },
+      { title: "Agency Partner Program — White Label Web Development" },
       { name: "description", content: "Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching." },
-      { property: "og:title", content: "Agency Partner Program — White Label Website Development" },
+      { property: "og:title", content: "Agency Partner Program — White Label Web Development" },
       { property: "og:description", content: "Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/agency-partner" },
-      { name: "twitter:title", content: "Agency Partner Program — White Label Website Development" },
+      { name: "twitter:title", content: "Agency Partner Program — White Label Web Development" },
       { name: "twitter:description", content: "Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching." },
     ],
     links: [
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/agency-partner")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Agency Partner\", \"item\": \"https://whitelabelwebsitedevelopment.com/agency-partner\"}]}, {\"@type\": \"WebPage\", \"name\": \"Agency Partner Program — White Label Website Development White Label Partnership\", \"description\": \"Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching.\", \"url\": \"https://whitelabelwebsitedevelopment.com/agency-partner\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Agency Partner\", \"item\": \"https://whitelabelwebsitedevelopment.com/agency-partner\"}]}, {\"@type\": \"WebPage\", \"name\": \"Agency Partner Program — White Label Web Development White Label Partnership\", \"description\": \"Become a white label partner. Outsource website development and maintenance under your brand with NDA, dedicated PM and zero client poaching.\", \"url\": \"https://whitelabelwebsitedevelopment.com/agency-partner\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
@@ -574,7 +574,7 @@ function Different() {
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border-2 border-ink bg-card p-8 shadow-elevated">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold text-ink">White Label Website Development partnership</h3>
+              <h3 className="text-lg font-semibold text-ink">White Label Web Development partnership</h3>
               <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">Recommended</span>
             </div>
             <ul className="mt-6 space-y-3">

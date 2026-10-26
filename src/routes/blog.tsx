@@ -4,9 +4,9 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { posts } from "@/content/posts";
 
-const TITLE = "Blog — White Label Website Development";
+const TITLE = "Blog — White Label Web Development";
 const DESC =
-  "Guides and insights for agencies scaling with white label website development, WordPress builds, and reseller-ready delivery.";
+  "Guides and insights for agencies scaling with white label web development, WordPress builds, and reseller-ready delivery.";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({

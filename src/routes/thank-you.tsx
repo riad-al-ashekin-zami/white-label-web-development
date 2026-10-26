@@ -9,10 +9,10 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/thank-you")({
   head: () => ({
     meta: [
-      { title: "Thank You — White Label Website Development" },
+      { title: "Thank You — White Label Web Development" },
       { name: "description", content: "Your project request has been received. Our team will review the details and reach out shortly." },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "Thank You — White Label Website Development" },
+      { property: "og:title", content: "Thank You — White Label Web Development" },
       { property: "og:description", content: "Your white label project request has been received." },
     ],
   }),

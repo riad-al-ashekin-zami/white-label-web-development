@@ -16,12 +16,12 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — White Label Website Development" },
+      { title: "About — White Label Web Development" },
       { name: "description", content: "The invisible white label development partner agencies trust to deliver SEO-ready WordPress, WooCommerce and custom sites under their brand." },
-      { property: "og:title", content: "About — White Label Website Development" },
+      { property: "og:title", content: "About — White Label Web Development" },
       { property: "og:description", content: "The invisible white label development partner agencies trust to deliver SEO-ready WordPress, WooCommerce and custom sites under their brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/about" },
-      { name: "twitter:title", content: "About — White Label Website Development" },
+      { name: "twitter:title", content: "About — White Label Web Development" },
       { name: "twitter:description", content: "The invisible white label development partner agencies trust to deliver SEO-ready WordPress, WooCommerce and custom sites under their brand." },
     ],
     links: [
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/about")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"About\", \"item\": \"https://whitelabelwebsitedevelopment.com/about\"}]}, {\"@type\": \"AboutPage\", \"name\": \"About Us — White Label Website Development | White Label Development Partner\", \"description\": \"We're the invisible backend development partner agencies trust. Learn how White Label Website Development helps SEO, marketing and creative agencies scale with reliable white label delivery.\", \"url\": \"https://whitelabelwebsitedevelopment.com/about\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"About\", \"item\": \"https://whitelabelwebsitedevelopment.com/about\"}]}, {\"@type\": \"AboutPage\", \"name\": \"About Us — White Label Web Development | White Label Development Partner\", \"description\": \"We're the invisible backend development partner agencies trust. Learn how White Label Web Development helps SEO, marketing and creative agencies scale with reliable white label delivery.\", \"url\": \"https://whitelabelwebsitedevelopment.com/about\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
@@ -61,13 +61,13 @@ function Hero() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-3 py-1 text-xs font-medium text-muted-foreground shadow-soft">
               <Sparkles className="h-3.5 w-3.5 text-brand" />
-              About White Label Website Development
+              About White Label Web Development
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
               Built for agencies that need <span className="text-brand">reliable backend support</span>.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              White Label Website Development exists to help agencies scale through professional white label development, maintenance and operational support — quietly, consistently, and under your brand.
+              White Label Web Development exists to help agencies scale through professional white label development, maintenance and operational support — quietly, consistently, and under your brand.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
@@ -163,7 +163,7 @@ function OurStory() {
             </h2>
             <div className="mt-6 space-y-4 text-muted-foreground">
               <p>
-                White Label Website Development was started by people who spent years inside agencies — managing client websites, juggling unreliable freelancers, and absorbing the operational stress of broken fulfillment.
+                White Label Web Development was started by people who spent years inside agencies — managing client websites, juggling unreliable freelancers, and absorbing the operational stress of broken fulfillment.
               </p>
               <p>
                 We saw the same problems repeat across every agency we worked with: missed deadlines, inconsistent quality, weak communication, and developers who would quietly disappear at the worst moments.
@@ -247,7 +247,7 @@ function Values() {
         <SectionHeader
           eyebrow="Our values"
           title="The principles behind every project"
-          sub="The operational DNA that makes White Label Website Development trusted by agency owners."
+          sub="The operational DNA that makes White Label Web Development trusted by agency owners."
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((v) => (
@@ -318,7 +318,7 @@ function Audiences() {
         <SectionHeader
           eyebrow="Who we work with"
           title="Built for agency teams of every shape"
-          sub="From boutique consultancies to fast-scaling agencies — White Label Website Development adapts to your delivery model."
+          sub="From boutique consultancies to fast-scaling agencies — White Label Web Development adapts to your delivery model."
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => (
@@ -476,7 +476,7 @@ function Structure() {
         <SectionHeader
           eyebrow="Operational structure"
           title="An organized team, not a freelancer pool"
-          sub="White Label Website Development is structured like a real backend department — with clear roles, ownership and systems."
+          sub="White Label Web Development is structured like a real backend department — with clear roles, ownership and systems."
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {cells.map((c) => (
@@ -502,7 +502,7 @@ function Testimonials() {
   const items = [
     {
       quote:
-        "White Label Website Development feels less like a vendor and more like an actual department. Their communication, structure and reliability are what we'd expect from a senior in-house team.",
+        "White Label Web Development feels less like a vendor and more like an actual department. Their communication, structure and reliability are what we'd expect from a senior in-house team.",
       name: "Elena R.", role: "Founder, Marketing Agency",
     },
     {
@@ -545,7 +545,7 @@ function Testimonials() {
 /* ---------- FAQ ---------- */
 function FAQ() {
   const faqs = [
-    { q: "How long have you worked with agencies?", a: "White Label Website Development has been operating as an agency-focused white label development partner for years, supporting agencies of every size across multiple regions." },
+    { q: "How long have you worked with agencies?", a: "White Label Web Development has been operating as an agency-focused white label development partner for years, supporting agencies of every size across multiple regions." },
     { q: "Do you work under agency branding?", a: "Yes — every project is delivered fully under your brand, your domain and your communication channels. We never appear to your end clients." },
     { q: "How does communication work?", a: "You get a dedicated PM and shared workspace (Slack, ClickUp or email) with structured updates, response SLAs and clear escalation paths." },
     { q: "Do you sign NDAs?", a: "Absolutely. NDAs are standard for every partnership. We're happy to sign yours or provide one." },
@@ -556,7 +556,7 @@ function FAQ() {
   return (
     <section className="py-20 md:py-28">
       <div className="container-page">
-        <SectionHeader eyebrow="FAQ" title="About White Label Website Development — common questions" />
+        <SectionHeader eyebrow="FAQ" title="About White Label Web Development — common questions" />
         <div className="mx-auto mt-10 max-w-3xl rounded-3xl border border-border bg-surface-elevated p-2 shadow-soft">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (

@@ -1,12 +1,12 @@
-# White Label Website Development
+# White Label Web Development
 
-> White label website development partner for SEO, marketing and digital agencies. SEO-ready WordPress, WooCommerce and custom builds delivered under your brand — NDA friendly, dedicated PM, on schedule.
+> White label web development partner for SEO, marketing and digital agencies. SEO-ready WordPress, WooCommerce and custom builds delivered under your brand — NDA friendly, dedicated PM, on schedule.
 
 We are an invisible backend production team. Agencies brief us, we build under their brand, and their clients never know we exist. Confidential by design, structured workflow, and SEO-first development practices.
 
 ## Services
 
-- [White Label Website Development](/): End-to-end white label website development for agencies — keyword-optimized homepage.
+- [White Label Web Development](/): End-to-end white label web development for agencies — keyword-optimized homepage.
 - [White Label WordPress Development](/services/white-label-wordpress-development): Custom WordPress themes, ACF, Gutenberg, Elementor, no plugin bloat.
 - [White Label Website Design](/services/white-label-website-design): Conversion-focused UI design delivered in Figma or directly to dev.
 - [White Label WooCommerce Development](/services/white-label-woocommerce-development): Scalable storefronts with payments, shipping and inventory.
@@ -17,7 +17,7 @@ We are an invisible backend production team. Agencies brief us, we build under t
 
 ## Company
 
-- [About](/about): How White Label Website Development operates as an agency-first partner.
+- [About](/about): How White Label Web Development operates as an agency-first partner.
 - [Process](/process): Discovery, design, development, QA, delivery, ongoing support.
 - [Portfolio](/portfolio): Anonymized white label case studies across multiple industries.
 - [Pricing](/pricing): Project pricing, retainers, and dedicated agency partnership plans.

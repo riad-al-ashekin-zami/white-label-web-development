@@ -11,7 +11,7 @@ import { Lock, ShieldCheck } from "lucide-react";
 export const Route = createFileRoute("/admin/login")({
   head: () => ({
     meta: [
-      { title: "Admin Sign In — White Label Website Development" },
+      { title: "Admin Sign In — White Label Web Development" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
