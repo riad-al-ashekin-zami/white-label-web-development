@@ -71,7 +71,7 @@ function Hero() {
               <span className="text-gradient-brand">White Label Website Maintenance</span>
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Outsourced WordPress maintenance, security monitoring, plugin updates, backups and content edits — handled monthly under your agency brand. A predictable retainer your team can resell with healthy margins.
+              Outsourced WordPress maintenance, security monitoring, plugin updates, backups and content edits — handled monthly under your agency brand. A predictable retainer your team can resell with healthy margins. Need the site built first? See our <Link to="/services/white-label-wordpress-development" className="font-semibold text-brand hover:underline">white label WordPress development</Link>.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
@@ -574,6 +574,7 @@ function Pricing() {
           title="Maintenance Plans for Agencies"
           sub="Each plan is built for a different growth stage. Mark up freely — your margin, your clients."
         />
+        <p className="mt-4 text-center text-sm text-muted-foreground">Compare all <Link to="/pricing" className="font-semibold text-brand hover:underline">maintenance pricing</Link> options.</p>
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {plans.map((p) => (
             <div

@@ -70,6 +70,7 @@ function Hero() {
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               Outsource web design to a modern, agency-first studio. Conversion-focused UI, responsive layouts and developer-ready Figma files delivered under your agency brand — so your team ships premium design without expanding payroll.
+             Approved designs move straight into <Link to="/" className="font-semibold text-brand hover:underline">white label web development</Link>, and campaign pages are covered by our <Link to="/services/white-label-landing-page-design" className="font-semibold text-brand hover:underline">white label landing page design</Link>.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
