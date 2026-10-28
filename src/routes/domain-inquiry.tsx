@@ -13,7 +13,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-const PAGE_TITLE = "Domain Inquiry | White Label Web Development";
+const PAGE_TITLE = "Domain Inquiry | WLWD";
 const PAGE_DESC =
   "Have a domain or website you'd like to discuss with us? Send us the details and we'll get back to you shortly.";
 const PAGE_URL = "https://whitelabelwebsitedevelopment.com/domain-inquiry";
