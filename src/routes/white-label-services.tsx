@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Code2, Globe, ShoppingCart, Search, Palette,
+  Globe, ShoppingCart, Search, Palette,
   LayoutTemplate, Wrench, ShieldCheck, Handshake, ArrowRight,
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
