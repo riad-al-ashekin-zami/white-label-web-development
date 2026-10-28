@@ -92,7 +92,7 @@ function Hero() {
             NDA & <span className="text-gradient-brand">Confidentiality</span>
           </h1>
           <p className="mt-5 text-pretty text-[15px] leading-relaxed text-muted-foreground md:text-lg">
-            We built our workflow around one principle: your clients stay yours, and your backend operations stay invisible. Here's how we protect both.
+            This page describes our confidentiality obligations, nondisclosure agreements, restrictions on client contact and safeguards for project information.
           </p>
           <div className="mt-6 text-xs text-muted-foreground">
             Last updated: <span className="font-medium text-ink">{lastUpdated}</span>
