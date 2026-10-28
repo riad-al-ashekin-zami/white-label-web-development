@@ -19,6 +19,7 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-website-maintenance")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "White Label Website Maintenance & WordPress Support for Agencies | WLWD" },
       { name: "description", content: "White label website maintenance and WordPress support for agencies: updates, backups, security and care plans under your brand." },
       { property: "og:title", content: "White Label Website Maintenance & WordPress Support for Agencies | WLWD" },

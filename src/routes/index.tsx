@@ -18,6 +18,7 @@ const HOME_URL = "https://whitelabelwebsitedevelopment.com/";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: HOME_TITLE },
       { name: "description", content: HOME_DESC },
       { property: "og:title", content: HOME_TITLE },

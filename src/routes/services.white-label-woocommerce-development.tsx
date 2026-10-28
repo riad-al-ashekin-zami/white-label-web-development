@@ -19,6 +19,7 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-woocommerce-development")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "White Label WooCommerce Development for Agencies" },
       { name: "description", content: "White label WooCommerce and ecommerce development for agencies — conversion-focused stores, optimized checkout, payments and SEO." },
       { property: "og:title", content: "White Label WooCommerce Development for Agencies" },

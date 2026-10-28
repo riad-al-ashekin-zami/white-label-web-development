@@ -17,6 +17,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "Our White Label Workflow | WLWD" },
       { name: "description", content: "Our white label workflow for agencies: discovery, design, development, QA, delivery and ongoing support, run the same way on every project." },
       { property: "og:title", content: "Our White Label Workflow | WLWD" },

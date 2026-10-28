@@ -18,6 +18,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/industries/seo-agencies")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "Website Delivery for SEO Agencies | WLWD" },
       { name: "description", content: "Website delivery for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand." },
       { property: "og:title", content: "Website Delivery for SEO Agencies | WLWD" },

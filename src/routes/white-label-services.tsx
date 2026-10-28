@@ -27,6 +27,7 @@ const services = [
 export const Route = createFileRoute("/white-label-services")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: TITLE },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },

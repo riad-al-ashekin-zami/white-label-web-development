@@ -17,6 +17,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "White Label Web Development Pricing | WLWD" },
       { name: "description", content: "Clear white label web development pricing for agencies: project rates, maintenance plans and what's included." },
       { property: "og:title", content: "White Label Web Development Pricing | WLWD" },
