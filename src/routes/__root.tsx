@@ -76,23 +76,12 @@ const SITE_NAME = "White Label Web Development";
 const DEFAULT_OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dd80d172-8474-4ae9-b770-0dd06458bdaf/id-preview-ed50dfb7--91452c44-6c28-44e0-ab00-c7282b9a4cfe.lovable.app-1778362315882.png";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: ({ matches }) => ({
+  head: () => ({
     meta: [
-      {
-        name: "robots",
-        content: matches.some((m) => m.isNotFound)
-          ? "noindex, follow"
-          : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      },
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#ffffff" },
       { name: "format-detection", content: "telephone=no" },
-      {
-        name: "robots",
-        content:
-          "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: SITE_NAME },
       { property: "og:locale", content: "en_US" },
