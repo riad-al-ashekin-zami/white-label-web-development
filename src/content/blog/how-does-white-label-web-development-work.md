@@ -18,7 +18,7 @@ This guide explains **how white label web development works from the first clien
 
 ## Table of Contents
 
-- [What Is the White Label Web Development Workflow?](#what-is-the-white-label-web-development-workflow)
+- [What Is the White Label Web Development Workflow?](#what-is-the-project-delivery-workflow)
 - [Who Is Involved in a White Label Development Project?](#who-is-involved-in-a-white-label-development-project)
 - [Step 1: The Agency Receives a Client Opportunity](#step-1-the-agency-receives-a-client-opportunity)
 - [Step 2: Discovery and Requirements Gathering](#step-2-discovery-and-requirements-gathering)
@@ -41,14 +41,14 @@ This guide explains **how white label web development works from the first clien
 - [How Client Communication Works](#how-client-communication-works)
 - [How Agencies Price White Label Projects](#how-agencies-price-white-label-projects)
 - [How Revisions and Scope Creep Should Be Managed](#how-revisions-and-scope-creep-should-be-managed)
-- [White Label Workflow vs Traditional Outsourcing](#white-label-workflow-vs-traditional-outsourcing)
-- [How to Build a Scalable White Label Workflow](#how-to-build-a-scalable-white-label-workflow)
-- [Common White Label Workflow Mistakes](#common-white-label-workflow-mistakes)
+- [White Label Workflow vs Traditional Outsourcing](#delivery-workflow-vs-traditional-outsourcing)
+- [How to Build a Scalable White Label Workflow](#how-to-build-a-scalable-delivery-workflow)
+- [Common White Label Workflow Mistakes](#common-delivery-workflow-mistakes)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 ---
 
-## What Is the White Label Web Development Workflow?
+## What Is the project delivery workflow?
 
 A **white label web development workflow** is the process an agency and its development partner use to move a client website from initial inquiry to completed project without disrupting the agency's ownership of the client relationship.
 
@@ -1114,7 +1114,7 @@ This improves efficiency for everyone.
 
 ---
 
-# White Label Workflow vs Traditional Outsourcing
+# delivery workflow vs Traditional Outsourcing
 
 White label development and outsourcing overlap, but the workflows are not always identical.
 
@@ -1133,7 +1133,7 @@ White labeling is therefore best understood as a specialized outsourcing model d
 
 ---
 
-# How to Build a Scalable White Label Workflow
+# How to Build a Scalable delivery workflow
 
 Completing one outsourced website is relatively easy.
 
@@ -1191,7 +1191,7 @@ The goal is to reduce the number of decisions your team has to reinvent for ever
 
 ---
 
-# A Practical White Label Workflow for Agencies
+# A Practical delivery workflow for Agencies
 
 A mature agency workflow might look like this:
 
@@ -1219,7 +1219,7 @@ The important thing is to establish responsibilities instead of assuming them.
 
 ---
 
-# Common White Label Workflow Mistakes
+# Common delivery workflow Mistakes
 
 ## 1. Quoting Before Technical Review
 
@@ -1491,7 +1491,7 @@ Scaling a broken workflow only creates problems faster.
 
 ---
 
-# How Do You Know If Your White Label Workflow Is Working?
+# How Do You Know If Your delivery workflow Is Working?
 
 Track operational metrics rather than relying entirely on impressions.
 
@@ -1622,7 +1622,7 @@ and **the development partner**, because requirements and responsibilities are c
 
 An agency sells and manages a website project under its own brand while an external development partner performs agreed technical work behind the scenes. The agency usually manages the client relationship, while the partner handles development, technical QA, revisions, and other agreed responsibilities.
 
-## What is a white label web development workflow?
+## What is a project delivery workflow?
 
 A white label web development workflow is the structured process used to move a project from client discovery through scoping, development, QA, revisions, launch, and ongoing support while maintaining the agency's client-facing relationship.
 
@@ -1704,7 +1704,7 @@ Evaluate technical expertise, portfolio quality, communication, confidentiality,
 
 ---
 
-# From Client Inquiry to Launch: The Complete White Label Workflow
+# From Client Inquiry to Launch: The Complete delivery workflow
 
 The entire white label web development process can ultimately be summarized as:
 
@@ -1730,8 +1730,10 @@ Maintenance extends the client relationship after launch.
 
 When these pieces work together, white label development can allow an agency to add development capacity without requiring every technical role to sit permanently inside the company.
 
-If you are new to the model, start with our guide to [white label web development](https://whitelabelwebsitedevelopment.com/) and review the [agency partnership process](https://whitelabelwebsitedevelopment.com/agency-partner).
+If you are new to the model, start with our guide to [white label web development](/) and review the [agency partnership process](https://whitelabelwebsitedevelopment.com/agency-partner).
 
 For agencies ready to outsource production, our white label team can support [WordPress development](https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development), [WooCommerce development](https://whitelabelwebsitedevelopment.com/services/white-label-woocommerce-development), [website design](https://whitelabelwebsitedevelopment.com/services/white-label-website-design), [landing pages](https://whitelabelwebsitedevelopment.com/services/white-label-landing-page-design), and [ongoing website maintenance](https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance) behind your agency's delivery process.
 
 **[Become an Agency Partner](https://whitelabelwebsitedevelopment.com/agency-partner)** to discuss your workflow, current capacity requirements, and upcoming client projects.
+
+For our delivery stages, see [our white label workflow](/process). For implementation under your brand, explore [white label web development](/).
