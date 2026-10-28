@@ -24,9 +24,9 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-const PAGE_TITLE = "Contact Us | White Label Web Development";
+const PAGE_TITLE = "Contact Us | WLWD";
 const PAGE_DESC =
-  "Get in touch for white label web development. Fast, confidential, built for agencies across the US, Canada and worldwide.";
+  "Contact WLWD to discuss a project, ask a question or explore working together. Fast, confidential replies by email.";
 const PAGE_URL = "https://whitelabelwebsitedevelopment.com/contact";
 
 export const Route = createFileRoute("/contact")({

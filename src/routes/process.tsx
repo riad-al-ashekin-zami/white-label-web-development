@@ -17,13 +17,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
-      { title: "Our White Label Workflow & Process — White Label Web Development" },
-      { name: "description", content: "A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support — operationally engineered." },
-      { property: "og:title", content: "Our White Label Workflow & Process — White Label Web Development" },
-      { property: "og:description", content: "A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support — operationally engineered." },
+      { title: "Our White Label Workflow | WLWD" },
+      { name: "description", content: "Our white label workflow for agencies: discovery, design, development, QA, delivery and ongoing support, run the same way on every project." },
+      { property: "og:title", content: "Our White Label Workflow | WLWD" },
+      { property: "og:description", content: "Our white label workflow for agencies: discovery, design, development, QA, delivery and ongoing support, run the same way on every project." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/process" },
-      { name: "twitter:title", content: "Our White Label Workflow & Process — White Label Web Development" },
-      { name: "twitter:description", content: "A structured, transparent white label workflow built for agencies. Discovery, design, development, QA, delivery and ongoing support — operationally engineered." },
+      { name: "twitter:title", content: "Our White Label Workflow | WLWD" },
+      { name: "twitter:description", content: "Our white label workflow for agencies: discovery, design, development, QA, delivery and ongoing support, run the same way on every project." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/process" },
@@ -65,7 +65,7 @@ function Hero() {
               Process &amp; Workflow
             </div>
             <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl">
-              A structured <span className="text-gradient-brand">white label workflow</span> built for agencies.
+              Our <span className="text-gradient-brand">White Label Development Process</span>
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               Every project runs on the same proven seven-step pipeline. Transparent, scalable, agency-safe — engineered to make your team look great in front of every client.

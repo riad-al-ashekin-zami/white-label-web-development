@@ -18,13 +18,13 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-wordpress-development")({
   head: () => ({
     meta: [
-      { title: "White Label WordPress Development for Agencies" },
-      { name: "description", content: "White label WordPress development for agencies — custom themes, Elementor, WooCommerce and SEO performance delivered under your brand." },
-      { property: "og:title", content: "White Label WordPress Development for Agencies" },
-      { property: "og:description", content: "White label WordPress development for agencies — custom themes, Elementor, WooCommerce and SEO performance delivered under your brand." },
+      { title: "White Label WordPress Development for Agencies | WLWD" },
+      { name: "description", content: "White label WordPress development for agencies: custom themes, plugins and builds delivered under your brand." },
+      { property: "og:title", content: "White Label WordPress Development for Agencies | WLWD" },
+      { property: "og:description", content: "White label WordPress development for agencies: custom themes, plugins and builds delivered under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development" },
-      { name: "twitter:title", content: "White Label WordPress Development for Agencies" },
-      { name: "twitter:description", content: "White label WordPress development for agencies — custom themes, Elementor, WooCommerce and SEO performance delivered under your brand." },
+      { name: "twitter:title", content: "White Label WordPress Development for Agencies | WLWD" },
+      { name: "twitter:description", content: "White label WordPress development for agencies: custom themes, plugins and builds delivered under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-wordpress-development" },
@@ -66,7 +66,7 @@ function Hero() {
               White Label WordPress Development
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              <span className="text-brand">White Label WordPress Development</span> for agencies and freelancers.
+              <span className="text-brand">White Label WordPress Development</span>
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               Hire a dedicated white label WordPress developer team — custom themes, ACF, Gutenberg, Elementor and WooCommerce builds. SEO-friendly WordPress structure, clean code and editor-ready handovers, all delivered quietly under your agency brand.

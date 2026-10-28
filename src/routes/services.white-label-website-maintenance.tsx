@@ -19,13 +19,13 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-website-maintenance")({
   head: () => ({
     meta: [
-      { title: "White Label Website Maintenance for Agencies" },
-      { name: "description", content: "White label website maintenance for agencies — updates, security, backups, monitoring and emergency fixes under your brand." },
-      { property: "og:title", content: "White Label Website Maintenance for Agencies" },
-      { property: "og:description", content: "White label website maintenance for agencies — updates, security, backups, monitoring and emergency fixes under your brand." },
+      { title: "White Label Website Maintenance & WordPress Support for Agencies | WLWD" },
+      { name: "description", content: "White label website maintenance and WordPress support for agencies: updates, backups, security and care plans under your brand." },
+      { property: "og:title", content: "White Label Website Maintenance & WordPress Support for Agencies | WLWD" },
+      { property: "og:description", content: "White label website maintenance and WordPress support for agencies: updates, backups, security and care plans under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance" },
-      { name: "twitter:title", content: "White Label Website Maintenance for Agencies" },
-      { name: "twitter:description", content: "White label website maintenance for agencies — updates, security, backups, monitoring and emergency fixes under your brand." },
+      { name: "twitter:title", content: "White Label Website Maintenance & WordPress Support for Agencies | WLWD" },
+      { name: "twitter:description", content: "White label website maintenance and WordPress support for agencies: updates, backups, security and care plans under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance" },
@@ -68,7 +68,7 @@ function Hero() {
               White Label Website Maintenance
             </div>
             <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl">
-              <span className="text-gradient-brand">White Label Website Maintenance</span> for agencies and their client portfolios.
+              <span className="text-gradient-brand">White Label Website Maintenance</span>
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               Outsourced WordPress maintenance, security monitoring, plugin updates, backups and content edits — handled monthly under your agency brand. A predictable retainer your team can resell with healthy margins.

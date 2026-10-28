@@ -17,13 +17,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing & Agency Plans — White Label Web Development" },
-      { name: "description", content: "Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment." },
-      { property: "og:title", content: "Pricing & Agency Plans — White Label Web Development" },
-      { property: "og:description", content: "Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment." },
+      { title: "White Label Web Development Pricing | WLWD" },
+      { name: "description", content: "Clear white label web development pricing for agencies: project rates, maintenance plans and what's included." },
+      { property: "og:title", content: "White Label Web Development Pricing | WLWD" },
+      { property: "og:description", content: "Clear white label web development pricing for agencies: project rates, maintenance plans and what's included." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/pricing" },
-      { name: "twitter:title", content: "Pricing & Agency Plans — White Label Web Development" },
-      { name: "twitter:description", content: "Transparent white label development pricing for agencies. Flexible project pricing, retainers and partnership plans built for predictable, profitable fulfillment." },
+      { name: "twitter:title", content: "White Label Web Development Pricing | WLWD" },
+      { name: "twitter:description", content: "Clear white label web development pricing for agencies: project rates, maintenance plans and what's included." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/pricing" },
@@ -65,7 +65,7 @@ function Hero() {
               Pricing &amp; Agency Plans
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              <span className="text-brand">White Label Web Development Pricing</span> built for agency margins.
+              <span className="text-brand">White Label Web Development Pricing</span>
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               Transparent agency development pricing across projects, landing pages, ecommerce builds and white label maintenance retainers — engineered so your team keeps healthy markups while we handle delivery quietly under your brand.

@@ -18,13 +18,13 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-website-design")({
   head: () => ({
     meta: [
-      { title: "White Label Website Design for Agencies" },
-      { name: "description", content: "Premium white label website design for agencies — modern UI/UX, conversion-focused layouts and responsive builds delivered under your brand." },
-      { property: "og:title", content: "White Label Website Design for Agencies" },
-      { property: "og:description", content: "Premium white label website design for agencies — modern UI/UX, conversion-focused layouts and responsive builds delivered under your brand." },
+      { title: "White Label Website Design for Agencies | WLWD" },
+      { name: "description", content: "White label website design for agencies: custom, conversion-focused designs delivered under your brand and ready for development." },
+      { property: "og:title", content: "White Label Website Design for Agencies | WLWD" },
+      { property: "og:description", content: "White label website design for agencies: custom, conversion-focused designs delivered under your brand and ready for development." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-website-design" },
-      { name: "twitter:title", content: "White Label Website Design for Agencies" },
-      { name: "twitter:description", content: "Premium white label website design for agencies — modern UI/UX, conversion-focused layouts and responsive builds delivered under your brand." },
+      { name: "twitter:title", content: "White Label Website Design for Agencies | WLWD" },
+      { name: "twitter:description", content: "White label website design for agencies: custom, conversion-focused designs delivered under your brand and ready for development." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-website-design" },
@@ -66,7 +66,7 @@ function Hero() {
               White Label Website Design
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              <span className="text-brand">White Label Website Design</span> for agencies, freelancers and studios.
+              <span className="text-brand">White Label Website Design</span>
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               Outsource web design to a modern, agency-first studio. Conversion-focused UI, responsive layouts and developer-ready Figma files delivered under your agency brand — so your team ships premium design without expanding payroll.

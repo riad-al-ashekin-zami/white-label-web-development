@@ -15,13 +15,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "White Label Portfolio & Case Studies — White Label Web Development" },
-      { name: "description", content: "Explore white label websites delivered for agencies across healthcare, real estate, ecommerce, contractors and more. Reliable, scalable, agency-safe execution." },
-      { property: "og:title", content: "White Label Portfolio & Case Studies — White Label Web Development" },
-      { property: "og:description", content: "Explore white label websites delivered for agencies across healthcare, real estate, ecommerce, contractors and more. Reliable, scalable, agency-safe execution." },
+      { title: "Portfolio | WLWD" },
+      { name: "description", content: "Selected WLWD projects across healthcare, real estate, ecommerce, contractors and local businesses, delivered under our partners' brands." },
+      { property: "og:title", content: "Portfolio | WLWD" },
+      { property: "og:description", content: "Selected WLWD projects across healthcare, real estate, ecommerce, contractors and local businesses, delivered under our partners' brands." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/portfolio" },
-      { name: "twitter:title", content: "White Label Portfolio & Case Studies — White Label Web Development" },
-      { name: "twitter:description", content: "Explore white label websites delivered for agencies across healthcare, real estate, ecommerce, contractors and more. Reliable, scalable, agency-safe execution." },
+      { name: "twitter:title", content: "Portfolio | WLWD" },
+      { name: "twitter:description", content: "Selected WLWD projects across healthcare, real estate, ecommerce, contractors and local businesses, delivered under our partners' brands." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/portfolio" },
@@ -64,7 +64,7 @@ function Hero() {
               Portfolio &amp; Case Studies
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              <span className="text-brand">White Label Web Development Portfolio</span> for agencies and consultants.
+              Our <span className="text-brand">Work</span>
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               Selected WordPress, WooCommerce and landing page projects delivered under agency brands across industries — built for SEO, Core Web Vitals and conversion. Names anonymized for confidentiality, results made real.
