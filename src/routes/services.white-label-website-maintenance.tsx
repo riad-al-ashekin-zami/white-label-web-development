@@ -33,6 +33,10 @@ export const Route = createFileRoute("/services/white-label-website-maintenance"
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }),
+      },
+      {
+        type: "application/ld+json",
         children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Services\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"White Label Website Maintenance\", \"item\": \"https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance\"}]}, {\"@type\": \"Service\", \"name\": \"White Label Website Maintenance\", \"description\": \"Monthly white label website maintenance, updates, backups, security patches and content edits for agencies.\", \"url\": \"https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance\", \"provider\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#organization\"}, \"areaServed\": \"Global\", \"serviceType\": \"White Label Website Maintenance\", \"audience\": {\"@type\": \"Audience\", \"audienceType\": \"Marketing and SEO agencies\"}}]}",
       },
     ],
@@ -225,6 +229,11 @@ function Solution() {
           title="White Label WordPress Maintenance"
           sub="Eight pillars that keep your client portfolio healthy, secure and fast."
         />
+        <div className="mx-auto mt-6 max-w-3xl space-y-4 text-pretty text-base leading-relaxed text-muted-foreground">
+          <p>Every week we update WordPress core, themes and plugins on each site in your portfolio. Updates go to a staging copy first, where we check key pages, forms, checkout and logins before anything touches the live site.</p>
+          <p>If an update breaks something, we roll back to the last working version from that day's backup, log the conflict and fix it before trying again. Your clients never see a broken page while we work it out.</p>
+          <p>Once a month we run a deeper review: PHP version, unused plugins, database clean-up, expiring licences and SSL certificates. That monthly pass is what keeps white label website maintenance from turning into emergency work later.</p>
+        </div>
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
           {solutions.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="bg-background p-7">
@@ -266,6 +275,19 @@ function IncludedServices() {
           title="What's Included in Our Care Plans"
           sub="Every service your agency needs to keep client websites healthy — under one roof."
         />
+        <div className="mx-auto mt-6 max-w-3xl space-y-4 text-pretty text-base leading-relaxed text-muted-foreground">
+          <p>Every care plan covers the work that keeps a WordPress site safe, fast and up to date:</p>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Core, theme and plugin updates, tested on staging</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Daily off-site backups with one-click restore</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Uptime monitoring every minute, with instant alerts</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Daily malware and vulnerability scans</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Monthly speed and Core Web Vitals checks</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Broken-link and form checks</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />A monthly white label report under your logo</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Small content edits each month</li>
+          </ul>
+        </div>
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
           {included.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="flex flex-col bg-background p-6">
@@ -399,6 +421,12 @@ function DashboardPreview() {
           title="White Label WordPress Support"
           sub="A single pane of glass for your portfolio — uptime, updates, security, tickets and performance."
         />
+        <div className="mx-auto mt-6 max-w-3xl space-y-4 text-pretty text-base leading-relaxed text-muted-foreground">
+          <p>Your team sends requests the way you already work — by email, through a shared Slack channel, or in ClickUp, Asana or Trello. Each request becomes a ticket with an owner, a status and a due date you can see.</p>
+          <p>We acknowledge requests within 30 minutes during business hours and complete most small tasks the same or next business day. Site-down incidents are handled immediately, ahead of the queue.</p>
+          <p>A support task is anything that takes up to about an hour: text and image changes, a new page from an existing layout, form tweaks, plugin settings, or a fix for a reported bug. Larger changes are quoted first so nothing surprises you on the invoice.</p>
+          <p>All communication can run under your agency's brand — your email signature, your ticket portal, your report logo. If you want us to reply to clients directly, we do it as your team; otherwise we never contact them.</p>
+        </div>
         <div className="mt-14 overflow-hidden rounded-2xl border border-border bg-background shadow-elevated">
           {/* top bar */}
           <div className="flex items-center justify-between border-b border-border bg-surface-elevated px-5 py-3">
@@ -574,6 +602,10 @@ function Pricing() {
           title="Maintenance Plans for Agencies"
           sub="Each plan is built for a different growth stage. Mark up freely — your margin, your clients."
         />
+        <div className="mx-auto mt-6 max-w-3xl space-y-4 text-pretty text-base leading-relaxed text-muted-foreground">
+          <p>Plans differ in how many sites they cover, how many hours of content edits are included each month, and how fast we respond. Smaller plans suit agencies starting to sell care plans; larger plans add priority response, more edit hours and 24/7 emergency cover for big portfolios.</p>
+          <p>You buy at partner rates and set your own retail price, so every plan is recurring margin for your agency. See our <Link to="/pricing" className="font-semibold text-brand hover:underline">maintenance pricing</Link> for current plan details.</p>
+        </div>
         <p className="mt-4 text-center text-sm text-muted-foreground">Compare all <Link to="/pricing" className="font-semibold text-brand hover:underline">maintenance pricing</Link> options.</p>
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {plans.map((p) => (
@@ -656,13 +688,11 @@ function Testimonials() {
 
 /* ---------- FAQ ---------- */
 const faqs = [
-  { q: "Do you work under our branding?", a: "Yes. Reports, ticket replies, status pages — every touchpoint is delivered under your agency's brand." },
-  { q: "Do you communicate with our clients directly?", a: "Never, unless you explicitly authorize it for a specific account. Default is zero contact." },
-  { q: "How fast is your support response?", a: "Acknowledgement in 30 minutes during business hours on Growth plans, faster on Agency Unlimited. Emergency incidents get immediate paging." },
-  { q: "What happens if a client website crashes?", a: "Our monitoring alerts our on-call engineer. We diagnose and restore from backups while keeping you in the loop." },
-  { q: "Do you offer 24/7 emergency support?", a: "Yes — included on the Agency Unlimited plan, and available as an add-on to Growth." },
-  { q: "How does maintenance reporting work?", a: "Every site receives a branded monthly PDF report covering uptime, updates applied, security events, performance and tickets resolved." },
-  { q: "Can you manage multiple client websites?", a: "Absolutely. Most of our partners run portfolios of 20–200 sites with us. The workflow is built for scale." },
+  { q: "Do you work under our brand?", a: "Yes. Reports, ticket replies and any client-facing messages carry your agency's name and logo. We never mention our name to your clients." },
+  { q: "What happens if a site gets hacked?", a: "We take the site offline or into maintenance mode, remove the malware, restore clean files from backup, patch the cause and change affected passwords. You get a short incident report you can share with your client." },
+  { q: "Can we resell your plans?", a: "Yes. That is how most partners use them. You pay our partner rate, set your own price and bill your client directly." },
+  { q: "Which hosting do you support?", a: "Any host that gives us admin and SFTP or SSH access, including managed WordPress hosts and standard cPanel hosting. If a site needs a better host, we can recommend one and handle the move." },
+  { q: "How do we hand over a client site?", a: "Send us an admin login and hosting access through a secure password manager. We take a full backup, run an initial health check and send you a summary of anything that needs fixing before regular maintenance starts." },
 ];
 
 function FAQ() {

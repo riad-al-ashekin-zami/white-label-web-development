@@ -17,7 +17,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us | WLWD" },
-      { name: "robots", content: "noindex, nofollow" },
+      { name: "robots", content: "noindex, follow" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "description", content: "Meet the team behind WLWD: our story, how we work with agencies, and the values behind every project we deliver." },

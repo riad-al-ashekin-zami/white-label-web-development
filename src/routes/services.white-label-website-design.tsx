@@ -32,6 +32,10 @@ export const Route = createFileRoute("/services/white-label-website-design")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: DESIGN_FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }),
+      },
+      {
+        type: "application/ld+json",
         children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Services\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"White Label Website Design\", \"item\": \"https://whitelabelwebsitedevelopment.com/services/white-label-website-design\"}]}, {\"@type\": \"Service\", \"name\": \"White Label Website Design\", \"description\": \"Conversion-focused white label website design delivered in Figma or directly to development.\", \"url\": \"https://whitelabelwebsitedevelopment.com/services/white-label-website-design\", \"provider\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#organization\"}, \"areaServed\": \"Global\", \"serviceType\": \"White Label Website Design\", \"audience\": {\"@type\": \"Audience\", \"audienceType\": \"Marketing and SEO agencies\"}}]}",
       },
     ],
@@ -224,6 +228,10 @@ function Approach() {
           title="White Label Web Design Services"
           sub="A design philosophy built around scalability, performance and conversion — not just aesthetics."
         />
+        <div className="mx-auto mt-6 max-w-3xl space-y-4 text-pretty text-base leading-relaxed text-muted-foreground">
+          <p>We design websites for the clients agencies actually sell to: local service businesses such as contractors, clinics and law firms, B2B and SaaS companies that need product and pricing pages, ecommerce stores, and agency client sites of every size.</p>
+          <p>Each design starts from your client's brand and business goal, not a template. The result is a site that looks like your agency made it and gives the client a clear path to call, book or buy.</p>
+        </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((it) => (
             <div key={it.t} className="rounded-2xl border border-border bg-surface-elevated p-5 shadow-soft transition-shadow hover:shadow-elevated">
@@ -262,6 +270,17 @@ function ServicesIncluded() {
           title="What You Get"
           sub="A complete design fulfillment menu — pick what you need, scale as you grow."
         />
+        <div className="mx-auto mt-6 max-w-3xl space-y-4 text-pretty text-base leading-relaxed text-muted-foreground">
+          <p>Every white label website design project is handed over ready for your client review and for development:</p>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Organised, editable Figma files</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />A small design system: colours, type, buttons and components</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Mobile and desktop layouts for every page</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Exported images, icons and logo files</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Notes on interactions and hover states</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />Unbranded presentation links under your agency</li>
+          </ul>
+        </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <div key={s.t} className="group rounded-2xl border border-border bg-surface-elevated p-6 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-elevated">
@@ -338,6 +357,14 @@ function Process() {
           title="Our Design Process"
           sub="Every project moves through the same disciplined design stages — no chaos, no improvisation."
         />
+        <div className="mx-auto mt-6 max-w-3xl space-y-4 text-pretty text-base leading-relaxed text-muted-foreground">
+          <p><strong className="text-ink">1. Brief.</strong> You share the client's goals, brand assets, competitors and page list. We confirm scope and timeline in writing.</p>
+          <p><strong className="text-ink">2. Wireframes.</strong> We map page structure and content order in simple grey layouts, so layout decisions are made before visual design.</p>
+          <p><strong className="text-ink">3. Figma design.</strong> We design the homepage first, then the remaining pages on the agreed style, for both mobile and desktop.</p>
+          <p><strong className="text-ink">4. Revisions.</strong> Each project includes two rounds of revisions. You send one consolidated list of feedback per round and we turn it around in 1–2 business days.</p>
+          <p><strong className="text-ink">5. Developer handoff.</strong> We hand over clean files to your developers, or straight to our own team for build.</p>
+          <p>Turnaround: a homepage design usually takes 3–5 business days, and a typical 5–8 page site takes 7–10 business days. Extra revision rounds or new pages outside the agreed scope are quoted before we start them.</p>
+        </div>
         <div className="relative mt-12">
           <div className="absolute left-0 right-0 top-5 hidden h-px bg-border lg:block" aria-hidden />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -576,16 +603,15 @@ function Testimonials() {
 }
 
 /* ---------- FAQ ---------- */
+const DESIGN_FAQS = [
+  { q: "Do you work under our agency brand?", a: "Yes. Files, presentation links and any notes are delivered under your agency's name. We never appear to your clients." },
+  { q: "How long does a website design take?", a: "A homepage design usually takes 3–5 business days and a typical 5–8 page site takes 7–10 business days, depending on scope." },
+  { q: "How many revisions are included?", a: "Two rounds of revisions are included. Additional rounds or changes outside the agreed scope are quoted before we start." },
+  { q: "Can you build the site after designing it?", a: "Yes. Our team can develop the approved design in WordPress or another platform, or hand clean Figma files to your own developers." },
+];
+
 function FAQ() {
-  const faqs = [
-    { q: "Do you work under agency branding?", a: "Yes. Every design project is delivered fully under your brand. We never appear to your end clients." },
-    { q: "Do you design mobile-first websites?", a: "Always. We design the mobile experience first, then scale up to tablet and desktop with full fidelity." },
-    { q: "Can you match our client branding?", a: "Yes. We work from your client's brand assets — logos, colors, type, tone — and design within their system." },
-    { q: "Do you provide redesigns?", a: "Yes — many of our projects are full redesigns of outdated, slow or underperforming websites." },
-    { q: "How do revisions work?", a: "Each project includes structured revision rounds with clear scope and ownership — no open-ended back-and-forth." },
-    { q: "Do you build after designing?", a: "Yes. We can also handle full development through our white label WordPress and website development services." },
-    { q: "Do you optimize for conversions?", a: "Yes — every layout is designed around CTAs, lead capture, social proof and decision triggers." },
-  ];
+  const faqs = DESIGN_FAQS;
   return (
     <section className="py-20 md:py-28">
       <div className="container-page">
