@@ -41,6 +41,7 @@ const PARTNERS = [
 export const Route = createFileRoute("/partners")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "Partners | WLWD" },
       {
         name: "description",

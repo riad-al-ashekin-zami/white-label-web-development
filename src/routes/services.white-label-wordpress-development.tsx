@@ -18,6 +18,7 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-wordpress-development")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "White Label WordPress Development for Agencies | WLWD" },
       { name: "description", content: "White label WordPress development for agencies: custom themes, plugins and builds delivered under your brand." },
       { property: "og:title", content: "White Label WordPress Development for Agencies | WLWD" },

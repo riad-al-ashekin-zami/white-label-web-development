@@ -15,6 +15,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "Portfolio | WLWD" },
       { name: "description", content: "Selected WLWD projects across healthcare, real estate, ecommerce, contractors and local businesses, delivered under our partners' brands." },
       { property: "og:title", content: "Portfolio | WLWD" },

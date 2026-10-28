@@ -18,6 +18,7 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/seo-friendly-web-development")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "White Label SEO-Friendly Web Development" },
       { name: "description", content: "SEO-friendly web development for agencies — Core Web Vitals, schema, semantic HTML and crawl-ready architecture under your brand." },
       { property: "og:title", content: "White Label SEO-Friendly Web Development" },

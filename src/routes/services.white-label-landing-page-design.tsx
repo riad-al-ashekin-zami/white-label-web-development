@@ -18,6 +18,7 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-landing-page-design")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "White Label Landing Page Design for Agencies" },
       { name: "description", content: "High-converting white label landing pages for agencies. PPC, local SEO, lead gen and SaaS pages built fast, mobile-first and under your brand." },
       { property: "og:title", content: "White Label Landing Page Design for Agencies" },

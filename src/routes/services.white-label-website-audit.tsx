@@ -19,6 +19,7 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-website-audit")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "White Label Website Audit & Technical Review" },
       { name: "description", content: "Professional white label website audits for agencies — technical SEO, Core Web Vitals, performance, UX and conversion reviews delivered under your brand." },
       { property: "og:title", content: "White Label Website Audit & Technical Review" },
