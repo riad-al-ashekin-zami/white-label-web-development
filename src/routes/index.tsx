@@ -3,31 +3,17 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import {
   Hero, WhatIsWhiteLabel, WhoWeHelp, TexasCustomers, Services, WhyUs, Process,
-  Portfolio, Testimonials, FinalCTA, BusinessNAP,
+  Portfolio, Testimonials, FinalCTA, BusinessNAP, PartnerPricing, BecomePartner,
 } from "@/components/site/Sections";
 import {
-  Problem, Comparison, FAQ,
+  Problem, Comparison, FAQ, HOME_FAQS,
 } from "@/components/site/ServiceSections";
 
-const HOME_TITLE = "We're White Label Web Design & Development Agency in Texas";
+const HOME_TITLE = "White Label Web Development for Agencies | WLWD";
 const HOME_DESC =
-  "White label web development, web design and WordPress builds for agencies. NDA-friendly delivery under your brand with a 5–7 day turnaround.";
+  "White label web development for agencies. We design, build and maintain client websites under your brand — on time, NDA-protected, at partner rates.";
 const HOME_URL = "https://whitelabelwebsitedevelopment.com/";
 
-const HOME_FAQS = [
-  { q: "What is white label web development?", a: "White label web development is when a specialized development team builds websites on behalf of an agency, freelancer or consultant — entirely under their brand. The white label web developer handles design, coding, testing and deployment while staying invisible to the agency's end client. It lets agencies offer professional web development services without maintaining an in-house development team." },
-  { q: "How is a white label web developer different from a freelancer?", a: "A white label web developer operates as a structured production partner with dedicated project managers, QA processes, version control and documented workflows. Unlike freelancers, a white label web development agency provides reliable turnaround, scalable capacity and formal confidentiality through NDAs." },
-  { q: "Do you sign an NDA before starting work?", a: "Yes. We sign a mutual NDA before every engagement. Your client relationships, project details and brand identity stay fully protected. We never contact your clients directly." },
-  { q: "Do you communicate with our clients?", a: "Never. We work strictly behind your brand. All communication runs through your team, and we appear nowhere in the delivery." },
-  { q: "Can we use our own branding?", a: "Absolutely. Every deliverable ships under your branding, on your domain, presented as your agency's work." },
-  { q: "What platforms do your white label web developers build on?", a: "Our team builds on WordPress, WooCommerce, Shopify, Webflow and custom HTML/CSS/JS. WordPress is our strongest capability." },
-  { q: "How fast is your turnaround?", a: "Most standard websites ship in 5–7 business days. Complex WordPress sites or WooCommerce stores typically take 2–3 weeks depending on scope." },
-  { q: "How do revisions work?", a: "Every project includes structured revision rounds with clearly defined scope. You review on a private staging URL and our team implements consolidated feedback within 24–48 hours." },
-  { q: "Do you provide ongoing website maintenance?", a: "Yes. We offer white label website maintenance covering updates, daily backups, security monitoring, uptime checks and monthly content edits." },
-  { q: "Do you work with agencies remotely across North America?", a: "Yes. We partner with agencies across the United States and Canada, plus remote partners worldwide, with overlap across US Eastern and Pacific hours." },
-  { q: "Can you handle multi-location and local SEO websites?", a: "Yes. We build multi-location websites with location-specific schema, optimized landing pages, NAP consistency and crawlable architecture." },
-  { q: "Do you provide website design for Fort Worth agencies and small businesses?", a: "Yes. We provide remote white label website design for Fort Worth agencies serving local companies. Our team works behind your brand as website designers for small business projects, delivering responsive web design and SEO-ready development without presenting ourselves as a local Fort Worth office." },
-];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -112,6 +98,8 @@ function Index() {
         <Comparison />
         <Portfolio />
         <Testimonials />
+        <PartnerPricing />
+        <BecomePartner />
         <FAQ />
         <FinalCTA />
         <BusinessNAP />

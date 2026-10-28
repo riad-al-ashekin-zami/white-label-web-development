@@ -319,6 +319,10 @@ export function Process() {
             </div>
           ))}
         </div>
+        <p className="mt-8 text-center text-sm text-muted-foreground">
+          Want the detail behind every step?{" "}
+          <Link to="/process" className="font-semibold text-brand hover:underline">see our full white label workflow</Link>.
+        </p>
       </div>
     </section>
   );
@@ -564,6 +568,44 @@ export function BusinessNAP() {
             </a>
           </address>
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- PARTNER PRICING ---------- */
+export function PartnerPricing() {
+  return (
+    <section className="py-16 md:py-24">
+      <div className="container-page max-w-3xl text-center">
+        <SectionHeader
+          eyebrow="Partner rates"
+          title="Transparent Partner Pricing"
+          sub="Every project is quoted up front with a fixed scope, clear deliverables and agreed payment milestones — no hourly surprises. Our partner rates leave room for a healthy markup, so you can resell at your own price and protect your margin."
+        />
+        <p className="mt-8 text-sm text-muted-foreground">
+          Compare project rates and care plans on our{" "}
+          <Link to="/pricing" className="font-semibold text-brand hover:underline">white label web development pricing</Link> page.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- BECOME A PARTNER ---------- */
+export function BecomePartner() {
+  return (
+    <section className="bg-surface py-16 md:py-24">
+      <div className="container-page max-w-3xl text-center">
+        <SectionHeader
+          eyebrow="Agency partnerships"
+          title="Become a Partner"
+          sub="Start with one scoped project and grow into a repeatable delivery relationship as your pipeline grows. Partners get priority scheduling, a dedicated project manager and volume rates."
+        />
+        <p className="mt-8 text-sm text-muted-foreground">
+          Learn how our{" "}
+          <Link to="/agency-partner" className="font-semibold text-brand hover:underline">white label web development partner program</Link> works.
+        </p>
       </div>
     </section>
   );
