@@ -208,7 +208,7 @@ function ContactPage() {
               <Mail className="h-3.5 w-3.5" /> Contact Us
             </div>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink md:text-5xl">
-              Let's talk about your next project
+              Contact Us
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
               Send us a quick message. We reply within one business day — confidential, white label, no spam.
