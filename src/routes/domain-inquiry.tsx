@@ -21,7 +21,7 @@ const PAGE_URL = "https://whitelabelwebsitedevelopment.com/domain-inquiry";
 export const Route = createFileRoute("/domain-inquiry")({
   head: () => ({
     meta: [
-      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { name: "robots", content: "noindex, follow" },
       { title: PAGE_TITLE },
       { name: "description", content: PAGE_DESC },
       { property: "og:title", content: PAGE_TITLE },

@@ -1,27 +1,26 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Code2, Globe, ShoppingCart, Search, Palette,
+  Globe, ShoppingCart, Search, Palette,
   LayoutTemplate, Wrench, ShieldCheck, Handshake, ArrowRight,
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Button } from "@/components/ui/button";
 
-const TITLE = "White Label Services for Agencies | Full Service Catalog";
+const TITLE = "Our Services | WLWD";
 const DESC =
-  "Browse every white label service we offer to agencies — WordPress, WooCommerce, custom web development, design, landing pages, maintenance and audits.";
+  "Browse every service we deliver for agencies — WordPress, WooCommerce, design, landing pages, maintenance, audits and SEO-friendly builds.";
 const URL = "https://whitelabelwebsitedevelopment.com/white-label-services";
 
 const services = [
-  { label: "Website Development", desc: "End-to-end white label builds in WordPress, custom React/Next.js or your stack of choice.", to: "/", icon: Code2 },
-  { label: "WordPress Development", desc: "Custom themes, ACF, Gutenberg blocks and clean plugin-light WordPress builds.", to: "/services/white-label-wordpress-development", icon: Globe },
-  { label: "WooCommerce Stores", desc: "Scalable online stores with payments, shipping, inventory and conversion-tuned UX.", to: "/services/white-label-woocommerce-development", icon: ShoppingCart },
-  { label: "SEO-Friendly Builds", desc: "Semantic HTML, schema, Core Web Vitals — engineered for your SEO team to rank.", to: "/services/seo-friendly-web-development", icon: Search },
-  { label: "Website Design", desc: "Conversion-focused UI and brand-aligned design systems your clients will love.", to: "/services/white-label-website-design", icon: Palette },
-  { label: "Landing Pages", desc: "High-performance landing pages built for paid traffic, launches and campaigns.", to: "/services/white-label-landing-page-design", icon: LayoutTemplate },
-  { label: "Website Maintenance", desc: "Ongoing care, updates, backups, security patches and monthly content edits.", to: "/services/white-label-website-maintenance", icon: Wrench },
-  { label: "Website Audit", desc: "Deep performance, SEO and UX audits with prioritised, actionable recommendations.", to: "/services/white-label-website-audit", icon: ShieldCheck },
-  { label: "For SEO Agencies", desc: "Our white label partner program purpose-built for SEO and digital agencies.", to: "/industries/seo-agencies", icon: Handshake },
+  { label: "White Label WordPress Development", desc: "Custom themes, ACF, Gutenberg blocks and clean plugin-light WordPress builds.", to: "/services/white-label-wordpress-development", icon: Globe },
+  { label: "White Label WooCommerce Development", desc: "Scalable online stores with payments, shipping, inventory and conversion-tuned UX.", to: "/services/white-label-woocommerce-development", icon: ShoppingCart },
+  { label: "SEO-Friendly Web Development", desc: "Semantic HTML, schema, Core Web Vitals — engineered for your SEO team to rank.", to: "/services/seo-friendly-web-development", icon: Search },
+  { label: "White Label Website Design", desc: "Conversion-focused UI and brand-aligned design systems your clients will love.", to: "/services/white-label-website-design", icon: Palette },
+  { label: "White Label Landing Page Design", desc: "High-performance landing pages built for paid traffic, launches and campaigns.", to: "/services/white-label-landing-page-design", icon: LayoutTemplate },
+  { label: "White Label Website Maintenance", desc: "Ongoing care, updates, backups, security patches and monthly content edits.", to: "/services/white-label-website-maintenance", icon: Wrench },
+  { label: "White Label Website Audit", desc: "Deep performance, SEO and UX audits with prioritised, actionable recommendations.", to: "/services/white-label-website-audit", icon: ShieldCheck },
+  { label: "Website Delivery for SEO Agencies", desc: "Our partner program purpose-built for SEO and digital agencies.", to: "/industries/seo-agencies", icon: Handshake },
 ] as const;
 
 export const Route = createFileRoute("/white-label-services")({
@@ -49,13 +48,20 @@ function WhiteLabelServicesPage() {
         <section className="border-b border-border bg-surface pt-32 pb-16 md:pt-40 md:pb-24">
           <div className="container-page max-w-3xl text-center">
             <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand md:text-xs">
-              White label services
+              Service catalog
             </div>
             <h1 className="mt-3 text-balance text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl md:text-5xl">
-              Every white label service we deliver for agencies
+              Our Services
             </h1>
             <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               A complete production catalog — from WordPress and WooCommerce to landing pages, maintenance and audits. Delivered under your brand, on your timeline.
+            </p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Everything here is part of our{" "}
+              <Link to="/" className="font-semibold text-brand underline-offset-4 hover:underline">
+                white label web development
+              </Link>{" "}
+              offering for agencies.
             </p>
           </div>
         </section>
