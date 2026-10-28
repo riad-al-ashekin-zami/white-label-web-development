@@ -22,10 +22,13 @@ export function Hero() {
               Trusted by 120+ agencies worldwide
             </div>
             <h1 className="mt-5 text-balance text-[34px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[64px] lg:leading-[1.05]">
-              We're <span className="text-gradient-brand">White Label Web Design & Development Agency</span> in Texas
+              <span className="text-gradient-brand">White Label Web Development</span> for Agencies
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
-              We're the white label web development partner behind 120+ agencies, marketing teams and consultants across North America and globally. Our <a href="#services" className="font-medium text-ink underline decoration-border underline-offset-4 hover:decoration-ink">white label web developers</a> handle web design, WordPress, WooCommerce and landing page builds under your brand — SEO-ready, Core Web Vitals optimized, and delivered remotely in 5–7 business days.
+              We're the white label web development team behind 120+ agencies, marketing teams and consultants across North America. You sell the website, we build it, and your client only ever sees your brand — SEO-ready, Core Web Vitals optimized and delivered in 5–7 business days.
+            </p>
+            <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:text-lg">
+              White label website development lets you add capacity without hiring. Work with a white label web developer through one dedicated project manager, review on private staging links and hand over a tested site under your name.
             </p>
             <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:mt-8">
               <Button asChild size="lg" className="h-12 rounded-full px-6">
@@ -103,7 +106,7 @@ export function WhatIsWhiteLabel() {
           <div>
             <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand md:text-xs">The model</div>
             <h2 className="mt-3 text-balance text-[26px] font-semibold leading-tight tracking-tight text-ink sm:text-3xl md:text-4xl">
-              What Is White Label Web Development?
+              Delivery Behind Your Brand
             </h2>
             <div className="mt-6 space-y-4 text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               <p>
@@ -216,12 +219,13 @@ export function TexasCustomers() {
 
 /* ---------- SERVICES ---------- */
 const services = [
-  { icon: Code2, title: "White Label WordPress Development", desc: "Custom themes, ACF, Elementor, Divi and Gutenberg — all built with clean, editable, SEO-ready code. Every WordPress site is mobile-optimized and safe for your client's team to manage.", to: "/services/white-label-wordpress-development" },
-  { icon: MonitorSmartphone, title: "White Label Website Design", desc: "Modern, conversion-focused web design delivered in Figma or built straight to development. Give your website design company experienced website designers for small business projects without adding payroll.", to: "/services/white-label-website-design" },
-  { icon: ShoppingCart, title: "White Label WooCommerce Development", desc: "Scalable ecommerce storefronts with payment gateways, shipping calculators and inventory management wired in and tested. WooCommerce stores that convert and scale.", to: "/services/white-label-woocommerce-development" },
-  { icon: Rocket, title: "White Label Landing Page Design", desc: "High-converting landing pages for ad campaigns, product launches and lead gen. Fast turnaround, A/B-test ready, built to hit your performance benchmarks.", to: "/services/white-label-landing-page-design" },
-  { icon: Wrench, title: "White Label Website Maintenance", desc: "WordPress updates, daily backups, security patches and monthly content edits — handled under your brand so you can offer recurring revenue to clients.", to: "/services/white-label-website-maintenance" },
-  { icon: Gauge, title: "SEO-Friendly Web Development", desc: "Core Web Vitals tuned, schema-ready code and Lighthouse scores you can sell. SEO-first development baked into every build.", to: "/services/seo-friendly-web-development" },
+  { icon: Code2, title: "White label WordPress development", desc: "Custom themes, ACF, Elementor and Gutenberg builds with clean, editable, SEO-ready code.", to: "/services/white-label-wordpress-development" },
+  { icon: MonitorSmartphone, title: "White label website design", desc: "Conversion-focused designs in Figma or built straight to development for your clients.", to: "/services/white-label-website-design" },
+  { icon: ShoppingCart, title: "White label WooCommerce development", desc: "Scalable stores with payments, shipping and inventory wired in and tested.", to: "/services/white-label-woocommerce-development" },
+  { icon: Rocket, title: "White label landing page design", desc: "Fast, A/B-test ready landing pages for ad campaigns, launches and lead generation.", to: "/services/white-label-landing-page-design" },
+  { icon: Wrench, title: "White label website maintenance", desc: "Updates, backups, security patches and content edits under your brand for recurring revenue.", to: "/services/white-label-website-maintenance" },
+  { icon: ShieldCheck, title: "White label website audit", desc: "Performance, security and technical reviews delivered as an agency-ready report.", to: "/services/white-label-website-audit" },
+  { icon: Gauge, title: "SEO-friendly web development", desc: "Core Web Vitals tuned, schema-ready code and Lighthouse scores you can sell.", to: "/services/seo-friendly-web-development" },
 ];
 
 export function Services() {
@@ -242,7 +246,7 @@ export function Services() {
               <h3 className="mt-6 text-lg font-semibold text-ink">{title}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{desc}</p>
               <Link to={to} className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand">
-                Explore service <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                {title} <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
           ))}
@@ -268,7 +272,7 @@ export function WhyUs() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Why agencies choose us"
-          title="Why Agencies Choose Us as Their White Label Web Development Partner"
+          title="Why Agencies Choose a White Label Web Development Agency"
           sub="Agency owners renew with us quarter after quarter because we operate like an in-house team — without the payroll. Here's what makes our white label web development different from typical freelancers and generic dev shops."
         />
         <div className="mt-10 grid grid-cols-2 gap-4 md:mt-14 md:gap-6 lg:grid-cols-3">
@@ -303,7 +307,7 @@ export function Process() {
       <div className="container-page">
         <SectionHeader
           eyebrow="How we work"
-          title="How Our White Label Web Development Process Works"
+          title="How Our White Label Process Works"
           sub="We replaced freelancer chaos with a structured white label web development workflow your agency can plan around. Every project runs on the same proven pipeline — whether it's a single landing page or 30 WordPress builds running in parallel."
         />
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:mt-16 lg:grid-cols-4">
@@ -388,7 +392,7 @@ export function Portfolio() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Portfolio"
-          title="Selected White Label Web Development Projects"
+          title="Selected Agency Projects"
           sub="Real websites delivered for agency partners — client names anonymized for confidentiality."
         />
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-14 md:gap-6 lg:grid-cols-3">
