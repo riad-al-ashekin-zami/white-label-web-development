@@ -48,13 +48,20 @@ function WhiteLabelServicesPage() {
         <section className="border-b border-border bg-surface pt-32 pb-16 md:pt-40 md:pb-24">
           <div className="container-page max-w-3xl text-center">
             <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand md:text-xs">
-              White label services
+              Service catalog
             </div>
             <h1 className="mt-3 text-balance text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl md:text-5xl">
-              Every white label service we deliver for agencies
+              Our Services
             </h1>
             <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               A complete production catalog — from WordPress and WooCommerce to landing pages, maintenance and audits. Delivered under your brand, on your timeline.
+            </p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Everything here is part of our{" "}
+              <Link to="/" className="font-semibold text-brand underline-offset-4 hover:underline">
+                white label web development
+              </Link>{" "}
+              offering for agencies.
             </p>
           </div>
         </section>
