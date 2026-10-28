@@ -4,9 +4,9 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { posts } from "@/content/posts";
 
-const TITLE = "Blog — White Label Web Development";
+const TITLE = "Blog | WLWD";
 const DESC =
-  "Guides and insights for agencies scaling with white label web development, WordPress builds, and reseller-ready delivery.";
+  "Practical guides for agencies on project delivery, platform selection, outsourcing and sustainable growth.";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -35,7 +35,7 @@ function BlogIndex() {
           <div className="mx-auto max-w-2xl text-center">
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">Blog</div>
             <h1 className="mt-3 text-balance text-4xl font-semibold tracking-tight text-ink md:text-5xl">
-              White label insights for agencies
+              Blog
             </h1>
             <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
               Practical guides on scaling delivery, choosing platforms, and selling websites under your own brand.
@@ -60,7 +60,7 @@ function BlogIndex() {
                 )}
                 <div className="flex flex-1 flex-col p-6">
                 <span className="text-xs font-semibold uppercase tracking-wider text-brand">{p.category}</span>
-                <h2 className="mt-3 text-xl font-semibold tracking-tight text-ink">{p.title}</h2>
+                <p className="mt-3 text-xl font-semibold tracking-tight text-ink">{p.title}</p>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
                 <div className="mt-5 flex items-center gap-4 text-xs text-muted-foreground">
                   <span className="inline-flex items-center gap-1.5">
