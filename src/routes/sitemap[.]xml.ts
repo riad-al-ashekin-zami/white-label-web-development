@@ -34,9 +34,6 @@ const entries: SitemapEntry[] = [
   { path: "/blog/what-is-white-label-web-development", changefreq: "monthly", priority: "0.7" },
   { path: "/blog/white-label-wordpress-development-for-agencies", changefreq: "monthly", priority: "0.7" },
   { path: "/partners", changefreq: "monthly", priority: "0.5" },
-  { path: "/privacy", changefreq: "yearly", priority: "0.3" },
-  { path: "/terms-of-service", changefreq: "yearly", priority: "0.3" },
-  { path: "/nda-confidentiality", changefreq: "yearly", priority: "0.3" },
 ];
 
 export const Route = createFileRoute("/sitemap.xml")({

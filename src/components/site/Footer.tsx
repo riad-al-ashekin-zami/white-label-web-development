@@ -7,13 +7,13 @@ type LinkItem = { label: string; to?: string; href?: string };
 type Col = { title: string; links: LinkItem[] };
 
 const services: LinkItem[] = [
-  { label: "WordPress Development", to: "/services/white-label-wordpress-development" },
-  { label: "WooCommerce Development", to: "/services/white-label-woocommerce-development" },
-  { label: "Website Design", to: "/services/white-label-website-design" },
-  { label: "Landing Pages", to: "/services/white-label-landing-page-design" },
-  { label: "SEO-Friendly Development", to: "/services/seo-friendly-web-development" },
-  { label: "Website Maintenance", to: "/services/white-label-website-maintenance" },
-  { label: "Website Audit", to: "/services/white-label-website-audit" },
+  { label: "White label WordPress development", to: "/services/white-label-wordpress-development" },
+  { label: "White label WooCommerce development", to: "/services/white-label-woocommerce-development" },
+  { label: "White label website design", to: "/services/white-label-website-design" },
+  { label: "White label landing page design", to: "/services/white-label-landing-page-design" },
+  { label: "SEO-friendly web development", to: "/services/seo-friendly-web-development" },
+  { label: "White label website maintenance", to: "/services/white-label-website-maintenance" },
+  { label: "White label website audit", to: "/services/white-label-website-audit" },
   { label: "For SEO Agencies", to: "/industries/seo-agencies" },
 ];
 
@@ -83,7 +83,7 @@ export function Footer() {
             <Link to="/" className="flex items-center gap-2.5">
               <img
                 src={logo}
-                alt="White Label Web Development logo"
+                alt="WLWD logo"
                 width={36}
                 height={36}
                 loading="lazy"
@@ -154,7 +154,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} White Label Web Development. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} WLWD. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link to="/privacy" className="hover:text-ink">Privacy</Link>
             <Link to="/terms-of-service" className="hover:text-ink">Terms</Link>
