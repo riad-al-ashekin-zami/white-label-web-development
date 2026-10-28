@@ -83,6 +83,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#ffffff" },
       { name: "format-detection", content: "telephone=no" },
+      {
+        name: "robots",
+        content:
+          "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: SITE_NAME },
       { property: "og:locale", content: "en_US" },
