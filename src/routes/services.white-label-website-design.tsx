@@ -220,7 +220,7 @@ function Approach() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Our design approach"
-          title="A modern design system for agency-grade work"
+          title="White Label Web Design Services"
           sub="A design philosophy built around scalability, performance and conversion — not just aesthetics."
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -258,7 +258,7 @@ function ServicesIncluded() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Design services included"
-          title="Everything design, under one operational roof"
+          title="What You Get"
           sub="A complete design fulfillment menu — pick what you need, scale as you grow."
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -334,7 +334,7 @@ function Process() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Our design process"
-          title="A predictable design delivery system"
+          title="Our Design Process"
           sub="Every project moves through the same disciplined design stages — no chaos, no improvisation."
         />
         <div className="relative mt-12">
@@ -588,7 +588,7 @@ function FAQ() {
   return (
     <section className="py-20 md:py-28">
       <div className="container-page">
-        <SectionHeader eyebrow="FAQ" title="Design questions, answered" />
+        <SectionHeader eyebrow="FAQ" title="FAQ" />
         <div className="mx-auto mt-10 max-w-3xl rounded-3xl border border-border bg-surface-elevated p-2 shadow-soft">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (

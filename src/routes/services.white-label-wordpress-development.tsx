@@ -69,7 +69,7 @@ function Hero() {
               <span className="text-brand">White Label WordPress Development</span>
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Hire a dedicated white label WordPress developer team — custom themes, ACF, Gutenberg, Elementor and WooCommerce builds. SEO-friendly WordPress structure, clean code and editor-ready handovers, all delivered quietly under your agency brand.
+              Hire a dedicated white label WordPress developer team — custom themes, ACF, Gutenberg, Elementor and <Link to="/services/white-label-woocommerce-development" className="font-semibold text-brand hover:underline">white label WooCommerce development</Link>. SEO-friendly WordPress structure, clean code and editor-ready handovers, all delivered quietly under your agency brand. Part of our wider <Link to="/" className="font-semibold text-brand hover:underline">white label web development</Link> offering.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
@@ -459,22 +459,10 @@ function Maintenance() {
           title="Long-term WordPress care, agency-grade"
           sub="Keep every client site healthy, fast and secure with structured ongoing support."
         />
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((it) => (
-            <div key={it.t} className="rounded-2xl border border-border bg-surface-elevated p-6 shadow-soft">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand/10 text-brand">
-                <it.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 text-base font-semibold text-ink">{it.t}</h3>
-              <p className="mt-1.5 text-sm text-muted-foreground">{it.d}</p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-8 text-center">
-          <Link to="/services/white-label-website-maintenance" className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:gap-2.5 transition-all">
-            Explore maintenance plans <ArrowUpRight className="h-4 w-4" />
-          </Link>
-        </div>
+        <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-relaxed text-muted-foreground">
+          After launch we keep WordPress sites updated, backed up, monitored and secure under your brand. See our 
+          <Link to="/services/white-label-website-maintenance" className="font-semibold text-brand hover:underline">white label WordPress maintenance</Link> for care plans and support details.
+        </p>
       </div>
     </section>
   );

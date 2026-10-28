@@ -222,7 +222,7 @@ function Solution() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Our solution"
-          title="A maintenance operation that runs in the background"
+          title="White Label WordPress Maintenance"
           sub="Eight pillars that keep your client portfolio healthy, secure and fast."
         />
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
@@ -263,7 +263,7 @@ function IncludedServices() {
       <div className="container-page">
         <SectionHeader
           eyebrow="What's included"
-          title="A complete maintenance stack"
+          title="What's Included in Our Care Plans"
           sub="Every service your agency needs to keep client websites healthy — under one roof."
         />
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
@@ -396,7 +396,7 @@ function DashboardPreview() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Reporting dashboard"
-          title="Operational visibility for every site"
+          title="White Label WordPress Support"
           sub="A single pane of glass for your portfolio — uptime, updates, security, tickets and performance."
         />
         <div className="mt-14 overflow-hidden rounded-2xl border border-border bg-background shadow-elevated">
@@ -571,7 +571,7 @@ function Pricing() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Maintenance plans"
-          title="Predictable pricing your agency can resell"
+          title="Maintenance Plans for Agencies"
           sub="Each plan is built for a different growth stage. Mark up freely — your margin, your clients."
         />
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -668,7 +668,7 @@ function FAQ() {
   return (
     <section className="py-24 md:py-32">
       <div className="container-page max-w-3xl">
-        <SectionHeader eyebrow="FAQ" title="Answers for agency owners" />
+        <SectionHeader eyebrow="FAQ" title="FAQ" />
         <div className="mt-12">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (

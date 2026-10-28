@@ -68,7 +68,7 @@ function Hero() {
               Our <span className="text-gradient-brand">White Label Development Process</span>
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Every project runs on the same proven seven-step pipeline. Transparent, scalable, agency-safe — engineered to make your team look great in front of every client.
+              Our white label workflow gives your agency a clear path from brief to launch. Every project runs on the same proven seven-step pipeline. Transparent, scalable, agency-safe — engineered to make your team look great in front of every client.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
