@@ -10,13 +10,14 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/terms-of-service")({
   head: () => ({
     meta: [
-      { title: "Terms of Service \u2014 White Label Web Development" },
-      { name: "description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Web Development." },
-      { property: "og:title", content: "Terms of Service \u2014 White Label Web Development" },
-      { property: "og:description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Web Development." },
+      { title: "Terms of Service | WLWD" },
+      { name: "robots", content: "noindex, follow" },
+      { name: "description", content: "Terms governing project agreements, payments, delivery, intellectual property, liability and termination when working with WLWD." },
+      { property: "og:title", content: "Terms of Service | WLWD" },
+      { property: "og:description", content: "Terms governing project agreements, payments, delivery, intellectual property, liability and termination when working with WLWD." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/terms-of-service" },
-      { name: "twitter:title", content: "Terms of Service \u2014 White Label Web Development" },
-      { name: "twitter:description", content: "Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Web Development." },
+      { name: "twitter:title", content: "Terms of Service | WLWD" },
+      { name: "twitter:description", content: "Terms governing project agreements, payments, delivery, intellectual property, liability and termination when working with WLWD." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/terms-of-service" },
@@ -24,7 +25,7 @@ export const Route = createFileRoute("/terms-of-service")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Terms of Service\", \"item\": \"https://whitelabelwebsitedevelopment.com/terms-of-service\"}]}, {\"@type\": \"WebPage\", \"name\": \"Terms of Service — White Label Web Development\", \"description\": \"Clear, partnership-focused terms covering services, workflow, payments, delivery, IP and support for agencies working with White Label Web Development.\", \"url\": \"https://whitelabelwebsitedevelopment.com/terms-of-service\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Terms of Service\", \"item\": \"https://whitelabelwebsitedevelopment.com/terms-of-service\"}]}, {\"@type\": \"WebPage\", \"name\": \"Terms of Service | WLWD\", \"description\": \"Terms governing project agreements, payments, delivery, intellectual property, liability and termination when working with WLWD.\", \"url\": \"https://whitelabelwebsitedevelopment.com/terms-of-service\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
@@ -35,7 +36,7 @@ export const Route = createFileRoute("/terms-of-service")({
 const lastUpdated = "May 22, 2026";
 
 const services = [
-  { icon: Code2, t: "White Label Web Development", d: "Custom builds delivered under your brand for agency clients." },
+  { icon: Code2, t: "WLWD", d: "Custom builds delivered under your brand for agency clients." },
   { icon: Code2, t: "WordPress Development", d: "Themes, ACF, Elementor and Gutenberg builds, cleanly structured." },
   { icon: MonitorSmartphone, t: "Website Design", d: "Conversion-focused design delivered in Figma or directly to dev." },
   { icon: Rocket, t: "Landing Pages", d: "High-performing pages for ad campaigns, launches and lead gen." },
@@ -148,7 +149,7 @@ function TermsPage() {
           <div className="container-page">
             <div className="mx-auto max-w-3xl rounded-2xl border border-border bg-surface-elevated p-6 md:p-8">
               <p className="text-[15px] leading-relaxed text-ink">
-                These terms describe how White Label Web Development ("we", "us") works with agencies, freelancers and consultants ("you"). Engaging us for a project means you agree to the terms below.
+                These terms describe how WLWD ("we", "us") works with agencies, freelancers and consultants ("you"). Engaging us for a project means you agree to the terms below.
               </p>
               <div className="mt-6 grid gap-2 sm:grid-cols-2">
                 {[
@@ -172,16 +173,7 @@ function TermsPage() {
         </section>
 
         <Section id="services" eyebrow="01" title="Services provided">
-          <p>We provide white label web development services, delivered quietly under your brand. Our core offering includes:</p>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {services.map(({ icon: Icon, t, d }) => (
-              <div key={t} className="rounded-xl border border-border bg-card p-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-soft text-brand"><Icon className="h-4.5 w-4.5" /></div>
-                <h3 className="mt-3 text-sm font-semibold text-ink">{t}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{d}</p>
-              </div>
-            ))}
-          </div>
+          <p>Each engagement is governed by its written scope, agreed deliverables, fees and the applicable project agreement. Changes require written approval before additional work begins.</p>
         </Section>
 
         <Section id="workflow" eyebrow="02" title="Project workflow & responsibilities">
@@ -247,27 +239,6 @@ function TermsPage() {
           </div>
         </Section>
 
-        {/* Final CTA */}
-        <section id="contact" className="py-12 md:py-20">
-          <div className="container-page">
-            <div className="mx-auto max-w-3xl overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-surface-elevated to-brand-soft p-8 text-center md:p-12">
-              <h2 className="text-balance text-2xl font-semibold tracking-tight text-ink md:text-3xl">
-                Need a reliable white label partner?
-              </h2>
-              <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-                Scale your agency with confidence. We'll review your pipeline and show you how a backend partner removes fulfillment bottlenecks.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                <Button asChild size="lg" className="rounded-full px-6">
-                  <Link to="/contact">Start a Partnership <ArrowRight className="h-4 w-4" /></Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="rounded-full bg-background px-6">
-                  <a href="https://calendly.com/" target="_blank" rel="noreferrer">Book a Discovery Call</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
