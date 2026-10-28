@@ -42,9 +42,9 @@ export const posts: Post[] = [
   },
   {
     slug: "white-label-wordpress-development-for-agencies",
-    title: "White Label WordPress Development for Agencies: Complete Guide",
+    title: "How Agencies Outsource WordPress Development: A Practical Guide",
     description:
-      "Learn how white label WordPress development works for agencies: services, pricing, workflow, partner selection, NDAs, and scaling.",
+      "A practical guide to outsourcing WordPress projects: choosing specialists, defining scope, managing delivery and protecting client relationships.",
     date: "2026-08-31",
     readingTime: "38 min read",
     category: "Agency Growth",
@@ -66,9 +66,9 @@ export const posts: Post[] = [
   },
   {
     slug: "white-label-web-development-pricing",
-    title: "White Label Web Development Pricing: Costs, Markups & Agency Margins",
+    title: "Fixed Price vs Hourly vs Retainer: How White Label Projects Are Billed",
     description:
-      "Learn how white label web development pricing works: costs, markups, margins, pricing models, scope creep, recurring revenue, and how to build profitable agency pricing.",
+      "Compare fixed-price, hourly and retainer billing for outsourced website projects, including markups, margins, revisions and recurring revenue.",
     date: "2026-08-31",
     readingTime: "32 min read",
     category: "Agency Growth",
@@ -90,9 +90,9 @@ export const posts: Post[] = [
   },
   {
     slug: "what-is-white-label-web-development",
-    title: "What Is White Label Web Development? Complete 2026 Guide",
+    title: "What Is White Label Web Development? Definition, Benefits & Examples",
     description:
-      "Learn what white label web development is, how it works, its benefits, costs, services, and how agencies use white label partners to scale.",
+      "A plain-English definition of white label web development: what it means, who uses it, the benefits for agencies, and real examples.",
     date: "2026-08-31",
     readingTime: "30 min read",
     category: "Agency Growth",
@@ -102,7 +102,7 @@ export const posts: Post[] = [
   },
   {
     slug: "best-white-label-website-builders",
-    title: "12 Best White Label Website Builders for Agencies (2026)",
+    title: "Best White Label Website Builders for Agencies (2026)",
     description:
       "Compare the best white label website builder options for agencies and resellers in 2026: branding depth, AI, APIs, WordPress, pricing and reseller programs.",
     date: "2026-08-31",

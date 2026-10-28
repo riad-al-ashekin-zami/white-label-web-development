@@ -259,7 +259,7 @@ export function PartnerBenefits() {
 }
 
 /* ---------- FAQ ---------- */
-const faqs = [
+export const HOME_FAQS = [
   { q: "What is white label web development?", a: "White label web development is when a specialized development team builds websites on behalf of an agency, freelancer or consultant — entirely under their brand. The white label web developer handles design, coding, testing and deployment while staying invisible to the agency's end client. It lets agencies offer professional web development services without maintaining an in-house development team." },
   { q: "How is a white label web developer different from a freelancer?", a: "A white label web developer operates as a structured production partner with dedicated project managers, QA processes, version control and documented workflows. Unlike freelancers who often work alone and communicate inconsistently, a white label web development agency provides reliable turnaround, scalable capacity and formal confidentiality through NDAs — agency-grade infrastructure without the freelancer risk." },
   { q: "Do you sign an NDA before starting work?", a: "Yes. We sign a mutual NDA before every engagement. Your client relationships, project details and brand identity stay fully protected. We never contact your clients directly, and all communication happens through agency-safe channels." },
@@ -268,6 +268,7 @@ const faqs = [
   { q: "What platforms do your white label web developers build on?", a: "Our white label web development team builds on WordPress (custom themes, Elementor, Divi, Gutenberg, ACF), WooCommerce, Shopify, Webflow and custom HTML/CSS/JS. WordPress is our strongest capability, covering the majority of projects we deliver for agency partners." },
   { q: "How fast is your turnaround?", a: "Most standard websites ship in 5–7 business days. Complex builds like multi-page WordPress sites or WooCommerce stores typically take 2–3 weeks depending on scope. Every project gets a hard committed timeline before work begins." },
   { q: "How do revisions work?", a: "Every project includes structured revision rounds with clearly defined scope. You review on a private staging URL, submit consolidated feedback, and our team implements changes within 24–48 hours — preventing scope creep while delivering exactly what your client needs." },
+  { q: "Who owns the code and deliverables?", a: "Your agency — and ultimately your client — owns the final code, design files and content once the project is paid in full. We hand over everything, including logins and documentation, and keep no claim to the work." },
   { q: "Do you provide ongoing website maintenance?", a: "Yes. We offer white label website maintenance packages covering WordPress core and plugin updates, daily backups, security monitoring, uptime checks and monthly content edits — billed monthly and delivered under your brand." },
   { q: "Do you work with agencies remotely across North America?", a: "Yes. We partner with agencies across the United States and Canada, plus remote partners worldwide. Our team overlaps with US Eastern and Pacific business hours, and we work asynchronously for partners in other time zones." },
   { q: "Can you handle multi-location and local SEO websites?", a: "Yes. We build multi-location websites with proper local SEO structure — location-specific schema, optimized landing pages, NAP consistency and crawlable architecture — so your SEO team can rank each location effectively." },
@@ -278,9 +279,9 @@ export function FAQ() {
   return (
     <section className="bg-surface py-16 md:py-32">
       <div className="container-page max-w-3xl">
-        <SectionHeader eyebrow="FAQ" title="White Label Web Development — FAQs for Agencies" />
+        <SectionHeader eyebrow="FAQ" title="Frequently Asked Questions" />
         <div className="mt-10 divide-y divide-border border-y border-border md:mt-12">
-          {faqs.map((f) => (
+          {HOME_FAQS.map((f) => (
             <article key={f.q} className="py-6">
               <h3 className="text-base font-semibold text-ink">{f.q}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>

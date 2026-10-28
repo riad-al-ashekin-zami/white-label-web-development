@@ -10,13 +10,14 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/nda-confidentiality")({
   head: () => ({
     meta: [
-      { title: "NDA & Confidentiality \u2014 White Label Web Development" },
-      { name: "description", content: "How we protect agency and client confidentiality: NDA-friendly operations, white label delivery, no client poaching, and secure data handling." },
-      { property: "og:title", content: "NDA & Confidentiality \u2014 White Label Web Development" },
-      { property: "og:description", content: "How we protect agency and client confidentiality: NDA-friendly operations, white label delivery, no client poaching, and secure data handling." },
+      { title: "NDA & Confidentiality | WLWD" },
+      { name: "robots", content: "noindex, follow" },
+      { name: "description", content: "WLWD confidentiality provisions covering nondisclosure agreements, client information, access controls and data handling." },
+      { property: "og:title", content: "NDA & Confidentiality | WLWD" },
+      { property: "og:description", content: "WLWD confidentiality provisions covering nondisclosure agreements, client information, access controls and data handling." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/nda-confidentiality" },
-      { name: "twitter:title", content: "NDA & Confidentiality \u2014 White Label Web Development" },
-      { name: "twitter:description", content: "How we protect agency and client confidentiality: NDA-friendly operations, white label delivery, no client poaching, and secure data handling." },
+      { name: "twitter:title", content: "NDA & Confidentiality | WLWD" },
+      { name: "twitter:description", content: "WLWD confidentiality provisions covering nondisclosure agreements, client information, access controls and data handling." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/nda-confidentiality" },
@@ -24,7 +25,7 @@ export const Route = createFileRoute("/nda-confidentiality")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"NDA & Confidentiality\", \"item\": \"https://whitelabelwebsitedevelopment.com/nda-confidentiality\"}]}, {\"@type\": \"WebPage\", \"name\": \"NDA & Confidentiality — White Label Web Development\", \"description\": \"How we protect agency and client confidentiality: NDA-friendly operations, white label delivery, no client poaching, and secure data handling.\", \"url\": \"https://whitelabelwebsitedevelopment.com/nda-confidentiality\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"NDA & Confidentiality\", \"item\": \"https://whitelabelwebsitedevelopment.com/nda-confidentiality\"}]}, {\"@type\": \"WebPage\", \"name\": \"NDA & Confidentiality | WLWD\", \"description\": \"WLWD confidentiality provisions covering nondisclosure agreements, client information, access controls and data handling.\", \"url\": \"https://whitelabelwebsitedevelopment.com/nda-confidentiality\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
@@ -91,7 +92,7 @@ function Hero() {
             NDA & <span className="text-gradient-brand">Confidentiality</span>
           </h1>
           <p className="mt-5 text-pretty text-[15px] leading-relaxed text-muted-foreground md:text-lg">
-            We built our workflow around one principle: your clients stay yours, and your backend operations stay invisible. Here's how we protect both.
+            This page describes our confidentiality obligations, nondisclosure agreements, restrictions on client contact and safeguards for project information.
           </p>
           <div className="mt-6 text-xs text-muted-foreground">
             Last updated: <span className="font-medium text-ink">{lastUpdated}</span>
@@ -244,27 +245,6 @@ function NDAPage() {
           </div>
         </Section>
 
-        {/* Final CTA */}
-        <section className="py-12 md:py-20">
-          <div className="container-page">
-            <div className="mx-auto max-w-3xl overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-surface-elevated to-brand-soft p-8 text-center md:p-12">
-              <h2 className="text-balance text-2xl font-semibold tracking-tight text-ink md:text-3xl">
-                Looking for a confidential white label partner?
-              </h2>
-              <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-                Scale your agency safely with a backend team built around discretion, reliability and long-term partnership.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                <Button asChild size="lg" className="rounded-full px-6">
-                  <Link to="/contact">Start a Partnership <ArrowRight className="h-4 w-4" /></Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="rounded-full bg-background px-6">
-                  <a href="https://calendly.com/" target="_blank" rel="noreferrer">Book a Discovery Call</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>

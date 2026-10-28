@@ -18,13 +18,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/industries/seo-agencies")({
   head: () => ({
     meta: [
-      { title: "White Label Web Development for SEO Agencies" },
-      { name: "description", content: "SEO-aware white label web development for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand." },
-      { property: "og:title", content: "White Label Web Development for SEO Agencies" },
-      { property: "og:description", content: "SEO-aware white label web development for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand." },
+      { title: "Website Delivery for SEO Agencies | WLWD" },
+      { name: "description", content: "Website delivery for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand." },
+      { property: "og:title", content: "Website Delivery for SEO Agencies | WLWD" },
+      { property: "og:description", content: "Website delivery for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/industries/seo-agencies" },
-      { name: "twitter:title", content: "White Label Web Development for SEO Agencies" },
-      { name: "twitter:description", content: "SEO-aware white label web development for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand." },
+      { name: "twitter:title", content: "Website Delivery for SEO Agencies | WLWD" },
+      { name: "twitter:description", content: "Website delivery for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/industries/seo-agencies" },
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/industries/seo-agencies")({
     scripts: [
       {
         type: "application/ld+json",
-        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Industries\", \"item\": \"https://whitelabelwebsitedevelopment.com/industries/seo-agencies\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"SEO Agencies\", \"item\": \"https://whitelabelwebsitedevelopment.com/industries/seo-agencies\"}]}, {\"@type\": \"WebPage\", \"name\": \"White Label Web Development for SEO Agencies — White Label Web Development\", \"description\": \"SEO-aware white label web development for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand.\", \"url\": \"https://whitelabelwebsitedevelopment.com/industries/seo-agencies\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
+        children: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://whitelabelwebsitedevelopment.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Industries\", \"item\": \"https://whitelabelwebsitedevelopment.com/industries/seo-agencies\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"SEO Agencies\", \"item\": \"https://whitelabelwebsitedevelopment.com/industries/seo-agencies\"}]}, {\"@type\": \"WebPage\", \"name\": \"Website Delivery for SEO Agencies | WLWD — White Label Web Development\", \"description\": \"Website delivery for SEO agencies. Local SEO sites, multi-location, schema, Core Web Vitals — built to rank, under your brand.\", \"url\": \"https://whitelabelwebsitedevelopment.com/industries/seo-agencies\", \"isPartOf\": {\"@id\": \"https://whitelabelwebsitedevelopment.com/#website\"}}]}",
       },
     ],
   }),
@@ -66,7 +66,7 @@ function Hero() {
               Built for SEO Agencies
             </div>
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink md:text-6xl">
-              <span className="text-brand">White Label Web Development for SEO Agencies</span> that need reliable backend delivery.
+              <span className="text-brand">Website Delivery for SEO Agencies</span>
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               A specialized SEO agency backend development partner — technical SEO implementation, multi-location architecture, local landing pages and Core Web Vitals work, all shipped quietly under your brand so your strategy team can keep selling and scaling.

@@ -24,9 +24,9 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-const PAGE_TITLE = "Contact Us | White Label Web Development";
+const PAGE_TITLE = "Contact Us | WLWD";
 const PAGE_DESC =
-  "Get in touch for white label web development. Fast, confidential, built for agencies across the US, Canada and worldwide.";
+  "Contact WLWD to discuss a project, ask a question or explore working together. Fast, confidential replies by email.";
 const PAGE_URL = "https://whitelabelwebsitedevelopment.com/contact";
 
 export const Route = createFileRoute("/contact")({
@@ -208,7 +208,7 @@ function ContactPage() {
               <Mail className="h-3.5 w-3.5" /> Contact Us
             </div>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink md:text-5xl">
-              Let's talk about your next project
+              Contact Us
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
               Send us a quick message. We reply within one business day — confidential, white label, no spam.

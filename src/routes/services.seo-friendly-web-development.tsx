@@ -19,12 +19,12 @@ export const Route = createFileRoute("/services/seo-friendly-web-development")({
   head: () => ({
     meta: [
       { title: "White Label SEO-Friendly Web Development" },
-      { name: "description", content: "SEO-aware white label web development for agencies — Core Web Vitals, schema, semantic HTML and crawl-ready architecture under your brand." },
+      { name: "description", content: "SEO-friendly web development for agencies — Core Web Vitals, schema, semantic HTML and crawl-ready architecture under your brand." },
       { property: "og:title", content: "White Label SEO-Friendly Web Development" },
-      { property: "og:description", content: "SEO-aware white label web development for agencies — Core Web Vitals, schema, semantic HTML and crawl-ready architecture under your brand." },
+      { property: "og:description", content: "SEO-friendly web development for agencies — Core Web Vitals, schema, semantic HTML and crawl-ready architecture under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/seo-friendly-web-development" },
       { name: "twitter:title", content: "White Label SEO-Friendly Web Development" },
-      { name: "twitter:description", content: "SEO-aware white label web development for agencies — Core Web Vitals, schema, semantic HTML and crawl-ready architecture under your brand." },
+      { name: "twitter:description", content: "SEO-friendly web development for agencies — Core Web Vitals, schema, semantic HTML and crawl-ready architecture under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/seo-friendly-web-development" },

@@ -121,7 +121,11 @@ export const Route = createFileRoute("/blog_/$slug")({
 
 function BlogPost() {
   const { post } = Route.useLoaderData();
-  const { body, faqs, faqId } = splitFaq(post.content.replace(/^#\s.+\n/, ""));
+  const markdown = post.content.trimStart();
+  const heading = markdown.match(/^#\s+(.+)(?:\r?\n|$)/);
+  const h1 = heading?.[1].replace(/\*\*/g, "").trim() ?? post.title;
+  const article = heading ? markdown.slice(heading[0].length) : markdown;
+  const { body, faqs, faqId } = splitFaq(article);
 
   return (
     <>
@@ -136,7 +140,7 @@ function BlogPost() {
               {post.category}
             </span>
             <h1 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-ink md:text-5xl">
-              {post.title}
+              {h1}
             </h1>
             <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-1.5">

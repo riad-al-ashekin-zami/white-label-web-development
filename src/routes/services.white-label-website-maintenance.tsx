@@ -19,13 +19,13 @@ import { RelatedServices } from "@/components/site/RelatedServices";
 export const Route = createFileRoute("/services/white-label-website-maintenance")({
   head: () => ({
     meta: [
-      { title: "White Label Website Maintenance for Agencies" },
-      { name: "description", content: "White label website maintenance for agencies — updates, security, backups, monitoring and emergency fixes under your brand." },
-      { property: "og:title", content: "White Label Website Maintenance for Agencies" },
-      { property: "og:description", content: "White label website maintenance for agencies — updates, security, backups, monitoring and emergency fixes under your brand." },
+      { title: "White Label Website Maintenance & WordPress Support for Agencies | WLWD" },
+      { name: "description", content: "White label website maintenance and WordPress support for agencies: updates, backups, security and care plans under your brand." },
+      { property: "og:title", content: "White Label Website Maintenance & WordPress Support for Agencies | WLWD" },
+      { property: "og:description", content: "White label website maintenance and WordPress support for agencies: updates, backups, security and care plans under your brand." },
       { property: "og:url", content: "https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance" },
-      { name: "twitter:title", content: "White Label Website Maintenance for Agencies" },
-      { name: "twitter:description", content: "White label website maintenance for agencies — updates, security, backups, monitoring and emergency fixes under your brand." },
+      { name: "twitter:title", content: "White Label Website Maintenance & WordPress Support for Agencies | WLWD" },
+      { name: "twitter:description", content: "White label website maintenance and WordPress support for agencies: updates, backups, security and care plans under your brand." },
     ],
     links: [
       { rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/services/white-label-website-maintenance" },
@@ -68,10 +68,10 @@ function Hero() {
               White Label Website Maintenance
             </div>
             <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl">
-              <span className="text-gradient-brand">White Label Website Maintenance</span> for agencies and their client portfolios.
+              <span className="text-gradient-brand">White Label Website Maintenance</span>
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-              Outsourced WordPress maintenance, security monitoring, plugin updates, backups and content edits — handled monthly under your agency brand. A predictable retainer your team can resell with healthy margins.
+              Outsourced WordPress maintenance, security monitoring, plugin updates, backups and content edits — handled monthly under your agency brand. A predictable retainer your team can resell with healthy margins. Need the site built first? See our <Link to="/services/white-label-wordpress-development" className="font-semibold text-brand hover:underline">white label WordPress development</Link>.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
@@ -222,7 +222,7 @@ function Solution() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Our solution"
-          title="A maintenance operation that runs in the background"
+          title="White Label WordPress Maintenance"
           sub="Eight pillars that keep your client portfolio healthy, secure and fast."
         />
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
@@ -263,7 +263,7 @@ function IncludedServices() {
       <div className="container-page">
         <SectionHeader
           eyebrow="What's included"
-          title="A complete maintenance stack"
+          title="What's Included in Our Care Plans"
           sub="Every service your agency needs to keep client websites healthy — under one roof."
         />
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
@@ -396,7 +396,7 @@ function DashboardPreview() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Reporting dashboard"
-          title="Operational visibility for every site"
+          title="White Label WordPress Support"
           sub="A single pane of glass for your portfolio — uptime, updates, security, tickets and performance."
         />
         <div className="mt-14 overflow-hidden rounded-2xl border border-border bg-background shadow-elevated">
@@ -571,9 +571,10 @@ function Pricing() {
       <div className="container-page">
         <SectionHeader
           eyebrow="Maintenance plans"
-          title="Predictable pricing your agency can resell"
+          title="Maintenance Plans for Agencies"
           sub="Each plan is built for a different growth stage. Mark up freely — your margin, your clients."
         />
+        <p className="mt-4 text-center text-sm text-muted-foreground">Compare all <Link to="/pricing" className="font-semibold text-brand hover:underline">maintenance pricing</Link> options.</p>
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {plans.map((p) => (
             <div
@@ -668,7 +669,7 @@ function FAQ() {
   return (
     <section className="py-24 md:py-32">
       <div className="container-page max-w-3xl">
-        <SectionHeader eyebrow="FAQ" title="Answers for agency owners" />
+        <SectionHeader eyebrow="FAQ" title="FAQ" />
         <div className="mt-12">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (
