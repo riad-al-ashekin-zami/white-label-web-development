@@ -39,6 +39,11 @@ const ALL: Record<string, Item> = {
     title: "White Label Website Maintenance",
     desc: "Updates, backups, security patches, and content edits — handled monthly.",
   },
+  migration: {
+    to: "/services/white-label-website-migration",
+    title: "White Label Website Migration",
+    desc: "Platform, host and domain moves with rankings, content and data preserved.",
+  },
   pricing: {
     to: "/pricing",
     title: "White Label Pricing",
@@ -65,7 +70,7 @@ export function RelatedServices({
 }) {
   const order: (keyof typeof ALL)[] =
     keys ??
-    (["wordpress", "woo", "design", "landing", "seo", "audit", "maintenance", "pricing"] as const);
+    (["wordpress", "woo", "design", "landing", "seo", "audit", "maintenance", "migration", "pricing"] as const);
   const items = order.filter((k) => k !== currentKey).slice(0, 4).map((k) => ALL[k]);
 
   return (

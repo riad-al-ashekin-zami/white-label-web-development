@@ -29,11 +29,13 @@ import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
+import { Route as ServicesSeoAgenciesRouteImport } from './routes/services.seo-agencies'
 import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
 import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './routes/services.white-label-landing-page-design'
 import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/services.white-label-website-audit'
 import { Route as ServicesWhiteLabelWebsiteDesignRouteImport } from './routes/services.white-label-website-design'
 import { Route as ServicesWhiteLabelWebsiteMaintenanceRouteImport } from './routes/services.white-label-website-maintenance'
+import { Route as ServicesWhiteLabelWebsiteMigrationRouteImport } from './routes/services.white-label-website-migration'
 import { Route as ServicesWhiteLabelWoocommerceDevelopmentRouteImport } from './routes/services.white-label-woocommerce-development'
 import { Route as ServicesWhiteLabelWordpressDevelopmentRouteImport } from './routes/services.white-label-wordpress-development'
 import { Route as AdminLeadsIdRouteImport } from './routes/admin.leads_.$id'
@@ -138,6 +140,11 @@ const IndustriesSeoAgenciesRoute = IndustriesSeoAgenciesRouteImport.update({
   path: '/industries/seo-agencies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesSeoAgenciesRoute = ServicesSeoAgenciesRouteImport.update({
+  id: '/services/seo-agencies',
+  path: '/services/seo-agencies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesSeoFriendlyWebDevelopmentRoute =
   ServicesSeoFriendlyWebDevelopmentRouteImport.update({
     id: '/services/seo-friendly-web-development',
@@ -166,6 +173,12 @@ const ServicesWhiteLabelWebsiteMaintenanceRoute =
   ServicesWhiteLabelWebsiteMaintenanceRouteImport.update({
     id: '/services/white-label-website-maintenance',
     path: '/services/white-label-website-maintenance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesWhiteLabelWebsiteMigrationRoute =
+  ServicesWhiteLabelWebsiteMigrationRouteImport.update({
+    id: '/services/white-label-website-migration',
+    path: '/services/white-label-website-migration',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesWhiteLabelWoocommerceDevelopmentRoute =
@@ -207,11 +220,13 @@ export interface FileRoutesByFullPath {
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
+  '/services/seo-agencies': typeof ServicesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
+  '/services/white-label-website-migration': typeof ServicesWhiteLabelWebsiteMigrationRoute
   '/services/white-label-woocommerce-development': typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
   '/admin/leads/$id': typeof AdminLeadsIdRoute
@@ -237,11 +252,13 @@ export interface FileRoutesByTo {
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
+  '/services/seo-agencies': typeof ServicesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
+  '/services/white-label-website-migration': typeof ServicesWhiteLabelWebsiteMigrationRoute
   '/services/white-label-woocommerce-development': typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
   '/admin/leads/$id': typeof AdminLeadsIdRoute
@@ -268,11 +285,13 @@ export interface FileRoutesById {
   '/admin/login': typeof AdminLoginRoute
   '/blog_/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
+  '/services/seo-agencies': typeof ServicesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
+  '/services/white-label-website-migration': typeof ServicesWhiteLabelWebsiteMigrationRoute
   '/services/white-label-woocommerce-development': typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
   '/admin/leads_/$id': typeof AdminLeadsIdRoute
@@ -300,11 +319,13 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/blog/$slug'
     | '/industries/seo-agencies'
+    | '/services/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
     | '/services/white-label-website-design'
     | '/services/white-label-website-maintenance'
+    | '/services/white-label-website-migration'
     | '/services/white-label-woocommerce-development'
     | '/services/white-label-wordpress-development'
     | '/admin/leads/$id'
@@ -330,11 +351,13 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/blog/$slug'
     | '/industries/seo-agencies'
+    | '/services/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
     | '/services/white-label-website-design'
     | '/services/white-label-website-maintenance'
+    | '/services/white-label-website-migration'
     | '/services/white-label-woocommerce-development'
     | '/services/white-label-wordpress-development'
     | '/admin/leads/$id'
@@ -360,11 +383,13 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/blog_/$slug'
     | '/industries/seo-agencies'
+    | '/services/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
     | '/services/white-label-website-design'
     | '/services/white-label-website-maintenance'
+    | '/services/white-label-website-migration'
     | '/services/white-label-woocommerce-development'
     | '/services/white-label-wordpress-development'
     | '/admin/leads_/$id'
@@ -391,11 +416,13 @@ export interface RootRouteChildren {
   AdminLoginRoute: typeof AdminLoginRoute
   BlogSlugRoute: typeof BlogSlugRoute
   IndustriesSeoAgenciesRoute: typeof IndustriesSeoAgenciesRoute
+  ServicesSeoAgenciesRoute: typeof ServicesSeoAgenciesRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
   ServicesWhiteLabelLandingPageDesignRoute: typeof ServicesWhiteLabelLandingPageDesignRoute
   ServicesWhiteLabelWebsiteAuditRoute: typeof ServicesWhiteLabelWebsiteAuditRoute
   ServicesWhiteLabelWebsiteDesignRoute: typeof ServicesWhiteLabelWebsiteDesignRoute
   ServicesWhiteLabelWebsiteMaintenanceRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRoute
+  ServicesWhiteLabelWebsiteMigrationRoute: typeof ServicesWhiteLabelWebsiteMigrationRoute
   ServicesWhiteLabelWoocommerceDevelopmentRoute: typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   ServicesWhiteLabelWordpressDevelopmentRoute: typeof ServicesWhiteLabelWordpressDevelopmentRoute
   AdminLeadsIdRoute: typeof AdminLeadsIdRoute
@@ -543,6 +570,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesSeoAgenciesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/seo-agencies': {
+      id: '/services/seo-agencies'
+      path: '/services/seo-agencies'
+      fullPath: '/services/seo-agencies'
+      preLoaderRoute: typeof ServicesSeoAgenciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/seo-friendly-web-development': {
       id: '/services/seo-friendly-web-development'
       path: '/services/seo-friendly-web-development'
@@ -576,6 +610,13 @@ declare module '@tanstack/react-router' {
       path: '/services/white-label-website-maintenance'
       fullPath: '/services/white-label-website-maintenance'
       preLoaderRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/white-label-website-migration': {
+      id: '/services/white-label-website-migration'
+      path: '/services/white-label-website-migration'
+      fullPath: '/services/white-label-website-migration'
+      preLoaderRoute: typeof ServicesWhiteLabelWebsiteMigrationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/white-label-woocommerce-development': {
@@ -623,6 +664,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminLoginRoute: AdminLoginRoute,
   BlogSlugRoute: BlogSlugRoute,
   IndustriesSeoAgenciesRoute: IndustriesSeoAgenciesRoute,
+  ServicesSeoAgenciesRoute: ServicesSeoAgenciesRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
     ServicesSeoFriendlyWebDevelopmentRoute,
   ServicesWhiteLabelLandingPageDesignRoute:
@@ -631,6 +673,8 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesWhiteLabelWebsiteDesignRoute: ServicesWhiteLabelWebsiteDesignRoute,
   ServicesWhiteLabelWebsiteMaintenanceRoute:
     ServicesWhiteLabelWebsiteMaintenanceRoute,
+  ServicesWhiteLabelWebsiteMigrationRoute:
+    ServicesWhiteLabelWebsiteMigrationRoute,
   ServicesWhiteLabelWoocommerceDevelopmentRoute:
     ServicesWhiteLabelWoocommerceDevelopmentRoute,
   ServicesWhiteLabelWordpressDevelopmentRoute:

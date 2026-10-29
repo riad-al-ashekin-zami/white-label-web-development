@@ -14,7 +14,8 @@ const services: LinkItem[] = [
   { label: "SEO-friendly web development", to: "/services/seo-friendly-web-development" },
   { label: "White label website maintenance", to: "/services/white-label-website-maintenance" },
   { label: "White label website audit", to: "/services/white-label-website-audit" },
-  { label: "For SEO Agencies", to: "/industries/seo-agencies" },
+  { label: "White label website migration", to: "/services/white-label-website-migration" },
+  { label: "For SEO Agencies", to: "/services/seo-agencies" },
 ];
 
 const company: LinkItem[] = [
@@ -29,8 +30,7 @@ const company: LinkItem[] = [
 ];
 
 const resources: LinkItem[] = [
-  { label: "Email us", href: "mailto:whitelabelwebsitedevelopment@gmail.com" },
-  { label: "Book a call", href: "https://calendly.com/" },
+  { label: "Email us", href: "mailto:hello@whitelabelwebsitedevelopment.com" },
   { label: "Get a quote", to: "/contact" },
   { label: "NDA & Confidentiality", to: "/nda-confidentiality" },
   { label: "Privacy Policy", to: "/privacy" },
@@ -69,9 +69,6 @@ export function Footer() {
           <div className="flex w-full flex-col gap-2 sm:flex-row md:w-auto">
             <Button asChild size="lg" className="h-11 rounded-full px-6">
               <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="h-11 rounded-full px-6">
-              <Link to="/pricing">View Pricing</Link>
             </Button>
           </div>
         </div>
@@ -119,7 +116,7 @@ export function Footer() {
                 { Icon: Facebook, href: "https://www.facebook.com/whitelabelwebsitedevelopment/", label: "Facebook" },
                 { Icon: Linkedin, href: "https://www.linkedin.com/company/white-label-website-development/", label: "LinkedIn" },
                 { Icon: Instagram, href: "https://www.instagram.com/whitelabelwebsitedevelopment", label: "Instagram" },
-                { Icon: Mail, href: "mailto:whitelabelwebsitedevelopment@gmail.com", label: "Email" },
+                { Icon: Mail, href: "mailto:hello@whitelabelwebsitedevelopment.com", label: "Email" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -159,8 +156,8 @@ export function Footer() {
             <Link to="/privacy" className="hover:text-ink">Privacy</Link>
             <Link to="/terms-of-service" className="hover:text-ink">Terms</Link>
             <Link to="/nda-confidentiality" className="hover:text-ink">NDA</Link>
-            <a href="mailto:whitelabelwebsitedevelopment@gmail.com" className="hover:text-ink">
-              whitelabelwebsitedevelopment@gmail.com
+            <a href="mailto:hello@whitelabelwebsitedevelopment.com" className="hover:text-ink">
+              hello@whitelabelwebsitedevelopment.com
             </a>
           </div>
         </div>
