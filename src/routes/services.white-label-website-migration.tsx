@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight, RefreshCw, Globe, Server, ShieldCheck, Search, Link2, Database,
   FileText, Gauge, CheckCircle2, EyeOff, FileLock2, UserX, Zap, Smartphone,
-  ClipboardCheck, Compass, Code2, Rocket, LifeBuoy, AlertTriangle, Clock,
+  ClipboardCheck, Compass, Code2, Rocket, LifeBuoy, AlertTriangle, Clock, BadgeCheck,
   TrendingUp, Workflow, HardDriveDownload, ScanSearch,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
