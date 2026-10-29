@@ -72,10 +72,7 @@ function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <Link to="/contact">Start a project <ArrowRight className="ml-2 h-4 w-4" /></Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full px-6">
-                <Link to="/contact">Book a discovery call</Link>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>
             <ul className="mt-8 grid grid-cols-2 gap-3 text-sm text-muted-foreground sm:grid-cols-4">
@@ -114,7 +111,7 @@ function PortfolioMock() {
             <span className="h-2.5 w-2.5 rounded-full bg-rose-300" />
             <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
-            <span className="ml-3">portfolio.whitelabelwebsitedevelopment.com</span>
+            <span className="ml-3">Partner project board</span>
           </div>
           <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
             12 active projects
@@ -157,7 +154,7 @@ const caseStudies = [
     title: "Northbridge Family Clinic",
     summary:
       "Rebuilt a slow, outdated WordPress site into a fast, SEO-optimized multi-location experience with appointment booking and service-based landing pages.",
-    tech: ["WordPress", "Elementor Pro", "ACF", "Schema SEO"],
+    tech: ["Healthcare website", "WordPress", "Elementor", "Schema", "Core Web Vitals", "Responsive design"],
     challenges: [
       "Outdated design hurting conversions",
       "Poor mobile experience and 4s+ load time",
@@ -181,7 +178,7 @@ const caseStudies = [
     title: "Harbor & Vine Realty",
     summary:
       "Designed and built a premium brokerage website with IDX-ready listing templates and agent profile pages — delivered fully under the agency’s brand.",
-    tech: ["WordPress", "Custom CMS", "IDX-ready", "Performance"],
+    tech: ["Real estate website", "WordPress", "Custom CMS", "Figma to code", "Responsive design"],
     challenges: [
       "Needed scalable agent + listing system",
       "Agency required full white label delivery",
@@ -205,7 +202,7 @@ const caseStudies = [
     title: "Field Goods Co.",
     summary:
       "Replaced a fragile theme-based store with a structured WooCommerce build, optimized checkout flow and a maintainable design system.",
-    tech: ["WooCommerce", "WordPress", "Stripe", "CWV"],
+    tech: ["Ecommerce store", "WooCommerce", "WordPress", "Stripe payments", "Core Web Vitals"],
     challenges: [
       "Cart abandonment over 78%",
       "Theme conflicts breaking checkout",
@@ -246,8 +243,8 @@ function CaseStudies() {
                 </div>
                 <div className="mt-6 rounded-2xl border border-border bg-background/90 p-4 shadow-soft backdrop-blur">
                   <div className="flex items-center justify-between border-b border-border pb-2 text-[10px] text-muted-foreground">
-                    <span>{c.title.toLowerCase().replace(/\s+/g, "")}.com</span>
-                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-emerald-700">Live</span>
+                    <span>Case study — anonymized</span>
+                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-emerald-700">Delivered</span>
                   </div>
                   <div className="mt-3 grid grid-cols-3 gap-2">
                     {c.outcomes.map((o) => (
@@ -549,10 +546,7 @@ function WhiteLabelDelivery() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild className="rounded-full px-5">
-                <Link to="/agency-partner">Become a partner</Link>
-              </Button>
-              <Button asChild variant="outline" className="rounded-full px-5">
-                <Link to="/contact">Discuss your project</Link>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>
           </div>
@@ -584,6 +578,12 @@ function Technologies() {
     { name: "Landing Systems", desc: "High-converting modular pages." },
     { name: "SEO Optimization", desc: "Schema, hierarchy, indexability." },
     { name: "Performance", desc: "Core Web Vitals & caching." },
+    { name: "Webflow", desc: "Visual builds and CMS collections." },
+    { name: "Divi", desc: "Flexible WordPress builder layouts." },
+    { name: "Gutenberg", desc: "Native block-based editing." },
+    { name: "Custom HTML/CSS/JS", desc: "Framework-free bespoke builds." },
+    { name: "React / Next.js", desc: "Custom stacks for advanced builds." },
+    { name: "Figma (handoff)", desc: "Pixel-accurate design-to-code." },
   ];
   return (
     <section className="border-y border-border bg-muted/30 py-20 md:py-28">
@@ -713,10 +713,7 @@ function CTA() {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Button asChild size="lg" className="rounded-full bg-brand-foreground px-6 text-ink hover:bg-brand-foreground/90">
-                <Link to="/contact">Request a free quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full border-white/20 bg-transparent px-6 text-brand-foreground hover:bg-white/10 hover:text-brand-foreground">
-                <Link to="/contact">Schedule a discovery call</Link>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>
           </div>
