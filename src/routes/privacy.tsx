@@ -278,7 +278,7 @@ function PrivacyPage() {
               </li>
             ))}
           </ul>
-          <p>To exercise any of these rights, email us at the address below. We respond to verified requests within a reasonable timeframe.</p>
+          <p>To exercise any of these rights, email us at <a href="mailto:privacy@whitelabelwebsitedevelopment.com" className="font-semibold text-brand hover:underline">privacy@whitelabelwebsitedevelopment.com</a>. We respond to verified requests within a reasonable timeframe.</p>
         </Section>
 
         {/* 8. Contact */}
