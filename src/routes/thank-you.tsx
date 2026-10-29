@@ -47,15 +47,7 @@ function ThankYou() {
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <a href="https://calendly.com/" target="_blank" rel="noreferrer">
-                  Book a discovery call <ArrowRight className="h-4 w-4" />
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full bg-background px-6">
-                <Link to="/portfolio">View portfolio</Link>
-              </Button>
-              <Button asChild size="lg" variant="ghost" className="rounded-full px-6">
-                <Link to="/agency-partner">Explore agency partnership</Link>
+                <Link to="/">Back to homepage <ArrowRight className="h-4 w-4" /></Link>
               </Button>
             </div>
           </div>

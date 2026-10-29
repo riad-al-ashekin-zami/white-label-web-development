@@ -73,10 +73,7 @@ function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <Link to="/contact">Start your agency partnership <ArrowRight className="h-4 w-4" /></Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-6">
-                <Link to="/contact">Book a partnership call</Link>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
             </div>
             <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-muted-foreground sm:flex sm:flex-wrap">
@@ -309,7 +306,7 @@ function Promise() {
               </p>
               <div className="mt-8">
                 <Button asChild size="lg" className="rounded-full bg-background px-6 text-ink hover:bg-background/90">
-                  <a href="#contact">Request our partner NDA <ArrowRight className="h-4 w-4" /></a>
+                  <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
                 </Button>
               </div>
             </div>
@@ -346,6 +343,7 @@ const outsource = [
   { icon: FileSearch, title: "Technical SEO Fixes", desc: "Schema, redirects, indexability — done right." },
   { icon: RefreshCw, title: "Website Redesign", desc: "Modernize legacy sites without losing SEO equity." },
   { icon: AlertOctagon, title: "Emergency Fixes", desc: "Priority response when client sites go sideways." },
+  { icon: Globe, title: "Website migration", desc: "Platform, host and domain moves without losing rankings or data.", to: "/services/white-label-website-migration" },
 ];
 
 function Outsource() {
@@ -358,15 +356,22 @@ function Outsource() {
           sub="Hand off execution. Keep strategy, sales and the client relationship."
         />
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-          {outsource.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="flex flex-col bg-background p-7">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink text-brand-foreground">
-                <Icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-6 text-base font-semibold text-ink">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-            </div>
-          ))}
+          {outsource.map(({ icon: Icon, title, desc, to }) => {
+            const inner = (
+              <>
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink text-brand-foreground">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="mt-6 text-base font-semibold text-ink">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+              </>
+            );
+            return to ? (
+              <Link key={title} to={to} className="flex flex-col bg-background p-7 transition-colors hover:bg-surface-elevated">{inner}</Link>
+            ) : (
+              <div key={title} className="flex flex-col bg-background p-7">{inner}</div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -688,10 +693,7 @@ function FinalCTA() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <a href="#contact">Become an Agency Partner <ArrowRight className="h-4 w-4" /></a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full bg-background px-6">
-                <a href="#contact">Schedule a Call</a>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
             </div>
           </div>
