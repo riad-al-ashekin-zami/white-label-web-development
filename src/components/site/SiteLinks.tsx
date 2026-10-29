@@ -12,7 +12,8 @@ const services = [
   { label: "White Label Landing Page Design", to: "/services/white-label-landing-page-design", icon: LayoutTemplate },
   { label: "White Label Website Maintenance", to: "/services/white-label-website-maintenance", icon: Wrench },
   { label: "White Label Website Audit", to: "/services/white-label-website-audit", icon: ShieldCheck },
-  { label: "White Label for SEO Agencies", to: "/industries/seo-agencies", icon: Handshake },
+  { label: "White Label Website Migration", to: "/services/white-label-website-migration", icon: Code2 },
+  { label: "White Label for SEO Agencies", to: "/services/seo-agencies", icon: Handshake },
 ] as const;
 
 const company = [

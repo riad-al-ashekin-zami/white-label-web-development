@@ -34,9 +34,6 @@ export function Hero() {
               <Button asChild size="lg" className="h-12 rounded-full px-6">
                 <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="h-12 rounded-full px-6">
-                <Link to="/portfolio">See Agency Projects</Link>
-              </Button>
             </div>
             <div className="mt-6 grid grid-cols-3 gap-2 text-[11px] text-muted-foreground sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-2 sm:text-xs md:mt-8">
               <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 shrink-0 text-brand" /> NDA friendly</span>
@@ -118,7 +115,7 @@ export function WhatIsWhiteLabel() {
             </div>
             <div className="mt-8">
               <Button asChild size="lg" className="h-12 rounded-full px-6">
-                <Link to="/contact">Become a partner <ArrowRight className="ml-1.5 h-4 w-4" /></Link>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="ml-1.5 h-4 w-4" /></Link>
               </Button>
             </div>
           </div>
@@ -226,6 +223,7 @@ const services = [
   { icon: Wrench, title: "White label website maintenance", desc: "Updates, backups, security patches and content edits under your brand for recurring revenue.", to: "/services/white-label-website-maintenance" },
   { icon: ShieldCheck, title: "White label website audit", desc: "Performance, security and technical reviews delivered as an agency-ready report.", to: "/services/white-label-website-audit" },
   { icon: Gauge, title: "SEO-friendly web development", desc: "Core Web Vitals tuned, schema-ready code and Lighthouse scores you can sell.", to: "/services/seo-friendly-web-development" },
+  { icon: RefreshCw, title: "White label website migration", desc: "Platform, host and domain moves with rankings, content and data fully preserved.", to: "/services/white-label-website-migration" },
 ];
 
 export function Services() {
@@ -358,7 +356,7 @@ export function WhiteLabel() {
               </p>
               <div className="mt-8">
                 <Button asChild size="lg" className="rounded-full bg-background px-6 text-ink hover:bg-background/90">
-                  <Link to="/nda-confidentiality">Request our NDA <ArrowRight className="h-4 w-4" /></Link>
+                  <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
                 </Button>
               </div>
             </div>
@@ -503,9 +501,6 @@ export function FinalCTA() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
                 <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full bg-background px-6">
-                <a href="https://calendly.com/" target="_blank" rel="noreferrer">Book a Discovery Call</a>
               </Button>
             </div>
           </div>
