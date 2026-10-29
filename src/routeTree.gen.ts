@@ -35,6 +35,7 @@ import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './route
 import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/services.white-label-website-audit'
 import { Route as ServicesWhiteLabelWebsiteDesignRouteImport } from './routes/services.white-label-website-design'
 import { Route as ServicesWhiteLabelWebsiteMaintenanceRouteImport } from './routes/services.white-label-website-maintenance'
+import { Route as ServicesWhiteLabelWebsiteMigrationRouteImport } from './routes/services.white-label-website-migration'
 import { Route as ServicesWhiteLabelWoocommerceDevelopmentRouteImport } from './routes/services.white-label-woocommerce-development'
 import { Route as ServicesWhiteLabelWordpressDevelopmentRouteImport } from './routes/services.white-label-wordpress-development'
 import { Route as AdminLeadsIdRouteImport } from './routes/admin.leads_.$id'
@@ -174,6 +175,12 @@ const ServicesWhiteLabelWebsiteMaintenanceRoute =
     path: '/services/white-label-website-maintenance',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ServicesWhiteLabelWebsiteMigrationRoute =
+  ServicesWhiteLabelWebsiteMigrationRouteImport.update({
+    id: '/services/white-label-website-migration',
+    path: '/services/white-label-website-migration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesWhiteLabelWoocommerceDevelopmentRoute =
   ServicesWhiteLabelWoocommerceDevelopmentRouteImport.update({
     id: '/services/white-label-woocommerce-development',
@@ -219,6 +226,7 @@ export interface FileRoutesByFullPath {
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
+  '/services/white-label-website-migration': typeof ServicesWhiteLabelWebsiteMigrationRoute
   '/services/white-label-woocommerce-development': typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
   '/admin/leads/$id': typeof AdminLeadsIdRoute
@@ -250,6 +258,7 @@ export interface FileRoutesByTo {
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
+  '/services/white-label-website-migration': typeof ServicesWhiteLabelWebsiteMigrationRoute
   '/services/white-label-woocommerce-development': typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
   '/admin/leads/$id': typeof AdminLeadsIdRoute
@@ -282,6 +291,7 @@ export interface FileRoutesById {
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
   '/services/white-label-website-design': typeof ServicesWhiteLabelWebsiteDesignRoute
   '/services/white-label-website-maintenance': typeof ServicesWhiteLabelWebsiteMaintenanceRoute
+  '/services/white-label-website-migration': typeof ServicesWhiteLabelWebsiteMigrationRoute
   '/services/white-label-woocommerce-development': typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   '/services/white-label-wordpress-development': typeof ServicesWhiteLabelWordpressDevelopmentRoute
   '/admin/leads_/$id': typeof AdminLeadsIdRoute
@@ -315,6 +325,7 @@ export interface FileRouteTypes {
     | '/services/white-label-website-audit'
     | '/services/white-label-website-design'
     | '/services/white-label-website-maintenance'
+    | '/services/white-label-website-migration'
     | '/services/white-label-woocommerce-development'
     | '/services/white-label-wordpress-development'
     | '/admin/leads/$id'
@@ -346,6 +357,7 @@ export interface FileRouteTypes {
     | '/services/white-label-website-audit'
     | '/services/white-label-website-design'
     | '/services/white-label-website-maintenance'
+    | '/services/white-label-website-migration'
     | '/services/white-label-woocommerce-development'
     | '/services/white-label-wordpress-development'
     | '/admin/leads/$id'
@@ -377,6 +389,7 @@ export interface FileRouteTypes {
     | '/services/white-label-website-audit'
     | '/services/white-label-website-design'
     | '/services/white-label-website-maintenance'
+    | '/services/white-label-website-migration'
     | '/services/white-label-woocommerce-development'
     | '/services/white-label-wordpress-development'
     | '/admin/leads_/$id'
@@ -409,6 +422,7 @@ export interface RootRouteChildren {
   ServicesWhiteLabelWebsiteAuditRoute: typeof ServicesWhiteLabelWebsiteAuditRoute
   ServicesWhiteLabelWebsiteDesignRoute: typeof ServicesWhiteLabelWebsiteDesignRoute
   ServicesWhiteLabelWebsiteMaintenanceRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRoute
+  ServicesWhiteLabelWebsiteMigrationRoute: typeof ServicesWhiteLabelWebsiteMigrationRoute
   ServicesWhiteLabelWoocommerceDevelopmentRoute: typeof ServicesWhiteLabelWoocommerceDevelopmentRoute
   ServicesWhiteLabelWordpressDevelopmentRoute: typeof ServicesWhiteLabelWordpressDevelopmentRoute
   AdminLeadsIdRoute: typeof AdminLeadsIdRoute
@@ -598,6 +612,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesWhiteLabelWebsiteMaintenanceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/white-label-website-migration': {
+      id: '/services/white-label-website-migration'
+      path: '/services/white-label-website-migration'
+      fullPath: '/services/white-label-website-migration'
+      preLoaderRoute: typeof ServicesWhiteLabelWebsiteMigrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/white-label-woocommerce-development': {
       id: '/services/white-label-woocommerce-development'
       path: '/services/white-label-woocommerce-development'
@@ -652,6 +673,8 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesWhiteLabelWebsiteDesignRoute: ServicesWhiteLabelWebsiteDesignRoute,
   ServicesWhiteLabelWebsiteMaintenanceRoute:
     ServicesWhiteLabelWebsiteMaintenanceRoute,
+  ServicesWhiteLabelWebsiteMigrationRoute:
+    ServicesWhiteLabelWebsiteMigrationRoute,
   ServicesWhiteLabelWoocommerceDevelopmentRoute:
     ServicesWhiteLabelWoocommerceDevelopmentRoute,
   ServicesWhiteLabelWordpressDevelopmentRoute:
