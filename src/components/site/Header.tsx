@@ -17,15 +17,15 @@ type ServiceItem = {
 };
 
 const services: ServiceItem[] = [
-  { label: "Website Development", desc: "End-to-end white label builds.", to: "/", icon: Code2 },
   { label: "WordPress Development", desc: "Custom themes & plugins.", to: "/services/white-label-wordpress-development", icon: Globe },
   { label: "WooCommerce Stores", desc: "Scalable online shops.", to: "/services/white-label-woocommerce-development", icon: ShoppingCart },
   { label: "SEO-Friendly Builds", desc: "Engineered to rank.", to: "/services/seo-friendly-web-development", icon: Search },
   { label: "Website Design", desc: "Conversion-focused UI.", to: "/services/white-label-website-design", icon: Palette },
   { label: "Landing Pages", desc: "High-performance pages.", to: "/services/white-label-landing-page-design", icon: LayoutTemplate },
   { label: "Website Maintenance", desc: "Ongoing care & updates.", to: "/services/white-label-website-maintenance", icon: Wrench },
+  { label: "Website Migration", desc: "SEO-safe platform moves.", to: "/services/white-label-website-migration", icon: Code2 },
   { label: "Website Audit", desc: "Performance & SEO review.", to: "/services/white-label-website-audit", icon: ShieldCheck },
-  { label: "For SEO Agencies", desc: "White label partner program.", to: "/industries/seo-agencies", icon: Handshake },
+  { label: "For SEO Agencies", desc: "White label partner program.", to: "/services/seo-agencies", icon: Handshake },
 ];
 
 const nav = [
@@ -36,7 +36,6 @@ const nav = [
   { label: "Pricing", to: "/pricing" },
   { label: "About", to: "/about" },
   { label: "Blog", to: "/blog" },
-  { label: "Contact", to: "/contact" },
 ] as const;
 
 export function Header() {
