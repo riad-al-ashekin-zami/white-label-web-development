@@ -252,18 +252,26 @@ function Services() {
           sub="Everything an SEO agency needs from a development partner — under one operational roof."
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <div key={s.t} className="group rounded-2xl border border-border bg-surface-elevated p-6 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-elevated">
-              <div className="flex items-center justify-between">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand/10 text-brand">
-                  <s.icon className="h-5 w-5" />
+          {services.map((s) => {
+            const card = (
+              <>
+                <div className="flex items-center justify-between">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand/10 text-brand">
+                    <s.icon className="h-5 w-5" />
+                  </div>
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:rotate-45" />
                 </div>
-                <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:rotate-45" />
-              </div>
-              <h3 className="mt-4 text-base font-semibold text-ink">{s.t}</h3>
-              <p className="mt-1.5 text-sm text-muted-foreground">{s.d}</p>
-            </div>
-          ))}
+                <h3 className="mt-4 text-base font-semibold text-ink">{s.t}</h3>
+                <p className="mt-1.5 text-sm text-muted-foreground">{s.d}</p>
+              </>
+            );
+            const cls = "group rounded-2xl border border-border bg-surface-elevated p-6 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-elevated";
+            return "to" in s && s.to ? (
+              <Link key={s.t} to={s.to} className={cls}>{card}</Link>
+            ) : (
+              <div key={s.t} className={cls}>{card}</div>
+            );
+          })}
         </div>
       </div>
     </section>

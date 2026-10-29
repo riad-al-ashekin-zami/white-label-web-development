@@ -22,7 +22,7 @@ We are an invisible backend production team. Agencies brief us, we build under t
 - [Portfolio](/portfolio): Anonymized white label case studies across multiple industries.
 - [Pricing](/pricing): Project pricing, retainers, and dedicated agency partnership plans.
 - [Agency Partner Program](/agency-partner): Long-term white label partnership for SEO and marketing agencies.
-- [For SEO Agencies](/industries/seo-agencies): How SEO agencies use our team as their backend dev department.
+- [For SEO Agencies](/services/seo-agencies): How SEO agencies use our team as their backend dev department.
 - [Blog](/blog): Guides for agencies on white label website delivery and platforms.
 - [Contact](/contact): Free quote and confidential discovery call.
 

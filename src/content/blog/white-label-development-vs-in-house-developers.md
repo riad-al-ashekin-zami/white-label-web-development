@@ -1337,7 +1337,7 @@ An SEO agency can sell technical work while keeping its internal focus on:
 - analytics
 - client management
 
-Our [white label development for SEO agencies](/industries/seo-agencies) is built around this type of relationship.
+Our [white label development for SEO agencies](/services/seo-agencies) is built around this type of relationship.
 
 ## Which Model Is Better for Web Design Agencies?
 

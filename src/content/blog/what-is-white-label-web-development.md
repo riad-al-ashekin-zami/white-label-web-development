@@ -403,7 +403,7 @@ Examples include:
 
 Instead of sending the client elsewhere, an SEO agency can potentially add web development to its offering.
 
-Our [white label services for SEO agencies](https://whitelabelwebsitedevelopment.com/industries/seo-agencies) are structured around this type of delivery model.
+Our [white label services for SEO agencies](https://whitelabelwebsitedevelopment.com/services/seo-agencies) are structured around this type of delivery model.
 
 ---
 

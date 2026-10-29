@@ -20,7 +20,7 @@ const services = [
   { label: "White Label Landing Page Design", desc: "High-performance landing pages built for paid traffic, launches and campaigns.", to: "/services/white-label-landing-page-design", icon: LayoutTemplate },
   { label: "White Label Website Maintenance", desc: "Ongoing care, updates, backups, security patches and monthly content edits.", to: "/services/white-label-website-maintenance", icon: Wrench },
   { label: "White Label Website Audit", desc: "Deep performance, SEO and UX audits with prioritised, actionable recommendations.", to: "/services/white-label-website-audit", icon: ShieldCheck },
-  { label: "Website Delivery for SEO Agencies", desc: "Our partner program purpose-built for SEO and digital agencies.", to: "/industries/seo-agencies", icon: Handshake },
+  { label: "Website Delivery for SEO Agencies", desc: "Our partner program purpose-built for SEO and digital agencies.", to: "/services/seo-agencies", icon: Handshake },
 ] as const;
 
 export const Route = createFileRoute("/white-label-services")({
