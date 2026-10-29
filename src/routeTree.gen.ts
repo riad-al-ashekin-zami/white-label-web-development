@@ -29,6 +29,7 @@ import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 import { Route as IndustriesSeoAgenciesRouteImport } from './routes/industries.seo-agencies'
+import { Route as ServicesSeoAgenciesRouteImport } from './routes/services.seo-agencies'
 import { Route as ServicesSeoFriendlyWebDevelopmentRouteImport } from './routes/services.seo-friendly-web-development'
 import { Route as ServicesWhiteLabelLandingPageDesignRouteImport } from './routes/services.white-label-landing-page-design'
 import { Route as ServicesWhiteLabelWebsiteAuditRouteImport } from './routes/services.white-label-website-audit'
@@ -138,6 +139,11 @@ const IndustriesSeoAgenciesRoute = IndustriesSeoAgenciesRouteImport.update({
   path: '/industries/seo-agencies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesSeoAgenciesRoute = ServicesSeoAgenciesRouteImport.update({
+  id: '/services/seo-agencies',
+  path: '/services/seo-agencies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesSeoFriendlyWebDevelopmentRoute =
   ServicesSeoFriendlyWebDevelopmentRouteImport.update({
     id: '/services/seo-friendly-web-development',
@@ -207,6 +213,7 @@ export interface FileRoutesByFullPath {
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
+  '/services/seo-agencies': typeof ServicesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
@@ -237,6 +244,7 @@ export interface FileRoutesByTo {
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
+  '/services/seo-agencies': typeof ServicesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
@@ -268,6 +276,7 @@ export interface FileRoutesById {
   '/admin/login': typeof AdminLoginRoute
   '/blog_/$slug': typeof BlogSlugRoute
   '/industries/seo-agencies': typeof IndustriesSeoAgenciesRoute
+  '/services/seo-agencies': typeof ServicesSeoAgenciesRoute
   '/services/seo-friendly-web-development': typeof ServicesSeoFriendlyWebDevelopmentRoute
   '/services/white-label-landing-page-design': typeof ServicesWhiteLabelLandingPageDesignRoute
   '/services/white-label-website-audit': typeof ServicesWhiteLabelWebsiteAuditRoute
@@ -300,6 +309,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/blog/$slug'
     | '/industries/seo-agencies'
+    | '/services/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
@@ -330,6 +340,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/blog/$slug'
     | '/industries/seo-agencies'
+    | '/services/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
@@ -360,6 +371,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/blog_/$slug'
     | '/industries/seo-agencies'
+    | '/services/seo-agencies'
     | '/services/seo-friendly-web-development'
     | '/services/white-label-landing-page-design'
     | '/services/white-label-website-audit'
@@ -391,6 +403,7 @@ export interface RootRouteChildren {
   AdminLoginRoute: typeof AdminLoginRoute
   BlogSlugRoute: typeof BlogSlugRoute
   IndustriesSeoAgenciesRoute: typeof IndustriesSeoAgenciesRoute
+  ServicesSeoAgenciesRoute: typeof ServicesSeoAgenciesRoute
   ServicesSeoFriendlyWebDevelopmentRoute: typeof ServicesSeoFriendlyWebDevelopmentRoute
   ServicesWhiteLabelLandingPageDesignRoute: typeof ServicesWhiteLabelLandingPageDesignRoute
   ServicesWhiteLabelWebsiteAuditRoute: typeof ServicesWhiteLabelWebsiteAuditRoute
@@ -543,6 +556,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesSeoAgenciesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/seo-agencies': {
+      id: '/services/seo-agencies'
+      path: '/services/seo-agencies'
+      fullPath: '/services/seo-agencies'
+      preLoaderRoute: typeof ServicesSeoAgenciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/seo-friendly-web-development': {
       id: '/services/seo-friendly-web-development'
       path: '/services/seo-friendly-web-development'
@@ -623,6 +643,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminLoginRoute: AdminLoginRoute,
   BlogSlugRoute: BlogSlugRoute,
   IndustriesSeoAgenciesRoute: IndustriesSeoAgenciesRoute,
+  ServicesSeoAgenciesRoute: ServicesSeoAgenciesRoute,
   ServicesSeoFriendlyWebDevelopmentRoute:
     ServicesSeoFriendlyWebDevelopmentRoute,
   ServicesWhiteLabelLandingPageDesignRoute:
