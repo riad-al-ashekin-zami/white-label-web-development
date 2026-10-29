@@ -18,6 +18,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/agency-partner")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { title: "White Label Web Development Partner Program | WLWD" },
       { name: "description", content: "Join our white label web development partner program: outsource builds and maintenance under your brand with an NDA, dedicated PM and zero client poaching." },
       { property: "og:title", content: "White Label Web Development Partner Program | WLWD" },

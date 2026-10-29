@@ -15,6 +15,7 @@ export const Route = createFileRoute("/thank-you")({
       { property: "og:title", content: "Thank You — White Label Web Development" },
       { property: "og:description", content: "Your white label project request has been received." },
     ],
+    links: [{ rel: "canonical", href: "https://whitelabelwebsitedevelopment.com/thank-you" }],
   }),
   component: ThankYou,
 });
