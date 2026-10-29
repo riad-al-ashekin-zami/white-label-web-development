@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight, Clock, MessagesSquare, Workflow, ListChecks, EyeOff, Activity,
   AlertTriangle, ShieldQuestion, FileWarning, Repeat, FileSearch, GitPullRequestDraft,
@@ -73,10 +73,7 @@ function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <a href="#contact">Start a Project <ArrowRight className="h-4 w-4" /></a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-6">
-                <a href="#contact">Book a Discovery Call</a>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
             </div>
             <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-muted-foreground sm:flex sm:flex-wrap">
@@ -462,7 +459,7 @@ function WhiteLabelDelivery() {
               </p>
               <div className="mt-8">
                 <Button asChild size="lg" className="rounded-full bg-background px-6 text-ink hover:bg-background/90">
-                  <a href="#contact">Request the NDA <ArrowRight className="h-4 w-4" /></a>
+                  <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
                 </Button>
               </div>
             </div>
@@ -632,10 +629,7 @@ function FinalCTA() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <a href="#contact">Start a Project <ArrowRight className="h-4 w-4" /></a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full bg-background px-6">
-                <a href="#contact">Schedule a Call</a>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
             </div>
           </div>
