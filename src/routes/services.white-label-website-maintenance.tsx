@@ -80,10 +80,7 @@ function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <a href="#pricing">See maintenance plans <ArrowRight className="h-4 w-4" /></a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-6">
-                <Link to="/contact">Start your agency partnership</Link>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
             </div>
             <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-muted-foreground sm:flex sm:flex-wrap">
@@ -105,10 +102,10 @@ function Hero() {
 
 function HeroDashboard() {
   const sites = [
-    { name: "beaconclinic.com", status: "Healthy", uptime: "99.99%", color: "text-emerald-600", dot: "bg-emerald-500" },
-    { name: "northwindroofing.com", status: "Updated", uptime: "99.97%", color: "text-emerald-600", dot: "bg-emerald-500" },
-    { name: "linenandloom.shop", status: "Patched", uptime: "99.95%", color: "text-amber-600", dot: "bg-amber-500" },
-    { name: "harborrealty.co", status: "Healthy", uptime: "100%", color: "text-emerald-600", dot: "bg-emerald-500" },
+    { name: "Client site — Healthcare", status: "Healthy", uptime: "99.99%", color: "text-emerald-600", dot: "bg-emerald-500" },
+    { name: "Client site — Contractor", status: "Updated", uptime: "99.97%", color: "text-emerald-600", dot: "bg-emerald-500" },
+    { name: "Client site — Ecommerce", status: "Patched", uptime: "99.95%", color: "text-amber-600", dot: "bg-amber-500" },
+    { name: "Client site — Real estate", status: "Healthy", uptime: "100%", color: "text-emerald-600", dot: "bg-emerald-500" },
   ];
   return (
     <div className="relative">
@@ -489,7 +486,7 @@ function DashboardPreview() {
                   { t: "Update homepage hero copy", s: "Resolved", c: "text-emerald-600" },
                   { t: "Fix checkout redirect", s: "In progress", c: "text-amber-600" },
                   { t: "Add new blog post layout", s: "Queued", c: "text-muted-foreground" },
-                  { t: "SSL renewal — beacon.com", s: "Resolved", c: "text-emerald-600" },
+                  { t: "SSL renewal", s: "Resolved", c: "text-emerald-600" },
                 ].map((t) => (
                   <li key={t.t} className="flex items-center justify-between gap-3">
                     <span className="truncate text-ink">{t.t}</span>
@@ -547,49 +544,46 @@ function DashboardPreview() {
 const plans = [
   {
     name: "Starter Maintenance",
-    price: "$149",
-    blurb: "For freelancers and small portfolios",
+    price: "$220",
+    blurb: "Essential care for individual client sites.",
     features: [
-      "Up to 5 client websites",
-      "Weekly core, plugin & theme updates",
-      "Daily off-site backups",
-      "Uptime monitoring (5 min)",
-      "Monthly white label report",
-      "Email support — 24h response",
+      "Monthly core & plugin updates",
+      "Weekly backups",
+      "Uptime monitoring",
+      "48h response time",
+      "Monthly health summary",
     ],
-    cta: "Get started",
+    cta: "Get a Free Quote",
     highlight: false,
   },
   {
     name: "Growth Maintenance",
-    price: "$349",
-    blurb: "For growing agencies with active clients",
+    price: "$520",
+    blurb: "Active care for growing client portfolios.",
     features: [
-      "Up to 20 client websites",
-      "Update windows + staging tests",
-      "Daily backups + 1-click restore",
-      "60-second uptime monitoring",
-      "Malware scanning & cleanup",
-      "Branded reporting portal",
-      "Priority support — 2h response",
+      "Weekly updates & monitoring",
+      "Daily backups",
+      "Security hardening & malware scans",
+      "12h priority response",
+      "Up to 2 hours of dev edits / mo",
+      "Monthly performance report",
     ],
-    cta: "Most popular",
+    cta: "Get a Free Quote",
     highlight: true,
   },
   {
-    name: "Agency Unlimited",
-    price: "Custom",
-    blurb: "For agencies running large portfolios",
+    name: "Unlimited Agency Maintenance",
+    price: "$1,400",
+    blurb: "All-in care across your whole portfolio.",
     features: [
-      "Unlimited client websites",
-      "Dedicated maintenance team",
-      "24/7 emergency response",
-      "Quarterly strategy reviews",
-      "Custom SLA & integrations",
-      "Slack-channel support",
-      "Named PM",
+      "Up to 10 sites covered",
+      "Daily updates & monitoring",
+      "24/7 uptime + emergency response",
+      "Same-day priority response",
+      "Up to 6 hours of dev edits / mo",
+      "Quarterly portfolio reviews",
     ],
-    cta: "Talk to sales",
+    cta: "Get a Free Quote",
     highlight: false,
   },
 ];
@@ -627,7 +621,7 @@ function Pricing() {
               <p className="mt-1 text-sm text-muted-foreground">{p.blurb}</p>
               <div className="mt-6 flex items-baseline gap-1">
                 <span className="text-4xl font-semibold tracking-tight text-ink">{p.price}</span>
-                {p.price !== "Custom" && <span className="text-sm text-muted-foreground">/ month</span>}
+                <span className="text-sm text-muted-foreground">/ month</span>
               </div>
               <ul className="mt-6 flex-1 space-y-3">
                 {p.features.map((f) => (
@@ -643,7 +637,7 @@ function Pricing() {
                 variant={p.highlight ? "default" : "outline"}
                 className="mt-8 w-full rounded-full"
               >
-                <a href="#contact">{p.cta}</a>
+                <Link to="/contact">{p.cta}</Link>
               </Button>
             </div>
           ))}
@@ -739,10 +733,7 @@ function FinalCTA() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">
-                <a href="#pricing">Get Maintenance Pricing <ArrowRight className="h-4 w-4" /></a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full bg-background px-6">
-                <a href="#contact">Schedule a Call</a>
+                <Link to="/contact">Get a Free Quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
             </div>
           </div>
