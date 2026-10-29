@@ -625,7 +625,7 @@ function FinalCTA() {
               Scale your agency with a proven delivery system.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-              Start a project or book a discovery call. We'll walk you through the full workflow and tailor it to your agency's stack.
+              Send us your brief. We'll walk you through the full workflow and tailor it to your agency's stack.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">

@@ -496,7 +496,7 @@ export function FinalCTA() {
                Ready to Scale Your Agency?
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-               Book a confidential 20-minute call. We'll map your fulfillment bottlenecks and show how a white label web development partner removes them — so you can take on more clients without hiring a single developer.
+               Send us your brief. We'll map your fulfillment bottlenecks and show how a white label web development partner removes them — so you can take on more clients without hiring a single developer.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-full px-6">

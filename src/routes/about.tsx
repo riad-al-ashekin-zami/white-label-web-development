@@ -76,9 +76,6 @@ function Hero() {
               <Button asChild size="lg" className="rounded-full px-6">
                 <Link to="/agency-partner">Start a partnership <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full px-6">
-                <Link to="/contact">Book a discovery call</Link>
-              </Button>
             </div>
             <ul className="mt-8 grid grid-cols-2 gap-3 text-sm text-muted-foreground sm:grid-cols-4">
               {[
@@ -605,7 +602,7 @@ function CTA() {
                 <Link to="/agency-partner">Start a partnership <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full border-white/20 bg-transparent px-6 text-brand-foreground hover:bg-white/10 hover:text-brand-foreground">
-                <Link to="/contact">Request a free quote</Link>
+                <Link to="/contact">Get a Free Quote</Link>
               </Button>
             </div>
           </div>
