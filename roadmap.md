@@ -33,4 +33,5 @@
 ## Approved homepage keyword additions
 - [x] Apply approved A–E only and synchronize social descriptions.
 - [x] Verify unchanged SEO elements, existing text/links, counts and FAQ HTML/schema; confirm other pages unchanged.
-- [ ] Publish and check live evidence; report actual deployment status.
+- [x] Request publication and report verified preview evidence.
+- [ ] Confirm live deployment evidence — blocked by deployment propagation: the one post-publish live check still returned the previous description.
