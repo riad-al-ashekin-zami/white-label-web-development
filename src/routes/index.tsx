@@ -11,7 +11,7 @@ import {
 
 const HOME_TITLE = "White Label Web Development for Agencies | WLWD";
 const HOME_DESC =
-  "White label web development for agencies. We design, build and maintain client websites under your brand — on time, NDA-protected, at partner rates.";
+  "White label web development for agencies: website development services and a dedicated development team, delivered under your brand and NDA-protected.";
 const HOME_URL = "https://whitelabelwebsitedevelopment.com/";
 
 

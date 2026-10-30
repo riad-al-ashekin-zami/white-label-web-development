@@ -29,3 +29,8 @@
 - [x] D2: Sitemap updated
 - [x] D3: Screenshots of fixed sections
 - [x] D4: Report table A1–C11
+
+## Approved homepage keyword additions
+- [ ] Apply approved A–E only and synchronize social descriptions.
+- [ ] Verify unchanged SEO elements, existing text/links, counts and FAQ HTML/schema; confirm other pages unchanged.
+- [ ] Publish and check live evidence; report actual deployment status.

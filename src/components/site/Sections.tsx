@@ -25,7 +25,7 @@ export function Hero() {
               <span className="text-gradient-brand">White Label Web Development</span> for Agencies
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
-              We're the white label web development team behind 120+ agencies, marketing teams and consultants across North America. You sell the website, we build it, and your client only ever sees your brand — SEO-ready, Core Web Vitals optimized and delivered in 5–7 business days.
+              We're the white label web development team behind 120+ agencies, marketing teams and consultants across North America. As a white label web development agency, we provide white label website development services through a dedicated development team that works as an extension of your team. You sell the website, we build it, and your client only ever sees your brand — SEO-ready, Core Web Vitals optimized and delivered in 5–7 business days.
             </p>
             <p className="mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:text-lg">
               White label website development lets you add capacity without hiring. Work with a white label web developer through one dedicated project manager, review on private staging links and hand over a tested site under your name.
@@ -233,7 +233,7 @@ export function Services() {
         <SectionHeader
           eyebrow="White label services"
           title="White Label Web Development Services"
-           sub="Everything your agency needs to deliver professional websites at scale. Our white label web development services give each web design agency and web development agency a complete production lifecycle — from design and development to launch and maintenance, all under your brand."
+           sub="Everything your agency needs to deliver professional websites at scale. Our white label web development services give each web design agency and web development agency a complete production lifecycle — from design and development to launch and maintenance, all under your brand. Every service below is part of our white label website development offering, delivered under your agency's brand."
         />
         <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
           {services.map(({ icon: Icon, title, desc, to }) => (
@@ -294,7 +294,7 @@ export function WhyUs() {
 /* ---------- PROCESS ---------- */
 const steps = [
   { n: "01", title: "Send Your Requirements", desc: "Brief us via Slack, ClickUp, Asana, email or your tool of choice. Your dedicated project manager confirms scope, timeline and a fixed price within hours — before any work begins." },
-  { n: "02", title: "Your White Label Web Developers Build", desc: "Your PM and development team get to work with daily progress updates and a private staging URL. Every site is built with clean semantic HTML, responsive across all breakpoints, and tuned for Core Web Vitals from day one." },
+  { n: "02", title: "Your White Label Web Developers Build", desc: "Your PM and development team get to work with daily progress updates and a private staging URL. Every site is built with clean semantic HTML, responsive across all breakpoints, and tuned for Core Web Vitals from day one. Your dedicated development team stays on the project from kickoff to launch." },
   { n: "03", title: "Review, Revisions & QA", desc: "You review on a private staging URL under your brand. We run structured revision rounds with clear scope, and our QA team tests across browsers, devices and screen sizes before launch." },
   { n: "04", title: "Deliver to Your Client", desc: "We hand off polished, production-ready files. You ship under your brand. Your client never knows a white label web development team was involved. We stay invisible — that's the promise." },
 ];
