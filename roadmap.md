@@ -34,10 +34,10 @@
 - [x] Apply approved A–E only and synchronize social descriptions.
 - [x] Verify unchanged SEO elements, existing text/links, counts and FAQ HTML/schema; confirm other pages unchanged.
 - [x] Request publication and report verified preview evidence.
-- [ ] Confirm live deployment evidence — blocked by deployment propagation: the one post-publish live check still returned the previous description.
+- [x] Confirm live deployment evidence — live homepage now returns the previously approved description.
 
 ## Homepage redesign
-- [ ] Approve the homepage redesign plan and explicit exceptions to previous SEO guardrails.
+- [x] Approve the homepage redesign plan and explicit exceptions to previous SEO guardrails.
 - [ ] Redesign only the homepage with scoped styles, quote forms, requested prices, tracking and empty image slots.
 - [ ] Move the two original Texas sections to /fort-worth-web-design and link it from the homepage footer only.
 - [ ] Verify copy preservation, SEO, pricing rules, forms, desktop/mobile layout and unchanged other pages.
