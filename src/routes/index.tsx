@@ -1,17 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Header } from "@/components/site/Header";
-import { Footer } from "@/components/site/Footer";
-import {
-  Hero, WhatIsWhiteLabel, WhoWeHelp, TexasCustomers, Services, WhyUs, Process,
-  Portfolio, Testimonials, FinalCTA, BusinessNAP, PartnerPricing, BecomePartner,
-} from "@/components/site/Sections";
-import {
-  Problem, Comparison, FAQ, HOME_FAQS,
-} from "@/components/site/ServiceSections";
+import { Homepage } from "@/components/homepage/Homepage";
+import { HOME_FAQS } from "@/components/site/ServiceSections";
+import { homepageImages } from "@/config/images";
+import homepageCss from "@/components/homepage/homepage.css?url";
 
-const HOME_TITLE = "White Label Web Development for Agencies | WLWD";
+const HOME_TITLE = "White Label Web Development for Agencies - From $490";
 const HOME_DESC =
-  "White label web development for agencies: website development services and a dedicated development team, delivered under your brand and NDA-protected.";
+  "Agency-ready white label WordPress, WooCommerce & landing page builds. Fixed prices from $490, revisions included, NDA & no-poaching. Get a quote today.";
 const HOME_URL = "https://whitelabelwebsitedevelopment.com/";
 
 
@@ -28,8 +23,12 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: HOME_TITLE },
       { name: "twitter:description", content: HOME_DESC },
+      ...(homepageImages["IMG-12"]?.url?.startsWith("https://") ? [
+        { property: "og:image", content: homepageImages["IMG-12"].url },
+        { name: "twitter:image", content: homepageImages["IMG-12"].url },
+      ] : []),
     ],
-    links: [{ rel: "canonical", href: HOME_URL }],
+    links: [{ rel: "canonical", href: HOME_URL }, { rel: "stylesheet", href: homepageCss }, { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -55,26 +54,6 @@ export const Route = createFileRoute("/")({
                 acceptedAnswer: { "@type": "Answer", text: f.a },
               })),
             },
-            {
-              "@type": "ProfessionalService",
-              "@id": `${HOME_URL}#fort-worth-business`,
-              name: "Roadrunner Media Website Design",
-              url: HOME_URL,
-              telephone: "+1-817-201-7558",
-              description: "White label web development and website design support for agencies and small businesses.",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "3925 Bryce Ave",
-                addressLocality: "Fort Worth",
-                addressRegion: "TX",
-                postalCode: "76107",
-                addressCountry: "US",
-              },
-              areaServed: {
-                "@type": "City",
-                name: "Fort Worth",
-              },
-            },
           ],
         }),
       },
@@ -84,28 +63,5 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <WhatIsWhiteLabel />
-        <WhoWeHelp />
-        <Problem />
-        <Process />
-        <Services />
-        <WhyUs />
-        <TexasCustomers />
-        <Comparison />
-        <Portfolio />
-        <Testimonials />
-        <PartnerPricing />
-        <BecomePartner />
-        <FAQ />
-        <FinalCTA />
-        <BusinessNAP />
-      </main>
-      <Footer />
-    </div>
-  );
+  return <Homepage />;
 }

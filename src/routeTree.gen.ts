@@ -15,6 +15,7 @@ import { Route as AgencyPartnerRouteImport } from './routes/agency-partner'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DomainInquiryRouteImport } from './routes/domain-inquiry'
+import { Route as FortWorthWebDesignRouteImport } from './routes/fort-worth-web-design'
 import { Route as NdaConfidentialityRouteImport } from './routes/nda-confidentiality'
 import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
@@ -68,6 +69,11 @@ const ContactRoute = ContactRouteImport.update({
 const DomainInquiryRoute = DomainInquiryRouteImport.update({
   id: '/domain-inquiry',
   path: '/domain-inquiry',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FortWorthWebDesignRoute = FortWorthWebDesignRouteImport.update({
+  id: '/fort-worth-web-design',
+  path: '/fort-worth-web-design',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NdaConfidentialityRoute = NdaConfidentialityRouteImport.update({
@@ -206,6 +212,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
+  '/fort-worth-web-design': typeof FortWorthWebDesignRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/partners': typeof PartnersRoute
   '/portfolio': typeof PortfolioRoute
@@ -238,6 +245,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
+  '/fort-worth-web-design': typeof FortWorthWebDesignRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/partners': typeof PartnersRoute
   '/portfolio': typeof PortfolioRoute
@@ -271,6 +279,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/domain-inquiry': typeof DomainInquiryRoute
+  '/fort-worth-web-design': typeof FortWorthWebDesignRoute
   '/nda-confidentiality': typeof NdaConfidentialityRoute
   '/partners': typeof PartnersRoute
   '/portfolio': typeof PortfolioRoute
@@ -305,6 +314,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/domain-inquiry'
+    | '/fort-worth-web-design'
     | '/nda-confidentiality'
     | '/partners'
     | '/portfolio'
@@ -337,6 +347,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/domain-inquiry'
+    | '/fort-worth-web-design'
     | '/nda-confidentiality'
     | '/partners'
     | '/portfolio'
@@ -369,6 +380,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/domain-inquiry'
+    | '/fort-worth-web-design'
     | '/nda-confidentiality'
     | '/partners'
     | '/portfolio'
@@ -402,6 +414,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
   DomainInquiryRoute: typeof DomainInquiryRoute
+  FortWorthWebDesignRoute: typeof FortWorthWebDesignRoute
   NdaConfidentialityRoute: typeof NdaConfidentialityRoute
   PartnersRoute: typeof PartnersRoute
   PortfolioRoute: typeof PortfolioRoute
@@ -470,6 +483,13 @@ declare module '@tanstack/react-router' {
       path: '/domain-inquiry'
       fullPath: '/domain-inquiry'
       preLoaderRoute: typeof DomainInquiryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fort-worth-web-design': {
+      id: '/fort-worth-web-design'
+      path: '/fort-worth-web-design'
+      fullPath: '/fort-worth-web-design'
+      preLoaderRoute: typeof FortWorthWebDesignRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/nda-confidentiality': {
@@ -650,6 +670,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
   DomainInquiryRoute: DomainInquiryRoute,
+  FortWorthWebDesignRoute: FortWorthWebDesignRoute,
   NdaConfidentialityRoute: NdaConfidentialityRoute,
   PartnersRoute: PartnersRoute,
   PortfolioRoute: PortfolioRoute,
