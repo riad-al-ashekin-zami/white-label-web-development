@@ -38,6 +38,6 @@
 
 ## Homepage redesign
 - [x] Approve the homepage redesign plan and explicit exceptions to previous SEO guardrails.
-- [ ] Redesign only the homepage with scoped styles, quote forms, requested prices, tracking and empty image slots.
-- [ ] Move the two original Texas sections to /fort-worth-web-design and link it from the homepage footer only.
-- [ ] Verify copy preservation, SEO, pricing rules, forms, desktop/mobile layout and unchanged other pages.
+- [x] Redesign only the homepage with scoped styles, quote forms, requested prices, tracking and empty image slots.
+- [x] Move the two original Texas sections to /fort-worth-web-design and link it from the homepage footer only.
+- [x] Verify copy preservation, SEO, pricing rules, forms, desktop/mobile layout and unchanged other pages.
